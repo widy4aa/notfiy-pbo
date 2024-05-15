@@ -44,10 +44,20 @@ namespace notfiy.Views.Login
         private void Timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
-            this.pictureBox1.Hide();
+            //pictureBox1.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

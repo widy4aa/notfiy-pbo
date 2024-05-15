@@ -30,53 +30,61 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginControl));
             label1 = new Label();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            LoginButton = new Button();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(209, 115);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Chivo", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(808, 455);
             label1.Name = "label1";
-            label1.Size = new Size(82, 20);
+            label1.Size = new Size(320, 53);
             label1.TabIndex = 0;
-            label1.Text = "Login Page";
+            label1.Text = "Forgot Password?";
+            label1.Click += label1_Click;
             // 
-            // button1
+            // LoginButton
             // 
-            button1.Location = new Point(203, 174);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            LoginButton.BackColor = Color.Lime;
+            LoginButton.BackgroundImageLayout = ImageLayout.None;
+            LoginButton.FlatStyle = FlatStyle.Popup;
+            LoginButton.Font = new Font("Segoe UI Historic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LoginButton.ForeColor = Color.White;
+            LoginButton.Location = new Point(516, 559);
+            LoginButton.Margin = new Padding(0);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(612, 44);
+            LoginButton.TabIndex = 1;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.Click += button1_Click;
             // 
-            // pictureBox1
+            // panel1
             // 
-            pictureBox1.BackColor = SystemColors.Control;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(43, -4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(527, 369);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            panel1.BackColor = SystemColors.Control;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1, 368);
+            panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // LoginControl
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
-            AutoScaleMode = AutoScaleMode.Dpi;
-            Controls.Add(pictureBox1);
-            Controls.Add(button1);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(31, 17, 70);
+            Controls.Add(panel1);
+            Controls.Add(LoginButton);
             Controls.Add(label1);
             Name = "LoginControl";
-            Size = new Size(653, 368);
+            Size = new Size(1600, 800);
             Load += LoginControl_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -84,7 +92,7 @@
         #endregion
 
         private Label label1;
-        private Button button1;
-        private PictureBox pictureBox1;
+        private Button LoginButton;
+        private Panel panel1;
     }
 }
