@@ -61,5 +61,10 @@ namespace notfiy.Views.Login
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
