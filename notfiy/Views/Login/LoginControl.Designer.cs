@@ -34,7 +34,8 @@
             panel1 = new Panel();
             textBox1 = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            kryptonMaskedTextBox1 = new Krypton.Toolkit.KryptonMaskedTextBox();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             SuspendLayout();
             // 
             // label1
@@ -80,10 +81,11 @@
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Freehand521 BT", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Minecraft", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(492, 340);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(601, 62);
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(601, 51);
             textBox1.TabIndex = 3;
             // 
             // label2
@@ -98,20 +100,41 @@
             label2.TabIndex = 5;
             label2.Text = "Forgot Password?";
             // 
-            // textBox2
+            // kryptonMaskedTextBox1
             // 
-            textBox2.Font = new Font("Segoe UI", 30F);
-            textBox2.Location = new Point(492, 173);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(601, 61);
-            textBox2.TabIndex = 6;
+            kryptonMaskedTextBox1.Location = new Point(344, 104);
+            kryptonMaskedTextBox1.Name = "kryptonMaskedTextBox1";
+            kryptonMaskedTextBox1.PasswordChar = 'K';
+            kryptonMaskedTextBox1.Size = new Size(556, 23);
+            kryptonMaskedTextBox1.TabIndex = 8;
+            kryptonMaskedTextBox1.Text = "kryptonMaskedTextBox1";
+            // 
+            // kryptonButton1
+            // 
+            kryptonButton1.Location = new Point(170, 419);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.OverrideDefault.Border.Rounding = 20F;
+            kryptonButton1.OverrideDefault.Border.Width = 10;
+            kryptonButton1.Size = new Size(306, 72);
+            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.HighQuality;
+            kryptonButton1.StateTracking.Border.Color1 = Color.Transparent;
+            kryptonButton1.StateTracking.Border.Color2 = Color.Transparent;
+            kryptonButton1.StateTracking.Border.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            kryptonButton1.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.TabIndex = 7;
+            kryptonButton1.UseWaitCursor = true;
+            kryptonButton1.Values.Text = "kryptonButton1";
             // 
             // LoginControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 17, 70);
-            Controls.Add(textBox2);
+            Controls.Add(kryptonMaskedTextBox1);
+            Controls.Add(kryptonButton1);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(panel1);
@@ -132,6 +155,7 @@
         private Panel panel1;
         private TextBox textBox1;
         private Label label2;
-        private TextBox textBox2;
+        private Krypton.Toolkit.KryptonMaskedTextBox kryptonMaskedTextBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
