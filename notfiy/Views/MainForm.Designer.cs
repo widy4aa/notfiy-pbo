@@ -35,7 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1584, 761);
+            ClientSize = new Size(1424, 985);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;

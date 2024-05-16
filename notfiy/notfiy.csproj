@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bunifu.UI.WinForms" Version="7.0.0" />
     <PackageReference Include="Npgsql" Version="8.0.3" />
   </ItemGroup>
 

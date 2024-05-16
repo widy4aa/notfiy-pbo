@@ -80,10 +80,10 @@
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Segoe UI", 30F);
+            textBox1.Font = new Font("Freehand521 BT", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(492, 340);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(601, 61);
+            textBox1.Size = new Size(601, 62);
             textBox1.TabIndex = 3;
             // 
             // label2
@@ -119,7 +119,7 @@
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginControl";
-            Size = new Size(1600, 800);
+            Size = new Size(1440, 1024);
             Load += LoginControl_Load;
             ResumeLayout(false);
             PerformLayout();
