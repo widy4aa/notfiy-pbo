@@ -29,18 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginControl));
+            label1 = new Label();
             panel1 = new Panel();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            kryptonMaskedTextBox1 = new Krypton.Toolkit.KryptonMaskedTextBox();
             LoginButton = new Krypton.Toolkit.KryptonButton();
-            UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
-            kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            BuatAkunLabel = new Krypton.Toolkit.KryptonLabel();
-            kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
-            kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(847, 419);
+            label1.Name = "label1";
+            label1.Size = new Size(235, 31);
+            label1.TabIndex = 0;
+            label1.Text = "Forgot Password?";
+            label1.Click += label1_Click;
             // 
             // panel1
             // 
@@ -54,9 +62,40 @@
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Minecraft", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(492, 340);
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(601, 51);
+            textBox1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(492, 284);
+            label2.Name = "label2";
+            label2.Size = new Size(134, 31);
+            label2.TabIndex = 5;
+            label2.Text = "Password";
+            label2.Click += label2_Click;
+            // 
+            // kryptonMaskedTextBox1
+            // 
+            kryptonMaskedTextBox1.Location = new Point(344, 104);
+            kryptonMaskedTextBox1.Name = "kryptonMaskedTextBox1";
+            kryptonMaskedTextBox1.PasswordChar = 'K';
+            kryptonMaskedTextBox1.Size = new Size(556, 23);
+            kryptonMaskedTextBox1.TabIndex = 8;
+            kryptonMaskedTextBox1.Text = "kryptonMaskedTextBox1";
+            // 
             // LoginButton
             // 
-            LoginButton.Location = new Point(465, 563);
+            LoginButton.Location = new Point(492, 470);
             LoginButton.Margin = new Padding(0);
             LoginButton.Name = "LoginButton";
             LoginButton.OverrideDefault.Back.Color1 = Color.Lime;
@@ -76,9 +115,6 @@
             LoginButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             LoginButton.StateCommon.Border.Rounding = 20F;
             LoginButton.StateCommon.Border.Width = 2;
-            LoginButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            LoginButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            LoginButton.StateCommon.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateDisabled.Back.Color1 = Color.Lime;
             LoginButton.StateDisabled.Back.Color2 = Color.Lime;
             LoginButton.StateNormal.Back.Color1 = Color.Lime;
@@ -89,151 +125,48 @@
             LoginButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             LoginButton.StateNormal.Border.Rounding = 20F;
             LoginButton.StateNormal.Border.Width = 2;
-            LoginButton.StatePressed.Back.Color1 = Color.FromArgb(0, 192, 0);
-            LoginButton.StatePressed.Back.Color2 = Color.FromArgb(0, 192, 0);
-            LoginButton.StatePressed.Border.Color1 = Color.FromArgb(0, 192, 0);
-            LoginButton.StatePressed.Border.Color2 = Color.FromArgb(0, 192, 0);
+            LoginButton.StatePressed.Back.Color1 = Color.White;
+            LoginButton.StatePressed.Back.Color2 = Color.White;
+            LoginButton.StatePressed.Border.Color1 = Color.White;
+            LoginButton.StatePressed.Border.Color2 = Color.White;
             LoginButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            LoginButton.StatePressed.Content.ShortText.Color1 = Color.White;
-            LoginButton.StatePressed.Content.ShortText.Color2 = Color.White;
-            LoginButton.StatePressed.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateTracking.Back.Color1 = Color.Lime;
             LoginButton.StateTracking.Back.Color2 = Color.Lime;
-            LoginButton.StateTracking.Border.Color1 = Color.FromArgb(0, 192, 0);
-            LoginButton.StateTracking.Border.Color2 = Color.FromArgb(0, 192, 0);
+            LoginButton.StateTracking.Border.Color1 = Color.Lime;
+            LoginButton.StateTracking.Border.Color2 = Color.Lime;
             LoginButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            LoginButton.StateTracking.Border.Width = 4;
             LoginButton.StateTracking.Content.LongText.Color1 = Color.Transparent;
             LoginButton.StateTracking.Content.LongText.Color2 = Color.Transparent;
             LoginButton.StateTracking.Content.LongText.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LoginButton.StateTracking.Content.ShortText.Color1 = Color.White;
-            LoginButton.StateTracking.Content.ShortText.Color2 = Color.White;
-            LoginButton.StateTracking.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.TabIndex = 9;
             LoginButton.Values.Text = "Login";
-            LoginButton.Click += LoginButton_Click;
-            // 
-            // UsernameTextbox
-            // 
-            UsernameTextbox.Cursor = Cursors.IBeam;
-            UsernameTextbox.Location = new Point(465, 353);
-            UsernameTextbox.Name = "UsernameTextbox";
-            UsernameTextbox.Size = new Size(601, 56);
-            UsernameTextbox.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
-            UsernameTextbox.StateActive.Border.Color1 = Color.White;
-            UsernameTextbox.StateActive.Border.Color2 = Color.White;
-            UsernameTextbox.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            UsernameTextbox.StateActive.Border.Rounding = 20F;
-            UsernameTextbox.StateActive.Border.Width = 4;
-            UsernameTextbox.StateActive.Content.Color1 = Color.White;
-            UsernameTextbox.StateActive.Content.Font = new Font("Inria Sans", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            UsernameTextbox.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
-            UsernameTextbox.TabIndex = 10;
-            UsernameTextbox.Text = "Username";
-            // 
-            // kryptonPanel1
-            // 
-            kryptonPanel1.Controls.Add(kryptonLabel1);
-            kryptonPanel1.Controls.Add(BuatAkunLabel);
-            kryptonPanel1.Controls.Add(kryptonPictureBox1);
-            kryptonPanel1.Controls.Add(kryptonTextBox1);
-            kryptonPanel1.Controls.Add(UsernameTextbox);
-            kryptonPanel1.Controls.Add(LoginButton);
-            kryptonPanel1.Location = new Point(0, 0);
-            kryptonPanel1.Name = "kryptonPanel1";
-            kryptonPanel1.Size = new Size(1440, 1024);
-            kryptonPanel1.StateCommon.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonPanel1.StateCommon.Color2 = Color.FromArgb(12, 0, 45);
-            kryptonPanel1.StateCommon.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonPanel1.StateDisabled.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonPanel1.StateDisabled.Color2 = Color.FromArgb(12, 0, 45);
-            kryptonPanel1.StateNormal.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonPanel1.StateNormal.Color2 = Color.FromArgb(12, 0, 45);
-            kryptonPanel1.StateNormal.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear;
-            kryptonPanel1.StateNormal.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonPanel1.TabIndex = 11;
-            // 
-            // kryptonLabel1
-            // 
-            kryptonLabel1.Location = new Point(576, 883);
-            kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(376, 36);
-            kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
-            kryptonLabel1.StateCommon.ShortText.Color2 = Color.White;
-            kryptonLabel1.StateCommon.ShortText.Font = new Font("Inria Sans Light", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel1.TabIndex = 14;
-            kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
-            kryptonLabel1.Click += kryptonLabel1_Click;
-            // 
-            // BuatAkunLabel
-            // 
-            BuatAkunLabel.Location = new Point(943, 513);
-            BuatAkunLabel.Name = "BuatAkunLabel";
-            BuatAkunLabel.Size = new Size(123, 36);
-            BuatAkunLabel.StateCommon.ShortText.Color1 = Color.White;
-            BuatAkunLabel.StateCommon.ShortText.Color2 = Color.White;
-            BuatAkunLabel.StateCommon.ShortText.Font = new Font("Inria Sans Light", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BuatAkunLabel.TabIndex = 13;
-            BuatAkunLabel.Values.Text = "Buat Akun";
-            BuatAkunLabel.Click += BuatAkunLabel_Click;
-            // 
-            // kryptonPictureBox1
-            // 
-            kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
-            kryptonPictureBox1.Location = new Point(474, 107);
-            kryptonPictureBox1.Name = "kryptonPictureBox1";
-            kryptonPictureBox1.Size = new Size(557, 143);
-            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            kryptonPictureBox1.TabIndex = 12;
-            kryptonPictureBox1.TabStop = false;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Cursor = Cursors.IBeam;
-            kryptonTextBox1.Location = new Point(465, 451);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.PasswordChar = '*';
-            kryptonTextBox1.Size = new Size(601, 56);
-            kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
-            kryptonTextBox1.StateActive.Border.Color1 = Color.White;
-            kryptonTextBox1.StateActive.Border.Color2 = Color.White;
-            kryptonTextBox1.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox1.StateActive.Border.Rounding = 20F;
-            kryptonTextBox1.StateActive.Border.Width = 4;
-            kryptonTextBox1.StateActive.Content.Color1 = Color.White;
-            kryptonTextBox1.StateActive.Content.Font = new Font("Inria Sans", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
-            kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.Text = "Username";
             // 
             // LoginControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 17, 70);
+            Controls.Add(LoginButton);
+            Controls.Add(kryptonMaskedTextBox1);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
             Controls.Add(panel1);
-            Controls.Add(kryptonPanel1);
+            Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginControl";
             Size = new Size(1440, 1024);
             Load += LoginControl_Load;
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
-            kryptonPanel1.ResumeLayout(false);
-            kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
         private Panel panel1;
+        private TextBox textBox1;
+        private Label label2;
+        private Krypton.Toolkit.KryptonMaskedTextBox kryptonMaskedTextBox1;
         private Krypton.Toolkit.KryptonButton LoginButton;
-        private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
-        private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
-        private Krypton.Toolkit.KryptonLabel BuatAkunLabel;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }
