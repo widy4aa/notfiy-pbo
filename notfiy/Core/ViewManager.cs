@@ -13,15 +13,11 @@ namespace notfiy.Core
 
         public void MoveUserControl(Control userControl)
         {
-
             MainForm.Controls.Clear();
-
             MainForm.Controls.Add(userControl);
-
-            //MainForm.Refresh();
-            //MainForm.Activate();
+            MainForm.Refresh();
         }
-
+                                                      
         public static void MoveView(Control control)
         {
             SystemSingleton.Instance.ViewManager.MoveUserControl(control);
