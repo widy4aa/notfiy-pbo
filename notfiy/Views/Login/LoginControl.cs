@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Views.Homepage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NotifyViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.Login
 {
@@ -79,7 +81,8 @@ namespace notfiy.Views.Login
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
+            HomepageControl homepage = new HomepageControl();
+            NotifyViewManager.MoveView(homepage);
         }
 
         private void BuatAkunLabel_Click(object sender, EventArgs e)

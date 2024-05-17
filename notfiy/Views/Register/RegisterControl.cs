@@ -16,5 +16,10 @@ namespace notfiy.Views.Register
         {
             InitializeComponent();
         }
+
+        private void RegisterControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
