@@ -11,20 +11,20 @@ namespace notfiy.Core
         public MainForm MainForm { get; set; }
 
 
-        public void HMoveView(Control userControl)
+        public void MoveUserControl(Control userControl)
         {
 
             MainForm.Controls.Clear();
 
             MainForm.Controls.Add(userControl);
 
-            MainForm.Refresh();
-            MainForm.Activate();
+            //MainForm.Refresh();
+            //MainForm.Activate();
         }
 
         public static void MoveView(Control control)
         {
-            System.Instance.ViewManager.HMoveView(control);
+            SystemSingleton.Instance.ViewManager.MoveUserControl(control);
         }
     }
 }

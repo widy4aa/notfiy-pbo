@@ -14,14 +14,11 @@ namespace notfiy
         // see https://aka.ms/applicationconfiguration.
 
 
-
-
-
             ApplicationConfiguration.Initialize();
 
             MainForm mainForm = new MainForm();
 
-            System.Instance.ViewManager.MainForm = mainForm;
+            SystemSingleton.Instance.ViewManager.MainForm = mainForm;
             mainForm.Controls.Add(new LoginControl());
             
             Application.Run(mainForm);

@@ -7,25 +7,25 @@ using System.Threading.Tasks;
 
 namespace notfiy.Core
 {
-    internal class System
+    internal class SystemSingleton
     {
-        private static System _instance;
+        private static SystemSingleton _instance;
         
         public NpgsqlConnection NpgsqlConnection;
 
         public ViewManager ViewManager;
-        private System() 
-        { 
-            SetAtributes();
+        private SystemSingleton() 
+        {
+            ViewManager = new ViewManager();
         }
 
-        public static System Instance
+        public static SystemSingleton Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new System();
+                    _instance = new SystemSingleton();
                 }
 
                 return _instance;
@@ -35,16 +35,15 @@ namespace notfiy.Core
         public void EnableDatabase(string connectionString)
         {
             try {
-                NpgsqlConnection = new NpgsqlConnection(connectionString);                 
+                NpgsqlConnection = new NpgsqlConnection(connectionString);
+                NpgsqlConnection.Open();
             } catch (Exception ex)
             {
                 throw new Exception("Tidak dapat terhubung ke database!");
             }
-        }
 
-        private void SetAtributes()
-        {
-            ViewManager = new ViewManager();
+            NpgsqlConnection.Close();
+
         }
 
     }

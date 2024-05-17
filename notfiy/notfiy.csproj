@@ -9,9 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Compile Remove="Views\Landing\**" />
+    <EmbeddedResource Remove="Views\Landing\**" />
+    <None Remove="Views\Landing\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Views\Landing\" />
+    <Folder Include="Models\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 
   <ItemGroup>
