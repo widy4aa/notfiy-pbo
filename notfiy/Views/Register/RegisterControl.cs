@@ -21,5 +21,15 @@ namespace notfiy.Views.Register
         {
 
         }
+
+        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
