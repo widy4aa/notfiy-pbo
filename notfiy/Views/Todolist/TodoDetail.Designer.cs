@@ -1,6 +1,6 @@
-﻿namespace notfiy.Views.Homepage
+﻿namespace notfiy.Views.Todolist
 {
-    partial class HomepageControl
+    partial class TodoDetail
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodoDetail));
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
-            kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            panel1 = new Panel();
+            BtnBack = new Button();
+            kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPanel1
@@ -52,7 +56,7 @@
             kryptonPanel1.Size = new Size(1440, 120);
             kryptonPanel1.StateNormal.Color1 = Color.FromArgb(51, 15, 126);
             kryptonPanel1.StateNormal.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonPanel1.TabIndex = 0;
+            kryptonPanel1.TabIndex = 2;
             // 
             // kryptonButton1
             // 
@@ -165,7 +169,6 @@
             HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
-            HamburgerButton.Click += kryptonButton1_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -195,42 +198,88 @@
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 11;
             UsernameTextbox.Text = "Search";
-            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             // 
-            // kryptonPanel2
+            // kryptonLabel1
             // 
-            kryptonPanel2.Location = new Point(0, 860);
-            kryptonPanel2.Name = "kryptonPanel2";
-            kryptonPanel2.Size = new Size(1440, 164);
-            kryptonPanel2.StateNormal.Color1 = Color.Black;
-            kryptonPanel2.StateNormal.Color2 = Color.Black;
-            kryptonPanel2.TabIndex = 1;
+            kryptonLabel1.Location = new Point(241, 144);
+            kryptonLabel1.Name = "kryptonLabel1";
+            kryptonLabel1.Size = new Size(89, 20);
+            kryptonLabel1.TabIndex = 3;
+            kryptonLabel1.Values.Text = "Detail Todolist";
             // 
-            // HomepageControl
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(kryptonButton2);
+            panel1.Controls.Add(BtnBack);
+            panel1.Controls.Add(kryptonLabel2);
+            panel1.Location = new Point(241, 184);
+            panel1.Name = "panel1";
+            panel1.RightToLeft = RightToLeft.No;
+            panel1.Size = new Size(1063, 407);
+            panel1.TabIndex = 4;
+            panel1.Paint += panel1_Paint;
+            // 
+            // BtnBack
+            // 
+            BtnBack.Location = new Point(910, 356);
+            BtnBack.Name = "BtnBack";
+            BtnBack.Size = new Size(75, 23);
+            BtnBack.TabIndex = 1;
+            BtnBack.Text = "BACK";
+            BtnBack.UseVisualStyleBackColor = true;
+            BtnBack.Click += BtnBack_Click;
+            // 
+            // kryptonLabel2
+            // 
+            kryptonLabel2.Location = new Point(24, 22);
+            kryptonLabel2.Name = "kryptonLabel2";
+            kryptonLabel2.Size = new Size(88, 20);
+            kryptonLabel2.TabIndex = 0;
+            kryptonLabel2.Values.Text = "kryptonLabel2";
+            kryptonLabel2.Click += kryptonLabel2_Click;
+            // 
+            // kryptonButton2
+            // 
+            kryptonButton2.Location = new Point(201, 157);
+            kryptonButton2.Name = "kryptonButton2";
+            kryptonButton2.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton2.OverrideDefault.Border.Rounding = 10F;
+            kryptonButton2.Size = new Size(90, 25);
+            kryptonButton2.TabIndex = 2;
+            kryptonButton2.Values.Text = "kryptonButton2";
+            // 
+            // TodoDetail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(kryptonPanel2);
+            BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(panel1);
+            Controls.Add(kryptonLabel1);
             Controls.Add(kryptonPanel1);
-            Name = "HomepageControl";
+            Name = "TodoDetail";
             Size = new Size(1440, 1024);
-            Load += HomepageControl_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonPanel kryptonPanel2;
-        private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
-        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
-        private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonButton HamburgerButton;
+        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
+        private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Panel panel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Button BtnBack;
+        private Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }
