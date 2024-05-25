@@ -34,5 +34,16 @@ namespace notfiy.Views.Todolist
             TodolistControl todolist = new TodolistControl();
             NotifyViewManager.MoveView(todolist);
         }
+
+        private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBack_Click_1(object sender, EventArgs e)
+        {
+            TodolistControl todolist = new TodolistControl();
+            NotifyViewManager.MoveView(todolist);
+        }
     }
 }
