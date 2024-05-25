@@ -45,5 +45,10 @@ namespace notfiy.Views.Todolist
             TodolistControl todolist = new TodolistControl();
             NotifyViewManager.MoveView(todolist);
         }
+
+        private void TodoDetail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

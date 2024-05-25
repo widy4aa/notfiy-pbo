@@ -67,7 +67,7 @@
             kryptonCheckBox1.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedNormal");
             kryptonCheckBox1.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedPressed");
             kryptonCheckBox1.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedTracking");
-            kryptonCheckBox1.Location = new Point(3, 29);
+            kryptonCheckBox1.Location = new Point(3, 35);
             kryptonCheckBox1.Name = "kryptonCheckBox1";
             kryptonCheckBox1.Size = new Size(163, 30);
             kryptonCheckBox1.TabIndex = 7;
@@ -85,14 +85,15 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
             flowLayoutPanel1.TabIndex = 8;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint_1;
             flowLayoutPanel1.Click += flowLayoutPanel1_Click;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint_1;
             // 
             // kryptonLabel1
             // 
             kryptonLabel1.Location = new Point(3, 3);
             kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(95, 20);
+            kryptonLabel1.Size = new Size(153, 26);
+            kryptonLabel1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel1.TabIndex = 11;
             kryptonLabel1.Values.Text = "Judul Pekerjaan";
             // 
@@ -107,7 +108,7 @@
             kryptonCheckBox2.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedNormal");
             kryptonCheckBox2.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedPressed");
             kryptonCheckBox2.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedTracking");
-            kryptonCheckBox2.Location = new Point(3, 65);
+            kryptonCheckBox2.Location = new Point(3, 71);
             kryptonCheckBox2.Name = "kryptonCheckBox2";
             kryptonCheckBox2.Size = new Size(163, 30);
             kryptonCheckBox2.TabIndex = 8;
@@ -124,7 +125,7 @@
             kryptonCheckBox3.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedNormal");
             kryptonCheckBox3.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedPressed");
             kryptonCheckBox3.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedTracking");
-            kryptonCheckBox3.Location = new Point(3, 101);
+            kryptonCheckBox3.Location = new Point(3, 107);
             kryptonCheckBox3.Name = "kryptonCheckBox3";
             kryptonCheckBox3.Size = new Size(163, 30);
             kryptonCheckBox3.TabIndex = 9;
@@ -141,7 +142,7 @@
             kryptonCheckBox4.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox4.Images.UncheckedNormal");
             kryptonCheckBox4.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox4.Images.UncheckedPressed");
             kryptonCheckBox4.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox4.Images.UncheckedTracking");
-            kryptonCheckBox4.Location = new Point(3, 137);
+            kryptonCheckBox4.Location = new Point(3, 143);
             kryptonCheckBox4.Name = "kryptonCheckBox4";
             kryptonCheckBox4.Size = new Size(163, 30);
             kryptonCheckBox4.TabIndex = 10;
@@ -188,13 +189,13 @@
             Controls.Add(kryptonCheckedListBox1);
             Cursor = Cursors.Hand;
             Name = "TodoItem";
-            Size = new Size(300, 264);
+            Size = new Size(298, 266);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
-       
+
 
         #endregion
         private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;

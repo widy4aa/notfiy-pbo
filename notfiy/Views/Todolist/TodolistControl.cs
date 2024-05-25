@@ -50,5 +50,15 @@ namespace notfiy.Views.Todolist
         {
 
         }
+
+        private void todoItem3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void todoItem12_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
