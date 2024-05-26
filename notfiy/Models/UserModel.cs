@@ -34,6 +34,7 @@ namespace notfiy.Models
                             //Name = reader.GetString(1),
                             //Email = reader.GetString(2),
                             //Password = reader.GetString(3)
+                            // test
                         });
                     }
                 }
