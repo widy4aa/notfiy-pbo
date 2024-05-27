@@ -1,4 +1,4 @@
-﻿namespace notfiy.Entities
+namespace notfiy.Entities
 {
     public class Labels
     {
