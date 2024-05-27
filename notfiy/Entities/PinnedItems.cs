@@ -2,7 +2,7 @@
 {
     public class PinnedItems
     {
-        public int id_pin_item { get; set; }
-        public string pin_item { get; set; }
+        public int id_pinned_item { get; set; }
+        public string pinned_item { get; set; }
     }
 }

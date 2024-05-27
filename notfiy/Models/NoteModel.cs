@@ -10,8 +10,6 @@ namespace notfiy.Models
         private string connection;
         private NpgsqlConnection conn;
 
-        //private Model conn;
-
         public List<Note> ListModel = new List<Note>();
         public NoteModel(string server, int port, string userId, string password, string database)
         {
