@@ -9,11 +9,11 @@ namespace notfiy.Core
 {
     abstract class Model
     {
-        protected NpgsqlConnection NpgsqlConnection;
+        protected NpgsqlConnection Connection;
 
         public Model() 
         {
-            NpgsqlConnection = SystemSingleton.Instance.NpgsqlConnection;
+            Connection = SystemSingleton.Instance.NpgsqlConnection;
         }
 
     }

@@ -1,17 +1,12 @@
-﻿using notfiy.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace notfiy.Entities
+﻿namespace notfiy.Entities
 {
-    internal class TodoList : IEntity
+    public class Todolist
     {
-        public int IdTodoList;
-        public string TodoListName;
-        public string Timestamp;
+        public int id_todolist { get; set; }
+        public int users_id_user { get; set; }
+        public string todolist_name { get; set; }
+        public string timestamp { get; set; }
+        public int id_todolist_status { get; set; }
+        public int id_pin_item { get; set; }
     }
 }
