@@ -20,7 +20,17 @@ namespace notfiy
 
             MainForm mainForm = new MainForm();
 
+            // Tempat Konfigurasi Database
+            string host = "";
+            string username = "";
+            string password = "";
+            string dbName = "";
+            //
+
+
+            SystemSingleton.Instance.EnableDatabase($"Host={host};Username={username};Password={password};Database={dbName};");
             SystemSingleton.Instance.ViewManager.MainForm = mainForm;
+
             //mainForm.Controls.Add(new LoginControl());
             mainForm.Controls.Add(new TodolistControl());
 
