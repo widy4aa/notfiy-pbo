@@ -66,7 +66,7 @@
             LoginButton.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             LoginButton.OverrideDefault.Content.ShortText.Color1 = Color.White;
             LoginButton.OverrideDefault.Content.ShortText.Color2 = Color.White;
-            LoginButton.OverrideDefault.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.OverrideDefault.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.Size = new Size(601, 46);
             LoginButton.StateCommon.Back.Color1 = Color.Lime;
             LoginButton.StateCommon.Back.Color2 = Color.Lime;
@@ -78,7 +78,7 @@
             LoginButton.StateCommon.Border.Width = 2;
             LoginButton.StateCommon.Content.ShortText.Color1 = Color.White;
             LoginButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            LoginButton.StateCommon.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateDisabled.Back.Color1 = Color.Lime;
             LoginButton.StateDisabled.Back.Color2 = Color.Lime;
             LoginButton.StateNormal.Back.Color1 = Color.Lime;
@@ -96,7 +96,7 @@
             LoginButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             LoginButton.StatePressed.Content.ShortText.Color1 = Color.White;
             LoginButton.StatePressed.Content.ShortText.Color2 = Color.White;
-            LoginButton.StatePressed.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateTracking.Back.Color1 = Color.Lime;
             LoginButton.StateTracking.Back.Color2 = Color.Lime;
             LoginButton.StateTracking.Border.Color1 = Color.FromArgb(0, 192, 0);
@@ -108,7 +108,7 @@
             LoginButton.StateTracking.Content.LongText.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateTracking.Content.ShortText.Color1 = Color.White;
             LoginButton.StateTracking.Content.ShortText.Color2 = Color.White;
-            LoginButton.StateTracking.Content.ShortText.Font = new Font("Inria Sans", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.TabIndex = 9;
             LoginButton.Values.Text = "Login";
             LoginButton.Click += LoginButton_Click;
@@ -118,7 +118,7 @@
             UsernameTextbox.Cursor = Cursors.IBeam;
             UsernameTextbox.Location = new Point(465, 353);
             UsernameTextbox.Name = "UsernameTextbox";
-            UsernameTextbox.Size = new Size(601, 56);
+            UsernameTextbox.Size = new Size(601, 54);
             UsernameTextbox.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
             UsernameTextbox.StateActive.Border.Color1 = Color.White;
             UsernameTextbox.StateActive.Border.Color2 = Color.White;
@@ -126,11 +126,12 @@
             UsernameTextbox.StateActive.Border.Rounding = 20F;
             UsernameTextbox.StateActive.Border.Width = 4;
             UsernameTextbox.StateActive.Content.Color1 = Color.White;
-            UsernameTextbox.StateActive.Content.Font = new Font("Inria Sans", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UsernameTextbox.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             UsernameTextbox.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 10;
             UsernameTextbox.Text = "Username";
+            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             // 
             // kryptonPanel1
             // 
@@ -158,10 +159,10 @@
             // 
             kryptonLabel1.Location = new Point(576, 883);
             kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(376, 36);
+            kryptonLabel1.Size = new Size(395, 33);
             kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
             kryptonLabel1.StateCommon.ShortText.Color2 = Color.White;
-            kryptonLabel1.StateCommon.ShortText.Font = new Font("Inria Sans Light", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel1.TabIndex = 14;
             kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
             kryptonLabel1.Click += kryptonLabel1_Click;
@@ -170,10 +171,10 @@
             // 
             BuatAkunLabel.Location = new Point(943, 513);
             BuatAkunLabel.Name = "BuatAkunLabel";
-            BuatAkunLabel.Size = new Size(123, 36);
+            BuatAkunLabel.Size = new Size(128, 33);
             BuatAkunLabel.StateCommon.ShortText.Color1 = Color.White;
             BuatAkunLabel.StateCommon.ShortText.Color2 = Color.White;
-            BuatAkunLabel.StateCommon.ShortText.Font = new Font("Inria Sans Light", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BuatAkunLabel.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BuatAkunLabel.TabIndex = 13;
             BuatAkunLabel.Values.Text = "Buat Akun";
             BuatAkunLabel.Click += BuatAkunLabel_Click;
@@ -194,7 +195,7 @@
             kryptonTextBox1.Location = new Point(465, 451);
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.PasswordChar = '*';
-            kryptonTextBox1.Size = new Size(601, 56);
+            kryptonTextBox1.Size = new Size(601, 54);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
             kryptonTextBox1.StateActive.Border.Color1 = Color.White;
             kryptonTextBox1.StateActive.Border.Color2 = Color.White;
@@ -202,7 +203,7 @@
             kryptonTextBox1.StateActive.Border.Rounding = 20F;
             kryptonTextBox1.StateActive.Border.Width = 4;
             kryptonTextBox1.StateActive.Content.Color1 = Color.White;
-            kryptonTextBox1.StateActive.Content.Font = new Font("Inria Sans", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;

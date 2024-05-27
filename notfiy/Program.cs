@@ -1,7 +1,9 @@
 namespace notfiy
 {
     using Core;
-    using notfiy.Views.Login;    
+    using notfiy.Views.Login;
+    using notfiy.Views.Todolist;
+
     internal static class Program
     {
         /// <summary>
@@ -19,8 +21,9 @@ namespace notfiy
             MainForm mainForm = new MainForm();
 
             SystemSingleton.Instance.ViewManager.MainForm = mainForm;
-            mainForm.Controls.Add(new LoginControl());
-            
+            //mainForm.Controls.Add(new LoginControl());
+            mainForm.Controls.Add(new TodolistControl());
+
             Application.Run(mainForm);
         }
     }

@@ -94,5 +94,10 @@ namespace notfiy.Views.Login
         {
 
         }
+
+        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
