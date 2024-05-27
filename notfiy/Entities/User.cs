@@ -12,6 +12,6 @@ namespace notfiy.Entities
         public string Username;
         public string Password;
         public string Email;
-        public string Timestamp;
+        public string TimeCreated;
     }
 }

@@ -11,11 +11,11 @@ namespace notfiy.Models
 {
     class TodoListModel : Model
     {
-        public List<TodoList> GetAll()
+        public List<TodoList> GetAllTodoList()
         {
             List<TodoList> todoLists = new List<TodoList>();
               
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("select * from todolists", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             while (reader.Read())
             {
@@ -23,7 +23,10 @@ namespace notfiy.Models
                 {
                     IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist")),
                     TodoListName = reader.GetString(reader.GetOrdinal("todolist_name")),
-                    Timestamp = reader.GetString(reader.GetOrdinal("timestamp"))
+                    TimeCreated = reader.GetString(reader.GetOrdinal("time_created")),
+                    IdUser = reader.GetInt32(reader.GetOrdinal("id_user")),
+                    IdTodoListStatus = reader.GetInt32(reader.GetOrdinal("id_todolist_status")),
+                    IdPinnedItem = reader.GetInt32(reader.GetOrdinal("id_pinned_item"))
                 };
 
                 todoLists.Add(todoList);
