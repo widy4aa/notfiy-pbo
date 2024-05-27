@@ -1,17 +1,17 @@
-﻿using System;
+﻿using notfiy.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace notfiy.Entities
 {
-    internal class User
+    internal class TodoList : IEntity
     {
-        public int IdUser;
-        public string Username;
-        public string Password;
-        public string Email;
+        public int IdTodoList;
+        public string TodoListName;
         public string Timestamp;
     }
 }

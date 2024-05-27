@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace notfiy.Models
+namespace notfiy.Entities
 {
-    internal class UserModel
+    internal class Note
     {
-        public UserModel()
-        {
-            
-        }
     }
 }

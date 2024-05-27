@@ -16,6 +16,5 @@ namespace notfiy.Core
             NpgsqlConnection = SystemSingleton.Instance.NpgsqlConnection;
         }
 
-        public abstract List<Entity> GetAll();
     }
 }
