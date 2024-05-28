@@ -21,11 +21,13 @@ namespace notfiy.Models
             {
                 while (reader.Read())
                 {
-                    User user = new User();
-                    user.IdUser = (int)reader["id_users"];
-                    user.Username = (string)reader["username"];
-                    user.Password = (string)reader["password"];
-                    user.TimeCreated = (string)reader["time_created"];
+                    User user = new User(){
+                        IdUser = (int)reader["id_users"],
+                        Username = (string)reader["username"],
+                        Password = (string)reader["password"],
+                        Email = (string)reader["email"],
+                        TimeCreated = (string)reader["time_created"]
+                    };
                     users.Add(user);
                 }
             }
@@ -49,6 +51,7 @@ namespace notfiy.Models
                             IdUser = (int)reader["id_users"],
                             Username = (string)reader["username"],
                             Password = (string)reader["password"],
+                            Email = (string)reader["email"],
                             TimeCreated = (string)reader["time_created"]
                         };
                     }

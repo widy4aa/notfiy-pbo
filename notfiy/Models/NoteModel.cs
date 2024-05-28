@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Npgsql;
 using notfiy.Entities;
 using notfiy.Core;
@@ -13,22 +14,22 @@ namespace notfiy.Models
 
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM notes", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
-            //ListNotes.Clear();
             while (reader.Read())
             {
-                Note notes = new Note
+                Note note = new Note
                 {
                     IdNote = (int)reader["id_note"],
                     NoteName = (string)reader["note_name"],
                     Content = (string)reader["content"],
-                    ImageFileName = (string)reader["image_filename"],
+                    ImageFileName = reader["image_filename"] as string,
                     TimeCreated = (string)reader["time_created"],
                     IdUser = (int)reader["id_user"],
                     IdLabel = (int)reader["id_label"],
                     IdPinnedItem = (int)reader["id_pinned_item"],
                     IdNoteStatus = (int)reader["id_note_status"]
                 };
-                ListNotes.Add(notes);
+
+                ListNotes.Add(note);
             }
             return ListNotes;
         }
@@ -41,10 +42,9 @@ namespace notfiy.Models
                 string insert = @"INSERT INTO notes (note_name, content, image_filename, time_created, id_user, id_label, id_pinned_item, id_note_status) VALUES (@note_name, @content, @image_filename, @time_created, @id_user, @id_label, @id_pinned_item, @id_note_status)";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
                 {
-                    cmd.Parameters.AddWithValue("@id_note", note.IdNote);
                     cmd.Parameters.AddWithValue("@note_name", note.NoteName);
                     cmd.Parameters.AddWithValue("@content", note.Content);
-                    cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName);
+                    cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@time_created", note.TimeCreated);
                     cmd.Parameters.AddWithValue("@id_user", note.IdUser);
                     cmd.Parameters.AddWithValue("@id_label", note.IdLabel);
@@ -56,7 +56,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Insert fail! Error: " + ex.Message);
+                MessageBox.Show("Insert failed! Error: " + ex.Message);
                 return false;
             }
             finally
@@ -70,13 +70,13 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string update = @"UPDATE notes SET note = @note_name, content = @content, image_filename = @image_filename, time_created = @time_created, id_user = @id_user, id_label = @id_label, id_pinned_item = @id_pinned_item, id_note_status = @id_note_status WHERE id_note = @id_note";
+                string update = @"UPDATE notes SET note_name = @note_name, content = @content, image_filename = @image_filename, time_created = @time_created, id_user = @id_user, id_label = @id_label, id_pinned_item = @id_pinned_item, id_note_status = @id_note_status WHERE id_note = @id_note";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {
                     cmd.Parameters.AddWithValue("@id_note", note.IdNote);
                     cmd.Parameters.AddWithValue("@note_name", note.NoteName);
                     cmd.Parameters.AddWithValue("@content", note.Content);
-                    cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName);
+                    cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@time_created", note.TimeCreated);
                     cmd.Parameters.AddWithValue("@id_user", note.IdUser);
                     cmd.Parameters.AddWithValue("@id_label", note.IdLabel);
@@ -88,7 +88,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("update fail! Error: " + ex.Message);
+                MessageBox.Show("Update failed! Error: " + ex.Message);
                 return false;
             }
             finally
@@ -99,12 +99,11 @@ namespace notfiy.Models
 
         public bool DeleteNote(int idNote)
         {
-            
             try
             {
                 Connection.Open();
-                string insert = @"DELETE FROM notes WHERE id_note = @id_note";
-                using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
+                string delete = @"DELETE FROM notes WHERE id_note = @id_note";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(delete, Connection))
                 {
                     cmd.Parameters.AddWithValue("@id_note", idNote);
                     int rows = cmd.ExecuteNonQuery();
@@ -113,7 +112,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Delete fail! Error: " + ex.Message);
+                MessageBox.Show("Delete failed! Error: " + ex.Message);
                 return false;
             }
             finally
