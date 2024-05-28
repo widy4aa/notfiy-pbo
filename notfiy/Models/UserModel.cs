@@ -15,8 +15,6 @@ namespace notfiy.Models
         public List<User> GetAllUsers()
         {
             var users = new List<User>();
-
-
             Connection.Open();
             var command = new NpgsqlCommand("SELECT * FROM users", Connection);
             using (var reader = command.ExecuteReader())
