@@ -18,23 +18,19 @@ namespace notfiy.Models
 
 
             Connection.Open();
-            var command = new NpgsqlCommand("SELECT id, name, email, password FROM users", Connection);
+            var command = new NpgsqlCommand("SELECT * FROM users", Connection);
             using (var reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    users.Add(new User
-                    {
-                        //Id = reader.GetInt32(0),
-                        //Name = reader.GetString(1),
-                        //Email = reader.GetString(2),
-                        //Password = reader.GetString(3)
-                        // test
-                    });
+                    User user = new User();
+                    user.IdUser = (int)reader["id_users"];
+                    user.Username = (string)reader["username"];
+                    user.Password = (string)reader["password"];
+                    user.TimeCreated = (string)reader["users_time_created"];
+                    users.Add(user);
                 }
             }
-            
-
             return users;
         }
 
