@@ -3,6 +3,6 @@
     public class PinnedItem
     {
         public int IdPinnedItem { get; set; }
-        public string PinnedItemName { get; set; }
+        public required string PinnedItemName { get; set; }
     }
 }

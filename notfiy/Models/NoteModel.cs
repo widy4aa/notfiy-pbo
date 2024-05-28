@@ -99,6 +99,7 @@ namespace notfiy.Models
 
         public bool DeleteNote(int idNote)
         {
+            
             try
             {
                 Connection.Open();
