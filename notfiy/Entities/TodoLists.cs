@@ -1,6 +1,6 @@
 ﻿namespace notfiy.Entities
 {
-    public class TodoList
+    public class TodoLists
     {
         public int IdTodoList { get; set; }
         public string TodoListName { get; set; }
