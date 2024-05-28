@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using notfiy.Core;
 using notfiy.Entities;
 using Npgsql;
@@ -32,8 +29,136 @@ namespace notfiy.Models
                 todoLists.Add(todoList);
             }
 
-
             return todoLists;
+        }
+
+        public bool CreateTodoList(TodoList todoList)
+        {
+            try
+            {
+                Connection.Open();
+                string insert = @"INSERT INTO todolists (todolist_name, time_created, id_user, id_todolist_status, id_pinned_item) VALUES 
+                (@todolist_name, @time_created, @id_user, @id_todolist_status, @id_pinned_item)";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
+                {
+                    cmd.Parameters.AddWithValue("todolist_name", todoList.TodoListName);
+                    cmd.Parameters.AddWithValue("time_created", todoList.TimeCreated);
+                    cmd.Parameters.AddWithValue("id_user", todoList.IdUser);
+                    cmd.Parameters.AddWithValue("id_todolist_status", todoList.IdTodoListStatus);
+                    cmd.Parameters.AddWithValue("id_pinned_item", todoList.IdPinnedItem);
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Insert failed! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public bool DeleteTodoList(int idTodoList)
+        {
+            try
+            {
+                Connection.Open();
+                string delete = @"DELETE FROM todolists WHERE id_todolist = @id_todolist";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(delete, Connection))
+                {
+                    cmd.Parameters.AddWithValue("id_todolist", idTodoList);
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Delete failed! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public bool UpdateTodoList(TodoList todoList)
+        {
+            try
+            {
+                Connection.Open();
+                string update = @"UPDATE todolists SET 
+                                  todolist_name = @todolist_name, 
+                                  time_created = @time_created, 
+                                  id_user = @id_user, 
+                                  id_todolist_status = @id_todolist_status, 
+                                  id_pinned_item = @id_pinned_item 
+                                  WHERE id_todolist = @id_todolist";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
+                {
+                    cmd.Parameters.AddWithValue("todolist_name", todoList.TodoListName);
+                    cmd.Parameters.AddWithValue("time_created", todoList.TimeCreated);
+                    cmd.Parameters.AddWithValue("id_user", todoList.IdUser);
+                    cmd.Parameters.AddWithValue("id_todolist_status", todoList.IdTodoListStatus);
+                    cmd.Parameters.AddWithValue("id_pinned_item", todoList.IdPinnedItem);
+                    cmd.Parameters.AddWithValue("id_todolist", todoList.IdTodoList);
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Update failed! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public TodoList ?GetTodoList(int idTodoList)
+        {
+            try
+            {
+                Connection.Open();
+                string query = @"SELECT * FROM todolists WHERE id_todolist = @id_todolist";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, Connection))
+                {
+                    cmd.Parameters.AddWithValue("id_todolist", idTodoList);
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new TodoList
+                            {
+                                IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist")),
+                                TodoListName = reader.GetString(reader.GetOrdinal("todolist_name")),
+                                TimeCreated = reader.GetString(reader.GetOrdinal("time_created")),
+                                IdUser = reader.GetInt32(reader.GetOrdinal("id_user")),
+                                IdTodoListStatus = reader.GetInt32(reader.GetOrdinal("id_todolist_status")),
+                                IdPinnedItem = reader.GetInt32(reader.GetOrdinal("id_pinned_item"))
+                            };
+                        }
+                        else
+                        {
+                            return null; // Return null if no record is found
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Retrieval failed! Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                Connection.Close();
+            }
         }
     }
 }

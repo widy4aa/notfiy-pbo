@@ -25,16 +25,16 @@ namespace notfiy.Models
                     user.IdUser = (int)reader["id_users"];
                     user.Username = (string)reader["username"];
                     user.Password = (string)reader["password"];
-                    user.TimeCreated = (string)reader["users_time_created"];
+                    user.TimeCreated = (string)reader["time_created"];
                     users.Add(user);
                 }
             }
             return users;
         }
 
-        public User GetUsersByID(int id)
+        public User ?GetUsersByID(int id)
         {
-            User user = null;
+            User ?user = null;
             Connection.Open();
             var command = new NpgsqlCommand("SELECT * FROM users WHERE id_user = @id", Connection);
             using (command)
@@ -49,7 +49,7 @@ namespace notfiy.Models
                             IdUser = (int)reader["id_users"],
                             Username = (string)reader["username"],
                             Password = (string)reader["password"],
-                            TimeCreated = (string)reader["users_time_created"]
+                            TimeCreated = (string)reader["time_created"]
                         };
                     }
                 }

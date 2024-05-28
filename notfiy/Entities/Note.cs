@@ -3,12 +3,13 @@
     public class Note
     {
         public int IdNote { get; set; }
-        public string NoteName {  get; set; }
+        public required string NoteName {  get; set; }
+        public required string Content { get; set; }
         public string ImageFileName { get; set; }
-        public string NoteTimeCreated {  get; set; }
-        public int IdUsers {  get; set; }
-        public int IdLabels {  get; set; }
-        public int IdPinnedItems { get; set; }
+        public required string TimeCreated {  get; set; }
+        public int IdUser {  get; set; }
+        public int IdLabel {  get; set; }
+        public int IdPinnedItem { get; set; }
         public  int IdNoteStatus {  get; set; }
     }
 }
