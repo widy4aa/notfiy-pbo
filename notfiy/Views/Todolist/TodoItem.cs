@@ -43,5 +43,11 @@ namespace notfiy.Views.Todolist
         {
 
         }
+
+        private void TodoItem_Click(object sender, EventArgs e)
+        {
+            TodoDetail detail = new TodoDetail();
+            NotifyViewManager.MoveView(detail);
+        }
     }
 }

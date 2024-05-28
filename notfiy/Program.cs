@@ -28,7 +28,7 @@ namespace notfiy
             //
 
 
-            SystemSingleton.Instance.EnableDatabase($"Host={host};Username={username};Password={password};Database={dbName};");
+            //SystemSingleton.Instance.EnableDatabase($"Host={host};Username={username};Password={password};Database={dbName};");
             SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
             //mainForm.Controls.Add(new LoginControl());

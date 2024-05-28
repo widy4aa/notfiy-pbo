@@ -150,9 +150,9 @@
             // 
             // kryptonButton1
             // 
-            kryptonButton1.Location = new Point(246, 12);
+            kryptonButton1.Location = new Point(246, 3);
             kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(22, 25);
+            kryptonButton1.Size = new Size(28, 34);
             kryptonButton1.StateCommon.Back.Color1 = Color.White;
             kryptonButton1.StateCommon.Back.Color2 = Color.White;
             kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
@@ -165,9 +165,9 @@
             // 
             // kryptonButton2
             // 
-            kryptonButton2.Location = new Point(212, 12);
+            kryptonButton2.Location = new Point(208, 3);
             kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(23, 24);
+            kryptonButton2.Size = new Size(32, 33);
             kryptonButton2.StateCommon.Back.Color1 = Color.White;
             kryptonButton2.StateCommon.Back.Color2 = Color.White;
             kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
@@ -190,6 +190,8 @@
             Cursor = Cursors.Hand;
             Name = "TodoItem";
             Size = new Size(298, 266);
+            //Load += TodoItem_Click;
+            Click += TodoItem_Click;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);

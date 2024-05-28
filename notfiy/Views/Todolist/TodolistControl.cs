@@ -68,7 +68,7 @@ namespace notfiy.Views.Todolist
 
         private void TodolistControl_Load(object sender, EventArgs e)
         {
-
+            flowLayoutPanel1.AutoScroll = true;
         }
     }
 }
