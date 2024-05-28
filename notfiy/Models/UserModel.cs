@@ -32,6 +32,30 @@ namespace notfiy.Models
             return users;
         }
 
+        public User GetUsersByID(int id)
+        {
+            User user = null;
+            Connection.Open();
+            var command = new NpgsqlCommand("SELECT * FROM users WHERE id_user = @id", Connection);
+            using (command)
+            {
+                command.Parameters.AddWithValue("@id",id);
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        user = new User
+                        {
+                            IdUser = (int)reader["id_users"],
+                            Username = (string)reader["username"],
+                            Password = (string)reader["password"],
+                            TimeCreated = (string)reader["users_time_created"]
+                        };
+                    }
+                }
+            }
+            return user;
+        }
 
     }
 }
