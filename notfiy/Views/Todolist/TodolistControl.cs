@@ -60,5 +60,15 @@ namespace notfiy.Views.Todolist
         {
 
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TodolistControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

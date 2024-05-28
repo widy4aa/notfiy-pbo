@@ -41,7 +41,7 @@ namespace notfiy.Models
                 using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
                 {
                     cmd.Parameters.AddWithValue("@id_note", note.IdNote);
-                    cmd.Parameters.AddWithValue("@note", note.Note);
+                    cmd.Parameters.AddWithValue("@note", note.NoteName);
                     cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName);
                     cmd.Parameters.AddWithValue("@note_time_created", note.NoteTimeCreated);
                     cmd.Parameters.AddWithValue("@id_users", note.IdUsers);
@@ -72,7 +72,7 @@ namespace notfiy.Models
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {
                     cmd.Parameters.AddWithValue("@id_note", note.IdNote);
-                    cmd.Parameters.AddWithValue("@note", note.Note);
+                    cmd.Parameters.AddWithValue("@note", note.NoteName);
                     cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName);
                     cmd.Parameters.AddWithValue("@note_time_created", note.NoteTimeCreated);
                     cmd.Parameters.AddWithValue("@id_users", note.IdUsers);
