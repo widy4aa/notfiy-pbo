@@ -1,9 +1,9 @@
 ﻿namespace notfiy.Entities
 {
-    public class Notes
+    public class Note
     {
         public int IdNote { get; set; }
-        public string Note {  get; set; }
+        public string NoteName {  get; set; }
         public string ImageFileName { get; set; }
         public string NoteTimeCreated {  get; set; }
         public int IdUsers {  get; set; }

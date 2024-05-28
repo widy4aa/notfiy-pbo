@@ -7,19 +7,19 @@ namespace notfiy.Models
 {
     internal class NoteModel : Model
     {
-        public List<Notes> GetAllNote()
+        public List<Note> GetAllNote()
         {
-            List<Notes> ListNotes = new List<Notes>();
+            List<Note> ListNotes = new List<Note>();
 
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM notes", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             //ListNotes.Clear();
             while (reader.Read())
             {
-                Notes notes = new Notes
+                Note notes = new Note
                 {
                     IdNote = (int)reader["id_note"],
-                    Note = (string)reader["note"],
+                    NoteName = (string)reader["note"],
                     ImageFileName = (string)reader["image_filename"],
                     NoteTimeCreated = (string)reader["note_time_created"],
                     IdUsers = (int)reader["id_users"],
@@ -32,7 +32,7 @@ namespace notfiy.Models
             return ListNotes;
         }
 
-        public bool CreateNote(Notes note)
+        public bool CreateNote(Note note)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace notfiy.Models
             }
         }
 
-        public bool UpdateNote(Notes note)
+        public bool UpdateNote(Note note)
         {
             try
             {

@@ -1,6 +1,6 @@
 ﻿namespace notfiy.Entities
 {
-    public class PinnedItems
+    public class PinnedItem
     {
         public int IdPinnedItem { get; set; }
         public string PinnedItemName { get; set; }
