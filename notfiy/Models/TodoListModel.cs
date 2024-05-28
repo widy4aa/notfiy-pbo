@@ -11,15 +11,15 @@ namespace notfiy.Models
 {
     class TodoListModel : Model
     {
-        public List<TodoList> GetAllTodoList()
+        public List<TodoLists> GetAllTodoList()
         {
-            List<TodoList> todoLists = new List<TodoList>();
+            List<TodoLists> todoLists = new List<TodoLists>();
               
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand("select * from todolists", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             while (reader.Read())
             {
-                TodoList todoList = new TodoList
+                TodoLists todoList = new TodoLists
                 {
                     IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist")),
                     TodoListName = reader.GetString(reader.GetOrdinal("todolist_name")),
