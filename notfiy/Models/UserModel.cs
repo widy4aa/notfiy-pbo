@@ -33,9 +33,9 @@ namespace notfiy.Models
             return users;
         }
 
-        public User GetUsersById(int id)
+        public User ?GetUsersById(int id)
         {
-            User user = null;
+            User ?user = null;
             var command = new NpgsqlCommand("SELECT * FROM users WHERE id_user = @id", Connection);
             using (command)
             {
@@ -58,33 +58,34 @@ namespace notfiy.Models
             return user;
         }
 
-        public bool CreateUser(User user)
+        public int CreateUser(User user)
         {
             try
             {
                 Connection.Open();
-                string QueryInsert = @"INSERT INTO users(id_users,username,password,email,time_created) VALUES (@id_users,@username,@password,@email,@time_created)";
-                using(NpgsqlCommand command = new NpgsqlCommand(QueryInsert,Connection))
+                string QueryInsert = @"INSERT INTO users(username,password,email,time_created) VALUES (@username,@password,@email,@time_created)
+                                        RETURNING id_user";
+                using(NpgsqlCommand command = new NpgsqlCommand(QueryInsert, Connection))
                 {
-                    command.Parameters.AddWithValue("id_users",user.IdUser);
-                    command.Parameters.AddWithValue("username",user.Username);
-                    command.Parameters.AddWithValue("password",user.Password);
-                    command.Parameters.AddWithValue("email",user.Email);
+                    command.Parameters.AddWithValue("username", user.Username);
+                    command.Parameters.AddWithValue("password", user.Password);
+                    command.Parameters.AddWithValue("email", user.Email);
                     command.Parameters.AddWithValue("time_created", user.TimeCreated);
-                    int row = command.ExecuteNonQuery();
-                    return row > 1;
+                    object ?result = command.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 0;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Gagal Membuat User! Error: " + ex.Message);
-                return false;
+                return 0;
             }
             finally
             {
                 Connection.Close();
             }
         }
+
 
         public bool DeleteUser(int IdUser)
         {

@@ -70,6 +70,7 @@
             kryptonCheckBox1.Location = new Point(3, 35);
             kryptonCheckBox1.Name = "kryptonCheckBox1";
             kryptonCheckBox1.Size = new Size(163, 30);
+            kryptonCheckBox1.StateNormal.ShortText.Color1 = Color.Black;
             kryptonCheckBox1.TabIndex = 7;
             kryptonCheckBox1.Values.Text = "kryptonCheckBox1";
             // 
@@ -93,6 +94,7 @@
             kryptonLabel1.Location = new Point(3, 3);
             kryptonLabel1.Name = "kryptonLabel1";
             kryptonLabel1.Size = new Size(153, 26);
+            kryptonLabel1.StateNormal.ShortText.Color1 = Color.Black;
             kryptonLabel1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel1.TabIndex = 11;
             kryptonLabel1.Values.Text = "Judul Pekerjaan";
@@ -111,6 +113,7 @@
             kryptonCheckBox2.Location = new Point(3, 71);
             kryptonCheckBox2.Name = "kryptonCheckBox2";
             kryptonCheckBox2.Size = new Size(163, 30);
+            kryptonCheckBox2.StateNormal.ShortText.Color1 = Color.Black;
             kryptonCheckBox2.TabIndex = 8;
             kryptonCheckBox2.Values.Text = "kryptonCheckBox2";
             // 
@@ -128,6 +131,7 @@
             kryptonCheckBox3.Location = new Point(3, 107);
             kryptonCheckBox3.Name = "kryptonCheckBox3";
             kryptonCheckBox3.Size = new Size(163, 30);
+            kryptonCheckBox3.StateNormal.ShortText.Color1 = Color.Black;
             kryptonCheckBox3.TabIndex = 9;
             kryptonCheckBox3.Values.Text = "kryptonCheckBox3";
             // 
@@ -145,6 +149,7 @@
             kryptonCheckBox4.Location = new Point(3, 143);
             kryptonCheckBox4.Name = "kryptonCheckBox4";
             kryptonCheckBox4.Size = new Size(163, 30);
+            kryptonCheckBox4.StateNormal.ShortText.Color1 = Color.Black;
             kryptonCheckBox4.TabIndex = 10;
             kryptonCheckBox4.Values.Text = "kryptonCheckBox4";
             // 
@@ -190,7 +195,6 @@
             Cursor = Cursors.Hand;
             Name = "TodoItem";
             Size = new Size(298, 266);
-            //Load += TodoItem_Click;
             Click += TodoItem_Click;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();

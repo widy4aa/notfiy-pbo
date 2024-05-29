@@ -22,8 +22,8 @@ namespace notfiy.Models
                     TodoListName = reader.GetString(reader.GetOrdinal("todolist_name")),
                     TimeCreated = reader.GetString(reader.GetOrdinal("time_created")),
                     IdUser = reader.GetInt32(reader.GetOrdinal("id_user")),
-                    IdTodoListStatus = reader.GetInt32(reader.GetOrdinal("id_todolist_status")),
-                    IdPinnedItem = reader.GetInt32(reader.GetOrdinal("id_pinned_item"))
+                    IdStatus = reader.GetInt32(reader.GetOrdinal("id_status")),
+                    Pinned = reader.GetInt32(reader.GetOrdinal("pinned"))
                 };
 
                 todoLists.Add(todoList);
@@ -32,34 +32,35 @@ namespace notfiy.Models
             return todoLists;
         }
 
-        public bool CreateTodoList(TodoList todoList)
+        public int CreateTodoList(TodoList todoList)
         {
             try
             {
                 Connection.Open();
-                string insert = @"INSERT INTO todolists (todolist_name, time_created, id_user, id_todolist_status, id_pinned_item) VALUES 
-                (@todolist_name, @time_created, @id_user, @id_todolist_status, @id_pinned_item)";
+                string insert = @"INSERT INTO todolists (todolist_name, time_created, id_user, id_status, pinned) VALUES 
+                (@todolist_name, @time_created, @id_user, @id_status, @pinned) RETURNING id_todolist";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
                 {
                     cmd.Parameters.AddWithValue("todolist_name", todoList.TodoListName);
                     cmd.Parameters.AddWithValue("time_created", todoList.TimeCreated);
                     cmd.Parameters.AddWithValue("id_user", todoList.IdUser);
-                    cmd.Parameters.AddWithValue("id_todolist_status", todoList.IdTodoListStatus);
-                    cmd.Parameters.AddWithValue("id_pinned_item", todoList.IdPinnedItem);
-                    int rows = cmd.ExecuteNonQuery();
-                    return rows > 0;
+                    cmd.Parameters.AddWithValue("id_status", todoList.IdStatus);
+                    cmd.Parameters.AddWithValue("pinned", todoList.Pinned);
+                    object ?result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 0;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Insert failed! Error: " + ex.Message);
-                return false;
+                return 0;
             }
             finally
             {
                 Connection.Close();
             }
         }
+
 
         public bool DeleteTodoList(int idTodoList)
         {
@@ -94,16 +95,16 @@ namespace notfiy.Models
                                   todolist_name = @todolist_name, 
                                   time_created = @time_created, 
                                   id_user = @id_user, 
-                                  id_todolist_status = @id_todolist_status, 
-                                  id_pinned_item = @id_pinned_item 
+                                  id_status = @id_status, 
+                                  pinned = @pinned 
                                   WHERE id_todolist = @id_todolist";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {
                     cmd.Parameters.AddWithValue("todolist_name", todoList.TodoListName);
                     cmd.Parameters.AddWithValue("time_created", todoList.TimeCreated);
                     cmd.Parameters.AddWithValue("id_user", todoList.IdUser);
-                    cmd.Parameters.AddWithValue("id_todolist_status", todoList.IdTodoListStatus);
-                    cmd.Parameters.AddWithValue("id_pinned_item", todoList.IdPinnedItem);
+                    cmd.Parameters.AddWithValue("id_status", todoList.IdStatus);
+                    cmd.Parameters.AddWithValue("pinned", todoList.Pinned);
                     cmd.Parameters.AddWithValue("id_todolist", todoList.IdTodoList);
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
@@ -139,8 +140,8 @@ namespace notfiy.Models
                                 TodoListName = reader.GetString(reader.GetOrdinal("todolist_name")),
                                 TimeCreated = reader.GetString(reader.GetOrdinal("time_created")),
                                 IdUser = reader.GetInt32(reader.GetOrdinal("id_user")),
-                                IdTodoListStatus = reader.GetInt32(reader.GetOrdinal("id_todolist_status")),
-                                IdPinnedItem = reader.GetInt32(reader.GetOrdinal("id_pinned_item"))
+                                IdStatus = reader.GetInt32(reader.GetOrdinal("id_status")),
+                                Pinned = reader.GetInt32(reader.GetOrdinal("pinned"))
                             };
                         }
                         else

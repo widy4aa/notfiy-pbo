@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using notfiy.Entities;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,9 @@ namespace notfiy.Core
     internal class SystemSingleton
     {
         private static SystemSingleton _instance;
-        
         public NpgsqlConnection NpgsqlConnection;
-
         public ViewManager ViewManager;
+        public User UserLoggedIn;
         private SystemSingleton() 
         {
             ViewManager = new ViewManager();

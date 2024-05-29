@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace notfiy.Controllers
 {
-    class NoteController
+    class ImageController
     {
-        public bool CreateNote(){
-            
-        }
+        
     }
 }
