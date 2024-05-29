@@ -48,6 +48,7 @@
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -346,7 +347,7 @@
             kryptonTextBox1.Location = new Point(93, 169);
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.ReadOnly = true;
-            kryptonTextBox1.Size = new Size(218, 48);
+            kryptonTextBox1.Size = new Size(218, 46);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(61, 44, 94);
             kryptonTextBox1.StateActive.Border.Color1 = Color.Black;
             kryptonTextBox1.StateActive.Border.Color2 = Color.Black;
@@ -365,14 +366,27 @@
             kryptonTextBox1.StateNormal.Border.Rounding = 20F;
             kryptonTextBox1.StateNormal.Border.Width = 1;
             kryptonTextBox1.TabIndex = 16;
-            kryptonTextBox1.Text = "To do List";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(61, 44, 94);
+            label1.Font = new Font("Microsoft Sans Serif", 17.25F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(144, 178);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 29);
+            label1.TabIndex = 17;
+            label1.Text = "To do List";
+            label1.Click += label1_Click;
             // 
             // TodolistControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(label1);
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel2);
@@ -412,5 +426,6 @@
         private TodoItem todoItem9;
         private TodoItem todoItem10;
         public FlowLayoutPanel flowLayoutPanel1;
+        private Label label1;
     }
 }

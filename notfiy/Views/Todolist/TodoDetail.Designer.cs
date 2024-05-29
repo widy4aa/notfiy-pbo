@@ -47,6 +47,7 @@
             BtnBack = new Krypton.Toolkit.KryptonButton();
             kryptonButton5 = new Krypton.Toolkit.KryptonButton();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            label1 = new Label();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
@@ -399,8 +400,19 @@
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 17;
-            kryptonTextBox1.Text = "Todolist";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(61, 44, 94);
+            label1.Font = new Font("Microsoft Sans Serif", 17.25F);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(374, 158);
+            label1.Name = "label1";
+            label1.Size = new Size(101, 29);
+            label1.TabIndex = 19;
+            label1.Text = "Todolist";
             // 
             // TodoDetail
             // 
@@ -408,6 +420,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(label1);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonButton5);
             Controls.Add(BtnBack);
@@ -450,5 +463,6 @@
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox3;
+        private Label label1;
     }
 }
