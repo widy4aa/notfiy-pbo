@@ -8,39 +8,34 @@ namespace notfiy.Helpers
 {
     class Image
     {
-        static string apiKey = "6d207e02198a847aa98d0a2a901485a5";
-        static string apiUrl = "https://freeimage.host/api/1/upload";
+        static string apiUrl = "https://dc-img-tranceiver.neiaozora.my.id/";
 
-        public static async Task<string> UploadImage(string imageUrl)
+        public static async Task<string> ?UploadImage(string imageUrl)
         {
             using (HttpClient client = new HttpClient())
             using (var formData = new MultipartFormDataContent())
             {
-                // Add API key and action
-                formData.Add(new StringContent(apiKey), "key");
-                formData.Add(new StringContent("upload"), "action");
-
-                // Read the image file
+                // Baca file gambar
                 byte[] imageBytes = File.ReadAllBytes(imageUrl);
                 var imageContent = new ByteArrayContent(imageBytes);
 
-                // Add image content to the form data
+                // Tambahkan konten gambar ke form data
                 formData.Add(imageContent, "source", Path.GetFileName(imageUrl));
 
-                // Send POST request
+                // Kirim permintaan POST
                 HttpResponseMessage response = await client.PostAsync(apiUrl, formData);
 
-                // Check if upload was successful
+                // Periksa apakah unggahan berhasil
                 if (response.IsSuccessStatusCode)
                 {
                     string responseContent = await response.Content.ReadAsStringAsync();
                     dynamic responseData = JsonConvert.DeserializeObject(responseContent);
-                    string uploadedImageUrl = responseData.image.url;
+                    string uploadedImageUrl = responseData["image-link"];
                     return uploadedImageUrl;
                 }
                 else
                 {
-                    Console.WriteLine("Failed to upload image. Status code: " + response.StatusCode);
+                    Console.WriteLine("Gagal mengunggah gambar. Kode status: " + response.StatusCode);
                     return null;
                 }
             }
@@ -50,10 +45,10 @@ namespace notfiy.Helpers
         {
             using (HttpClient client = new HttpClient())
             {
-                // Download image data
+                // Unduh data gambar
                 byte[] imageData = await client.GetByteArrayAsync(imageUrl);
 
-                // Save image to file
+                // Simpan gambar ke file
                 File.WriteAllBytes(targetFileOutput, imageData);
             }
         }
