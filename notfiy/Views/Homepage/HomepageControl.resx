@@ -126,14 +126,6 @@
         gg==
 </value>
   </data>
-  <data name="kryptonButton1.StateNormal.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAFdJREFUWEft1bENwDAMxEBvEm8W77+ELANpnY7FAzzge1bSqDAG0wymGUyLDH6T
-        NiTpX5+KmTQ/Hc1gmsE0g2kn+Ena9+8k6aZPxUqan45mMM1gmsGsqg1rh6onkdgKaAAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
   <data name="kryptonButton1.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

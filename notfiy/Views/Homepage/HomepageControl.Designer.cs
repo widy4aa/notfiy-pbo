@@ -84,7 +84,7 @@
             kryptonButton1.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(51, 15, 126);
             kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateNormal.Back.Image = (Image)resources.GetObject("kryptonButton1.StateNormal.Back.Image");
+            kryptonButton1.StateNormal.Back.Image = Properties.Resources.notif_icon;
             kryptonButton1.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             kryptonButton1.StateNormal.Border.Color1 = Color.FromArgb(51, 15, 126);
             kryptonButton1.StateNormal.Border.Color2 = Color.FromArgb(51, 15, 126);

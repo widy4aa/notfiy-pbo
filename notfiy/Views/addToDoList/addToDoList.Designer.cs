@@ -1,6 +1,6 @@
-﻿namespace notfiy.Views.addNoteToDoList
+﻿namespace notfiy.Views.addToDoList
 {
-    partial class Profiles
+    partial class addToDoList
     {
         /// <summary> 
         /// Required designer variable.

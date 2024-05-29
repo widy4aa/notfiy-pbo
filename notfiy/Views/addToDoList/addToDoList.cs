@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace notfiy.Views.addNoteToDoList
+namespace notfiy.Views.addToDoList
 {
-    public partial class Profiles : UserControl
+    public partial class addToDoList : UserControl
     {
-        public Profiles()
+        public addToDoList()
         {
             InitializeComponent();
         }
