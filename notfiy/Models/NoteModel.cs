@@ -34,7 +34,7 @@ namespace notfiy.Models
             return ListNotes;
         }
 
-        public Note GetNoteById(int idNote)
+        public Note ?GetNoteById(int idNote)
         {
             try
             {

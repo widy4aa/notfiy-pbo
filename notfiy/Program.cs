@@ -16,25 +16,28 @@ namespace notfiy
         // see https://aka.ms/applicationconfiguration.
 
 
-            ApplicationConfiguration.Initialize();
+        ApplicationConfiguration.Initialize();
 
-            MainForm mainForm = new MainForm();
+        MainForm mainForm = new MainForm();
 
-            // Tempat Konfigurasi Database
-            string host = "";
-            string username = "";
-            string password = "";
-            string dbName = "";
-            //
+        // Tempat Konfigurasi Database
+        string host = "pg-notify-pbo-pbo-notify.i.aivencloud.com";
+        string port = "15854";
+        string username = "avnadmin";
+        string password = "AVNS_IPBEyWnremMh1XJk-Oi";
+        string database = "defaultdb";
+        string sslMode = "Require";
+        string trustServerCertificate = "true";
 
+        string connectionString = $"Host={host};Port={port};Username={username};Password={password};Database={database};SSL Mode={sslMode};Trust Server Certificate={trustServerCertificate}";
 
-            //SystemSingleton.Instance.EnableDatabase($"Host={host};Username={username};Password={password};Database={dbName};");
-            SystemSingleton.Instance.ViewManager.MainForm = mainForm;
+        SystemSingleton.Instance.EnableDatabase(connectionString);
+        SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
-            //mainForm.Controls.Add(new LoginControl());
-            mainForm.Controls.Add(new TodolistControl());
+        //mainForm.Controls.Add(new LoginControl());
+        mainForm.Controls.Add(new TodolistControl());
 
-            Application.Run(mainForm);
+        Application.Run(mainForm);
         }
     }
 }
