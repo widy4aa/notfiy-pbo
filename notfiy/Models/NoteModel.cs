@@ -21,11 +21,11 @@ namespace notfiy.Models
                     IdNote = (int)reader["id_note"],
                     NoteName = (string)reader["note_name"],
                     Content = (string)reader["content"],
-                    ImageFileName = reader["image_filename"] as string,
+                    ImageUrl = reader["image_url"] as string,
                     TimeCreated = (string)reader["time_created"],
+                    Pinned = (bool)reader["pinned"],
                     IdUser = (int)reader["id_user"],
                     IdLabel = (int)reader["id_label"],
-                    Pinned = (bool)reader["pinned"],
                     IdStatus = (int)reader["id_status"]
                 };
 
@@ -34,7 +34,7 @@ namespace notfiy.Models
             return ListNotes;
         }
 
-        public Note ?GetNoteById(int idNote)
+        public Note? GetNoteById(int idNote)
         {
             try
             {
@@ -52,11 +52,11 @@ namespace notfiy.Models
                                 IdNote = (int)reader["id_note"],
                                 NoteName = (string)reader["note_name"],
                                 Content = (string)reader["content"],
-                                ImageFileName = reader["image_filename"] as string,
+                                ImageUrl = reader["image_url"] as string,
                                 TimeCreated = (string)reader["time_created"],
+                                Pinned = (bool)reader["pinned"],
                                 IdUser = (int)reader["id_user"],
                                 IdLabel = (int)reader["id_label"],
-                                Pinned = (bool)reader["pinned"],
                                 IdStatus = (int)reader["id_status"]
                             };
                         }
@@ -83,16 +83,16 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string insert = @"INSERT INTO notes (note_name, content, image_filename, time_created, id_user, id_label, pinned, id_status) VALUES (@note_name, @content, @image_filename, @time_created, @id_user, @id_label, @pinned, @id_status)";
+                string insert = @"INSERT INTO notes (note_name, content, image_url, time_created, pinned, id_user, id_label, id_status) VALUES (@note_name, @content, @image_url, @time_created, @pinned, @id_user, @id_label, @id_status)";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
                 {
                     cmd.Parameters.AddWithValue("@note_name", note.NoteName);
                     cmd.Parameters.AddWithValue("@content", note.Content);
-                    cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@image_url", note.ImageUrl ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@time_created", note.TimeCreated);
+                    cmd.Parameters.AddWithValue("@pinned", note.Pinned);
                     cmd.Parameters.AddWithValue("@id_user", note.IdUser);
                     cmd.Parameters.AddWithValue("@id_label", note.IdLabel);
-                    cmd.Parameters.AddWithValue("@pinned", note.Pinned);
                     cmd.Parameters.AddWithValue("@id_status", note.IdStatus);
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
@@ -114,17 +114,26 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string update = @"UPDATE notes SET note_name = @note_name, content = @content, image_filename = @image_filename, time_created = @time_created, id_user = @id_user, id_label = @id_label, pinned = @pinned, id_status = @id_status WHERE id_note = @id_note";
+                string update = @"UPDATE notes SET 
+                                note_name = @note_name, 
+                                content = @content, 
+                                image_url = @image_url, 
+                                time_created = @time_created, 
+                                pinned = @pinned,
+                                id_user = @id_user, 
+                                id_label = @id_label,  
+                                id_status = @id_status 
+                                WHERE id_note = @id_note";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {
                     cmd.Parameters.AddWithValue("@id_note", note.IdNote);
                     cmd.Parameters.AddWithValue("@note_name", note.NoteName);
                     cmd.Parameters.AddWithValue("@content", note.Content);
-                    cmd.Parameters.AddWithValue("@image_filename", note.ImageFileName ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@image_url", note.ImageUrl ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@time_created", note.TimeCreated);
+                    cmd.Parameters.AddWithValue("@pinned", note.Pinned);
                     cmd.Parameters.AddWithValue("@id_user", note.IdUser);
                     cmd.Parameters.AddWithValue("@id_label", note.IdLabel);
-                    cmd.Parameters.AddWithValue("@pinned", note.Pinned);
                     cmd.Parameters.AddWithValue("@id_status", note.IdStatus);
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
