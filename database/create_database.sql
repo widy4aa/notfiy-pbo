@@ -40,7 +40,7 @@ CREATE TABLE notes (
     id_note serial PRIMARY KEY,
     note_name VARCHAR(40) NOT NULL,
     content TEXT NOT NULL,
-    image_filename VARCHAR(100),
+    image_url VARCHAR(255),
     time_created TIMESTAMP NOT NULL,
     pinned BOOLEAN,
     id_user INT,
