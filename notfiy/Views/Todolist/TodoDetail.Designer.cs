@@ -329,6 +329,7 @@
             BtnDelete.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnDelete.TabIndex = 9;
             BtnDelete.Values.Text = "Delete";
+            BtnDelete.Click += BtnDelete_Click;
             // 
             // BtnEdit
             // 

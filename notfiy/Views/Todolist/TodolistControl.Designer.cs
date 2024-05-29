@@ -341,9 +341,11 @@
             // 
             // kryptonTextBox1
             // 
+            kryptonTextBox1.AlwaysActive = false;
             kryptonTextBox1.Cursor = Cursors.IBeam;
             kryptonTextBox1.Location = new Point(93, 169);
             kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.ReadOnly = true;
             kryptonTextBox1.Size = new Size(218, 48);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(61, 44, 94);
             kryptonTextBox1.StateActive.Border.Color1 = Color.Black;
@@ -354,7 +356,14 @@
             kryptonTextBox1.StateActive.Content.Color1 = Color.White;
             kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
+            kryptonTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox1.StateCommon.Border.Width = 1;
+            kryptonTextBox1.StateCommon.Content.Color1 = Color.White;
+            kryptonTextBox1.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonTextBox1.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
+            kryptonTextBox1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox1.StateNormal.Border.Rounding = 20F;
+            kryptonTextBox1.StateNormal.Border.Width = 1;
             kryptonTextBox1.TabIndex = 16;
             kryptonTextBox1.Text = "To do List";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;

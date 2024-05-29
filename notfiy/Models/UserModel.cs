@@ -15,27 +15,27 @@ namespace notfiy.Models
         public List<User> GetAllUsers()
         {
             var users = new List<User>();
-            Connection.Open();
             var command = new NpgsqlCommand("SELECT * FROM users", Connection);
             using (var reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    User user = new User();
-                    user.IdUser = (int)reader["id_users"];
-                    user.Username = (string)reader["username"];
-                    user.Password = (string)reader["password"];
-                    user.TimeCreated = (string)reader["users_time_created"];
+                    User user = new User(){
+                        IdUser = (int)reader["id_users"],
+                        Username = (string)reader["username"],
+                        Password = (string)reader["password"],
+                        Email = (string)reader["email"],
+                        TimeCreated = (string)reader["time_created"]
+                    };
                     users.Add(user);
                 }
             }
             return users;
         }
 
-        public User GetUsersByID(int id)
+        public User GetUsersById(int id)
         {
             User user = null;
-            Connection.Open();
             var command = new NpgsqlCommand("SELECT * FROM users WHERE id_user = @id", Connection);
             using (command)
             {
@@ -49,12 +49,98 @@ namespace notfiy.Models
                             IdUser = (int)reader["id_users"],
                             Username = (string)reader["username"],
                             Password = (string)reader["password"],
-                            TimeCreated = (string)reader["users_time_created"]
+                            Email = (string)reader["email"],
+                            TimeCreated = (string)reader["time_created"]
                         };
                     }
                 }
             }
             return user;
+        }
+
+        public bool CreateUser(User user)
+        {
+            try
+            {
+                Connection.Open();
+                string QueryInsert = @"INSERT INTO users(id_users,username,password,email,time_created) VALUES (@id_users,@username,@password,@email,@time_created)";
+                using(NpgsqlCommand command = new NpgsqlCommand(QueryInsert,Connection))
+                {
+                    command.Parameters.AddWithValue("id_users",user.IdUser);
+                    command.Parameters.AddWithValue("username",user.Username);
+                    command.Parameters.AddWithValue("password",user.Password);
+                    command.Parameters.AddWithValue("email",user.Email);
+                    command.Parameters.AddWithValue("time_created", user.TimeCreated);
+                    int row = command.ExecuteNonQuery();
+                    return row > 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal Membuat User! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public bool DeleteUser(int IdUser)
+        {
+            try
+            {
+                Connection.Open();
+                string QueryDel = @"DELETE FROM users WHERE id_user = @IdUser";
+                using(NpgsqlCommand command = new NpgsqlCommand(QueryDel, Connection))
+                {
+                    command.Parameters.AddWithValue("id_user", IdUser);
+                    int row = command.ExecuteNonQuery();
+                    return row > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal Menghapus User! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public bool UpdateUser(User user)
+        {
+            try
+            {
+                Connection.Open();
+                string QueryUpdate = @"UPDATE users SET
+                                 id_users = @IdUser
+                                 username = @Username
+                                 password = @Password
+                                 email = @Email
+                                 time_created = @TimeCreated";
+                using (NpgsqlCommand command = new NpgsqlCommand(QueryUpdate, Connection))
+                {
+                    command.Parameters.AddWithValue("id_users", user.IdUser);
+                    command.Parameters.AddWithValue("username", user.Username);
+                    command.Parameters.AddWithValue("password", user.Password);
+                    command.Parameters.AddWithValue("email", user.Email);
+                    command.Parameters.AddWithValue("time_created", user.TimeCreated);
+                    int row = command.ExecuteNonQuery();
+                    return row > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal Update User! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
         }
 
     }

@@ -9,9 +9,9 @@ namespace notfiy.Entities
     internal class User
     {
         public int IdUser;
-        public string Username;
-        public string Password;
-        public string Email;
-        public string TimeCreated;
+        public required string Username;
+        public required string Password;
+        public required string Email;
+        public required string TimeCreated;
     }
 }
