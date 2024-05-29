@@ -34,6 +34,50 @@ namespace notfiy.Models
             return ListNotes;
         }
 
+        public Note GetNoteById(int idNote)
+        {
+            try
+            {
+                Connection.Open();
+                string query = @"SELECT * FROM note WHERE id_note = @id_note";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, Connection))
+                {
+                    cmd.Parameters.AddWithValue("id_note", idNote);
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Note
+                            {
+                                IdNote = (int)reader["id_note"],
+                                NoteName = (string)reader["note_name"],
+                                Content = (string)reader["content"],
+                                ImageFileName = reader["image_filename"] as string,
+                                TimeCreated = (string)reader["time_created"],
+                                IdUser = (int)reader["id_user"],
+                                IdLabel = (int)reader["id_label"],
+                                IdPinnedItem = (int)reader["id_pinned_item"],
+                                IdNoteStatus = (int)reader["id_note_status"]
+                            };
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Retrieval failed! Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
         public bool CreateNote(Note note)
         {
             try
@@ -120,5 +164,31 @@ namespace notfiy.Models
                 Connection.Close();
             }
         }
+
+        public bool UpdateIdLabel(int idNote, int idLabel)
+        {
+            try
+            {
+                Connection.Open();
+                string update = @"UPDATE notes SET id_label = @id_label WHERE id_note = @id_note";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
+                {
+                    cmd.Parameters.AddWithValue("@id_note", idNote);
+                    cmd.Parameters.AddWithValue("@id_label", idLabel);
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Update Label failed! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
     }
 }
