@@ -35,9 +35,9 @@ namespace notfiy
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
         //mainForm.Controls.Add(new LoginControl());
-        mainForm.Controls.Add(new TodolistControl());
+            mainForm.Controls.Add(new TodolistControl());
 
-        Application.Run(mainForm);
+            Application.Run(mainForm);
         }
     }
 }
