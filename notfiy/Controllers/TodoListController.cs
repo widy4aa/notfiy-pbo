@@ -1,28 +1,49 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using notfiy.Entities;
+using notfiy.Models;
+using notfiy.Views.Todolist;
 
 namespace notfiy.Controllers
 {
     class TodolistController
     {
+        private readonly TodoListModel todolistModel;
+        private readonly TodolistControl todolistView;
+        
+        public TodolistController()
+        {
+            todolistModel = new TodoListModel();
+            todolistView = new TodolistControl();
+        }
 
-        // public int CreateTodoList(int idTodoList, string todoListName, string timeCreated, int idUser, int idStatus)
-        // {
-        // // Your update logic here
-        // }
+        public List<TodoList> GetAllTodoList()
+        {
+            return todolistModel.GetAllTodoList();
+        }
 
-        // public bool UpdateTodoList(int idTodoList, string todoListName, int idUser, int idStatus)
-        // {
-        // // Your update logic here
-        // }
+        public TodoList? GetTodoList(int idTodolist)
+        {
+            return todolistModel.GetTodoList(idTodolist);
+        }
 
-        // public bool DeleteTodoList(int idTodoList)
-        // {}
-        // public bool UpdateTodoListPin(int idTodoList, bool pinned)
-        // {} 
+        public int CreateTodoList(TodoList todoList)
+        {
+            return todolistModel.CreateTodoList(todoList);
+        }
+
+        public bool UpdateTodoList(TodoList todoList)
+        {
+            return todolistModel.UpdateTodoList(todoList);
+        }
+
+        public bool DeleteTodoList(int idTodoList)
+        {
+            return todolistModel.DeleteTodoList(idTodoList);
+        }
+
+        //public bool UpdateTodoListPin(int idTodoList, bool pinned)
+        //{
+            
+        //}
     }
 
 
