@@ -117,18 +117,18 @@ namespace notfiy.Models
             {
                 Connection.Open();
                 string QueryUpdate = @"UPDATE users SET
-                                 id_users = @IdUser
                                  username = @Username
                                  password = @Password
                                  email = @Email
-                                 time_created = @TimeCreated";
+                                 time_created = @TimeCreated
+                                 WHERE id_users = @IdUser";
                 using (NpgsqlCommand command = new NpgsqlCommand(QueryUpdate, Connection))
                 {
-                    command.Parameters.AddWithValue("id_users", user.IdUser);
-                    command.Parameters.AddWithValue("username", user.Username);
-                    command.Parameters.AddWithValue("password", user.Password);
-                    command.Parameters.AddWithValue("email", user.Email);
-                    command.Parameters.AddWithValue("time_created", user.TimeCreated);
+                    command.Parameters.AddWithValue("IdUser", user.IdUser);
+                    command.Parameters.AddWithValue("Username", user.Username);
+                    command.Parameters.AddWithValue("Password", user.Password);
+                    command.Parameters.AddWithValue("Email", user.Email);
+                    command.Parameters.AddWithValue("TimeCreated", user.TimeCreated);
                     int row = command.ExecuteNonQuery();
                     return row > 0;
                 }
@@ -143,6 +143,30 @@ namespace notfiy.Models
                 Connection.Close();
             }
         }
-
+        public User? UserAuth(string username, string password)
+        {
+            User? user = null;
+            var command = new NpgsqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", Connection);
+            using (command)
+            {
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", password);
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        user = new User
+                        {
+                            IdUser = (int)reader["id_users"],
+                            Username = (string)reader["username"],
+                            Password = (string)reader["password"],
+                            Email = (string)reader["email"],
+                            TimeCreated = (string)reader["time_created"]
+                        };
+                    }
+                }
+            }
+            return user;
+        }
     }
 }
