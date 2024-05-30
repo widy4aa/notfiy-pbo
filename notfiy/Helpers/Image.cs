@@ -56,15 +56,23 @@ namespace notfiy.Helpers
             }
         }
 
-        public static void DownloadImage(string imageUrl, string targetFileOutput)
+      public static bool DownloadImage(string imageUrl, string targetFileOutput)
         {
-            using (HttpClient client = new HttpClient())
+            try
             {
-                // Unduh data gambar
-                byte[] imageData = client.GetByteArrayAsync(imageUrl).Result;
+                using (HttpClient client = new HttpClient())
+                {
+                    // Unduh data gambar
+                    byte[] imageData = client.GetByteArrayAsync(imageUrl).Result;
 
-                // Simpan gambar ke file
-                File.WriteAllBytes(targetFileOutput, imageData);
+                    // Simpan gambar ke file
+                    File.WriteAllBytes(targetFileOutput, imageData);
+                }
+                return true; // Return true jika download dan save sukses
+            }
+            catch (Exception)
+            {
+                return false; // Return false if jika terdapat pengecualian
             }
         }
     }
