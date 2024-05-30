@@ -1,35 +1,35 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using notfiy.Entities;
 using notfiy.Models;
-using notfiy.Views.Todolist;
+
 using System.Runtime.CompilerServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace notfiy.Controllers
 {
-    class TodolistController
+    class TodoListController
     {
-        private TodoListModel todolistModel;
-        //private TodolistControl todolistView;
+        private TodoListModel TodoListModel;
+        //private TodoListControl todoListView;
         
-        public TodolistController()
+        public TodoListController()
         {
-            todolistModel = new TodoListModel();
-            //todolistView = new TodolistControl();
+            TodoListModel = new TodoListModel();
+            //todoListView = new TodoListControl();
         }
 
         public List<TodoList> GetAllTodoList()
         {
-            return todolistModel.GetAllTodoList();
+            return TodoListModel.GetAllTodoList();
         }
 
-        public TodoList? GetTodoList(int idTodolist)
+        public TodoList? GetTodoList(int idTodoList)
         {
-            return todolistModel.GetTodoList(idTodolist);
+            return TodoListModel.GetTodoList(idTodoList);
         }
 
-        public int CreateTodoList(string todoListName, string timeCreated, int idUser, int idStatus, bool pinned)
+        public int CreateTodoList(string todoListName, string timeCreated, int idUser, int idStatus)
         {
             TodoList todoList = new TodoList()
             {
@@ -37,12 +37,11 @@ namespace notfiy.Controllers
                 TimeCreated = timeCreated,
                 IdUser = idUser,
                 IdStatus = idStatus,
-                Pinned = pinned ? 1:0
             };
-            return todolistModel.CreateTodoList(todoList);
+            return TodoListModel.CreateTodoList(todoList);
         }
 
-        public bool UpdateTodoList(int idTodoList, string todoListName, string timeCreated, int idUser, int idStatus, bool pinned)
+        public bool UpdateTodoList(int idTodoList, string todoListName, string timeCreated, int idUser, int idStatus)
         {
             TodoList todoList = new TodoList()
             {
@@ -51,20 +50,26 @@ namespace notfiy.Controllers
                 TimeCreated = timeCreated,
                 IdUser = idUser,
                 IdStatus = idStatus,
-                Pinned = pinned ? 1 : 0
             };
-            return todolistModel.UpdateTodoList(todoList);
+            return TodoListModel.UpdateTodoList(todoList);
         }
 
         public bool DeleteTodoList(int idTodoList)
         {
-            return todolistModel.DeleteTodoList(idTodoList);
+            return TodoListModel.DeleteTodoList(idTodoList);
         }
 
         public bool UpdateTodoListPin(int idTodoList, bool pinned)
         {
-            return todolistModel.UpdateTodoListPin(idTodoList, pinned);
+            return TodoListModel.UpdateTodoListPin(idTodoList, pinned);
         }
+
+        public bool UpdateTodoListStatus(int idTodoList, int id_status)
+        {
+            TodoList todoList = TodoListModel.GetTodoList(idTodoList);
+            todoList.IdStatus = id_status;
+            return TodoListModel.UpdateTodoList(todoList);
+        } 
     }
 
 
