@@ -9,19 +9,19 @@ namespace notfiy.Controllers
     class TodoItemController
     {
         
-        // public int CreateTodoList(int idTodoList, string todoListName, string timeCreated, int idUser, int idStatus)
+        // public int CreateTodoItem(int idTodoItem, string todoItemName, string timeCreated, int idTodoList, bool checked)
         // {
         // // Your update logic here
         // }
 
-        // public bool UpdateTodoList(int idTodoList, string todoListName, int idUser, int idStatus)
+        // public bool UpdateTodoItem(int idTodoItem, string todoItemName, int idTodoList, bool checked)
         // {
         // // Your update logic here
         // }
 
-        // public bool DeleteTodoList(int idTodoList)
+        // public bool DeleteTodoItem(int idTodoItem)
         // {}
-        // public bool UpdateTodoListPin(int idTodoList, bool pinned)
+        // public bool UpdateTodoItemCheckedStatus(int idTodoItem, bool checked)
         // {} 
     }
 }
