@@ -25,6 +25,16 @@ namespace notfiy.Views.Todolist
             // Tidak menggambar latar belakang untuk menjaga transparansi
         }
 
+        private void PopUpDelete_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
         //public void ChangeButtonProperties(float Radius)
         //{
         //    //buttonInUserControl.Text = newText;

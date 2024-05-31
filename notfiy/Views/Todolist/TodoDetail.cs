@@ -57,7 +57,6 @@ namespace notfiy.Views.Todolist
             this.Controls.Add(popupdelete);
             popupdelete.BringToFront();
             popupdelete.BackColor = Color.Transparent;
-            popupdelete.kryptonCheckedListBox1.StateCommon.Back.Color1 = Color.Transparent;
 
             //popupdelete.CornerRoundingRadius = 20F;
             //popupdelete.kryptonCheckedListBox1.CornerRoundingRadius = 20F;
