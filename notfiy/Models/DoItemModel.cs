@@ -15,7 +15,7 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string query = "SELECT * FROM doitems WHERE id_todolist = @id_todolist";
+                string query = "SELECT * FROM do_items WHERE id_todolist = @id_todolist";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, Connection))
                 {
                     cmd.Parameters.AddWithValue("id_todolist", idTodoList);
@@ -26,11 +26,9 @@ namespace notfiy.Models
                             DoItem doItem = new DoItem
                             {
                                 IdDoItem = reader.GetInt32(reader.GetOrdinal("id_doitem")),
-                                Description = reader.GetString(reader.GetOrdinal("description")),
-                                IsCompleted = reader.GetBoolean(reader.GetOrdinal("is_completed")),
-                                IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist")),
-                                IdStatus = reader.GetInt32(reader.GetOrdinal("id_status")),
-                                TimeCreated = reader.GetDateTime(reader.GetOrdinal("time_created"))
+                                DoItemName = reader.GetString(reader.GetOrdinal("do_item_name")),
+                                Checked = reader.GetBoolean(reader.GetOrdinal("checked")),
+                                IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist"))
                             };
 
                             doItems.Add(doItem);
@@ -55,15 +53,13 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string insert = @"INSERT INTO doitems (description, is_completed, id_todolist, id_status, time_created) VALUES 
-                                  (@description, @is_completed, @id_todolist, @id_status, @time_created) RETURNING id_doitem";
+                string insert = @"INSERT INTO do_items (do_item_name, checked, id_todolist) VALUES 
+                                  (@do_item_name, @checked, @id_todolist) RETURNING id_do_item";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(insert, Connection))
                 {
-                    cmd.Parameters.AddWithValue("description", doItem.Description);
-                    cmd.Parameters.AddWithValue("is_completed", doItem.IsCompleted);
+                    cmd.Parameters.AddWithValue("do_item_name", doItem.DoItemName);
+                    cmd.Parameters.AddWithValue("checked", doItem.Checked);
                     cmd.Parameters.AddWithValue("id_todolist", doItem.IdTodoList);
-                    cmd.Parameters.AddWithValue("id_status", doItem.IdStatus);
-                    cmd.Parameters.AddWithValue("time_created", doItem.TimeCreated);
 
                     object? result = cmd.ExecuteScalar();
                     return result != null ? Convert.ToInt32(result) : 0;
@@ -80,47 +76,45 @@ namespace notfiy.Models
             }
         }
 
-        public bool InsertDoItem(DoItem doItem)
-        {
-            try
-            {
-                Connection.Open();
-                string insertQuery = @"INSERT INTO doitems (DOItemName, IsCompleted, IdTodoList, IdStatus, TimeCreated) 
-                                       VALUES (@DOItemName, @IsCompleted, @IdTodoList, @IdStatus, @TimeCreated)";
-                using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, Connection))
-                {
-                    cmd.Parameters.AddWithValue("DOItemName", doItem.DOItemName);
-                    cmd.Parameters.AddWithValue("IsCompleted", doItem.IsCompleted);
-                    cmd.Parameters.AddWithValue("IdTodoList", doItem.IdTodoList);
-                    cmd.Parameters.AddWithValue("IdStatus", doItem.IdStatus);
-                    cmd.Parameters.AddWithValue("TimeCreated", doItem.TimeCreated);
+        //public bool InsertDoItem(DoItem doItem)
+        //{
+        //    try
+        //    {
+        //        Connection.Open();
+        //        string insertQuery = @"INSERT INTO do_items (do_item_name, checked, id_todolist) 
+        //                               VALUES (@DItemName, @Checked, @IdTodoList)";
+        //        using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, Connection))
+        //        {
+        //            cmd.Parameters.AddWithValue("DOItemName", doItem.DoItemName);
+        //            cmd.Parameters.AddWithValue("Checked", doItem.Checked);
+        //            cmd.Parameters.AddWithValue("IdTodoList", doItem.IdTodoList);
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
+        //            int rowsAffected = cmd.ExecuteNonQuery();
 
-                    return rowsAffected > 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Insert failed! Error: " + ex.Message);
-                return false;
-            }
-            finally
-            {
+        //            return rowsAffected > 0;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine("Insert failed! Error: " + ex.Message);
+        //        return false;
+        //    }
+        //    finally
+        //    {
 
-                Connection.Close();
-            }
-        }
+        //        Connection.Close();
+        //    }
+        //}
 
             public bool DeleteDoItem(int idDoItem)
         {
             try
             {
                 Connection.Open();
-                string delete = @"DELETE FROM doitems WHERE id_doitem = @id_doitem";
+                string delete = @"DELETE FROM do_items WHERE id_do_item = @id_do_item";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(delete, Connection))
                 {
-                    cmd.Parameters.AddWithValue("id_doitem", idDoItem);
+                    cmd.Parameters.AddWithValue("id_do_item", idDoItem);
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
                 }
@@ -142,20 +136,16 @@ namespace notfiy.Models
             {
                 Connection.Open();
                 string update = @"UPDATE doitems SET 
-                                  description = @description, 
-                                  is_completed = @is_completed, 
+                                  do_item_name = @do_item_name, 
+                                  checked = @checked, 
                                   id_todolist = @id_todolist, 
-                                  id_status = @id_status, 
-                                  time_created = @time_created 
-                                  WHERE id_doitem = @id_doitem";
+                                  WHERE id_do_item = @id_do_item";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {
-                    cmd.Parameters.AddWithValue("description", doItem.Description);
-                    cmd.Parameters.AddWithValue("is_completed", doItem.IsCompleted);
+                    cmd.Parameters.AddWithValue("id_do_item", doItem.IdDoItem);
+                    cmd.Parameters.AddWithValue("do_item_name", doItem.DoItemName);
+                    cmd.Parameters.AddWithValue("checked", doItem.Checked);
                     cmd.Parameters.AddWithValue("id_todolist", doItem.IdTodoList);
-                    cmd.Parameters.AddWithValue("id_status", doItem.IdStatus);
-                    cmd.Parameters.AddWithValue("time_created", doItem.TimeCreated);
-                    cmd.Parameters.AddWithValue("id_doitem", doItem.IdDoItem);
 
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
@@ -172,16 +162,16 @@ namespace notfiy.Models
             }
         }
 
-        public bool UpdateStatusDoItem(int idDoItem, int idStatus)
+        public bool DoItemCheck(int idDoItem, bool Checked)
         {
             try
             {
                 Connection.Open();
-                string update = @"UPDATE doitems SET id_status = @id_status WHERE id_doitem = @id_doitem";
+                string update = @"UPDATE doitems SET checked = @checked WHERE id_do_item = @id_do_item";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {
-                    cmd.Parameters.AddWithValue("id_status", idStatus);
-                    cmd.Parameters.AddWithValue("id_doitem", idDoItem);
+                    cmd.Parameters.AddWithValue("checked", Checked);
+                    cmd.Parameters.AddWithValue("id_do_item", idDoItem);
 
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
@@ -203,7 +193,7 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string query = @"SELECT * FROM doitems WHERE id_doitem = @id_doitem";
+                string query = @"SELECT * FROM do_items WHERE id_do_item = @id_do_item";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, Connection))
                 {
                     cmd.Parameters.AddWithValue("id_doitem", idDoItem);
@@ -214,12 +204,10 @@ namespace notfiy.Models
                             return new DoItem
                             {
                                 IdDoItem = reader.GetInt32(reader.GetOrdinal("id_doitem")),
-                                Description = reader.GetString(reader.GetOrdinal("description")),
-                                IsCompleted = reader.GetBoolean(reader.GetOrdinal("is_completed")),
-                                IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist")),
-                                IdStatus = reader.GetInt32(reader.GetOrdinal("id_status")),
-                                TimeCreated = reader.GetDateTime(reader.GetOrdinal("time_created"))
-                            };
+                                DoItemName = reader.GetString(reader.GetOrdinal("do_item_name")),
+                                Checked = reader.GetBoolean(reader.GetOrdinal("checked")),
+                                IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist"))
+                                };
                         }
                         else
                         {
