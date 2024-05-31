@@ -85,5 +85,13 @@ namespace notfiy.Controllers
         {
             return NoteModel.DeleteNote(idNote);
         }
+
+        public int CopyNoteToUser(int idNote, int targetIdUser)
+        {
+            Note note = NoteModel.GetNoteById(idNote);
+            note.IdUser = targetIdUser;
+            note.IdNote = 0;
+            return NoteModel.CreateNote(note);
+        }
     }
 }
