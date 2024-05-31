@@ -118,6 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="kryptonButton1.OverrideDefault.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAFdJREFUWEft1bENwDAMxEBvEm8W77+ELANpnY7FAzzge1bSqDAG0wymGUyLDH6T
+        NiTpX5+KmTQ/Hc1gmsE0g2kn+Ena9+8k6aZPxUqan45mMM1gmsGsqg1rh6onkdgKaAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="kryptonButton1.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAFdJREFUWEft1bENwDAMxEBvEm8W77+ELANpnY7FAzzge1bSqDAG0wymGUyLDH6T
+        NiTpX5+KmTQ/Hc1gmsE0g2kn+Ena9+8k6aZPxUqan45mMM1gmsGsqg1rh6onkdgKaAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="kryptonButton1.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAC4AAAAqCAYAAADMKGkhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAFtJREFUWEft1sEJACAQxEA70c60/yZOBWsIrGRg/3kcYqtQhtMMpxlOM5wWHT4T
+        16TfnUMfifMdpxlOM5xmOM1w2g3viXs/Fulf59BX4nzHaYbTDKcZTjOcVbUBeRHPRuSMd38AAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <data name="HamburgerButton.OverrideDefault.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
