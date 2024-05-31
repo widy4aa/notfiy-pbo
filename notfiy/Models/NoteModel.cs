@@ -78,7 +78,7 @@ namespace notfiy.Models
             }
         }
 
-        public bool CreateNote(Note note)
+        public int CreateNote(Note note)
         {
             try
             {
@@ -94,14 +94,14 @@ namespace notfiy.Models
                     cmd.Parameters.AddWithValue("@id_user", note.IdUser);
                     cmd.Parameters.AddWithValue("@id_label", note.IdLabel);
                     cmd.Parameters.AddWithValue("@id_status", note.IdStatus);
-                    int rows = cmd.ExecuteNonQuery();
-                    return rows > 0;
+                    object ?result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 0;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Insert failed! Error: " + ex.Message);
-                return false;
+                return 0;
             }
             finally
             {

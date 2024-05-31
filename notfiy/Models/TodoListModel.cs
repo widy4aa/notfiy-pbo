@@ -161,5 +161,30 @@ namespace notfiy.Models
                 Connection.Close();
             }
         }
+
+        public bool UpdateTodoListPin(int idTodoList, bool pinned)
+        {
+            try
+            {
+                Connection.Open();
+                string update = @"UPDATE todolists SET pinned = @pinned WHERE id_todolist = @id_todolist";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
+                {
+                    cmd.Parameters.AddWithValue("@id_todolist", idTodoList);
+                    cmd.Parameters.AddWithValue("@pinned", pinned);
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Update Label failed! Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
     }
 }

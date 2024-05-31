@@ -4,9 +4,10 @@ namespace notfiy.Helpers
 {
     public static class Time
     {
-        public static DateTime CurrentTimeStamp()
+        public static string CurrentTimeStamp()
         {
-            return DateTime.UtcNow;
+            return DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffffffZ");
         }
+
     }
 }
