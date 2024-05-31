@@ -16,5 +16,25 @@ namespace notfiy.Views.Other
         {
             InitializeComponent();
         }
+
+        private void kryptonLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
