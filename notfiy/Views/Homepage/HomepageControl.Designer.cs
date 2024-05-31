@@ -35,6 +35,8 @@
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -165,7 +167,6 @@
             HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
-            HamburgerButton.Click += kryptonButton1_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -206,11 +207,52 @@
             kryptonPanel2.StateNormal.Color2 = Color.Black;
             kryptonPanel2.TabIndex = 1;
             // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.AlwaysActive = false;
+            kryptonTextBox1.Cursor = Cursors.IBeam;
+            kryptonTextBox1.Location = new Point(93, 169);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.ReadOnly = true;
+            kryptonTextBox1.Size = new Size(218, 48);
+            kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(61, 44, 94);
+            kryptonTextBox1.StateActive.Border.Color1 = Color.Black;
+            kryptonTextBox1.StateActive.Border.Color2 = Color.Black;
+            kryptonTextBox1.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox1.StateActive.Border.Rounding = 20F;
+            kryptonTextBox1.StateActive.Border.Width = 1;
+            kryptonTextBox1.StateActive.Content.Color1 = Color.White;
+            kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
+            kryptonTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox1.StateCommon.Border.Width = 1;
+            kryptonTextBox1.StateCommon.Content.Color1 = Color.White;
+            kryptonTextBox1.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonTextBox1.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
+            kryptonTextBox1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox1.StateNormal.Border.Rounding = 20F;
+            kryptonTextBox1.StateNormal.Border.Width = 1;
+            kryptonTextBox1.TabIndex = 17;
+            kryptonTextBox1.Text = "Note";
+            kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AllowDrop = true;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(93, 221);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1251, 611);
+            flowLayoutPanel1.TabIndex = 18;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            // 
             // HomepageControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel2);
             Controls.Add(kryptonPanel1);
             Name = "HomepageControl";
@@ -222,6 +264,7 @@
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -232,5 +275,7 @@
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        public FlowLayoutPanel flowLayoutPanel1;
     }
 }

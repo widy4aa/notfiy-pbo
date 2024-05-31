@@ -27,7 +27,17 @@ namespace notfiy.Views.Homepage
 
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void krytonButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void todoItem6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

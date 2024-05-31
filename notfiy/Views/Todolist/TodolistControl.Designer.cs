@@ -219,7 +219,7 @@
             flowLayoutPanel1.Controls.Add(todoItem8);
             flowLayoutPanel1.Controls.Add(todoItem9);
             flowLayoutPanel1.Controls.Add(todoItem10);
-            flowLayoutPanel1.Location = new Point(90, 220);
+            flowLayoutPanel1.Location = new Point(93, 221);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1251, 611);
             flowLayoutPanel1.TabIndex = 2;

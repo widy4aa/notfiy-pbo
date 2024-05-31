@@ -8,8 +8,6 @@ namespace notfiy.Controllers
 {
     class NoteController
     {
-        public bool CreateNote(){
-            
-        }
+        //public bool CreateNote() }
     }
 }
