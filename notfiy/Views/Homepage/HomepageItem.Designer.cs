@@ -34,7 +34,7 @@
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,7 +83,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(kryptonLabel1);
-            flowLayoutPanel1.Controls.Add(kryptonTextBox1);
+            flowLayoutPanel1.Controls.Add(kryptonRichTextBox1);
             flowLayoutPanel1.Location = new Point(28, 57);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
@@ -99,14 +99,14 @@
             kryptonLabel1.TabIndex = 12;
             kryptonLabel1.Values.Text = "Judul Pekerjaan";
             // 
-            // kryptonTextBox1
+            // kryptonRichTextBox1
             // 
-            kryptonTextBox1.Location = new Point(3, 35);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.ReadOnly = true;
-            kryptonTextBox1.Size = new Size(233, 23);
-            kryptonTextBox1.TabIndex = 13;
-            kryptonTextBox1.Text = "kryptonTextBox1";
+            kryptonRichTextBox1.Location = new Point(3, 35);
+            kryptonRichTextBox1.Name = "kryptonRichTextBox1";
+            kryptonRichTextBox1.Size = new Size(243, 141);
+            kryptonRichTextBox1.TabIndex = 13;
+            kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
+            kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged;
             // 
             // HomepageItem
             // 
@@ -132,6 +132,6 @@
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
         private FlowLayoutPanel flowLayoutPanel1;
         public Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
     }
 }

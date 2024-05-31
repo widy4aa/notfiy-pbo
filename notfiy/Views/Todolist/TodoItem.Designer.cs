@@ -73,6 +73,7 @@
             kryptonCheckBox1.StateNormal.ShortText.Color1 = Color.Black;
             kryptonCheckBox1.TabIndex = 7;
             kryptonCheckBox1.Values.Text = "kryptonCheckBox1";
+            kryptonCheckBox1.CheckedChanged += kryptonCheckBox1_CheckedChanged_1;
             // 
             // flowLayoutPanel1
             // 

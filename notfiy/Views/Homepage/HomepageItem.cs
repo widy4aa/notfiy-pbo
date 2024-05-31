@@ -21,5 +21,15 @@ namespace notfiy.Views.Homepage
         {
 
         }
+
+        private void kryptonLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonRichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -49,5 +49,15 @@ namespace notfiy.Views.Todolist
             TodoDetail detail = new TodoDetail();
             NotifyViewManager.MoveView(detail);
         }
+
+        private void kryptonCheckBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

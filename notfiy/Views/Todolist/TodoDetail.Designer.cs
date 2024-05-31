@@ -388,7 +388,7 @@
             kryptonTextBox1.Cursor = Cursors.IBeam;
             kryptonTextBox1.Location = new Point(324, 149);
             kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(218, 48);
+            kryptonTextBox1.Size = new Size(218, 46);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(61, 44, 94);
             kryptonTextBox1.StateActive.Border.Color1 = Color.Black;
             kryptonTextBox1.StateActive.Border.Color2 = Color.Black;
