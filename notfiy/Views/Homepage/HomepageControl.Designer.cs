@@ -36,7 +36,7 @@
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            HomepagePanel1 = new FlowLayoutPanel();
             homepageItem10 = new HomepageItem();
             homepageItem8 = new HomepageItem();
             homepageItem7 = new HomepageItem();
@@ -51,7 +51,7 @@
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
+            HomepagePanel1.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPanel1
@@ -246,25 +246,25 @@
             kryptonTextBox1.Text = "Note";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
             // 
-            // flowLayoutPanel1
+            // HomepagePanel1
             // 
-            flowLayoutPanel1.AllowDrop = true;
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(homepageItem10);
-            flowLayoutPanel1.Controls.Add(homepageItem8);
-            flowLayoutPanel1.Controls.Add(homepageItem7);
-            flowLayoutPanel1.Controls.Add(homepageItem1);
-            flowLayoutPanel1.Controls.Add(homepageItem2);
-            flowLayoutPanel1.Controls.Add(homepageItem9);
-            flowLayoutPanel1.Controls.Add(homepageItem3);
-            flowLayoutPanel1.Controls.Add(homepageItem4);
-            flowLayoutPanel1.Controls.Add(homepageItem6);
-            flowLayoutPanel1.Controls.Add(homepageItem5);
-            flowLayoutPanel1.Location = new Point(93, 221);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1251, 611);
-            flowLayoutPanel1.TabIndex = 18;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            HomepagePanel1.AllowDrop = true;
+            HomepagePanel1.AutoScroll = true;
+            HomepagePanel1.Controls.Add(homepageItem10);
+            HomepagePanel1.Controls.Add(homepageItem8);
+            HomepagePanel1.Controls.Add(homepageItem7);
+            HomepagePanel1.Controls.Add(homepageItem1);
+            HomepagePanel1.Controls.Add(homepageItem2);
+            HomepagePanel1.Controls.Add(homepageItem9);
+            HomepagePanel1.Controls.Add(homepageItem3);
+            HomepagePanel1.Controls.Add(homepageItem4);
+            HomepagePanel1.Controls.Add(homepageItem6);
+            HomepagePanel1.Controls.Add(homepageItem5);
+            HomepagePanel1.Location = new Point(93, 221);
+            HomepagePanel1.Name = "HomepagePanel1";
+            HomepagePanel1.Size = new Size(1251, 611);
+            HomepagePanel1.TabIndex = 18;
+            HomepagePanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // homepageItem10
             // 
@@ -297,6 +297,7 @@
             homepageItem1.Name = "homepageItem1";
             homepageItem1.Size = new Size(298, 266);
             homepageItem1.TabIndex = 0;
+            homepageItem1.Load += homepageItem1_Load;
             // 
             // homepageItem2
             // 
@@ -351,7 +352,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(HomepagePanel1);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel2);
             Controls.Add(kryptonPanel1);
@@ -363,7 +364,7 @@
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
+            HomepagePanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -377,7 +378,7 @@
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        public FlowLayoutPanel flowLayoutPanel1;
+        public FlowLayoutPanel HomepagePanel1;
         private HomepageItem homepageItem10;
         private HomepageItem homepageItem8;
         private HomepageItem homepageItem7;

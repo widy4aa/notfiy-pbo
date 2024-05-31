@@ -19,7 +19,7 @@ namespace notfiy.Views.Homepage
 
         private void HomepageControl_Load(object sender, EventArgs e)
         {
-
+            HomepagePanel1.AutoScroll = true;
         }
 
         private void UsernameTextbox_TextChanged(object sender, EventArgs e)
@@ -27,17 +27,12 @@ namespace notfiy.Views.Homepage
 
         }
 
-        private void krytonButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void todoItem6_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void homepageItem1_Load(object sender, EventArgs e)
         {
 
         }

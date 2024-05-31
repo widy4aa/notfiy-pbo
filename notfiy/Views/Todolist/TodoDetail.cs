@@ -89,5 +89,10 @@ namespace notfiy.Views.Todolist
 
             popupdelete.Show();
         }
+
+        private void kryptonCheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

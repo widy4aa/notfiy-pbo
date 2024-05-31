@@ -312,6 +312,7 @@
             kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
             kryptonCheckedListBox1.StateCommon.Border.Width = 3;
             kryptonCheckedListBox1.TabIndex = 8;
+            kryptonCheckedListBox1.SelectedIndexChanged += kryptonCheckedListBox1_SelectedIndexChanged;
             // 
             // BtnDelete
             // 

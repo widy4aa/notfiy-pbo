@@ -88,6 +88,7 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
             flowLayoutPanel1.TabIndex = 14;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // kryptonLabel1
             // 
@@ -101,12 +102,15 @@
             // 
             // kryptonRichTextBox1
             // 
+            kryptonRichTextBox1.DetectUrls = false;
+            kryptonRichTextBox1.ImeMode = ImeMode.Disable;
             kryptonRichTextBox1.Location = new Point(3, 35);
             kryptonRichTextBox1.Name = "kryptonRichTextBox1";
+            kryptonRichTextBox1.ReadOnly = true;
+            kryptonRichTextBox1.ScrollBars = RichTextBoxScrollBars.None;
             kryptonRichTextBox1.Size = new Size(243, 141);
             kryptonRichTextBox1.TabIndex = 13;
             kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
-            kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged;
             // 
             // HomepageItem
             // 
