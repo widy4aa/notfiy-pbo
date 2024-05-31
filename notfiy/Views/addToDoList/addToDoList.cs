@@ -16,5 +16,20 @@ namespace notfiy.Views.addToDoList
         {
             InitializeComponent();
         }
+
+        private void kryptonPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addToDoList_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
