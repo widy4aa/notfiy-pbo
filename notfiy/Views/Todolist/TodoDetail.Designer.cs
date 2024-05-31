@@ -64,7 +64,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(380, 305);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(745, 299);
+            flowLayoutPanel1.Size = new Size(745, 381);
             flowLayoutPanel1.TabIndex = 4;
             // 
             // kryptonCheckBox1
@@ -293,7 +293,7 @@
             // 
             // kryptonBorderEdge1
             // 
-            kryptonBorderEdge1.Location = new Point(324, 659);
+            kryptonBorderEdge1.Location = new Point(324, 729);
             kryptonBorderEdge1.Name = "kryptonBorderEdge1";
             kryptonBorderEdge1.Size = new Size(861, 3);
             kryptonBorderEdge1.StateCommon.Color1 = Color.Black;
@@ -305,7 +305,7 @@
             // 
             kryptonCheckedListBox1.Location = new Point(324, 212);
             kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
-            kryptonCheckedListBox1.Size = new Size(861, 521);
+            kryptonCheckedListBox1.Size = new Size(861, 605);
             kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
             kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.Black;
             kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -316,7 +316,7 @@
             // 
             // BtnDelete
             // 
-            BtnDelete.Location = new Point(380, 678);
+            BtnDelete.Location = new Point(363, 757);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(130, 31);
             BtnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 107, 107);
@@ -335,7 +335,7 @@
             // 
             // BtnEdit
             // 
-            BtnEdit.Location = new Point(903, 678);
+            BtnEdit.Location = new Point(886, 757);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(120, 31);
             BtnEdit.StateCommon.Back.Color1 = Color.FromArgb(255, 217, 61);
@@ -352,7 +352,7 @@
             // 
             // BtnBack
             // 
-            BtnBack.Location = new Point(1050, 678);
+            BtnBack.Location = new Point(1033, 757);
             BtnBack.Name = "BtnBack";
             BtnBack.Size = new Size(110, 31);
             BtnBack.StateCommon.Back.Color1 = Color.FromArgb(165, 165, 165);

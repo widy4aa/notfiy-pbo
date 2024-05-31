@@ -94,11 +94,11 @@
             // 
             kryptonLabel1.Location = new Point(3, 3);
             kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(153, 26);
+            kryptonLabel1.Size = new Size(134, 26);
             kryptonLabel1.StateNormal.ShortText.Color1 = Color.Black;
             kryptonLabel1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel1.TabIndex = 11;
-            kryptonLabel1.Values.Text = "Judul Pekerjaan";
+            kryptonLabel1.Values.Text = "Judul Todolist";
             // 
             // kryptonCheckBox2
             // 
