@@ -31,5 +31,20 @@ namespace notfiy.Views.Homepage
         {
 
         }
+
+        private void kryptonMaskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
