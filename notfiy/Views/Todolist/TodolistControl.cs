@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Views.Other;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,6 +80,16 @@ namespace notfiy.Views.Todolist
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            Sidebar sidebar = new Sidebar();
+            this.Controls.Add(sidebar);
+            sidebar.BringToFront();
+            sidebar.BackColor = Color.Transparent;
+            sidebar.Location = new Point(950, 0);
+            sidebar.Show();
         }
     }
 }

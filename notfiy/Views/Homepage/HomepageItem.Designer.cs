@@ -109,6 +109,8 @@
             kryptonRichTextBox1.ReadOnly = true;
             kryptonRichTextBox1.ScrollBars = RichTextBoxScrollBars.None;
             kryptonRichTextBox1.Size = new Size(243, 141);
+            kryptonRichTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonRichTextBox1.StateCommon.Border.Width = -2;
             kryptonRichTextBox1.TabIndex = 13;
             kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
             // 
