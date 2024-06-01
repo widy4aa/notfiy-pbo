@@ -13,7 +13,7 @@ namespace notfiy.Controllers
     class UserController
     {
         private UserModel UserModel;
-        UserController()
+        public UserController()
         {
             UserModel = new UserModel();
         }
@@ -27,16 +27,14 @@ namespace notfiy.Controllers
             return true;
         }
 
-        public bool UpdateUser(int idUser, string username, string password, string email, string timeCreated)
+        public bool UpdateUser(int idUser, string username, string password, string email)
         {
-            User user = new User()
-            {
-                IdUser = idUser,
-                Username = username,
-                Password = password,
-                Email = email,
-                TimeCreated = timeCreated
-            };
+            User user = UserModel.GetUserById(idUser);
+
+            user.Username = username;
+            user.Password = password;
+            user.Email = email;
+            
             return UserModel.UpdateUser(user);
         }
 
@@ -47,7 +45,7 @@ namespace notfiy.Controllers
                 Username = username,
                 Password = password,
                 Email = email,
-                TimeCreated = Time.CurrentTimeStamp()
+                TimeCreated = DateTime.Now
             };
             return (UserModel.CreateUser(user) > 0);
         }

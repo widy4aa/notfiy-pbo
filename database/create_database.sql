@@ -25,15 +25,15 @@ CREATE TABLE labels (
 
 CREATE TABLE users (
     id_user serial PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
     time_created TIMESTAMP NOT NULL
 );
 
 CREATE TABLE statuses (
     id_status serial PRIMARY KEY,
-    status_name VARCHAR(15) NOT NULL
+    status_name VARCHAR(15) NOT NULL UNIQUE
 );
 
 CREATE TABLE notes (

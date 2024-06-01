@@ -29,28 +29,27 @@ namespace notfiy.Controllers
             return TodoListModel.GetTodoList(idTodoList);
         }
 
-        public int CreateTodoList(string todoListName, string timeCreated, int idUser, int idStatus)
+        public int CreateTodoList(string todoListName, int idUser, int idStatus)
         {
             TodoList todoList = new TodoList()
             {
                 TodoListName = todoListName,
-                TimeCreated = timeCreated,
+                TimeCreated = DateTime.Now,
                 IdUser = idUser,
                 IdStatus = idStatus,
             };
             return TodoListModel.CreateTodoList(todoList);
         }
 
-        public bool UpdateTodoList(int idTodoList, string todoListName, string timeCreated, int idUser, int idStatus)
+        public bool UpdateTodoList(int idTodoList, string todoListName, int idUser, int idStatus)
         {
-            TodoList todoList = new TodoList()
-            {
-                IdTodoList = idTodoList,
-                TodoListName = todoListName,
-                TimeCreated = timeCreated,
-                IdUser = idUser,
-                IdStatus = idStatus,
-            };
+            TodoList todoList = GetTodoList(idTodoList);
+
+                todoList.IdTodoList = idTodoList;
+                todoList.TodoListName = todoListName;
+                todoList.IdUser = idUser;
+                todoList.IdStatus = idStatus;
+            
             return TodoListModel.UpdateTodoList(todoList);
         }
 

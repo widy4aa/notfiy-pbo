@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Npgsql;
 using notfiy.Entities;
 using notfiy.Core;
+using notfiy.Helpers;
 
 namespace notfiy.Models
 {
@@ -38,7 +39,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Retrieval failed! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox("Retrieval failed! Error: " + ex.Message);
             }
             finally
             {
@@ -67,7 +68,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Insert failed! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox("Insert failed! Error: " + ex.Message);
                 return 0;
             }
             finally
@@ -121,7 +122,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Delete failed! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox("Delete failed! Error: " + ex.Message);
                 return false;
             }
             finally
@@ -153,7 +154,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Update failed! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox("Update failed! Error: " + ex.Message);
                 return false;
             }
             finally
@@ -179,7 +180,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Update failed! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox("Update failed! Error: " + ex.Message);
                 return false;
             }
             finally
@@ -218,7 +219,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Retrieval failed! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox("Retrieval failed! Error: " + ex.Message);
                 return null;
             }
             finally

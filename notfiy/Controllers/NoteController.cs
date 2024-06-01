@@ -25,7 +25,7 @@ namespace notfiy.Controllers
                 NoteName = noteName,
                 Content = content,
                 ImageUrl = imageUrl,
-                TimeCreated = Time.CurrentTimeStamp(),
+                TimeCreated = DateTime.Now,
                 IdUser = SystemSingleton.Instance.UserLoggedIn.IdUser,
                 IdStatus = (int)Helpers.Status.Default
             };

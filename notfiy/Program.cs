@@ -3,7 +3,7 @@ namespace notfiy
     using Core;
     using notfiy.Views.Login;
     using notfiy.Views.Todolist;
-
+    using notfiy.Views;
     internal static class Program
     {
         /// <summary>
@@ -30,6 +30,8 @@ namespace notfiy
         string trustServerCertificate = "true";
 
         string connectionString = $"Host={host};Port={port};Username={username};Password={password};Database={database};SSL Mode={sslMode};Trust Server Certificate={trustServerCertificate}";
+        //string connectionString = "Host=localhost:5050;Username=postgres;Password=noxzan123;Database=notify_pbo;";
+
 
         SystemSingleton.Instance.EnableDatabase(connectionString);
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
@@ -37,7 +39,9 @@ namespace notfiy
         //mainForm.Controls.Add(new LoginControl());
         mainForm.Controls.Add(new TodolistControl());
 
+
         Application.Run(mainForm);
+        //Application.Run(new LoginUnitTesterForm());
         }
     }
 }

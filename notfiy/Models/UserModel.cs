@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using notfiy.Core;
+using notfiy.Helpers;
+using Newtonsoft.Json;
 
 namespace notfiy.Models
 {
@@ -16,45 +18,74 @@ namespace notfiy.Models
         {
             var users = new List<User>();
             var command = new NpgsqlCommand("SELECT * FROM users", Connection);
-            using (var reader = command.ExecuteReader())
+
+            try
             {
-                while (reader.Read())
+                Connection.Open();
+                using (var reader = command.ExecuteReader())
                 {
-                    User user = new User(){
-                        IdUser = (int)reader["id_users"],
-                        Username = (string)reader["username"],
-                        Password = (string)reader["password"],
-                        Email = (string)reader["email"],
-                        TimeCreated = (string)reader["time_created"]
-                    };
-                    users.Add(user);
+                    while (reader.Read())
+                    {
+                        User user = new User()
+                        {
+                            IdUser = (int)reader["id_user"],
+                            Username = (string)reader["username"],
+                            Password = (string)reader["password"],
+                            Email = (string)reader["email"],
+                            TimeCreated = (DateTime)reader["time_created"]
+                        };
+                        users.Add(user);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                // Handle exception (log it, rethrow it, etc.)
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+
             return users;
         }
 
-        public User ?GetUsersById(int id)
+        public User? GetUserById(int id)
         {
-            User ?user = null;
+            User? user = null;
             var command = new NpgsqlCommand("SELECT * FROM users WHERE id_user = @id", Connection);
-            using (command)
+
+            try
             {
-                command.Parameters.AddWithValue("@id",id);
+                Connection.Open();
+                command.Parameters.AddWithValue("@id", id);
+
                 using (var reader = command.ExecuteReader())
                 {
                     if (reader.Read())
                     {
                         user = new User
                         {
-                            IdUser = (int)reader["id_users"],
+                            IdUser = (int)reader["id_user"],
                             Username = (string)reader["username"],
                             Password = (string)reader["password"],
                             Email = (string)reader["email"],
-                            TimeCreated = (string)reader["time_created"]
+                            TimeCreated = (DateTime)reader["time_created"]
                         };
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                // Handle exception (log it, rethrow it, etc.)
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+
             return user;
         }
 
@@ -77,7 +108,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal Membuat User! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
                 return 0;
             }
             finally
@@ -102,7 +133,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal Menghapus User! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
                 return false;
             }
             finally
@@ -113,15 +144,16 @@ namespace notfiy.Models
 
         public bool UpdateUser(User user)
         {
+            MessageBoxHelper.ShowInfoMessageBox(JsonConvert.SerializeObject(user));
             try
             {
                 Connection.Open();
                 string QueryUpdate = @"UPDATE users SET
-                                 username = @Username
-                                 password = @Password
-                                 email = @Email
+                                 username = @Username,
+                                 password = @Password,
+                                 email = @Email,
                                  time_created = @TimeCreated
-                                 WHERE id_users = @IdUser";
+                                 WHERE id_user = @IdUser";
                 using (NpgsqlCommand command = new NpgsqlCommand(QueryUpdate, Connection))
                 {
                     command.Parameters.AddWithValue("IdUser", user.IdUser);
@@ -135,7 +167,7 @@ namespace notfiy.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal Update User! Error: " + ex.Message);
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
                 return false;
             }
             finally
@@ -146,27 +178,42 @@ namespace notfiy.Models
         public User? UserAuth(string username, string password)
         {
             User? user = null;
-            var command = new NpgsqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", Connection);
-            using (command)
+            var command = new NpgsqlCommand($"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'", Connection);
+            // Kenapa gak mau ngisi parameters!!??
+            //var command = new NpgsqlCommand("SELECT * FROM users WHERE username = '@username' AND password = '@password'", Connection);
+
+            try
             {
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password);
-                using (var reader = command.ExecuteReader())
+                Connection.Open();
+                //command.Parameters.AddWithValue("@username", username);
+                //command.Parameters.AddWithValue("@password", password);
+
+                var reader = command.ExecuteReader();
+                if (reader.Read())
                 {
-                    if (reader.Read())
+                    user = new User
                     {
-                        user = new User
-                        {
-                            IdUser = (int)reader["id_users"],
-                            Username = (string)reader["username"],
-                            Password = (string)reader["password"],
-                            Email = (string)reader["email"],
-                            TimeCreated = (string)reader["time_created"]
-                        };
-                    }
+                        IdUser = (int)reader["id_user"],
+                        Username = (string)reader["username"],
+                        Password = (string)reader["password"],
+                        Email = (string)reader["email"],
+                        TimeCreated = (DateTime)reader["time_created"]
+                    };
+
                 }
+                
+            }
+            catch (Exception ex)
+            {
+                // Handle exception (log it, rethrow it, etc.)
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
+               }
+            finally
+            {
+                Connection.Close();
             }
             return user;
         }
+
     }
 }

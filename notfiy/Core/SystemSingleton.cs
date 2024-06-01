@@ -1,10 +1,12 @@
 ﻿using notfiy.Entities;
+using notfiy.Helpers;
 using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WinFormLabel = System.Windows.Forms.Label;
 
 namespace notfiy.Core
 {
@@ -34,16 +36,33 @@ namespace notfiy.Core
 
         public void EnableDatabase(string connectionString)
         {
-            try {
+
+            var connectionForm = new Form
+            {
+                Text = "Berusaha Menyambung ke Database!",
+                Size = new System.Drawing.Size(500, 1),
+                StartPosition = FormStartPosition.CenterScreen,
+            };
+
+            connectionForm.Show();
+
+
+            try
+            {
                 NpgsqlConnection = new NpgsqlConnection(connectionString);
                 NpgsqlConnection.Open();
-            } catch (Exception ex)
-            {
-                throw new Exception("Tidak dapat terhubung ke database!");
+                connectionForm.Text = "Menyambung ke database sukses!";
+
             }
-
-            NpgsqlConnection.Close();
-
+            catch (Exception ex)
+            {
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
+            }
+            finally
+            {
+                connectionForm.Close();
+                NpgsqlConnection.Close();
+            }
         }
 
     }

@@ -1,8 +1,9 @@
+using notfiy.Core;
 using System.Web;
 
 namespace notfiy.Entities
 {
-    class DoItem
+    class DoItem : Entity
     {
         public int IdDoItem;
         public string DoItemName;
