@@ -39,6 +39,9 @@
             kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
+            BtnBack = new Krypton.Toolkit.KryptonButton();
+            BtnEdit = new Krypton.Toolkit.KryptonButton();
+            BtnDelete = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -268,12 +271,69 @@
             kryptonRichTextBox1.StateCommon.Border.Width = -2;
             kryptonRichTextBox1.TabIndex = 24;
             kryptonRichTextBox1.Text = "kryptonRichTextBox1";
+            kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged;
+            // 
+            // BtnBack
+            // 
+            BtnBack.Location = new Point(1050, 757);
+            BtnBack.Name = "BtnBack";
+            BtnBack.Size = new Size(110, 31);
+            BtnBack.StateCommon.Back.Color1 = Color.FromArgb(165, 165, 165);
+            BtnBack.StateCommon.Back.Color2 = Color.FromArgb(165, 165, 165);
+            BtnBack.StateCommon.Border.Color1 = Color.Black;
+            BtnBack.StateCommon.Border.Color2 = Color.Black;
+            BtnBack.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            BtnBack.StateCommon.Border.Rounding = 20F;
+            BtnBack.StateCommon.Border.Width = 1;
+            BtnBack.StateNormal.Content.ShortText.Color1 = Color.Black;
+            BtnBack.StateNormal.Content.ShortText.Color2 = Color.Black;
+            BtnBack.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnBack.TabIndex = 26;
+            BtnBack.Values.Text = "Back";
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.Location = new Point(902, 757);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(120, 31);
+            BtnEdit.StateCommon.Back.Color1 = Color.Lime;
+            BtnEdit.StateCommon.Back.Color2 = Color.Lime;
+            BtnEdit.StateCommon.Border.Color1 = Color.Black;
+            BtnEdit.StateCommon.Border.Color2 = Color.Black;
+            BtnEdit.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            BtnEdit.StateCommon.Border.Rounding = 20F;
+            BtnEdit.StateCommon.Border.Width = 1;
+            BtnEdit.StateNormal.Content.ShortText.Color1 = Color.Black;
+            BtnEdit.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnEdit.TabIndex = 27;
+            BtnEdit.Values.Text = "Save";
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Location = new Point(354, 757);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(130, 31);
+            BtnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 107, 107);
+            BtnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 107, 107);
+            BtnDelete.StateCommon.Border.Color1 = Color.Black;
+            BtnDelete.StateCommon.Border.Color2 = Color.Black;
+            BtnDelete.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            BtnDelete.StateCommon.Border.Rounding = 20F;
+            BtnDelete.StateCommon.Border.Width = 1;
+            BtnDelete.StateNormal.Content.ShortText.Color1 = Color.Black;
+            BtnDelete.StateNormal.Content.ShortText.Color2 = Color.Black;
+            BtnDelete.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnDelete.TabIndex = 28;
+            BtnDelete.Values.Text = "Delete";
             // 
             // HomepageDetail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnDelete);
+            Controls.Add(BtnEdit);
+            Controls.Add(BtnBack);
             Controls.Add(kryptonRichTextBox1);
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonBorderEdge1);
@@ -303,5 +363,8 @@
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        private Krypton.Toolkit.KryptonButton BtnBack;
+        private Krypton.Toolkit.KryptonButton BtnEdit;
+        private Krypton.Toolkit.KryptonButton BtnDelete;
     }
 }
