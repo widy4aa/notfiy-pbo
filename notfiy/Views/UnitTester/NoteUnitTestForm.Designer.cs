@@ -87,7 +87,7 @@
             Controls.Add(Name);
             Controls.Add(textBox1);
             Controls.Add(richTextBox1);
-            Name = "NoteUnitTestForm";
+            //Name = "NoteUnitTestForm";
             Text = "Note Unit Test Form";
             ResumeLayout(false);
             PerformLayout();
