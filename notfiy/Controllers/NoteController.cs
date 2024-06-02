@@ -16,7 +16,7 @@ namespace notfiy.Controllers
             ImageController = new ImageController();
         }
 
-        public int CreateNote(string noteName, string content, string? imageFileName, int idUser, int idLabel, int idStatus)
+        public int CreateNote(string noteName, string content, string? imageFileName, int idLabel, int idStatus)
         {
             string? imageUrl = ImageController.ProcessImage(imageFileName);
 
@@ -27,7 +27,8 @@ namespace notfiy.Controllers
                 ImageUrl = imageUrl,
                 TimeCreated = DateTime.Now,
                 IdUser = SystemSingleton.Instance.UserLoggedIn.IdUser,
-                IdStatus = (int)Helpers.Status.Default
+                IdStatus = idStatus,
+                IdLabel = idLabel
             };
 
             return NoteModel.CreateNote(note);
@@ -44,7 +45,7 @@ namespace notfiy.Controllers
             return ImageController.GetImage(idNote, note.ImageUrl);
         }
 
-        public bool UpdateNote(int idNote, string noteName, string content, string? imageFileName, bool pinned, int idUser, int idLabel, int idStatus)
+        public bool UpdateNote(int idNote, string noteName, string content, string? imageFileName, bool pinned, int idLabel, int idStatus)
         {
             Note note = NoteModel.GetNoteById(idNote);
 
