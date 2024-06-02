@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic.ApplicationServices;
+using notfiy.Core;
 using notfiy.Entities;
 using notfiy.Models;
 
@@ -29,25 +30,25 @@ namespace notfiy.Controllers
             return TodoListModel.GetTodoList(idTodoList);
         }
 
-        public int CreateTodoList(string todoListName, int idUser, int idStatus)
+        public int CreateTodoList(string todoListName, int idStatus)
         {
             TodoList todoList = new TodoList()
             {
                 TodoListName = todoListName,
                 TimeCreated = DateTime.Now,
-                IdUser = idUser,
+                IdUser = SystemSingleton.Instance.UserLoggedIn.IdUser,
                 IdStatus = idStatus,
             };
             return TodoListModel.CreateTodoList(todoList);
         }
 
-        public bool UpdateTodoList(int idTodoList, string todoListName, int idUser, int idStatus)
+        public bool UpdateTodoList(int idTodoList, string todoListName, int idStatus)
         {
             TodoList todoList = GetTodoList(idTodoList);
 
                 todoList.IdTodoList = idTodoList;
                 todoList.TodoListName = todoListName;
-                todoList.IdUser = idUser;
+                todoList.IdUser = SystemSingleton.Instance.UserLoggedIn.IdUser;
                 todoList.IdStatus = idStatus;
             
             return TodoListModel.UpdateTodoList(todoList);

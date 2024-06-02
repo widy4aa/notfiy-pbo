@@ -36,7 +36,7 @@ namespace notfiy.Controllers
 
         public string? GetImage(int idNote)
         {
-            Note note = NoteModel.GetNoteById(idNote);
+            Note ?note = NoteModel.GetNoteById(idNote);
             if (note == null || string.IsNullOrEmpty(note.ImageUrl))
             {
                 return null; // Note not found or no image URL
@@ -47,7 +47,7 @@ namespace notfiy.Controllers
 
         public bool UpdateNote(int idNote, string noteName, string content, string? imageFileName, bool pinned, int idLabel, int idStatus)
         {
-            Note note = NoteModel.GetNoteById(idNote);
+            Note ?note = NoteModel.GetNoteById(idNote);
 
             string? imageUrl = ImageController.ProcessImage(imageFileName);
 

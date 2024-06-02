@@ -33,6 +33,7 @@ namespace notfiy.Controllers
         {
             DoItem doItem = new DoItem()
             {
+                IdDoItem = idDoItem,
                 DoItemName = doItemName,
                 Checked = Checked,
                 IdTodoList = idTodoList
