@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Profiles\" />
+    <Compile Remove="Views\Other\Sidebar.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
