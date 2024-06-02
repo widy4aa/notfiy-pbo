@@ -1,6 +1,6 @@
 ﻿namespace notfiy.Views.Todolist
 {
-    partial class TodoDetail
+    partial class EditTodolist
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,111 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodoDetail));
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            kryptonCheckBox1 = new Krypton.Toolkit.KryptonCheckBox();
-            kryptonCheckBox2 = new Krypton.Toolkit.KryptonCheckBox();
-            kryptonCheckBox3 = new Krypton.Toolkit.KryptonCheckBox();
-            kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTodolist));
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
-            kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
-            kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
-            kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
-            kryptonButton5 = new Krypton.Toolkit.KryptonButton();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             label1 = new Label();
-            BtnBack = new Krypton.Toolkit.KryptonButton();
-            BtnEdit = new Krypton.Toolkit.KryptonButton();
-            BtnDelete = new Krypton.Toolkit.KryptonButton();
-            flowLayoutPanel1.SuspendLayout();
+            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            kryptonCheckBox1 = new Krypton.Toolkit.KryptonCheckBox();
+            kryptonCheckBox2 = new Krypton.Toolkit.KryptonCheckBox();
+            kryptonCheckBox3 = new Krypton.Toolkit.KryptonCheckBox();
+            kryptonButton6 = new Krypton.Toolkit.KryptonButton();
+            kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
+            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
+            kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.BackColor = Color.White;
-            flowLayoutPanel1.Controls.Add(kryptonCheckBox1);
-            flowLayoutPanel1.Controls.Add(kryptonCheckBox2);
-            flowLayoutPanel1.Controls.Add(kryptonCheckBox3);
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(380, 305);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(745, 381);
-            flowLayoutPanel1.TabIndex = 4;
-            // 
-            // kryptonCheckBox1
-            // 
-            kryptonCheckBox1.AutoSize = false;
-            kryptonCheckBox1.Images.CheckedDisabled = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedDisabled");
-            kryptonCheckBox1.Images.CheckedNormal = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedNormal");
-            kryptonCheckBox1.Images.CheckedPressed = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedPressed");
-            kryptonCheckBox1.Images.CheckedTracking = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedTracking");
-            kryptonCheckBox1.Images.UncheckedDisabled = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedDisabled");
-            kryptonCheckBox1.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedNormal");
-            kryptonCheckBox1.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedPressed");
-            kryptonCheckBox1.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedTracking");
-            kryptonCheckBox1.Location = new Point(3, 3);
-            kryptonCheckBox1.Name = "kryptonCheckBox1";
-            kryptonCheckBox1.Size = new Size(202, 30);
-            kryptonCheckBox1.StateNormal.ShortText.Color1 = Color.Black;
-            kryptonCheckBox1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonCheckBox1.TabIndex = 8;
-            kryptonCheckBox1.Values.Text = "kryptonCheckBox1";
-            // 
-            // kryptonCheckBox2
-            // 
-            kryptonCheckBox2.AutoSize = false;
-            kryptonCheckBox2.Images.CheckedDisabled = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedDisabled");
-            kryptonCheckBox2.Images.CheckedNormal = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedNormal");
-            kryptonCheckBox2.Images.CheckedPressed = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedPressed");
-            kryptonCheckBox2.Images.CheckedTracking = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedTracking");
-            kryptonCheckBox2.Images.UncheckedDisabled = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedDisabled");
-            kryptonCheckBox2.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedNormal");
-            kryptonCheckBox2.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedPressed");
-            kryptonCheckBox2.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedTracking");
-            kryptonCheckBox2.Location = new Point(3, 39);
-            kryptonCheckBox2.Name = "kryptonCheckBox2";
-            kryptonCheckBox2.Size = new Size(202, 30);
-            kryptonCheckBox2.StateNormal.ShortText.Color1 = Color.Black;
-            kryptonCheckBox2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonCheckBox2.TabIndex = 9;
-            kryptonCheckBox2.Values.Text = "kryptonCheckBox2";
-            // 
-            // kryptonCheckBox3
-            // 
-            kryptonCheckBox3.AutoSize = false;
-            kryptonCheckBox3.Images.CheckedDisabled = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedDisabled");
-            kryptonCheckBox3.Images.CheckedNormal = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedNormal");
-            kryptonCheckBox3.Images.CheckedPressed = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedPressed");
-            kryptonCheckBox3.Images.CheckedTracking = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedTracking");
-            kryptonCheckBox3.Images.UncheckedDisabled = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedDisabled");
-            kryptonCheckBox3.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedNormal");
-            kryptonCheckBox3.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedPressed");
-            kryptonCheckBox3.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedTracking");
-            kryptonCheckBox3.Location = new Point(3, 75);
-            kryptonCheckBox3.Name = "kryptonCheckBox3";
-            kryptonCheckBox3.Size = new Size(202, 30);
-            kryptonCheckBox3.StateNormal.ShortText.Color1 = Color.Black;
-            kryptonCheckBox3.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonCheckBox3.TabIndex = 10;
-            kryptonCheckBox3.Values.Text = "kryptonCheckBox3";
-            // 
-            // kryptonLabel2
-            // 
-            kryptonLabel2.Location = new Point(345, 244);
-            kryptonLabel2.Name = "kryptonLabel2";
-            kryptonLabel2.Size = new Size(221, 43);
-            kryptonLabel2.StateNormal.ShortText.Color1 = Color.Black;
-            kryptonLabel2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel2.TabIndex = 5;
-            kryptonLabel2.Values.Text = "Judul Todolist";
             // 
             // kryptonPanel1
             // 
@@ -145,7 +65,7 @@
             kryptonPanel1.Size = new Size(1440, 120);
             kryptonPanel1.StateNormal.Color1 = Color.FromArgb(51, 15, 126);
             kryptonPanel1.StateNormal.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonPanel1.TabIndex = 5;
+            kryptonPanel1.TabIndex = 2;
             // 
             // kryptonButton1
             // 
@@ -282,52 +202,17 @@
             UsernameTextbox.TabIndex = 11;
             UsernameTextbox.Text = "Search";
             // 
-            // kryptonPanel2
+            // label1
             // 
-            kryptonPanel2.Location = new Point(0, 860);
-            kryptonPanel2.Name = "kryptonPanel2";
-            kryptonPanel2.Size = new Size(1440, 164);
-            kryptonPanel2.StateNormal.Color1 = Color.Black;
-            kryptonPanel2.StateNormal.Color2 = Color.Black;
-            kryptonPanel2.TabIndex = 6;
-            // 
-            // kryptonBorderEdge1
-            // 
-            kryptonBorderEdge1.Location = new Point(324, 729);
-            kryptonBorderEdge1.Name = "kryptonBorderEdge1";
-            kryptonBorderEdge1.Size = new Size(861, 3);
-            kryptonBorderEdge1.StateCommon.Color1 = Color.Black;
-            kryptonBorderEdge1.StateCommon.Color2 = Color.Black;
-            kryptonBorderEdge1.StateCommon.Width = 3;
-            kryptonBorderEdge1.Text = "kryptonBorderEdge1";
-            // 
-            // kryptonCheckedListBox1
-            // 
-            kryptonCheckedListBox1.Location = new Point(324, 212);
-            kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
-            kryptonCheckedListBox1.Size = new Size(861, 605);
-            kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
-            kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.Black;
-            kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
-            kryptonCheckedListBox1.StateCommon.Border.Width = 3;
-            kryptonCheckedListBox1.TabIndex = 8;
-            kryptonCheckedListBox1.SelectedIndexChanged += kryptonCheckedListBox1_SelectedIndexChanged;
-            // 
-            // kryptonButton5
-            // 
-            kryptonButton5.Location = new Point(1116, 177);
-            kryptonButton5.Name = "kryptonButton5";
-            kryptonButton5.Size = new Size(38, 29);
-            kryptonButton5.StateCommon.Back.Color1 = Color.White;
-            kryptonButton5.StateCommon.Back.Color2 = Color.White;
-            kryptonButton5.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton5.StateCommon.Back.Image");
-            kryptonButton5.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton5.StateCommon.Border.Color1 = Color.White;
-            kryptonButton5.StateCommon.Border.Color2 = Color.White;
-            kryptonButton5.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton5.TabIndex = 12;
-            kryptonButton5.Values.Text = "";
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(61, 44, 94);
+            label1.Font = new Font("Microsoft Sans Serif", 17.25F);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(374, 158);
+            label1.Name = "label1";
+            label1.Size = new Size(101, 29);
+            label1.TabIndex = 21;
+            label1.Text = "Todolist";
             // 
             // kryptonTextBox1
             // 
@@ -345,126 +230,215 @@
             kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
-            kryptonTextBox1.TabIndex = 17;
+            kryptonTextBox1.TabIndex = 20;
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
             // 
-            // label1
+            // kryptonLabel2
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(61, 44, 94);
-            label1.Font = new Font("Microsoft Sans Serif", 17.25F);
-            label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(374, 158);
-            label1.Name = "label1";
-            label1.Size = new Size(101, 29);
-            label1.TabIndex = 19;
-            label1.Text = "Todolist";
+            kryptonLabel2.Location = new Point(345, 259);
+            kryptonLabel2.Name = "kryptonLabel2";
+            kryptonLabel2.Size = new Size(221, 43);
+            kryptonLabel2.StateNormal.ShortText.Color1 = Color.Black;
+            kryptonLabel2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel2.TabIndex = 24;
+            kryptonLabel2.Values.Text = "Judul Todolist";
             // 
-            // BtnBack
+            // kryptonBorderEdge1
             // 
-            BtnBack.Location = new Point(1033, 757);
-            BtnBack.Name = "BtnBack";
-            BtnBack.Size = new Size(110, 31);
-            BtnBack.StateCommon.Back.Color1 = Color.FromArgb(165, 165, 165);
-            BtnBack.StateCommon.Back.Color2 = Color.FromArgb(165, 165, 165);
-            BtnBack.StateCommon.Border.Color1 = Color.Black;
-            BtnBack.StateCommon.Border.Color2 = Color.Black;
-            BtnBack.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            BtnBack.StateCommon.Border.Rounding = 20F;
-            BtnBack.StateCommon.Border.Width = 1;
-            BtnBack.StateNormal.Content.ShortText.Color1 = Color.Black;
-            BtnBack.StateNormal.Content.ShortText.Color2 = Color.Black;
-            BtnBack.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnBack.TabIndex = 11;
-            BtnBack.Values.Text = "Back";
-            BtnBack.Click += BtnBack_Click_1;
+            kryptonBorderEdge1.Location = new Point(324, 744);
+            kryptonBorderEdge1.Name = "kryptonBorderEdge1";
+            kryptonBorderEdge1.Size = new Size(861, 3);
+            kryptonBorderEdge1.StateCommon.Color1 = Color.Black;
+            kryptonBorderEdge1.StateCommon.Color2 = Color.Black;
+            kryptonBorderEdge1.StateCommon.Width = 3;
+            kryptonBorderEdge1.Text = "kryptonBorderEdge1";
             // 
-            // BtnEdit
+            // flowLayoutPanel1
             // 
-            BtnEdit.Location = new Point(886, 757);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(120, 31);
-            BtnEdit.StateCommon.Back.Color1 = Color.FromArgb(255, 217, 61);
-            BtnEdit.StateCommon.Back.Color2 = Color.FromArgb(255, 217, 61);
-            BtnEdit.StateCommon.Border.Color1 = Color.Black;
-            BtnEdit.StateCommon.Border.Color2 = Color.Black;
-            BtnEdit.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            BtnEdit.StateCommon.Border.Rounding = 20F;
-            BtnEdit.StateCommon.Border.Width = 1;
-            BtnEdit.StateNormal.Content.ShortText.Color1 = Color.Black;
-            BtnEdit.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnEdit.TabIndex = 10;
-            BtnEdit.Values.Text = "Edit";
-            BtnEdit.Click += BtnEdit_Click;
+            flowLayoutPanel1.BackColor = Color.White;
+            flowLayoutPanel1.Controls.Add(kryptonCheckBox1);
+            flowLayoutPanel1.Controls.Add(kryptonCheckBox2);
+            flowLayoutPanel1.Controls.Add(kryptonCheckBox3);
+            flowLayoutPanel1.Controls.Add(kryptonButton6);
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(380, 320);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(745, 381);
+            flowLayoutPanel1.TabIndex = 23;
             // 
-            // BtnDelete
+            // kryptonCheckBox1
             // 
-            BtnDelete.Location = new Point(363, 757);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(130, 31);
-            BtnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 107, 107);
-            BtnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 107, 107);
-            BtnDelete.StateCommon.Border.Color1 = Color.Black;
-            BtnDelete.StateCommon.Border.Color2 = Color.Black;
-            BtnDelete.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            BtnDelete.StateCommon.Border.Rounding = 20F;
-            BtnDelete.StateCommon.Border.Width = 1;
-            BtnDelete.StateNormal.Content.ShortText.Color1 = Color.Black;
-            BtnDelete.StateNormal.Content.ShortText.Color2 = Color.Black;
-            BtnDelete.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnDelete.TabIndex = 9;
-            BtnDelete.Values.Text = "Delete";
-            BtnDelete.Click += BtnDelete_Click;
+            kryptonCheckBox1.AutoSize = false;
+            kryptonCheckBox1.Images.CheckedDisabled = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedDisabled");
+            kryptonCheckBox1.Images.CheckedNormal = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedNormal");
+            kryptonCheckBox1.Images.CheckedPressed = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedPressed");
+            kryptonCheckBox1.Images.CheckedTracking = (Image)resources.GetObject("kryptonCheckBox1.Images.CheckedTracking");
+            kryptonCheckBox1.Images.UncheckedDisabled = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedDisabled");
+            kryptonCheckBox1.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedNormal");
+            kryptonCheckBox1.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedPressed");
+            kryptonCheckBox1.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox1.Images.UncheckedTracking");
+            kryptonCheckBox1.Location = new Point(3, 3);
+            kryptonCheckBox1.Name = "kryptonCheckBox1";
+            kryptonCheckBox1.Size = new Size(202, 30);
+            kryptonCheckBox1.StateNormal.ShortText.Color1 = Color.Black;
+            kryptonCheckBox1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonCheckBox1.TabIndex = 8;
+            kryptonCheckBox1.Values.Text = "kryptonCheckBox1";
             // 
-            // TodoDetail
+            // kryptonCheckBox2
+            // 
+            kryptonCheckBox2.AutoSize = false;
+            kryptonCheckBox2.Images.CheckedDisabled = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedDisabled");
+            kryptonCheckBox2.Images.CheckedNormal = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedNormal");
+            kryptonCheckBox2.Images.CheckedPressed = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedPressed");
+            kryptonCheckBox2.Images.CheckedTracking = (Image)resources.GetObject("kryptonCheckBox2.Images.CheckedTracking");
+            kryptonCheckBox2.Images.UncheckedDisabled = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedDisabled");
+            kryptonCheckBox2.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedNormal");
+            kryptonCheckBox2.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedPressed");
+            kryptonCheckBox2.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox2.Images.UncheckedTracking");
+            kryptonCheckBox2.Location = new Point(3, 39);
+            kryptonCheckBox2.Name = "kryptonCheckBox2";
+            kryptonCheckBox2.Size = new Size(202, 30);
+            kryptonCheckBox2.StateNormal.ShortText.Color1 = Color.Black;
+            kryptonCheckBox2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonCheckBox2.TabIndex = 9;
+            kryptonCheckBox2.Values.Text = "kryptonCheckBox2";
+            // 
+            // kryptonCheckBox3
+            // 
+            kryptonCheckBox3.AutoSize = false;
+            kryptonCheckBox3.Images.CheckedDisabled = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedDisabled");
+            kryptonCheckBox3.Images.CheckedNormal = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedNormal");
+            kryptonCheckBox3.Images.CheckedPressed = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedPressed");
+            kryptonCheckBox3.Images.CheckedTracking = (Image)resources.GetObject("kryptonCheckBox3.Images.CheckedTracking");
+            kryptonCheckBox3.Images.UncheckedDisabled = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedDisabled");
+            kryptonCheckBox3.Images.UncheckedNormal = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedNormal");
+            kryptonCheckBox3.Images.UncheckedPressed = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedPressed");
+            kryptonCheckBox3.Images.UncheckedTracking = (Image)resources.GetObject("kryptonCheckBox3.Images.UncheckedTracking");
+            kryptonCheckBox3.Location = new Point(3, 75);
+            kryptonCheckBox3.Name = "kryptonCheckBox3";
+            kryptonCheckBox3.Size = new Size(202, 30);
+            kryptonCheckBox3.StateNormal.ShortText.Color1 = Color.Black;
+            kryptonCheckBox3.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonCheckBox3.TabIndex = 10;
+            kryptonCheckBox3.Values.Text = "kryptonCheckBox3";
+            // 
+            // kryptonButton6
+            // 
+            kryptonButton6.Location = new Point(3, 111);
+            kryptonButton6.Name = "kryptonButton6";
+            kryptonButton6.Size = new Size(27, 28);
+            kryptonButton6.StateNormal.Back.Color1 = Color.White;
+            kryptonButton6.StateNormal.Back.Color2 = Color.White;
+            kryptonButton6.StateNormal.Border.Color1 = Color.White;
+            kryptonButton6.StateNormal.Border.Color2 = Color.White;
+            kryptonButton6.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton6.TabIndex = 33;
+            kryptonButton6.Values.Image = (Image)resources.GetObject("kryptonButton6.Values.Image");
+            kryptonButton6.Values.Text = "";
+            // 
+            // kryptonCheckedListBox1
+            // 
+            kryptonCheckedListBox1.Location = new Point(324, 227);
+            kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
+            kryptonCheckedListBox1.Size = new Size(861, 605);
+            kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
+            kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.Black;
+            kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
+            kryptonCheckedListBox1.StateCommon.Border.Width = 3;
+            kryptonCheckedListBox1.TabIndex = 25;
+            // 
+            // kryptonButton2
+            // 
+            kryptonButton2.Location = new Point(827, 767);
+            kryptonButton2.Name = "kryptonButton2";
+            kryptonButton2.Size = new Size(136, 41);
+            kryptonButton2.StateCommon.Back.Color1 = Color.White;
+            kryptonButton2.StateCommon.Back.Color2 = Color.White;
+            kryptonButton2.StateCommon.Border.Color1 = Color.Black;
+            kryptonButton2.StateCommon.Border.Color2 = Color.Black;
+            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton2.StateCommon.Border.Rounding = 20F;
+            kryptonButton2.StateCommon.Border.Width = 1;
+            kryptonButton2.StateNormal.Content.ShortText.Color1 = Color.Black;
+            kryptonButton2.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonButton2.TabIndex = 32;
+            kryptonButton2.Values.Text = "Cancel";
+            kryptonButton2.Click += this.kryptonButton2_Click;
+            // 
+            // kryptonButton3
+            // 
+            kryptonButton3.Location = new Point(989, 767);
+            kryptonButton3.Name = "kryptonButton3";
+            kryptonButton3.Size = new Size(136, 41);
+            kryptonButton3.StateCommon.Back.Color1 = Color.FromArgb(77, 150, 255);
+            kryptonButton3.StateCommon.Back.Color2 = Color.FromArgb(77, 150, 255);
+            kryptonButton3.StateCommon.Border.Color1 = Color.Black;
+            kryptonButton3.StateCommon.Border.Color2 = Color.Black;
+            kryptonButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton3.StateCommon.Border.Rounding = 20F;
+            kryptonButton3.StateCommon.Border.Width = 1;
+            kryptonButton3.StateNormal.Content.ShortText.Color1 = Color.White;
+            kryptonButton3.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonButton3.TabIndex = 31;
+            kryptonButton3.Values.Text = "Save";
+            // 
+            // kryptonPanel2
+            // 
+            kryptonPanel2.Location = new Point(0, 860);
+            kryptonPanel2.Name = "kryptonPanel2";
+            kryptonPanel2.Size = new Size(1440, 164);
+            kryptonPanel2.StateNormal.Color1 = Color.Black;
+            kryptonPanel2.StateNormal.Color2 = Color.Black;
+            kryptonPanel2.TabIndex = 34;
+            // 
+            // EditTodolist
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(label1);
-            Controls.Add(kryptonTextBox1);
-            Controls.Add(kryptonButton5);
-            Controls.Add(BtnBack);
-            Controls.Add(BtnEdit);
-            Controls.Add(BtnDelete);
+            Controls.Add(kryptonPanel2);
+            Controls.Add(kryptonButton2);
+            Controls.Add(kryptonButton3);
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonBorderEdge1);
-            Controls.Add(kryptonPanel2);
-            Controls.Add(kryptonPanel1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonCheckedListBox1);
-            Name = "TodoDetail";
+            Controls.Add(label1);
+            Controls.Add(kryptonPanel1);
+            Controls.Add(kryptonTextBox1);
+            Name = "EditTodolist";
             Size = new Size(1440, 1024);
-            flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
+
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
-        private Krypton.Toolkit.KryptonPanel kryptonPanel2;
-        private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
-        private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;
-        private Krypton.Toolkit.KryptonButton kryptonButton5;
+        private Label label1;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox3;
-        private Label label1;
-        private Krypton.Toolkit.KryptonButton BtnBack;
-        private Krypton.Toolkit.KryptonButton BtnEdit;
-        private Krypton.Toolkit.KryptonButton BtnDelete;
+        private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton kryptonButton3;
+        private Krypton.Toolkit.KryptonButton kryptonButton6;
+        private Krypton.Toolkit.KryptonPanel kryptonPanel2;
     }
 }
