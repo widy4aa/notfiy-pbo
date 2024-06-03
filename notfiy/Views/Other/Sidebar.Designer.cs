@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
@@ -81,230 +81,232 @@
             kryptonPanel1.Controls.Add(kryptonLabel4);
             kryptonPanel1.Controls.Add(kryptonLabel3);
             kryptonPanel1.Controls.Add(kryptonLabel2);
-            kryptonPanel1.Location = new Point(0, 0);
-            kryptonPanel1.Margin = new Padding(0);
+            kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            kryptonPanel1.Margin = new System.Windows.Forms.Padding(0);
             kryptonPanel1.Name = "kryptonPanel1";
-            kryptonPanel1.Size = new Size(480, 1024);
-            kryptonPanel1.StateNormal.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonPanel1.StateNormal.Color2 = Color.FromArgb(51, 15, 126);
+            kryptonPanel1.Size = new System.Drawing.Size(480, 1024);
+            kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb((System.Int32)(System.Byte)51, (System.Int32)(System.Byte)15, (System.Int32)(System.Byte)126);
+            kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb((System.Int32)(System.Byte)51, (System.Int32)(System.Byte)15, (System.Int32)(System.Byte)126);
             kryptonPanel1.TabIndex = 0;
+            kryptonPanel1.Paint += this.kryptonPanel1_Paint;
             // 
             // kryptonLabel1
             // 
-            kryptonLabel1.Location = new Point(182, 195);
+            kryptonLabel1.Location = new System.Drawing.Point(182, 195);
             kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(144, 46);
-            kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
-            kryptonLabel1.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel1.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.Size = new System.Drawing.Size(144, 46);
+            kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel1.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel1.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel1.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel1.TabIndex = 0;
             kryptonLabel1.Values.Text = "Catatan";
-            kryptonLabel1.Click += kryptonLabel1_Click;
+            kryptonLabel1.Click += this.kryptonLabel1_Click;
             // 
             // kryptonLabel9
             // 
-            kryptonLabel9.Location = new Point(223, 74);
+            kryptonLabel9.Location = new System.Drawing.Point(223, 74);
             kryptonLabel9.Name = "kryptonLabel9";
-            kryptonLabel9.Size = new Size(151, 46);
-            kryptonLabel9.StateCommon.ShortText.Color1 = Color.White;
-            kryptonLabel9.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel9.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel9.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonLabel9.Size = new System.Drawing.Size(151, 46);
+            kryptonLabel9.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel9.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel9.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel9.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel9.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel9.TabIndex = 17;
             kryptonLabel9.Values.Text = "Rafkyyy";
             // 
             // kryptonPictureBox9
             // 
-            kryptonPictureBox9.Image = (Image)resources.GetObject("kryptonPictureBox9.Image");
-            kryptonPictureBox9.Location = new Point(103, 45);
+            kryptonPictureBox9.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox9.Image");
+            kryptonPictureBox9.Location = new System.Drawing.Point(103, 45);
             kryptonPictureBox9.Name = "kryptonPictureBox9";
-            kryptonPictureBox9.Size = new Size(92, 92);
-            kryptonPictureBox9.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox9.Size = new System.Drawing.Size(92, 92);
+            kryptonPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox9.TabIndex = 16;
             kryptonPictureBox9.TabStop = false;
+            kryptonPictureBox9.Click += this.kryptonPictureBox9_Click;
             // 
             // kryptonPictureBox8
             // 
-            kryptonPictureBox8.Image = (Image)resources.GetObject("kryptonPictureBox8.Image");
-            kryptonPictureBox8.Location = new Point(124, 658);
+            kryptonPictureBox8.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox8.Image");
+            kryptonPictureBox8.Location = new System.Drawing.Point(124, 658);
             kryptonPictureBox8.Name = "kryptonPictureBox8";
-            kryptonPictureBox8.Size = new Size(40, 40);
-            kryptonPictureBox8.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox8.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox8.TabIndex = 15;
             kryptonPictureBox8.TabStop = false;
             // 
             // kryptonPictureBox7
             // 
-            kryptonPictureBox7.Image = (Image)resources.GetObject("kryptonPictureBox7.Image");
-            kryptonPictureBox7.Location = new Point(124, 594);
+            kryptonPictureBox7.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox7.Image");
+            kryptonPictureBox7.Location = new System.Drawing.Point(124, 594);
             kryptonPictureBox7.Name = "kryptonPictureBox7";
-            kryptonPictureBox7.Size = new Size(40, 40);
-            kryptonPictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox7.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox7.TabIndex = 14;
             kryptonPictureBox7.TabStop = false;
             // 
             // kryptonPictureBox6
             // 
-            kryptonPictureBox6.Image = (Image)resources.GetObject("kryptonPictureBox6.Image");
-            kryptonPictureBox6.Location = new Point(124, 530);
+            kryptonPictureBox6.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox6.Image");
+            kryptonPictureBox6.Location = new System.Drawing.Point(124, 530);
             kryptonPictureBox6.Name = "kryptonPictureBox6";
-            kryptonPictureBox6.Size = new Size(40, 40);
-            kryptonPictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox6.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox6.TabIndex = 13;
             kryptonPictureBox6.TabStop = false;
             // 
             // kryptonPictureBox5
             // 
-            kryptonPictureBox5.Image = (Image)resources.GetObject("kryptonPictureBox5.Image");
-            kryptonPictureBox5.Location = new Point(124, 468);
+            kryptonPictureBox5.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox5.Image");
+            kryptonPictureBox5.Location = new System.Drawing.Point(124, 468);
             kryptonPictureBox5.Name = "kryptonPictureBox5";
-            kryptonPictureBox5.Size = new Size(40, 40);
-            kryptonPictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox5.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox5.TabIndex = 12;
             kryptonPictureBox5.TabStop = false;
             // 
             // kryptonPictureBox4
             // 
-            kryptonPictureBox4.Image = (Image)resources.GetObject("kryptonPictureBox4.Image");
-            kryptonPictureBox4.Location = new Point(124, 399);
+            kryptonPictureBox4.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox4.Image");
+            kryptonPictureBox4.Location = new System.Drawing.Point(124, 399);
             kryptonPictureBox4.Name = "kryptonPictureBox4";
-            kryptonPictureBox4.Size = new Size(40, 40);
-            kryptonPictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox4.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox4.TabIndex = 11;
             kryptonPictureBox4.TabStop = false;
             // 
             // kryptonPictureBox3
             // 
-            kryptonPictureBox3.Image = (Image)resources.GetObject("kryptonPictureBox3.Image");
-            kryptonPictureBox3.Location = new Point(124, 331);
+            kryptonPictureBox3.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox3.Image");
+            kryptonPictureBox3.Location = new System.Drawing.Point(124, 331);
             kryptonPictureBox3.Name = "kryptonPictureBox3";
-            kryptonPictureBox3.Size = new Size(40, 40);
-            kryptonPictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox3.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox3.TabIndex = 10;
             kryptonPictureBox3.TabStop = false;
             // 
             // kryptonPictureBox2
             // 
-            kryptonPictureBox2.Image = (Image)resources.GetObject("kryptonPictureBox2.Image");
-            kryptonPictureBox2.Location = new Point(124, 267);
+            kryptonPictureBox2.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox2.Image");
+            kryptonPictureBox2.Location = new System.Drawing.Point(124, 267);
             kryptonPictureBox2.Name = "kryptonPictureBox2";
-            kryptonPictureBox2.Size = new Size(40, 40);
-            kryptonPictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox2.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox2.TabIndex = 9;
             kryptonPictureBox2.TabStop = false;
             // 
             // kryptonPictureBox1
             // 
-            kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
-            kryptonPictureBox1.Location = new Point(124, 195);
+            kryptonPictureBox1.Image = (System.Drawing.Image)resources.GetObject("kryptonPictureBox1.Image");
+            kryptonPictureBox1.Location = new System.Drawing.Point(124, 195);
             kryptonPictureBox1.Name = "kryptonPictureBox1";
-            kryptonPictureBox1.Size = new Size(40, 40);
-            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox1.Size = new System.Drawing.Size(40, 40);
+            kryptonPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             kryptonPictureBox1.TabIndex = 8;
             kryptonPictureBox1.TabStop = false;
             // 
             // kryptonLabel8
             // 
-            kryptonLabel8.Location = new Point(182, 658);
+            kryptonLabel8.Location = new System.Drawing.Point(182, 658);
             kryptonLabel8.Name = "kryptonLabel8";
-            kryptonLabel8.Size = new Size(152, 46);
-            kryptonLabel8.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel8.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel8.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel8.Size = new System.Drawing.Size(152, 46);
+            kryptonLabel8.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel8.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel8.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel8.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel8.TabIndex = 7;
             kryptonLabel8.Values.Text = "Sampah";
-            kryptonLabel8.Click += kryptonLabel8_Click;
+            kryptonLabel8.Click += this.kryptonLabel8_Click;
             // 
             // kryptonLabel7
             // 
-            kryptonLabel7.Location = new Point(182, 594);
+            kryptonLabel7.Location = new System.Drawing.Point(182, 594);
             kryptonLabel7.Name = "kryptonLabel7";
-            kryptonLabel7.Size = new Size(96, 46);
-            kryptonLabel7.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel7.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel7.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel7.Size = new System.Drawing.Size(96, 46);
+            kryptonLabel7.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel7.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel7.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel7.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel7.TabIndex = 6;
             kryptonLabel7.Values.Text = "Draft";
             // 
             // kryptonLabel6
             // 
-            kryptonLabel6.Location = new Point(182, 530);
+            kryptonLabel6.Location = new System.Drawing.Point(182, 530);
             kryptonLabel6.Name = "kryptonLabel6";
-            kryptonLabel6.Size = new Size(100, 46);
-            kryptonLabel6.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel6.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel6.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel6.Size = new System.Drawing.Size(100, 46);
+            kryptonLabel6.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel6.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel6.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel6.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel6.TabIndex = 5;
             kryptonLabel6.Values.Text = "Arsip";
             // 
             // kryptonLabel5
             // 
-            kryptonLabel5.Location = new Point(182, 468);
+            kryptonLabel5.Location = new System.Drawing.Point(182, 468);
             kryptonLabel5.Name = "kryptonLabel5";
-            kryptonLabel5.Size = new Size(167, 46);
-            kryptonLabel5.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel5.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel5.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel5.Size = new System.Drawing.Size(167, 46);
+            kryptonLabel5.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel5.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel5.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel5.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel5.TabIndex = 4;
             kryptonLabel5.Values.Text = "Edit label";
-            kryptonLabel5.Click += kryptonLabel5_Click;
+            kryptonLabel5.Click += this.kryptonLabel5_Click;
             // 
             // kryptonLabel4
             // 
-            kryptonLabel4.Location = new Point(182, 399);
+            kryptonLabel4.Location = new System.Drawing.Point(182, 399);
             kryptonLabel4.Name = "kryptonLabel4";
-            kryptonLabel4.Size = new Size(102, 46);
-            kryptonLabel4.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel4.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel4.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel4.Size = new System.Drawing.Size(102, 46);
+            kryptonLabel4.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel4.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel4.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel4.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel4.TabIndex = 3;
             kryptonLabel4.Values.Text = "Diary";
             // 
             // kryptonLabel3
             // 
-            kryptonLabel3.Location = new Point(182, 331);
+            kryptonLabel3.Location = new System.Drawing.Point(182, 331);
             kryptonLabel3.Name = "kryptonLabel3";
-            kryptonLabel3.Size = new Size(208, 46);
-            kryptonLabel3.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel3.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel3.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel3.Size = new System.Drawing.Size(208, 46);
+            kryptonLabel3.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel3.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel3.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel3.StateNormal.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel3.TabIndex = 2;
             kryptonLabel3.Values.Text = "Health Note";
-            kryptonLabel3.Click += kryptonLabel3_Click;
+            kryptonLabel3.Click += this.kryptonLabel3_Click;
             // 
             // kryptonLabel2
             // 
-            kryptonLabel2.Location = new Point(182, 267);
+            kryptonLabel2.Location = new System.Drawing.Point(182, 267);
             kryptonLabel2.Name = "kryptonLabel2";
-            kryptonLabel2.Size = new Size(176, 46);
-            kryptonLabel2.StateDisabled.ShortText.Color1 = Color.White;
-            kryptonLabel2.StateDisabled.ShortText.Color2 = Color.White;
-            kryptonLabel2.StateDisabled.ShortText.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel2.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel2.StateNormal.ShortText.Color2 = Color.White;
-            kryptonLabel2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel2.Size = new System.Drawing.Size(176, 46);
+            kryptonLabel2.StateDisabled.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel2.StateDisabled.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel2.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
+            kryptonLabel2.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            kryptonLabel2.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            kryptonLabel2.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte)0);
             kryptonLabel2.TabIndex = 1;
             kryptonLabel2.Values.Text = "To do List\r\n";
-            kryptonLabel2.Click += kryptonLabel2_Click;
+            kryptonLabel2.Click += this.kryptonLabel2_Click;
             // 
             // Sidebar
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(kryptonPanel1);
-            Name = "Sidebar";
-            RightToLeft = RightToLeft.Yes;
-            Size = new Size(480, 1024);
-            Load += Sidebar_Load;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(kryptonPanel1);
+            this.Name = "Sidebar";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Size = new System.Drawing.Size(480, 1024);
+            this.Load += this.Sidebar_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
@@ -317,7 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
-            ResumeLayout(false);
+            this.ResumeLayout(false);
         }
 
         #endregion

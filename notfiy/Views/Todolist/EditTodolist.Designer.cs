@@ -365,7 +365,7 @@
             kryptonButton2.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonButton2.TabIndex = 32;
             kryptonButton2.Values.Text = "Cancel";
-            kryptonButton2.Click += this.kryptonButton2_Click;
+          //  kryptonButton2.Click += this.kryptonButton2_Click;
             // 
             // kryptonButton3
             // 
