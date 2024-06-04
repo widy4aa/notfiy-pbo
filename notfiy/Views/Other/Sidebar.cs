@@ -17,7 +17,7 @@ namespace notfiy.Views.Other
     {
         public Sidebar()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void kryptonLabel2_Click(object sender, EventArgs e)

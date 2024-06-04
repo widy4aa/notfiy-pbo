@@ -46,5 +46,10 @@ namespace notfiy.Views.Homepage
         {
 
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

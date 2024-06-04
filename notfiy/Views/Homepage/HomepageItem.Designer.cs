@@ -52,6 +52,7 @@
             kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton2.TabIndex = 11;
             kryptonButton2.Values.Text = "";
+            kryptonButton2.Click += kryptonButton2_Click;
             // 
             // kryptonButton1
             // 
