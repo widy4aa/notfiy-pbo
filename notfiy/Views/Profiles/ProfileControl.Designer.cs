@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileControl));
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
             kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox3 = new Krypton.Toolkit.KryptonTextBox();
@@ -50,7 +50,6 @@
             kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             kryptonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
@@ -69,12 +68,26 @@
             kryptonPanel2.StateNormal.Color2 = Color.Black;
             kryptonPanel2.TabIndex = 2;
             // 
+            // kryptonLabel3
+            // 
+            kryptonLabel3.Location = new Point(581, 105);
+            kryptonLabel3.Name = "kryptonLabel3";
+            kryptonLabel3.Size = new Size(347, 29);
+            kryptonLabel3.StateCommon.LongText.Color1 = Color.White;
+            kryptonLabel3.StateCommon.LongText.Color2 = Color.White;
+            kryptonLabel3.StateNormal.ShortText.Color1 = Color.White;
+            kryptonLabel3.StateNormal.ShortText.Color2 = Color.Black;
+            kryptonLabel3.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel3.TabIndex = 39;
+            kryptonLabel3.UseWaitCursor = true;
+            kryptonLabel3.Values.Text = "2024 * Notify - Copyright Reserved";
+            kryptonLabel3.Click += kryptonLabel3_Click;
+            // 
             // kryptonPanel1
             // 
             kryptonPanel1.Controls.Add(kryptonButton2);
             kryptonPanel1.Controls.Add(kryptonButton3);
             kryptonPanel1.Controls.Add(kryptonPictureBox2);
-            kryptonPanel1.Controls.Add(kryptonTextBox1);
             kryptonPanel1.Location = new Point(0, 0);
             kryptonPanel1.Margin = new Padding(0);
             kryptonPanel1.Name = "kryptonPanel1";
@@ -205,36 +218,19 @@
             kryptonPictureBox2.TabIndex = 13;
             kryptonPictureBox2.TabStop = false;
             // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(380, 30);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(745, 54);
-            kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonTextBox1.StateActive.Border.Color1 = Color.White;
-            kryptonTextBox1.StateActive.Border.Color2 = Color.White;
-            kryptonTextBox1.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox1.StateActive.Border.Rounding = 20F;
-            kryptonTextBox1.StateActive.Border.Width = 4;
-            kryptonTextBox1.StateActive.Content.Color1 = Color.White;
-            kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
-            kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.Text = "Search";
-            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
-            // 
             // kryptonListBox1
             // 
             kryptonListBox1.Location = new Point(243, 179);
             kryptonListBox1.Name = "kryptonListBox1";
             kryptonListBox1.Size = new Size(1003, 597);
-            kryptonListBox1.StateActive.Back.Color1 = SystemColors.Control;
+            kryptonListBox1.StateActive.Back.Color1 = Color.White;
             kryptonListBox1.StateActive.Back.Color2 = Color.White;
             kryptonListBox1.StateActive.Border.Color1 = Color.FromArgb(46, 26, 94);
             kryptonListBox1.StateActive.Border.ColorAngle = -10F;
             kryptonListBox1.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonListBox1.StateActive.Border.Width = 9;
+            kryptonListBox1.StateCommon.Back.Color1 = Color.White;
+            kryptonListBox1.StateCommon.Back.Color2 = Color.White;
             kryptonListBox1.StateCommon.Border.Color1 = Color.Black;
             kryptonListBox1.StateCommon.Border.Color2 = Color.Black;
             kryptonListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -531,25 +527,11 @@
             kryptonLabel2.UseWaitCursor = true;
             kryptonLabel2.Values.Text = "Password";
             // 
-            // kryptonLabel3
-            // 
-            kryptonLabel3.Location = new Point(581, 105);
-            kryptonLabel3.Name = "kryptonLabel3";
-            kryptonLabel3.Size = new Size(347, 29);
-            kryptonLabel3.StateCommon.LongText.Color1 = Color.White;
-            kryptonLabel3.StateCommon.LongText.Color2 = Color.White;
-            kryptonLabel3.StateNormal.ShortText.Color1 = Color.White;
-            kryptonLabel3.StateNormal.ShortText.Color2 = Color.Black;
-            kryptonLabel3.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel3.TabIndex = 39;
-            kryptonLabel3.UseWaitCursor = true;
-            kryptonLabel3.Values.Text = "2024 * Notify - Copyright Reserved";
-            kryptonLabel3.Click += kryptonLabel3_Click;
-            // 
             // ProfileControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonLabel1);
             Controls.Add(kryptonLabel4);
@@ -574,7 +556,6 @@
             kryptonPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
-            kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
@@ -588,7 +569,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox2;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
