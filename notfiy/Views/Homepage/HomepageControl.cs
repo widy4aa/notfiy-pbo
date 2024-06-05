@@ -21,12 +21,36 @@ namespace notfiy.Views.Homepage
         }
         private void HomepageControl_Load(object sender, EventArgs e)
         {
-            HomepagePanel1.AutoScroll = true;
+            FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+
+            // Mengatur ukuran FlowLayoutPanel
+            flowLayoutPanel.Size = new Size(1288, 584); // Contoh ukuran 500x300 piksel
+            flowLayoutPanel.Location = new Point(93, 254); // Mengatur lokasi di dalam form
+
+            // Mengatur properti lain jika diperlukan
+            flowLayoutPanel.BackColor = Color.White; // Untuk memastikan terlihat
+            flowLayoutPanel.AutoScroll = true;
+
+            // Menambahkan FlowLayoutPanel ke Form
+            this.Controls.Add(flowLayoutPanel);
+
+            // Menambahkan beberapa tombol ke dalam FlowLayoutPanel
+            for (int i = 0; i < 100; i++)
+            {
+                HomepageItem homepageItem = new HomepageItem();
+                homepageItem.Name = $"Note {i + 1}";
+
+                // Mengatur margin
+                homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
+
+                // Menambahkan kontrol ke FlowLayoutPanel
+                flowLayoutPanel.Controls.Add(homepageItem);
+            }
         }
 
         private void UsernameTextbox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -51,7 +75,6 @@ namespace notfiy.Views.Homepage
 
         private void homepageItem7_Load(object sender, EventArgs e)
         {
-
         }
 
         private void kryptonPanel3_Paint(object sender, PaintEventArgs e)
@@ -65,6 +88,21 @@ namespace notfiy.Views.Homepage
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homepageItem8_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homepageItem2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

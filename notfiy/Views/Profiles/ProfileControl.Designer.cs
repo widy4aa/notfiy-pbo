@@ -263,6 +263,7 @@
             kryptonTextBox2.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonTextBox2.StateNormal.Back.Color1 = Color.FromArgb(255, 128, 128);
             kryptonTextBox2.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox2.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonTextBox2.StateNormal.Border.Rounding = 20F;
             kryptonTextBox2.StateNormal.Border.Width = 1;
             kryptonTextBox2.TabIndex = 24;
@@ -551,6 +552,7 @@
             Controls.Add(kryptonPanel2);
             Name = "ProfileControl";
             Size = new Size(1440, 1024);
+            Load += ProfileControl_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
             kryptonPanel2.ResumeLayout(false);
             kryptonPanel2.PerformLayout();

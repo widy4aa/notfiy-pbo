@@ -296,8 +296,8 @@
             BtnEdit.Location = new Point(902, 757);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(120, 31);
-            BtnEdit.StateCommon.Back.Color1 = Color.Lime;
-            BtnEdit.StateCommon.Back.Color2 = Color.Lime;
+            BtnEdit.StateCommon.Back.Color1 = Color.Yellow;
+            BtnEdit.StateCommon.Back.Color2 = Color.Yellow;
             BtnEdit.StateCommon.Border.Color1 = Color.Black;
             BtnEdit.StateCommon.Border.Color2 = Color.Black;
             BtnEdit.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -306,7 +306,7 @@
             BtnEdit.StateNormal.Content.ShortText.Color1 = Color.Black;
             BtnEdit.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnEdit.TabIndex = 27;
-            BtnEdit.Values.Text = "Save";
+            BtnEdit.Values.Text = "Edit";
             // 
             // BtnDelete
             // 

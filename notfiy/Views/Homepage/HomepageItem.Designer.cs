@@ -114,6 +114,7 @@
             kryptonRichTextBox1.StateCommon.Border.Width = -2;
             kryptonRichTextBox1.TabIndex = 13;
             kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
+            kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged_1;
             // 
             // HomepageItem
             // 

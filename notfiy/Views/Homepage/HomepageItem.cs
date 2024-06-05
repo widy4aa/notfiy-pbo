@@ -51,5 +51,10 @@ namespace notfiy.Views.Homepage
         {
 
         }
+
+        private void kryptonRichTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

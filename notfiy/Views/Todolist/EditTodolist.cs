@@ -51,9 +51,9 @@ namespace notfiy.Views.Todolist
 
         private void HamburgerButton_Click(object sender, EventArgs e)
         {
-            SIdeBar sideBar = new SIdeBar();
-            this.Controls.Add(sideBar);
-            sideBar.Show();
+            //SIdeBar sideBar = new SIdeBar();
+            //this.Controls.Add(sideBar);
+            //sideBar.Show();
         }
     }
 }
