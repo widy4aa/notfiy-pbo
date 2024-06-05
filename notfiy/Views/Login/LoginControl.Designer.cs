@@ -105,7 +105,7 @@
             LoginButton.StateTracking.Border.Width = 4;
             LoginButton.StateTracking.Content.LongText.Color1 = Color.Transparent;
             LoginButton.StateTracking.Content.LongText.Color2 = Color.Transparent;
-            LoginButton.StateTracking.Content.LongText.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.StateTracking.Content.LongText.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateTracking.Content.ShortText.Color1 = Color.White;
             LoginButton.StateTracking.Content.ShortText.Color2 = Color.White;
             LoginButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -131,7 +131,8 @@
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 10;
             UsernameTextbox.Text = "Username";
-            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
+            UsernameTextbox.Enter += UsernameTextbox_Enter;
+            UsernameTextbox.Leave += UsernameTextbox_Leave;
             // 
             // kryptonPanel1
             // 
@@ -208,9 +209,7 @@
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.Text = "Password";
-            kryptonTextBox1.UseSystemPasswordChar = true;
-            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
+            kryptonTextBox1.Text = "Username";
             // 
             // LoginControl
             // 

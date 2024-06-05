@@ -1,4 +1,5 @@
-﻿using notfiy.Views.Homepage;
+﻿using notfiy.Helpers;
+using notfiy.Views.Homepage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,9 +96,35 @@ namespace notfiy.Views.Login
 
         }
 
-        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
+        private void UsernameTextbox_Enter(object sender, EventArgs e)
         {
+            if (UsernameTextbox.Text == "Username")
+            {
+                UsernameTextbox.Text = "";
+            }
+        }
 
+        private void UsernameTextbox_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(UsernameTextbox.Text))
+            {
+                UsernameTextbox.Text = "Username";
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Password")
+            {
+                kryptonTextBox1.Text = "";
+            }
+        }
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(kryptonTextBox1.Text))
+            {
+                kryptonTextBox1.Text = "Password";
+            }
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
