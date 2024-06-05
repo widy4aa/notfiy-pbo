@@ -58,6 +58,12 @@ namespace notfiy.Views.Todolist
             popupdelete.BringToFront();
             popupdelete.BackColor = Color.Transparent;
             popupdelete.Show();
+
+            //PopUpEdit popUpEdit = new PopUpEdit();
+            //this.Controls.Add(popUpEdit);
+            //popUpEdit.BringToFront();
+            //popUpEdit.BackColor = Color.Transparent;
+            //popUpEdit.Show();
         }
 
         private void kryptonCheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)

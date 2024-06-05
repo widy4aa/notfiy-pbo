@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpDelete));
-            kryptonTaskDialog1 = new Krypton.Toolkit.KryptonTaskDialog();
             kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             label1 = new Label();
@@ -37,17 +36,6 @@
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // kryptonTaskDialog1
-            // 
-            kryptonTaskDialog1.CheckboxText = null;
-            kryptonTaskDialog1.Content = null;
-            kryptonTaskDialog1.DefaultRadioButton = null;
-            kryptonTaskDialog1.FooterHyperlink = null;
-            kryptonTaskDialog1.FooterText = null;
-            kryptonTaskDialog1.MainInstruction = null;
-            kryptonTaskDialog1.TextExtra = "Ctrl+C to copy";
-            kryptonTaskDialog1.WindowTitle = null;
             // 
             // kryptonCheckedListBox1
             // 
@@ -98,7 +86,7 @@
             kryptonButton1.StateCommon.Border.Rounding = 0F;
             kryptonButton1.TabIndex = 4;
             kryptonButton1.Values.Text = "";
-            kryptonButton1.Click += kryptonButton1_Click;
+            kryptonButton1.Click += this.kryptonButton1_Click;
             // 
             // kryptonButton2
             // 
@@ -128,14 +116,13 @@
             Controls.Add(kryptonCheckedListBox1);
             Name = "PopUpDelete";
             Size = new Size(1440, 1024);
-            Load += PopUpDelete_Load;
+            Load += this.PopUpDelete_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Krypton.Toolkit.KryptonTaskDialog kryptonTaskDialog1;
         private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Label label1;

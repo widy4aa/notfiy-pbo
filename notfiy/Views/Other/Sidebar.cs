@@ -17,7 +17,7 @@ namespace notfiy.Views.Other
     {
         public Sidebar()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void kryptonLabel2_Click(object sender, EventArgs e)
@@ -50,6 +50,16 @@ namespace notfiy.Views.Other
         {
             HomepageControl homepage = new HomepageControl();
             NotifyViewManager.MoveView(homepage);
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonPictureBox9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

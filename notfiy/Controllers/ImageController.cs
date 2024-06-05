@@ -2,14 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using notfiy.Helpers;
+
 
 namespace notfiy.Controllers
 {
     class ImageController
     {
         private readonly string dataFolder = "data"; // Tentukan jalur folder data
-        private readonly string integrityFile; // Jalur file integritas
+        private readonly string integrityFile; // file integritas
 
         public ImageController()
         {
@@ -22,6 +24,9 @@ namespace notfiy.Controllers
             }
         }
 
+        // Metode ini mengambil gambar berdasarkan ID catatan. Jika gambarnya sudah ada
+        // diunduh dan integritasnya diverifikasi, ia mengembalikan path file lokal.
+        // Jika tidak, ia akan mengunduh gambar, dan menyimpan atau menimpa hash yang ada di integrity.csv.
         public string? GetImage(int idNote, string imageUrl)
         {
             // Tentukan jalur file gambar
@@ -31,11 +36,15 @@ namespace notfiy.Controllers
             Dictionary<int, string> integrityData = new Dictionary<int, string>();
             if (File.Exists(integrityFile))
             {
+                // Membaca file csv
                 foreach (var line in File.ReadLines(integrityFile))
                 {
                     var parts = line.Split(',');
+                    // Jika panjangg parts 2 dan jika parse int dari parts[0] berhasil,
+                    // akan membuat variable yg berisi noteId yg tersimpan di integrity.csv 
                     if (parts.Length == 2 && int.TryParse(parts[0], out int noteId))
                     {
+                        // menimpa var integrityData dari Key noteId dengan nilai parts[2] (berisi hash)
                         integrityData[noteId] = parts[1];
                     }
                 }
@@ -75,6 +84,7 @@ namespace notfiy.Controllers
             return imageFilePath;
         }
 
+        // Digunakan untuk mendapatkan URL dari image yg di upload
         public string? ProcessImage(string? imageFileName)
         {
             if (string.IsNullOrEmpty(imageFileName))

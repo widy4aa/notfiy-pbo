@@ -36,11 +36,11 @@ namespace notfiy
         SystemSingleton.Instance.EnableDatabase(connectionString);
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
-        //mainForm.Controls.Add(new LoginControl());
-        mainForm.Controls.Add(new LoginControl());
+            mainForm.Controls.Add(new TodolistControl());
+            //mainForm.Controls.Add(new LoginControl());
 
 
-        Application.Run(mainForm);
+            Application.Run(mainForm);
         //Application.Run(new LoginUnitTesterForm());
         }
     }
