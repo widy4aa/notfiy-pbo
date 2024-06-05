@@ -28,6 +28,10 @@ namespace notfiy.Views.Todolist
             popUpEdit.BringToFront();
             popUpEdit.BackColor = Color.Transparent;
             popUpEdit.Show();
+            //PopUpDelete popUpDelete = new PopUpDelete();
+            //this.Controls.Add(popUpDelete);
+            //popUpDelete.BringToFront();
+            //popUpDelete.Show();
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)

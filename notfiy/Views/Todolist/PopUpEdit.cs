@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using NotifyViewManager = notfiy.Core.ViewManager;
 
 
@@ -17,16 +18,14 @@ namespace notfiy.Views.Todolist
         public PopUpEdit()
         {
             InitializeComponent();
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            BackColor = Color.Transparent;
+            this.BackColor = Color.Transparent;
+            kryptonCheckedListBox1.CornerRoundingRadius = 20F;
         }
 
         private void PopUpEdit_Load(object sender, EventArgs e)
         {
-            //this.BackColor = Color.Transparent;
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            BackColor = Color.Transparent;
             this.BackColor = Color.Transparent;
+
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)

@@ -104,11 +104,11 @@
             kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
             kryptonCheckedListBox1.StateCommon.Border.Width = 5;
-            kryptonCheckedListBox1.TabIndex = 6;
+            kryptonCheckedListBox1.TabIndex = 0;
             // 
             // kryptonButton3
             // 
-            kryptonButton3.Location = new Point(893, 341);
+            kryptonButton3.Location = new Point(893, 347);
             kryptonButton3.Name = "kryptonButton3";
             kryptonButton3.Size = new Size(101, 50);
             kryptonButton3.StateCommon.Back.Color1 = Color.Transparent;
