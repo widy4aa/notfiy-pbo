@@ -105,7 +105,7 @@
             LoginButton.StateTracking.Border.Width = 4;
             LoginButton.StateTracking.Content.LongText.Color1 = Color.Transparent;
             LoginButton.StateTracking.Content.LongText.Color2 = Color.Transparent;
-            LoginButton.StateTracking.Content.LongText.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.StateTracking.Content.LongText.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.StateTracking.Content.ShortText.Color1 = Color.White;
             LoginButton.StateTracking.Content.ShortText.Color2 = Color.White;
             LoginButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -131,7 +131,8 @@
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 10;
             UsernameTextbox.Text = "Username";
-            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
+            UsernameTextbox.Enter += UsernameTextbox_Enter;
+            UsernameTextbox.Leave += UsernameTextbox_Leave;
             // 
             // kryptonPanel1
             // 
@@ -194,7 +195,7 @@
             kryptonTextBox1.Cursor = Cursors.IBeam;
             kryptonTextBox1.Location = new Point(465, 451);
             kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.PasswordChar = '*';
+            //kryptonTextBox1.PasswordChar = '*';
             kryptonTextBox1.Size = new Size(601, 54);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
             kryptonTextBox1.StateActive.Border.Color1 = Color.White;
@@ -207,8 +208,10 @@
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.Text = "Username";
-            // 
+            kryptonTextBox1.Text = "Password";
+            kryptonTextBox1.Enter += kryptonTextBox1_Enter;
+            kryptonTextBox1.Leave += kryptonTextBox1_Leave;
+            //                                             
             // LoginControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
