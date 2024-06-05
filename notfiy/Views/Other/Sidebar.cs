@@ -57,9 +57,16 @@ namespace notfiy.Views.Other
 
         }
 
+        private void InitializeComponent()
+        {
+
+        }
+
         private void kryptonPictureBox9_Click(object sender, EventArgs e)
         {
 
         }
+
+        private Krypton.Toolkit.KryptonPanel kryptonPanel1;
     }
 }

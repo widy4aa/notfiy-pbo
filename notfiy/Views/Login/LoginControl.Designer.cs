@@ -192,9 +192,10 @@
             // kryptonTextBox1
             // 
             kryptonTextBox1.Cursor = Cursors.IBeam;
+            kryptonTextBox1.ImeMode = ImeMode.On;
             kryptonTextBox1.Location = new Point(465, 451);
             kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.PasswordChar = '*';
+            kryptonTextBox1.PasswordChar = '●';
             kryptonTextBox1.Size = new Size(601, 54);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
             kryptonTextBox1.StateActive.Border.Color1 = Color.White;
@@ -207,7 +208,9 @@
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.Text = "Username";
+            kryptonTextBox1.Text = "Password";
+            kryptonTextBox1.UseSystemPasswordChar = true;
+            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
             // 
             // LoginControl
             // 

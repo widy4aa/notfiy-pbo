@@ -193,7 +193,8 @@
             UsernameTextbox.Cursor = Cursors.IBeam;
             UsernameTextbox.Location = new Point(380, 30);
             UsernameTextbox.Name = "UsernameTextbox";
-            UsernameTextbox.Size = new Size(745, 54);
+            UsernameTextbox.PasswordChar = '●';
+            UsernameTextbox.Size = new Size(745, 53);
             UsernameTextbox.StateActive.Back.Color1 = Color.FromArgb(51, 15, 126);
             UsernameTextbox.StateActive.Border.Color1 = Color.White;
             UsernameTextbox.StateActive.Border.Color2 = Color.White;
@@ -205,7 +206,8 @@
             UsernameTextbox.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 11;
-            UsernameTextbox.Text = "Search";
+            UsernameTextbox.ToolTipValues.EnableToolTips = true;
+            UsernameTextbox.UseSystemPasswordChar = true;
             UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             // 
             // flowLayoutPanel1
@@ -245,6 +247,7 @@
             todoItem12.Name = "todoItem12";
             todoItem12.Size = new Size(298, 266);
             todoItem12.TabIndex = 1;
+            todoItem12.Load += todoItem12_Load_1;
             // 
             // todoItem13
             // 

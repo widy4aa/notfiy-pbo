@@ -99,5 +99,13 @@ namespace notfiy.Views.Login
         {
 
         }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text != "password")
+            {
+                kryptonTextBox1.PasswordChar = '●';
+            }
+        }
     }
 }

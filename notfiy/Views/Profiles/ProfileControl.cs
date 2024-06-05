@@ -51,5 +51,10 @@ namespace notfiy.Views.Profiles
         {
 
         }
+
+        private void ProfileControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

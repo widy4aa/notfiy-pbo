@@ -91,5 +91,10 @@ namespace notfiy.Views.Todolist
             sidebar.Location = new Point(950, 0);
             sidebar.Show();
         }
+
+        private void todoItem12_Load_1(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
