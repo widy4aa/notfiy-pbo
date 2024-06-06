@@ -207,6 +207,7 @@
             kryptonButton3.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             kryptonButton3.TabIndex = 14;
             kryptonButton3.Values.Text = "";
+            kryptonButton3.Click += kryptonButton3_Click;
             // 
             // kryptonPictureBox2
             // 

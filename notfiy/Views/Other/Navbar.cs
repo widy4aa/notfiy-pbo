@@ -1,4 +1,7 @@
-﻿using System;
+﻿using notfiy.Views.Homepage;
+using notfiy.Views.Profiles;
+using notfiy.Views.Todolist;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NotifyViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.Other
 {
@@ -20,7 +24,8 @@ namespace notfiy.Views.Other
 
         private void kryptonPictureBox1_Click(object sender, EventArgs e)
         {
-
+            ProfileControl profil = new ProfileControl();
+            NotifyViewManager.MoveView(profil);
         }
 
         private void Navbar_Load(object sender, EventArgs e)
@@ -37,6 +42,28 @@ namespace notfiy.Views.Other
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelItem2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            HomepageControl homepage = new HomepageControl();
+            NotifyViewManager.MoveView(homepage);
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            TodolistControl todolist = new TodolistControl();
+            NotifyViewManager.MoveView(todolist);
         }
     }
 }

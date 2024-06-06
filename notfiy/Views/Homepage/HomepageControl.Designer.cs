@@ -33,7 +33,7 @@
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
+            SearchTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
@@ -47,7 +47,7 @@
             kryptonPanel1.Controls.Add(kryptonButton1);
             kryptonPanel1.Controls.Add(HamburgerButton);
             kryptonPanel1.Controls.Add(kryptonPictureBox1);
-            kryptonPanel1.Controls.Add(UsernameTextbox);
+            kryptonPanel1.Controls.Add(SearchTextbox);
             kryptonPanel1.Location = new Point(0, 0);
             kryptonPanel1.Name = "kryptonPanel1";
             kryptonPanel1.Size = new Size(1440, 120);
@@ -180,24 +180,24 @@
             kryptonPictureBox1.TabIndex = 13;
             kryptonPictureBox1.TabStop = false;
             // 
-            // UsernameTextbox
+            // SearchTextbox
             // 
-            UsernameTextbox.Location = new Point(380, 30);
-            UsernameTextbox.Name = "UsernameTextbox";
-            UsernameTextbox.Size = new Size(745, 54);
-            UsernameTextbox.StateActive.Back.Color1 = Color.FromArgb(51, 15, 126);
-            UsernameTextbox.StateActive.Border.Color1 = Color.White;
-            UsernameTextbox.StateActive.Border.Color2 = Color.White;
-            UsernameTextbox.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            UsernameTextbox.StateActive.Border.Rounding = 20F;
-            UsernameTextbox.StateActive.Border.Width = 4;
-            UsernameTextbox.StateActive.Content.Color1 = Color.White;
-            UsernameTextbox.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            UsernameTextbox.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
-            UsernameTextbox.TabIndex = 11;
-            UsernameTextbox.Text = "Search";
-            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
+            SearchTextbox.Location = new Point(380, 30);
+            SearchTextbox.Name = "SearchTextbox";
+            SearchTextbox.Size = new Size(745, 54);
+            SearchTextbox.StateActive.Back.Color1 = Color.FromArgb(51, 15, 126);
+            SearchTextbox.StateActive.Border.Color1 = Color.White;
+            SearchTextbox.StateActive.Border.Color2 = Color.White;
+            SearchTextbox.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            SearchTextbox.StateActive.Border.Rounding = 20F;
+            SearchTextbox.StateActive.Border.Width = 4;
+            SearchTextbox.StateActive.Content.Color1 = Color.White;
+            SearchTextbox.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SearchTextbox.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
+            SearchTextbox.StateNormal.Back.Color1 = Color.Transparent;
+            SearchTextbox.TabIndex = 11;
+            SearchTextbox.Text = "Search";
+            SearchTextbox.TextChanged += UsernameTextbox_TextChanged;
             // 
             // kryptonPanel2
             // 
@@ -261,7 +261,7 @@
 
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private Krypton.Toolkit.KryptonPanel kryptonPanel2;
-        private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
+        private Krypton.Toolkit.KryptonTextBox SearchTextbox;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
