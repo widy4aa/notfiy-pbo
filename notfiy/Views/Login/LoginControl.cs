@@ -1,4 +1,5 @@
-﻿using notfiy.Helpers;
+﻿using Krypton.Toolkit;
+using notfiy.Helpers;
 using notfiy.Views.Homepage;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using NotifyViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.Login
@@ -29,7 +31,34 @@ namespace notfiy.Views.Login
         private void LoginControl_Load(object sender, EventArgs e)
         {
             this.Width = this.ClientSize.Width;
+            kryptonTextBox1.Text = "Password";
+
+            // Menambahkan event handlers
+            kryptonTextBox1.Enter += RemovePlaceholder;
+            kryptonTextBox1.Leave += SetPlaceholder;
         }
+
+        private void RemovePlaceholder(object sender, EventArgs e)
+        {
+            KryptonTextBox textBox = (KryptonTextBox)sender;
+            if (textBox.Text == "Password")
+            {
+                textBox.Text = "";
+                textBox.PasswordChar = '*';
+            }
+        }
+
+        private void SetPlaceholder(object sender, EventArgs e)
+        {
+            KryptonTextBox textBox = (KryptonTextBox)sender;
+            if (string.IsNullOrEmpty(textBox.Text))
+            {
+                textBox.Text = "Password";
+                textBox.PasswordChar = '\0';
+            }
+        }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -121,18 +150,27 @@ namespace notfiy.Views.Login
         }
         private void kryptonTextBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(kryptonTextBox1.Text))
-            {
-                kryptonTextBox1.Text = "Password";
-            }
+
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (kryptonTextBox1.Text != "password")
-            {
-                kryptonTextBox1.PasswordChar = '●';
-            }
+
+        }
+
+        private void kryptonTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

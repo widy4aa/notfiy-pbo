@@ -131,6 +131,7 @@
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 10;
             UsernameTextbox.Text = "Username";
+            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             UsernameTextbox.Enter += UsernameTextbox_Enter;
             UsernameTextbox.Leave += UsernameTextbox_Leave;
             // 
@@ -155,6 +156,7 @@
             kryptonPanel1.StateNormal.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear;
             kryptonPanel1.StateNormal.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPanel1.TabIndex = 11;
+            kryptonPanel1.Paint += kryptonPanel1_Paint;
             // 
             // kryptonLabel1
             // 
@@ -196,8 +198,7 @@
             kryptonTextBox1.ImeMode = ImeMode.On;
             kryptonTextBox1.Location = new Point(465, 451);
             kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.PasswordChar = '●';
-            kryptonTextBox1.Size = new Size(601, 54);
+            kryptonTextBox1.Size = new Size(601, 53);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
             kryptonTextBox1.StateActive.Border.Color1 = Color.White;
             kryptonTextBox1.StateActive.Border.Color2 = Color.White;
@@ -209,7 +210,7 @@
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.Text = "Username";
+            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged_1;
             // 
             // LoginControl
             // 
@@ -234,9 +235,9 @@
         private Krypton.Toolkit.KryptonButton LoginButton;
         private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonLabel BuatAkunLabel;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }
