@@ -1,4 +1,5 @@
 ﻿using notfiy.Views.Other;
+using notfiy.Views.addToDoList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,20 +53,20 @@ namespace notfiy.Views.Todolist
 
         }
 
-        private void todoItem3_Load(object sender, EventArgs e)
-        {
+        //private void todoItem3_Load(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void todoItem12_Load(object sender, EventArgs e)
-        {
+        //private void todoItem12_Load(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
+        //private void kryptonButton2_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void TodolistControl_Load(object sender, EventArgs e)
         {
@@ -79,7 +80,7 @@ namespace notfiy.Views.Todolist
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void HamburgerButton_Click(object sender, EventArgs e)
@@ -100,7 +101,12 @@ namespace notfiy.Views.Todolist
 
         private void todoItem12_Load_1(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
