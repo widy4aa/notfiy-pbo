@@ -82,5 +82,21 @@ namespace notfiy.Views.Register
             LoginControl log = new LoginControl();
             NotifyViewManager.MoveView(log);
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            // Pengecekan username telah memenuhi syarat atau tidak
+            // Pengecekan username apakah sudah ada pada database atau tidak
+            // Pengecekan email juga sama, email yang sudah terdaftar tidak bisa digunakan mendaftar lagi
+            // Pengecekan email sudah memenuhi syarat atau tidak
+            // Pengecekan password apakah sudah sesuai aturan atau tidak
+            // Pengecekan password apakah sudah sama dengan confirm password atau tidak
+
+            // Mempertahankan text email dan username apabila pendaftaran akun gagal
+            // Menghapus text ketika password atau confirm password tidak sesuai
+
+            // Menampilkan messagebox ketika berhasil mendaftar atau gagal
+            // Apabila sudah mendaftar langsung view berpindah ke login
+        }
     }
 }

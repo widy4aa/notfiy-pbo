@@ -342,6 +342,7 @@
             kryptonButton1.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonButton1.TabIndex = 9;
             kryptonButton1.Values.Text = "Register";
+            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // RegisterControl
             // 
