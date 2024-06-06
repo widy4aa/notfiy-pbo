@@ -1,6 +1,10 @@
 ﻿using Krypton.Toolkit;
+using Newtonsoft.Json;
+using notfiy.Controllers;
+using notfiy.Core;
 using notfiy.Helpers;
 using notfiy.Views.Homepage;
+using notfiy.Views.Register;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,112 +21,39 @@ namespace notfiy.Views.Login
 {
     public partial class LoginControl : UserControl
     {
+        private UserController UserController;
+        private MessageBoxHelper MessageBoxHelper;
         public LoginControl()
         {
             InitializeComponent();
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 2000;
-            timer.Tick += Timer_Tick;
-            EventHandler eventHandler = ControlLoaded;
-            this.Load += eventHandler;
-
+            UserController = new UserController();
+            MessageBoxHelper = new MessageBoxHelper();
         }
 
         private void LoginControl_Load(object sender, EventArgs e)
         {
             this.Width = this.ClientSize.Width;
-            kryptonTextBox1.Text = "Password";
-
-            // Menambahkan event handlers
-            kryptonTextBox1.Enter += RemovePlaceholder;
-            kryptonTextBox1.Leave += SetPlaceholder;
-        }
-
-        private void RemovePlaceholder(object sender, EventArgs e)
-        {
-            KryptonTextBox textBox = (KryptonTextBox)sender;
-            if (textBox.Text == "Password")
-            {
-                textBox.Text = "";
-                textBox.PasswordChar = '*';
-            }
-        }
-
-        private void SetPlaceholder(object sender, EventArgs e)
-        {
-            KryptonTextBox textBox = (KryptonTextBox)sender;
-            if (string.IsNullOrEmpty(textBox.Text))
-            {
-                textBox.Text = "Password";
-                textBox.PasswordChar = '\0';
-            }
-        }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private System.Windows.Forms.Timer timer;
-
-
-        private void ControlLoaded(object sender, EventArgs e)
-        {
-            timer.Start();
-        }
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            timer.Stop();
-            //pictureBox1.Hide();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            HomepageControl homepage = new HomepageControl();
-            NotifyViewManager.MoveView(homepage);
-        }
-
-        private void BuatAkunLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel1_Click(object sender, EventArgs e)
-        {
-
+            if (UserController.AuthAttempt(UsernameTextbox.Text, kryptonTextBox1.Text))
+            {
+                HomepageControl homepage = new HomepageControl();
+                NotifyViewManager.MoveView(homepage);
+            }
+            else
+            {
+                if (UsernameTextbox.Text == "Username" || kryptonTextBox1.Text == "Password" || string.IsNullOrWhiteSpace(kryptonTextBox1.Text) || string.IsNullOrWhiteSpace(UsernameTextbox.Text))
+                {
+                    MessageBoxHelper.ShowInfoMessageBox("Mohon lengkapi data terlebih dahulu!");
+                }
+                else
+                {
+                    MessageBoxHelper.ShowCustomMessageBox("Username atau Password Salah", "Login Gagal!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    kryptonTextBox1.Text = "";
+                }
+            }
         }
 
         private void UsernameTextbox_Enter(object sender, EventArgs e)
@@ -146,31 +77,22 @@ namespace notfiy.Views.Login
             if (kryptonTextBox1.Text == "Password")
             {
                 kryptonTextBox1.Text = "";
+                kryptonTextBox1.PasswordChar = '*';
             }
         }
         private void kryptonTextBox1_Leave(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(kryptonTextBox1.Text))
+            {
+                kryptonTextBox1.Text = "Password";
+                kryptonTextBox1.PasswordChar = '\0';
+            }
         }
 
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        private void BuatAkunLabel_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void kryptonTextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
-        {
-
+            RegisterControl reg = new RegisterControl();
+            NotifyViewManager.MoveView(reg);
         }
     }
 }
