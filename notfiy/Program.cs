@@ -4,6 +4,8 @@ namespace notfiy
     using notfiy.Views.Login;
     using notfiy.Views.Todolist;
     using notfiy.Views;
+    using notfiy.Views.Other;
+
     internal static class Program
     {
         /// <summary>
@@ -36,7 +38,7 @@ namespace notfiy
         SystemSingleton.Instance.EnableDatabase(connectionString);
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
-            mainForm.Controls.Add(new LoginControl());
+            mainForm.Controls.Add(new TodolistControl());
             //mainForm.Controls.Add(new LoginControl());
 
 

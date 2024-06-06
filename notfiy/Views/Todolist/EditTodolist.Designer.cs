@@ -172,6 +172,7 @@
             HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -259,11 +260,10 @@
             flowLayoutPanel1.Controls.Add(kryptonCheckBox1);
             flowLayoutPanel1.Controls.Add(kryptonCheckBox2);
             flowLayoutPanel1.Controls.Add(kryptonCheckBox3);
-            flowLayoutPanel1.Controls.Add(kryptonButton6);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(380, 320);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(745, 381);
+            flowLayoutPanel1.Size = new Size(745, 117);
             flowLayoutPanel1.TabIndex = 23;
             // 
             // kryptonCheckBox1
@@ -325,7 +325,7 @@
             // 
             // kryptonButton6
             // 
-            kryptonButton6.Location = new Point(3, 111);
+            kryptonButton6.Location = new Point(380, 443);
             kryptonButton6.Name = "kryptonButton6";
             kryptonButton6.Size = new Size(27, 28);
             kryptonButton6.StateNormal.Back.Color1 = Color.White;
@@ -365,7 +365,7 @@
             kryptonButton2.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonButton2.TabIndex = 32;
             kryptonButton2.Values.Text = "Cancel";
-            kryptonButton2.Click += this.kryptonButton2_Click;
+            kryptonButton2.Click += kryptonButton2_Click;
             // 
             // kryptonButton3
             // 
@@ -403,6 +403,7 @@
             Controls.Add(kryptonPanel2);
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton3);
+            Controls.Add(kryptonButton6);
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonBorderEdge1);
             Controls.Add(flowLayoutPanel1);

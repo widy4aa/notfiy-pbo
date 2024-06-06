@@ -223,12 +223,14 @@
             kryptonListBox1.Location = new Point(243, 179);
             kryptonListBox1.Name = "kryptonListBox1";
             kryptonListBox1.Size = new Size(1003, 597);
-            kryptonListBox1.StateActive.Back.Color1 = SystemColors.Control;
+            kryptonListBox1.StateActive.Back.Color1 = Color.White;
             kryptonListBox1.StateActive.Back.Color2 = Color.White;
             kryptonListBox1.StateActive.Border.Color1 = Color.FromArgb(46, 26, 94);
             kryptonListBox1.StateActive.Border.ColorAngle = -10F;
             kryptonListBox1.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonListBox1.StateActive.Border.Width = 9;
+            kryptonListBox1.StateCommon.Back.Color1 = Color.White;
+            kryptonListBox1.StateCommon.Back.Color2 = Color.White;
             kryptonListBox1.StateCommon.Border.Color1 = Color.Black;
             kryptonListBox1.StateCommon.Border.Color2 = Color.Black;
             kryptonListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -530,6 +532,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonLabel1);
             Controls.Add(kryptonLabel4);

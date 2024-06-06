@@ -65,12 +65,12 @@ namespace notfiy.Views.Homepage
 
         private void HamburgerButton_Click(object sender, EventArgs e)
         {
-            Sidebar sidebar = new Sidebar();
-            this.Controls.Add(sidebar);
-            sidebar.BringToFront();
-            sidebar.BackColor = Color.Transparent;
-            sidebar.Location = new Point(950, 0);
-            sidebar.Show();
+            //Sidebar sidebar = new Sidebar();
+            //this.Controls.Add(sidebar);
+            //sidebar.BringToFront();
+            //sidebar.BackColor = Color.Transparent;
+            //sidebar.Location = new Point(950, 0);
+            //sidebar.Show();
         }
 
         private void homepageItem7_Load(object sender, EventArgs e)

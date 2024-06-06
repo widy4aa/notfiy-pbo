@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Views.Other;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +25,18 @@ namespace notfiy.Views.Todolist
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             PopUpEdit popUpEdit = new PopUpEdit();
-            this.Controls.Add(popUpEdit);
+            //this.Controls.Add(popUpEdit);
             popUpEdit.BringToFront();
             popUpEdit.BackColor = Color.Transparent;
-            popUpEdit.Show();
+            this.Controls.Add(popUpEdit);
+            //popUpEdit.Show();
+
+            //tesPopUp TesPop = new tesPopUp();
+            //this.Controls.Add(TesPop);
+            //TesPop.BringToFront();
+            //TesPop.BackColor = Color.Transparent;
+            //TesPop.Show();
+
             //PopUpDelete popUpDelete = new PopUpDelete();
             //this.Controls.Add(popUpDelete);
             //popUpDelete.BringToFront();
@@ -38,6 +47,13 @@ namespace notfiy.Views.Todolist
         {
             TodoDetail todoDetail = new TodoDetail();
             NotifyViewManager.MoveView(todoDetail);
+        }
+
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            //SIdeBar sideBar = new SIdeBar();
+            //this.Controls.Add(sideBar);
+            //sideBar.Show();
         }
     }
 }
