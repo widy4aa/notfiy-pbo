@@ -179,7 +179,6 @@ namespace notfiy.Models
         {
             User? user = null;
             var command = new NpgsqlCommand($"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'", Connection);
-            // Kenapa gak mau ngisi parameters!!??
             //var command = new NpgsqlCommand("SELECT * FROM users WHERE username = '@username' AND password = '@password'", Connection);
 
             try
