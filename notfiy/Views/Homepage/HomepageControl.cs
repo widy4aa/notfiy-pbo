@@ -48,9 +48,21 @@ namespace notfiy.Views.Homepage
             }
         }
 
-        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
+        private void SearchTextbox_Enter(object sender, EventArgs e)
         {
-            
+            if (SearchTextbox.Text == "Search")
+            {
+                SearchTextbox.Text = "\0";
+            }
+
+        }
+
+        private void SearchTextbox_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchTextbox.Text))
+            {
+                SearchTextbox.Text = "Search";
+            }
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
