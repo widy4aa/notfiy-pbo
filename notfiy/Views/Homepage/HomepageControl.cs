@@ -120,5 +120,10 @@ namespace notfiy.Views.Homepage
         {
 
         }
+
+        private void SearchTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

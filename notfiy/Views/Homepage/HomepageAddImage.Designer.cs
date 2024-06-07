@@ -1,6 +1,6 @@
-﻿namespace notfiy.Views.Todolist
+﻿namespace notfiy.Views.Homepage
 {
-    partial class PopUpDelete
+    partial class HomepageAddImage
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,105 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpDelete));
-            kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageAddImage));
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            label1 = new Label();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // kryptonCheckedListBox1
-            // 
-            kryptonCheckedListBox1.Location = new Point(519, 347);
-            kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
-            kryptonCheckedListBox1.Size = new Size(559, 203);
-            kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 94);
-            kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 94);
-            kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
-            kryptonCheckedListBox1.StateCommon.Border.Width = 5;
-            kryptonCheckedListBox1.TabIndex = 0;
-            // 
             // kryptonPictureBox1
             // 
-            kryptonPictureBox1.BackgroundImageLayout = ImageLayout.Center;
             kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
-            kryptonPictureBox1.Location = new Point(530, 378);
+            kryptonPictureBox1.Location = new Point(3, 3);
             kryptonPictureBox1.Name = "kryptonPictureBox1";
-            kryptonPictureBox1.Size = new Size(132, 139);
-            kryptonPictureBox1.TabIndex = 1;
+            kryptonPictureBox1.Size = new Size(583, 464);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            kryptonPictureBox1.TabIndex = 0;
             kryptonPictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(679, 390);
-            label1.Name = "label1";
-            label1.Size = new Size(385, 32);
-            label1.TabIndex = 3;
-            label1.Text = "Yakin Ingin Menghapus Todolist ? ";
             // 
             // kryptonButton1
             // 
-            kryptonButton1.Location = new Point(692, 461);
+            kryptonButton1.Location = new Point(42, 351);
             kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(149, 47);
+            kryptonButton1.Size = new Size(223, 69);
             kryptonButton1.StateCommon.Back.Color1 = Color.White;
             kryptonButton1.StateCommon.Back.Color2 = Color.White;
             kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
-            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StateCommon.Border.Color1 = Color.White;
-            kryptonButton1.StateCommon.Border.Color2 = Color.White;
+            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
             kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateCommon.Border.Rounding = 0F;
-            kryptonButton1.TabIndex = 4;
+            kryptonButton1.StateCommon.Border.Width = -2;
+            kryptonButton1.TabIndex = 1;
             kryptonButton1.Values.Text = "";
-            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // kryptonButton2
             // 
-            kryptonButton2.Location = new Point(870, 461);
+            kryptonButton2.Location = new Point(324, 351);
             kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(149, 47);
+            kryptonButton2.Size = new Size(223, 69);
             kryptonButton2.StateCommon.Back.Color1 = Color.White;
             kryptonButton2.StateCommon.Back.Color2 = Color.White;
             kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
-            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton2.StateCommon.Border.Color1 = Color.White;
-            kryptonButton2.StateCommon.Border.Color2 = Color.White;
+            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
             kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Rounding = 0F;
-            kryptonButton2.TabIndex = 5;
+            kryptonButton2.StateCommon.Border.Width = -2;
+            kryptonButton2.TabIndex = 2;
             kryptonButton2.Values.Text = "";
             // 
-            // PopUpDelete
+            // kryptonButton3
+            // 
+            kryptonButton3.Location = new Point(431, 9);
+            kryptonButton3.Name = "kryptonButton3";
+            kryptonButton3.Size = new Size(97, 44);
+            kryptonButton3.StateCommon.Back.Color1 = Color.Red;
+            kryptonButton3.StateCommon.Back.Color2 = Color.Red;
+            kryptonButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton3.StateCommon.Border.Width = -2;
+            kryptonButton3.StateCommon.Content.ShortText.Color1 = Color.White;
+            kryptonButton3.StateCommon.Content.ShortText.Color2 = Color.White;
+            kryptonButton3.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonButton3.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            kryptonButton3.TabIndex = 3;
+            kryptonButton3.Values.Text = "X";
+            // 
+            // HomepageAddImage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(kryptonButton3);
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton1);
-            Controls.Add(label1);
             Controls.Add(kryptonPictureBox1);
-            Controls.Add(kryptonCheckedListBox1);
-            Name = "PopUpDelete";
-            Size = new Size(1440, 1024);
-            Load += PopUpDelete_Load;
+            Name = "HomepageAddImage";
+            Size = new Size(600, 500);
+            Load += HomepageAddImage_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;
+
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
-        private Label label1;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

@@ -154,6 +154,7 @@
             kryptonPanel1.StateNormal.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear;
             kryptonPanel1.StateNormal.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPanel1.TabIndex = 11;
+            kryptonPanel1.Paint += kryptonPanel1_Paint;
             // 
             // kryptonLabel1
             // 
@@ -207,6 +208,7 @@
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;
             kryptonTextBox1.Text = "Password";
+            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
             kryptonTextBox1.Enter += kryptonTextBox1_Enter;
             kryptonTextBox1.Leave += kryptonTextBox1_Leave;
             // 
