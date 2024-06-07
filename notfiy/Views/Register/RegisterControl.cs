@@ -1,5 +1,6 @@
 ﻿using notfiy.Controllers;
 using notfiy.Helpers;
+using notfiy.Models;
 using notfiy.Views.Login;
 using Npgsql;
 using System;
@@ -18,11 +19,13 @@ namespace notfiy.Views.Register
     public partial class RegisterControl : UserControl
     {
         private UserController UserController;
+        private UserModel UserModel;
         private MessageBoxHelper MessageBoxHelper;
         public RegisterControl()
         {
             InitializeComponent();
             UserController = new UserController();
+            UserModel = new UserModel();
             MessageBoxHelper = new MessageBoxHelper();
         }
 
@@ -63,7 +66,7 @@ namespace notfiy.Views.Register
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "Password")
+            if (kryptonTextBox2.Text == "Confirm Password")
             {
                 kryptonTextBox2.Text = "";
                 kryptonTextBox2.PasswordChar = '*';
@@ -73,7 +76,8 @@ namespace notfiy.Views.Register
         {
             if (string.IsNullOrWhiteSpace(kryptonTextBox2.Text))
             {
-                kryptonTextBox2.Text = "Password";
+                kryptonTextBox2.Text = "Confirm Password";
+                kryptonTextBox2.PasswordChar = '\0';
             }
         }
 
@@ -83,25 +87,91 @@ namespace notfiy.Views.Register
             NotifyViewManager.MoveView(log);
         }
 
+        private void kryptonTextBox5_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "Password")
+            {
+                kryptonTextBox5.Text = "";
+                kryptonTextBox5.PasswordChar = '*';
+            }
+        }
+        private void kryptonTextBox5_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox5.Text))
+            {
+                kryptonTextBox5.Text = "Password";
+                kryptonTextBox5.PasswordChar = '\0';
+            }
+        }
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            // Pengecekan username telah memenuhi syarat atau tidak
-            // Pengecekan username apakah sudah ada pada database atau tidak
-            // Pengecekan email juga sama, email yang sudah terdaftar tidak bisa digunakan mendaftar lagi
-            // Pengecekan email sudah memenuhi syarat atau tidak
-            // Pengecekan password apakah sudah sesuai aturan atau tidak
-            // Pengecekan password apakah sudah sama dengan confirm password atau tidak
+            if (kryptonTextBox2.Text == "Confirm Password" || kryptonTextBox3.Text == "Username" || kryptonTextBox4.Text == "Email" || kryptonTextBox5.Text == "Password" 
+                || string.IsNullOrWhiteSpace(kryptonTextBox2.Text) || string.IsNullOrWhiteSpace(kryptonTextBox3.Text) || string.IsNullOrWhiteSpace(kryptonTextBox4.Text) || string.IsNullOrWhiteSpace(kryptonTextBox5.Text))
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Mohon lengkapi data terlebih dahulu!");
+                kryptonTextBox2.Text = "Confirm Password";
+                kryptonTextBox3.Text = "Username";
+                kryptonTextBox4.Text = "Email";
+                kryptonTextBox5.Text = "Password";
+                return;
+            }
 
-            // Mempertahankan text email dan username apabila pendaftaran akun gagal
-            // Menghapus text ketika password atau confirm password tidak sesuai
+            if (!kryptonTextBox3.Text.Any(char.IsDigit))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Username harus mengandung angka!");
+                return;
+            }
 
-            // Menampilkan messagebox ketika berhasil mendaftar atau gagal
-            // Apabila sudah mendaftar langsung view berpindah ke login
-        }
+            if (UserModel.IsUsernameTaken(kryptonTextBox3.Text))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Username telah digunakan! Mohon gunakan username lain");
+                kryptonTextBox3.Text = "";
+                return;
+            }
 
-        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
-        {
+            if (!(kryptonTextBox4.Text.Contains("@mail") || kryptonTextBox4.Text.Contains("@gmail")))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Format Email yang anda masukkan salah!");
+                return;
+            }
 
+            if (UserModel.IsEmailTaken(kryptonTextBox4.Text))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Email telah digunakan! Mohon gunakan email lain");
+                kryptonTextBox4.Text = "";
+                return;
+            }
+
+            if (kryptonTextBox2.Text.Length <= 8)
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Password harus memiliki minimal panjang 8 karakter");
+                kryptonTextBox5.Text = "";
+                kryptonTextBox2.Text = "";
+                return;
+            }
+
+            if (kryptonTextBox5.Text != kryptonTextBox2.Text)
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Password dengan Confirm Password tidak sama!");
+                kryptonTextBox5.Text = "";
+                kryptonTextBox2.Text = "";
+                return;
+            }
+
+            if (UserController.CreateUser(kryptonTextBox3.Text, kryptonTextBox5.Text, kryptonTextBox4.Text))
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Registrasi Berhasil! Silahkan login terlebih dahulu!");
+                LoginControl log = new LoginControl();
+                NotifyViewManager.MoveView(log);
+            }
+            else 
+            {
+                MessageBoxHelper.ShowErrorMessageBox("Registrasi Gagal! Silahkan mencoba lagi");
+                kryptonTextBox3.Text = "Username";
+                kryptonTextBox4.Text = "Email";
+                kryptonTextBox5.Text = "Password";
+                kryptonTextBox2.Text = "Confirm Password";
+            }
         }
     }
 }

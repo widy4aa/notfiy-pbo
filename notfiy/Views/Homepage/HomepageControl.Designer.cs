@@ -35,8 +35,8 @@
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             SearchTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -122,6 +122,7 @@
             SearchTextbox.StateNormal.Back.Color1 = Color.Transparent;
             SearchTextbox.TabIndex = 11;
             SearchTextbox.Text = "Search";
+            SearchTextbox.TextChanged += SearchTextbox_TextChanged;
             SearchTextbox.Enter += SearchTextbox_Enter;
             SearchTextbox.Leave += SearchTextbox_Leave;
             // 
@@ -134,6 +135,18 @@
             kryptonPanel2.StateNormal.Color1 = Color.Black;
             kryptonPanel2.StateNormal.Color2 = Color.Black;
             kryptonPanel2.TabIndex = 1;
+            // 
+            // kryptonLabel1
+            // 
+            kryptonLabel1.Location = new Point(541, 71);
+            kryptonLabel1.Name = "kryptonLabel1";
+            kryptonLabel1.Size = new Size(314, 26);
+            kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
+            kryptonLabel1.StateCommon.ShortText.Color2 = Color.White;
+            kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.StateCommon.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            kryptonLabel1.TabIndex = 0;
+            kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
             // 
             // kryptonTextBox1
             // 
@@ -163,18 +176,6 @@
             kryptonTextBox1.TabIndex = 17;
             kryptonTextBox1.Text = "Note";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
-            // 
-            // kryptonLabel1
-            // 
-            kryptonLabel1.Location = new Point(541, 71);
-            kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(314, 26);
-            kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
-            kryptonLabel1.StateCommon.ShortText.Color2 = Color.White;
-            kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel1.StateCommon.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            kryptonLabel1.TabIndex = 0;
-            kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
             // 
             // HomepageControl
             // 
