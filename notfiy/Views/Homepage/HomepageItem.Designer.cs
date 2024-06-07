@@ -35,6 +35,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
+            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -116,11 +117,28 @@
             kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
             kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged_1;
             // 
+            // kryptonButton3
+            // 
+            kryptonButton3.Location = new Point(208, 4);
+            kryptonButton3.Name = "kryptonButton3";
+            kryptonButton3.Size = new Size(32, 33);
+            kryptonButton3.StateCommon.Back.Color1 = Color.White;
+            kryptonButton3.StateCommon.Back.Color2 = Color.White;
+            kryptonButton3.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton3.StateCommon.Back.Image");
+            kryptonButton3.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            kryptonButton3.StateCommon.Border.Color1 = Color.White;
+            kryptonButton3.StateCommon.Border.Color2 = Color.White;
+            kryptonButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton3.TabIndex = 15;
+            kryptonButton3.Values.Text = "";
+            kryptonButton3.Click += kryptonButton3_Click;
+            // 
             // HomepageItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton3);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonListBox1);
             Controls.Add(kryptonButton1);
@@ -141,5 +159,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         public Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }
