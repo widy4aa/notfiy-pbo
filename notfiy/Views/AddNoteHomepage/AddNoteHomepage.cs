@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace notfiy.Views.addNoteHompage
+namespace notfiy.Views.AddNoteHomepage
 {
-    public partial class addNoteHomepage : UserControl
+    public partial class AddNoteHomepage : UserControl
     {
-        public addNoteHomepage()
+        public AddNoteHomepage()
         {
             InitializeComponent();
         }

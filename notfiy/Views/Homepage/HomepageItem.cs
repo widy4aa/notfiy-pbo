@@ -13,16 +13,38 @@ namespace notfiy.Views.Homepage
 {
     public partial class HomepageItem : UserControl
     {
-        public DoItem DoItem { get; set; }
-        public HomepageItem(DoItem doItem, HomepageControl homepageControl)
+        public int IdNote { get; set; }
+        public bool IsPinned;
+        private Action RearangeNoteItemsAction;
+
+
+        public HomepageItem(Note note, Action rearangeNoteItemsAction)
         {
-            DoItem = doItem;
             InitializeComponent();
+       
+            this.Name = "NoteId" + note.IdNote;
+            this.NoteName.Text = note.NoteName;
+            this.NoteTextBox.Text = note.Content;
+            IsPinned = note.Pinned;
+            RearangeNoteItemsAction = rearangeNoteItemsAction;
+        }
+
+        private void ChangeButtonState()
+        {
+            if (IsPinned)
+            {
+                kryptonButton2.Hide();
+                kryptonButton3.Show();
+            } else
+            {
+                kryptonButton3.Show();
+                kryptonButton2.Hide();
+            }
         }
 
         private void HomepageItem_Load(object sender, EventArgs e)
         {
-            kryptonButton2.Hide();
+            ChangeButtonState();
         }
 
         private void kryptonLabel2_Click(object sender, EventArgs e)
@@ -52,8 +74,8 @@ namespace notfiy.Views.Homepage
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            kryptonButton3.Show();
-            kryptonButton2.Hide();
+            IsPinned = true;
+            RearangeNoteItemsAction.Invoke();
         }
 
         private void kryptonRichTextBox1_TextChanged_1(object sender, EventArgs e)
@@ -63,8 +85,8 @@ namespace notfiy.Views.Homepage
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            kryptonButton3.Hide();
-            kryptonButton2.Show();
+            IsPinned = true;
+            RearangeNoteItemsAction.Invoke();
         }
     }
 }

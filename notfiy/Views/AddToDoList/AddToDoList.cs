@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace notfiy.Views.addToDoList
+namespace notfiy.Views.AddToDoList
 {
-    public partial class addToDoList : UserControl
+    public partial class AddToDoList : UserControl
     {
-        public addToDoList()
+        public AddToDoList()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace notfiy.Views.addToDoList
 
         }
 
-        private void addToDoList_Load(object sender, EventArgs e)
+        private void AddToDoList_Load(object sender, EventArgs e)
         {
 
         }

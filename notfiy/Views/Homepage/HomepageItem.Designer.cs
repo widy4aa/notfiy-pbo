@@ -33,8 +33,8 @@
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
+            NoteName = new Krypton.Toolkit.KryptonLabel();
+            NoteTextBox = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -84,38 +84,38 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(kryptonLabel1);
-            flowLayoutPanel1.Controls.Add(kryptonRichTextBox1);
+            flowLayoutPanel1.Controls.Add(NoteName);
+            flowLayoutPanel1.Controls.Add(NoteTextBox);
             flowLayoutPanel1.Location = new Point(28, 57);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
             flowLayoutPanel1.TabIndex = 14;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
-            // kryptonLabel1
+            // NoteName
             // 
-            kryptonLabel1.Location = new Point(3, 3);
-            kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(153, 26);
-            kryptonLabel1.StateNormal.ShortText.Color1 = Color.Black;
-            kryptonLabel1.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel1.TabIndex = 12;
-            kryptonLabel1.Values.Text = "Judul Pekerjaan";
+            NoteName.Location = new Point(3, 3);
+            NoteName.Name = "NoteName";
+            NoteName.Size = new Size(153, 26);
+            NoteName.StateNormal.ShortText.Color1 = Color.Black;
+            NoteName.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NoteName.TabIndex = 12;
+            NoteName.Values.Text = "Judul Pekerjaan";
             // 
-            // kryptonRichTextBox1
+            // NoteTextBox
             // 
-            kryptonRichTextBox1.DetectUrls = false;
-            kryptonRichTextBox1.ImeMode = ImeMode.Disable;
-            kryptonRichTextBox1.Location = new Point(3, 35);
-            kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            kryptonRichTextBox1.ReadOnly = true;
-            kryptonRichTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            kryptonRichTextBox1.Size = new Size(243, 141);
-            kryptonRichTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonRichTextBox1.StateCommon.Border.Width = -2;
-            kryptonRichTextBox1.TabIndex = 13;
-            kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
-            kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged_1;
+            NoteTextBox.DetectUrls = false;
+            NoteTextBox.ImeMode = ImeMode.Disable;
+            NoteTextBox.Location = new Point(3, 35);
+            NoteTextBox.Name = "NoteTextBox";
+            NoteTextBox.ReadOnly = true;
+            NoteTextBox.ScrollBars = RichTextBoxScrollBars.None;
+            NoteTextBox.Size = new Size(243, 141);
+            NoteTextBox.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            NoteTextBox.StateCommon.Border.Width = -2;
+            NoteTextBox.TabIndex = 13;
+            NoteTextBox.Text = resources.GetString("NoteTextBox.Text");
+            NoteTextBox.TextChanged += kryptonRichTextBox1_TextChanged_1;
             // 
             // kryptonButton3
             // 
@@ -157,8 +157,8 @@
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
         private FlowLayoutPanel flowLayoutPanel1;
-        public Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        public Krypton.Toolkit.KryptonLabel NoteName;
+        private Krypton.Toolkit.KryptonRichTextBox NoteTextBox;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace notfiy.Views.Homepage
 {
     public partial class HomepageDetail : UserControl
     {
-        public HomepageDetail()
+        public HomepageDetail(int? idNote)
         {
             InitializeComponent();
         }

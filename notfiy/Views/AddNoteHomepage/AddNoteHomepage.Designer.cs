@@ -1,6 +1,6 @@
-﻿namespace notfiy.Views.addNoteHompage
+﻿namespace notfiy.Views.AddNoteHomepage
 {
-    partial class addNoteHomepage
+    partial class AddNoteHomepage
     {
         /// <summary> 
         /// Required designer variable.
