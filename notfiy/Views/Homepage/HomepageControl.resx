@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+  <!--
     Microsoft ResX Schema 
-    
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -322,12 +322,33 @@
         AACardP5/4sDiEOMV21wAAAAAElFTkSuQmCC
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="HamburgerButton.StateCommon.Back.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\HamburgerButton.StateCommon.Back.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HamburgerButton.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIwAAAB2CAYAAAAayXtBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
+        JQAAFiUBSVIk8AAAAhtJREFUeF7t0jFtWAEUQ9ECCIeyCZQWQGCEVZasDaKUgId48B+ejqVDwLq/fr+8
+        fsNPCYaKYKgIhopgqAiGimCoCIaKYKgIhopgqAiGimCoCIaKYKgIhopgqAiGymPB2Hbp8wXBHFn6fEEw
+        R5Y+XxDMkaXPFwRzZOnzBcEcWfp8QTBHlj5fEMyRpc8XBHNk6fMFwRxZ+nxBMEeWPl8QzJGlzxcEc2Tp
+        8wXBHFn6fEEwR5Y+XxDMkaXPFx4L5vPji6H0+cJjwXCDYKgIhopgqAiGimCoCIaKYKgIhopgqAiGimCo
+        CIaKYKg8Fszb33eG0ucLjwVj26XPFwRzZOnzBcEcWfp8QTBHlj5fEMyRpc8XBHNk6fMFwRxZ+nxBMEeW
+        Pl8QzJGlzxcEc2Tp8wXBHFn6fEEwR5Y+XxDMkaXPFwRzZOnzBcEcWfp8QTBHlj5feCyYtz/vDKXPFx4L
+        hhsEQ0UwVARDRTBUBENFMFQEQ0UwVARDRTBUBENFMFQEQ+WxYD4//jGUPl94LBjbLn2+IJgjS58vCObI
+        0ucLgjmy9PmCYI4sfb4gmCNLny8I5sjS5wuCObL0+YJgjix9viCYI0ufLwjmyNLnC4I5svT5gmCOLH2+
+        IJgjS58vCObI0ucLgjmy9PnCY8Fwg2CoCIaKYKgIhopgqAiGimCoCIaKYKgIhopgqAiGimCoCIaKYKgI
+        hopgqAiGimAovH7/B9BIyLn+CtABAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="HamburgerButton.StateTracking.Back.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\HamburgerButton.StateTracking.Back.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HamburgerButton.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIwAAAB2CAYAAAAayXtBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
+        JQAAFiUBSVIk8AAAAbZJREFUeF7t2qFNBUEYRlEKoAMEnoQCCP4FJAqFBg8toBD0QGUkGLp4BL+Cm80w
+        2c35kuMn+a+ck/PTwxH+SjAkgiERDIlgSARDIhgSwZAIhkQwJIIhEQyJYEgEQyIYEsGQDAvG5u7+5mXx
+        LmsJZqcTjKUJxtIEY2mCsTTBWJpgLE0wliYYSxOMpQnG0gRjaYKxNMFYmmAsTTCWJhhL21wwvw9mnsuz
+        u8W7rDUsGPZJMCSCIREMiWBIBEMiGBLBkAiGRDAkgiERDIlgSARDIhiSYcE8P74x0eb+w9jc/X6iWrrL
+        WoLZ6QRjaYKxNMFYmmAsTTCWJhhLE4ylCcbSBGNpgrE0wViaYCxNMJYmGEsTjKVtLpivz28m2lww7JNg
+        SARDIhgSwZAIhkQwJIIhEQyJYEgEQyIYEsGQCIZEMCSCIRkWzNKnHv7P7dXT4l3WGhaMzZ0/vZYmGEsT
+        jKUJxtIEY2mCsTTBWJpgLE0wliYYSxOMpQnG0gRjaYKxNMFYmmAsbXPBvL9+MNH1xcPiXdYaFgz7JBgS
+        wZAIhkQwJIIhEQyJYEgEQyIYEsGQCIZEMCSCITgcfwBFdFZETayYgAAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="kryptonPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

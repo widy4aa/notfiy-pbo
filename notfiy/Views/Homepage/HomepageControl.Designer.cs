@@ -166,11 +166,13 @@
             // 
             // kryptonLabel1
             // 
-            kryptonLabel1.Location = new Point(582, 76);
+            kryptonLabel1.Location = new Point(541, 71);
             kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(266, 23);
+            kryptonLabel1.Size = new Size(314, 26);
             kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
-            kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.StateCommon.ShortText.Color2 = Color.White;
+            kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.StateCommon.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonLabel1.TabIndex = 0;
             kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
             // 
@@ -205,5 +207,6 @@
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }
