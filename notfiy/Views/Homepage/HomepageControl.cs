@@ -38,17 +38,17 @@ namespace notfiy.Views.Homepage
             this.Controls.Add(flowLayoutPanel);
 
             // Menambahkan beberapa tombol ke dalam FlowLayoutPanel
-            for (int i = 0; i < 10; i++)
-            {
-                HomepageItem homepageItem = new HomepageItem();
-                homepageItem.Name = $"Note {i + 1}";
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    HomepageItem homepageItem = new HomepageItem();
+            //    homepageItem.Name = $"Note {i + 1}";
 
-                // Mengatur margin
-                homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
+            //    // Mengatur margin
+            //    homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
 
-                // Menambahkan kontrol ke FlowLayoutPanel
-                flowLayoutPanel.Controls.Add(homepageItem);
-            }
+            //    // Menambahkan kontrol ke FlowLayoutPanel
+            //    flowLayoutPanel.Controls.Add(homepageItem);
+            //}
         }
 
         private void SearchTextbox_Enter(object sender, EventArgs e)
