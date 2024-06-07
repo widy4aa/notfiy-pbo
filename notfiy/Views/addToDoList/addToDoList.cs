@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using notfiy.Views.Todolist;
 
 namespace notfiy.Views.addToDoList
 {
-    public partial class AddToDoList : UserControl
+    public partial class addToDoList : UserControl
     {
-        public AddToDoList()
+        public addToDoList()
         {
             InitializeComponent();
         }
@@ -30,7 +29,7 @@ namespace notfiy.Views.addToDoList
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
