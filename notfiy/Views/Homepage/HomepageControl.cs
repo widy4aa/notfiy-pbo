@@ -10,11 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using notfiy.Controllers;
 
 namespace notfiy.Views.Homepage
 {
     public partial class HomepageControl : UserControl
     {
+        NoteController NoteController { get; set; }
+        List<HomepageItem> homepageItems = new List<HomepageItem>();
         public HomepageControl()
         {
             InitializeComponent();
@@ -35,22 +38,34 @@ namespace notfiy.Views.Homepage
             this.Controls.Add(flowLayoutPanel);
 
             // Menambahkan beberapa tombol ke dalam FlowLayoutPanel
-            for (int i = 0; i < 10; i++)
-            {
-                HomepageItem homepageItem = new HomepageItem();
-                homepageItem.Name = $"Note {i + 1}";
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    HomepageItem homepageItem = new HomepageItem();
+            //    homepageItem.Name = $"Note {i + 1}";
 
-                // Mengatur margin
-                homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
+            //    // Mengatur margin
+            //    homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
 
-                // Menambahkan kontrol ke FlowLayoutPanel
-                flowLayoutPanel.Controls.Add(homepageItem);
-            }
+            //    // Menambahkan kontrol ke FlowLayoutPanel
+            //    flowLayoutPanel.Controls.Add(homepageItem);
+            //}
         }
 
-        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
+        private void SearchTextbox_Enter(object sender, EventArgs e)
         {
-            
+            if (SearchTextbox.Text == "Search")
+            {
+                SearchTextbox.Text = "\0";
+            }
+
+        }
+
+        private void SearchTextbox_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchTextbox.Text))
+            {
+                SearchTextbox.Text = "Search";
+            }
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

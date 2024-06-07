@@ -3,7 +3,7 @@ using System.Web;
 
 namespace notfiy.Entities
 {
-    class DoItem : Entity
+    public class DoItem : Entity
     {
         public int IdDoItem;
         public string DoItemName;
