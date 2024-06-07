@@ -1,5 +1,5 @@
 ﻿using notfiy.Views.Other;
-using notfiy.Views.addToDoList;
+//using notfiy.Views.addToDoList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NotifyViewManager = notfiy.Core.ViewManager;
+using notfiy.Views.addNoteHompage;
+using notfiy.Views.addToDoList;
 
 
 namespace notfiy.Views.Todolist
@@ -106,7 +108,10 @@ namespace notfiy.Views.Todolist
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            
+            //addToDoList AddTodolist = new addToDoList;
+            AddToDoList addToDoList = new AddToDoList();
+            NotifyViewManager.MoveView(addToDoList);
+
         }
     }
 }
