@@ -98,7 +98,7 @@ namespace notfiy.Views.Todolist
             this.Controls.Add(navbar);
             navbar.BringToFront();
             navbar.BackColor = Color.Transparent;
-            navbar.Location = new Point(990, 0);
+            navbar.Location = new Point(1000, 0);
         }
 
         private void todoItem12_Load_1(object sender, EventArgs e)

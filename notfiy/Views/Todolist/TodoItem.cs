@@ -20,7 +20,7 @@ namespace notfiy.Views.Todolist
 
         public void kryptonLabel1_Click(object sender, EventArgs e)
         {
-
+            kryptonButton2.Hide();
         }
 
         private void flowLayoutPanel1_Click(object sender, EventArgs e)
@@ -58,6 +58,23 @@ namespace notfiy.Views.Todolist
         private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void TodoItem_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            kryptonButton2.Hide();
+            kryptonButton3.Show();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            kryptonButton3.Hide();
+            kryptonButton2.Show();
         }
     }
 }

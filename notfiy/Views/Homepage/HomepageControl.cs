@@ -35,7 +35,7 @@ namespace notfiy.Views.Homepage
             this.Controls.Add(flowLayoutPanel);
 
             // Menambahkan beberapa tombol ke dalam FlowLayoutPanel
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
                 HomepageItem homepageItem = new HomepageItem();
                 homepageItem.Name = $"Note {i + 1}";
@@ -48,9 +48,21 @@ namespace notfiy.Views.Homepage
             }
         }
 
-        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
+        private void SearchTextbox_Enter(object sender, EventArgs e)
         {
-            
+            if (SearchTextbox.Text == "Search")
+            {
+                SearchTextbox.Text = "\0";
+            }
+
+        }
+
+        private void SearchTextbox_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchTextbox.Text))
+            {
+                SearchTextbox.Text = "Search";
+            }
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -65,12 +77,11 @@ namespace notfiy.Views.Homepage
 
         private void HamburgerButton_Click(object sender, EventArgs e)
         {
-            //Sidebar sidebar = new Sidebar();
-            //this.Controls.Add(sidebar);
-            //sidebar.BringToFront();
-            //sidebar.BackColor = Color.Transparent;
-            //sidebar.Location = new Point(950, 0);
-            //sidebar.Show();
+            Navbar navbar = new Navbar();
+            this.Controls.Add(navbar);
+            navbar.BringToFront();
+            navbar.BackColor = Color.Transparent;
+            navbar.Location = new Point(1000, 0);
         }
 
         private void homepageItem7_Load(object sender, EventArgs e)

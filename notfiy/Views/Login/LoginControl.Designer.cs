@@ -52,7 +52,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1, 276);
             panel1.TabIndex = 2;
-            panel1.Paint += panel1_Paint;
             // 
             // LoginButton
             // 
@@ -131,7 +130,6 @@
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 10;
             UsernameTextbox.Text = "Username";
-            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             UsernameTextbox.Enter += UsernameTextbox_Enter;
             UsernameTextbox.Leave += UsernameTextbox_Leave;
             // 
@@ -156,7 +154,6 @@
             kryptonPanel1.StateNormal.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear;
             kryptonPanel1.StateNormal.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPanel1.TabIndex = 11;
-            kryptonPanel1.Paint += kryptonPanel1_Paint;
             // 
             // kryptonLabel1
             // 
@@ -168,7 +165,6 @@
             kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel1.TabIndex = 14;
             kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
-            kryptonLabel1.Click += kryptonLabel1_Click;
             // 
             // BuatAkunLabel
             // 
@@ -198,7 +194,7 @@
             kryptonTextBox1.ImeMode = ImeMode.On;
             kryptonTextBox1.Location = new Point(465, 451);
             kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(601, 53);
+            kryptonTextBox1.Size = new Size(601, 54);
             kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
             kryptonTextBox1.StateActive.Border.Color1 = Color.White;
             kryptonTextBox1.StateActive.Border.Color2 = Color.White;
@@ -210,7 +206,9 @@
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
             kryptonTextBox1.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox1.TabIndex = 11;
-            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged_1;
+            kryptonTextBox1.Text = "Password";
+            kryptonTextBox1.Enter += kryptonTextBox1_Enter;
+            kryptonTextBox1.Leave += kryptonTextBox1_Leave;
             // 
             // LoginControl
             // 

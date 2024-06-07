@@ -19,7 +19,7 @@ namespace notfiy.Views.Homepage
 
         private void HomepageItem_Load(object sender, EventArgs e)
         {
-
+            kryptonButton2.Hide();
         }
 
         private void kryptonLabel2_Click(object sender, EventArgs e)
@@ -49,12 +49,19 @@ namespace notfiy.Views.Homepage
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-
+            kryptonButton3.Show();
+            kryptonButton2.Hide();
         }
 
         private void kryptonRichTextBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            kryptonButton3.Hide();
+            kryptonButton2.Show();
         }
     }
 }
