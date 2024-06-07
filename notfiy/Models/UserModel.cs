@@ -175,17 +175,37 @@ namespace notfiy.Models
                 Connection.Close();
             }
         }
+        public bool IsUsernameTaken(string username)
+        {
+            var command = new NpgsqlCommand("SELECT COUNT(*) FROM users WHERE username = @username", Connection);
+            command.Parameters.AddWithValue("@username", username);
+            Connection.Open();
+            //var result = command.ExecuteNonQuery();
+            var result = (long)command.ExecuteScalar();
+            Connection.Close();
+            return result > 0;
+        }
+
+        public bool IsEmailTaken(string email)
+        {
+            var command = new NpgsqlCommand("SELECT COUNT(*) FROM users WHERE email = @email", Connection);
+            command.Parameters.AddWithValue("@email", email);
+            Connection.Open();
+            //var result = command.ExecuteNonQuery();
+            var result = (long)command.ExecuteScalar();
+            Connection.Close();
+            return result > 0;
+        }   
+
         public User? UserAuth(string username, string password)
         {
             User? user = null;
-            var command = new NpgsqlCommand($"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'", Connection);
-            //var command = new NpgsqlCommand("SELECT * FROM users WHERE username = '@username' AND password = '@password'", Connection);
-
+            var command = new NpgsqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", Connection);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
             try
             {
                 Connection.Open();
-                //command.Parameters.AddWithValue("@username", username);
-                //command.Parameters.AddWithValue("@password", password);
 
                 var reader = command.ExecuteReader();
                 if (reader.Read())
@@ -202,7 +222,7 @@ namespace notfiy.Models
                 }
                 
             }
-            catch (Exception ex)
+                catch (Exception ex)
             {
                 // Handle exception (log it, rethrow it, etc.)
                 MessageBoxHelper.ShowErrorMessageBox(ex.Message);

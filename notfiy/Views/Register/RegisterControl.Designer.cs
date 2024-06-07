@@ -35,6 +35,7 @@
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
             LoginButton = new Krypton.Toolkit.KryptonButton();
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
+            kryptonTextBox5 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
@@ -42,7 +43,6 @@
             kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox3 = new Krypton.Toolkit.KryptonTextBox();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            kryptonTextBox5 = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
@@ -190,7 +190,27 @@
             kryptonPanel1.StateNormal.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear;
             kryptonPanel1.StateNormal.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPanel1.TabIndex = 19;
-            kryptonPanel1.Paint += kryptonPanel1_Paint;
+            // 
+            // kryptonTextBox5
+            // 
+            kryptonTextBox5.Cursor = Cursors.IBeam;
+            kryptonTextBox5.Location = new Point(385, 507);
+            kryptonTextBox5.Name = "kryptonTextBox5";
+            kryptonTextBox5.Size = new Size(601, 54);
+            kryptonTextBox5.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
+            kryptonTextBox5.StateActive.Border.Color1 = Color.White;
+            kryptonTextBox5.StateActive.Border.Color2 = Color.White;
+            kryptonTextBox5.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox5.StateActive.Border.Rounding = 20F;
+            kryptonTextBox5.StateActive.Border.Width = 4;
+            kryptonTextBox5.StateActive.Content.Color1 = Color.White;
+            kryptonTextBox5.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonTextBox5.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
+            kryptonTextBox5.StateNormal.Back.Color1 = Color.Transparent;
+            kryptonTextBox5.TabIndex = 16;
+            kryptonTextBox5.Text = "Password";
+            kryptonTextBox5.Enter += kryptonTextBox5_Enter;
+            kryptonTextBox5.Leave += kryptonTextBox5_Leave;
             // 
             // kryptonTextBox4
             // 
@@ -226,7 +246,7 @@
             // 
             // kryptonLabel2
             // 
-            kryptonLabel2.Location = new Point(760, 695);
+            kryptonLabel2.Location = new Point(760, 681);
             kryptonLabel2.Name = "kryptonLabel2";
             kryptonLabel2.Size = new Size(226, 33);
             kryptonLabel2.StateCommon.ShortText.Color1 = Color.White;
@@ -249,7 +269,7 @@
             // kryptonTextBox2
             // 
             kryptonTextBox2.Cursor = Cursors.IBeam;
-            kryptonTextBox2.Location = new Point(385, 605);
+            kryptonTextBox2.Location = new Point(385, 596);
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.Size = new Size(601, 54);
             kryptonTextBox2.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
@@ -346,25 +366,6 @@
             kryptonButton1.TabIndex = 9;
             kryptonButton1.Values.Text = "Register";
             kryptonButton1.Click += kryptonButton1_Click;
-            // 
-            // kryptonTextBox5
-            // 
-            kryptonTextBox5.Cursor = Cursors.IBeam;
-            kryptonTextBox5.Location = new Point(385, 507);
-            kryptonTextBox5.Name = "kryptonTextBox5";
-            kryptonTextBox5.Size = new Size(601, 54);
-            kryptonTextBox5.StateActive.Back.Color1 = Color.FromArgb(36, 9, 96);
-            kryptonTextBox5.StateActive.Border.Color1 = Color.White;
-            kryptonTextBox5.StateActive.Border.Color2 = Color.White;
-            kryptonTextBox5.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox5.StateActive.Border.Rounding = 20F;
-            kryptonTextBox5.StateActive.Border.Width = 4;
-            kryptonTextBox5.StateActive.Content.Color1 = Color.White;
-            kryptonTextBox5.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonTextBox5.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            kryptonTextBox5.StateNormal.Back.Color1 = Color.Transparent;
-            kryptonTextBox5.TabIndex = 16;
-            kryptonTextBox5.Text = "Password";
             // 
             // RegisterControl
             // 
