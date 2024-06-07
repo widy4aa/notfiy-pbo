@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace notfiy.Entities
 {
-    internal class User : Entity
+    public class User : Entity
     {
         public int IdUser;
         public required string Username;

@@ -10,11 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using notfiy.Controllers;
 
 namespace notfiy.Views.Homepage
 {
     public partial class HomepageControl : UserControl
     {
+        NoteController NoteController { get; set; }
+        List<HomepageItem> homepageItems = new List<HomepageItem>();
         public HomepageControl()
         {
             InitializeComponent();

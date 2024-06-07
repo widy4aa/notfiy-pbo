@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace notfiy.Views.Homepage
 {
     public partial class HomepageItem : UserControl
     {
-        public HomepageItem()
+        public DoItem DoItem { get; set; }
+        public HomepageItem(DoItem doItem, HomepageControl homepageControl)
         {
+            DoItem = doItem;
             InitializeComponent();
         }
 
