@@ -38,6 +38,7 @@
             kryptonCheckBox4 = new Krypton.Toolkit.KryptonCheckBox();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -183,12 +184,30 @@
             kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton2.TabIndex = 10;
             kryptonButton2.Values.Text = "";
+            kryptonButton2.Click += kryptonButton2_Click;
+            // 
+            // kryptonButton3
+            // 
+            kryptonButton3.Location = new Point(208, 4);
+            kryptonButton3.Name = "kryptonButton3";
+            kryptonButton3.Size = new Size(32, 33);
+            kryptonButton3.StateCommon.Back.Color1 = Color.White;
+            kryptonButton3.StateCommon.Back.Color2 = Color.White;
+            kryptonButton3.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton3.StateCommon.Back.Image");
+            kryptonButton3.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            kryptonButton3.StateCommon.Border.Color1 = Color.White;
+            kryptonButton3.StateCommon.Border.Color2 = Color.White;
+            kryptonButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton3.TabIndex = 11;
+            kryptonButton3.Values.Text = "";
+            kryptonButton3.Click += kryptonButton3_Click;
             // 
             // TodoItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton3);
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton1);
             Controls.Add(flowLayoutPanel1);
@@ -196,6 +215,7 @@
             Cursor = Cursors.Hand;
             Name = "TodoItem";
             Size = new Size(298, 266);
+            Load += TodoItem_Load;
             Click += TodoItem_Click;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
@@ -214,5 +234,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         public Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

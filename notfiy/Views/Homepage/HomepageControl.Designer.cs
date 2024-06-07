@@ -36,10 +36,12 @@
             SearchTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
+            kryptonPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPanel1
@@ -201,6 +203,7 @@
             // 
             // kryptonPanel2
             // 
+            kryptonPanel2.Controls.Add(kryptonLabel1);
             kryptonPanel2.Location = new Point(0, 860);
             kryptonPanel2.Name = "kryptonPanel2";
             kryptonPanel2.Size = new Size(1440, 164);
@@ -237,6 +240,16 @@
             kryptonTextBox1.Text = "Note";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
             // 
+            // kryptonLabel1
+            // 
+            kryptonLabel1.Location = new Point(582, 76);
+            kryptonLabel1.Name = "kryptonLabel1";
+            kryptonLabel1.Size = new Size(266, 23);
+            kryptonLabel1.StateCommon.ShortText.Color1 = Color.White;
+            kryptonLabel1.StateCommon.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.TabIndex = 0;
+            kryptonLabel1.Values.Text = "2024 * Notify - Copyright Reserved";
+            // 
             // HomepageControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -253,6 +266,8 @@
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
+            kryptonPanel2.ResumeLayout(false);
+            kryptonPanel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -266,5 +281,6 @@
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }
