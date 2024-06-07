@@ -98,5 +98,10 @@ namespace notfiy.Views.Register
             // Menampilkan messagebox ketika berhasil mendaftar atau gagal
             // Apabila sudah mendaftar langsung view berpindah ke login
         }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
