@@ -94,5 +94,15 @@ namespace notfiy.Views.Login
             RegisterControl reg = new RegisterControl();
             NotifyViewManager.MoveView(reg);
         }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

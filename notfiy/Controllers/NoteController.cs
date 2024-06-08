@@ -16,6 +16,11 @@ namespace notfiy.Controllers
             ImageController = new ImageController();
         }
 
+        public List<Note> GetAllNote()
+        {
+            return NoteModel.GetAllNote();
+        }
+
         public int CreateNote(string noteName, string content, string? imageFileName, int idLabel, int idStatus)
         {
             string? imageUrl = ImageController.ProcessImage(imageFileName);

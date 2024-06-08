@@ -11,13 +11,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Controllers;
+using notfiy.Entities;
+using CoreViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.Homepage
 {
     public partial class HomepageControl : UserControl
     {
         NoteController NoteController { get; set; }
-        List<HomepageItem> homepageItems = new List<HomepageItem>();
+        List<HomepageItem> HomepageItems = new List<HomepageItem>();
+
+        FlowLayoutPanel FlowLayoutPanel;
         public HomepageControl()
         {
             InitializeComponent();
@@ -33,22 +37,35 @@ namespace notfiy.Views.Homepage
             // Mengatur properti lain jika diperlukan
             flowLayoutPanel.BackColor = Color.White; // Untuk memastikan terlihat
             flowLayoutPanel.AutoScroll = true;
-
+            FlowLayoutPanel = flowLayoutPanel;
             // Menambahkan FlowLayoutPanel ke Form
             this.Controls.Add(flowLayoutPanel);
 
+
+        }
+
+        private void SetNoteItems()
+        {
+            List<Note> notes = NoteController.GetAllNote();
+
             // Menambahkan beberapa tombol ke dalam FlowLayoutPanel
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    HomepageItem homepageItem = new HomepageItem();
-            //    homepageItem.Name = $"Note {i + 1}";
+            foreach (Note note in notes)
+            {
+                HomepageItem homepageItem = new HomepageItem(note, UpdateNoteArangement);
 
-            //    // Mengatur margin
-            //    homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
+                // Mengatur margin
+                homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
 
-            //    // Menambahkan kontrol ke FlowLayoutPanel
-            //    flowLayoutPanel.Controls.Add(homepageItem);
-            //}
+                // Menambahkan kontrol ke FlowLayoutPanel
+                FlowLayoutPanel.Controls.Add(homepageItem);
+
+                // Menambah Event Handler delegate ketika mengeklick note
+                homepageItem.Click += delegate
+                {
+                    CoreViewManager.MoveView(new HomepageDetail(note.IdNote));
+                };
+
+            }
         }
 
         private void SearchTextbox_Enter(object sender, EventArgs e)
@@ -58,6 +75,27 @@ namespace notfiy.Views.Homepage
                 SearchTextbox.Text = "\0";
             }
 
+        }
+
+        public void UpdateNoteArangement()
+        {
+            List<HomepageItem> homepageItems = new List<HomepageItem>();
+            // loop pertama untuk mendapatkan yanng di pinned
+            foreach(HomepageItem homepageItem in HomepageItems)
+            {
+                if (homepageItem.IsPinned)
+                {
+                    homepageItems.Add(homepageItem);
+                    HomepageItems.Remove(homepageItem);
+                }
+            }
+            // loop pertama untuk mendapatkan yanng tdk di pinned
+            foreach (HomepageItem homepageItem in HomepageItems)
+            {
+                homepageItems.Add(homepageItem);
+            }
+
+            SetNoteItems(); 
         }
 
         private void SearchTextbox_Leave(object sender, EventArgs e)
@@ -117,6 +155,11 @@ namespace notfiy.Views.Homepage
         }
 
         private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SearchTextbox_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -43,6 +43,12 @@ namespace notfiy.Controllers
             return true;
         }
 
+        public bool IsUserTaken(string username, string email, int idUser)
+        {
+            var users = UserModel.GetAllUsers();
+            return users.Any(user => (user.Username == username || user.Email == email) && user.IdUser != idUser);
+        }
+
         public bool UpdateUser(int idUser, string username, string password, string email)
         {
             User user = UserModel.GetUserById(idUser);

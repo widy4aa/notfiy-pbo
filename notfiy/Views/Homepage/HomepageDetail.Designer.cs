@@ -38,13 +38,19 @@
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
             kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
             BtnBack = new Krypton.Toolkit.KryptonButton();
             BtnEdit = new Krypton.Toolkit.KryptonButton();
             BtnDelete = new Krypton.Toolkit.KryptonButton();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
+            kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
+            kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
+            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).BeginInit();
             SuspendLayout();
             // 
             // kryptonTextBox1
@@ -232,7 +238,7 @@
             // 
             // kryptonListBox1
             // 
-            kryptonListBox1.Location = new Point(324, 212);
+            kryptonListBox1.Location = new Point(380, 212);
             kryptonListBox1.Name = "kryptonListBox1";
             kryptonListBox1.Size = new Size(861, 605);
             kryptonListBox1.StateCommon.Border.Color1 = Color.Black;
@@ -244,38 +250,29 @@
             // 
             // kryptonBorderEdge1
             // 
-            kryptonBorderEdge1.Location = new Point(324, 729);
+            kryptonBorderEdge1.Location = new Point(380, 729);
             kryptonBorderEdge1.Name = "kryptonBorderEdge1";
             kryptonBorderEdge1.Size = new Size(861, 3);
             kryptonBorderEdge1.StateCommon.Color1 = Color.Black;
             kryptonBorderEdge1.StateCommon.Color2 = Color.Black;
             kryptonBorderEdge1.StateCommon.Width = 3;
             kryptonBorderEdge1.Text = "kryptonBorderEdge1";
+            kryptonBorderEdge1.Paint += kryptonBorderEdge1_Paint;
             // 
             // kryptonLabel2
             // 
-            kryptonLabel2.Location = new Point(345, 244);
+            kryptonLabel2.Location = new Point(398, 234);
             kryptonLabel2.Name = "kryptonLabel2";
-            kryptonLabel2.Size = new Size(221, 43);
+            kryptonLabel2.Size = new Size(175, 43);
             kryptonLabel2.StateNormal.ShortText.Color1 = Color.Black;
             kryptonLabel2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel2.TabIndex = 23;
-            kryptonLabel2.Values.Text = "Judul Todolist";
-            // 
-            // kryptonRichTextBox1
-            // 
-            kryptonRichTextBox1.Location = new Point(354, 337);
-            kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            kryptonRichTextBox1.Size = new Size(806, 386);
-            kryptonRichTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonRichTextBox1.StateCommon.Border.Width = -2;
-            kryptonRichTextBox1.TabIndex = 24;
-            kryptonRichTextBox1.Text = "kryptonRichTextBox1";
-            kryptonRichTextBox1.TextChanged += kryptonRichTextBox1_TextChanged;
+            kryptonLabel2.Values.Text = "Judul Note";
+            kryptonLabel2.Click += kryptonLabel2_Click;
             // 
             // BtnBack
             // 
-            BtnBack.Location = new Point(1050, 757);
+            BtnBack.Location = new Point(1094, 757);
             BtnBack.Name = "BtnBack";
             BtnBack.Size = new Size(110, 31);
             BtnBack.StateCommon.Back.Color1 = Color.FromArgb(165, 165, 165);
@@ -293,7 +290,7 @@
             // 
             // BtnEdit
             // 
-            BtnEdit.Location = new Point(902, 757);
+            BtnEdit.Location = new Point(946, 757);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(120, 31);
             BtnEdit.StateCommon.Back.Color1 = Color.Yellow;
@@ -310,7 +307,7 @@
             // 
             // BtnDelete
             // 
-            BtnDelete.Location = new Point(354, 757);
+            BtnDelete.Location = new Point(421, 757);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(130, 31);
             BtnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 107, 107);
@@ -326,20 +323,75 @@
             BtnDelete.TabIndex = 28;
             BtnDelete.Values.Text = "Delete";
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(kryptonPictureBox2);
+            flowLayoutPanel1.Controls.Add(kryptonRichTextBox1);
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(398, 304);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(815, 419);
+            flowLayoutPanel1.TabIndex = 30;
+            // 
+            // kryptonPictureBox2
+            // 
+            kryptonPictureBox2.Location = new Point(3, 3);
+            kryptonPictureBox2.Name = "kryptonPictureBox2";
+            kryptonPictureBox2.Size = new Size(100, 50);
+            kryptonPictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            kryptonPictureBox2.TabIndex = 0;
+            kryptonPictureBox2.TabStop = false;
+            kryptonPictureBox2.Visible = false;
+            // 
+            // kryptonRichTextBox1
+            // 
+            kryptonRichTextBox1.Location = new Point(3, 59);
+            kryptonRichTextBox1.Name = "kryptonRichTextBox1";
+            kryptonRichTextBox1.Size = new Size(812, 334);
+            kryptonRichTextBox1.TabIndex = 1;
+            kryptonRichTextBox1.Text = "kryptonRichTextBox1";
+            // 
+            // kryptonCheckedListBox1
+            // 
+            kryptonCheckedListBox1.Location = new Point(240, 212);
+            kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
+            kryptonCheckedListBox1.Size = new Size(121, 282);
+            kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
+            kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.Black;
+            kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
+            kryptonCheckedListBox1.StateCommon.Border.Width = 3;
+            kryptonCheckedListBox1.TabIndex = 32;
+            // 
+            // kryptonButton2
+            // 
+            kryptonButton2.Location = new Point(270, 234);
+            kryptonButton2.Name = "kryptonButton2";
+            kryptonButton2.Size = new Size(60, 60);
+            kryptonButton2.StateCommon.Back.Color1 = Color.White;
+            kryptonButton2.StateCommon.Back.Color2 = Color.White;
+            kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
+            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            kryptonButton2.TabIndex = 33;
+            kryptonButton2.Values.Text = "";
+            kryptonButton2.Click += kryptonButton2_Click;
+            // 
             // HomepageDetail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton2);
+            Controls.Add(kryptonCheckedListBox1);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(BtnDelete);
             Controls.Add(BtnEdit);
             Controls.Add(BtnBack);
-            Controls.Add(kryptonRichTextBox1);
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonBorderEdge1);
-            Controls.Add(kryptonListBox1);
             Controls.Add(kryptonPanel1);
             Controls.Add(kryptonTextBox1);
+            Controls.Add(kryptonListBox1);
             Name = "HomepageDetail";
             Size = new Size(1440, 1024);
             Load += HomepageDetail_Load;
@@ -347,6 +399,9 @@
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -362,9 +417,13 @@
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
         private Krypton.Toolkit.KryptonButton BtnBack;
         private Krypton.Toolkit.KryptonButton BtnEdit;
         private Krypton.Toolkit.KryptonButton BtnDelete;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox2;
+        private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

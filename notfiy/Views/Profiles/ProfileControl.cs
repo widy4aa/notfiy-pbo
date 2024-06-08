@@ -83,7 +83,7 @@ namespace notfiy.Views.Profiles
                 passwordPlaceholder = currentUser.Password;
 
                 // Menampilkan pesan selamat datang
-                GreetingTextBox.Text = $"Selamat datang, {currentUser.Username}!";
+                GreetingTextBox.Text = $"Halo, {currentUser.Username}!";
 
                 kryptonRichTextBox1.Text = usernamePlaceholder;
                 kryptonRichTextBox2.Text = emailPlaceholder;
@@ -116,6 +116,13 @@ namespace notfiy.Views.Profiles
             string username = kryptonRichTextBox1.Text;
             string email = kryptonRichTextBox2.Text;
             string password = kryptonRichTextBox3.Text;
+
+            // Cek apakah username sudah ada
+            if (userController.IsUserTaken(username, email, currentUser.IdUser))
+            {
+                MessageBox.Show("Username atau Email sudah ada! Silakan gunakan yang lain.");
+                return;
+            }
 
             // update data user
             if (userController.UpdateUser(currentUser.IdUser, username, password, email))

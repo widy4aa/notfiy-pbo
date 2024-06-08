@@ -8,26 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace notfiy.Views.AddToDoList
+namespace notfiy.Views.Homepage
 {
-    public partial class AddToDoList : UserControl
+    public partial class HomepageAddImage : UserControl
     {
-        public AddToDoList()
+        public HomepageAddImage()
         {
             InitializeComponent();
         }
 
-        private void kryptonPanel2_Paint(object sender, PaintEventArgs e)
+        private void HomepageAddImage_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void AddToDoList_Load(object sender, EventArgs e)
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void kryptonButton1_Click(object sender, EventArgs e)
         {
 
         }
