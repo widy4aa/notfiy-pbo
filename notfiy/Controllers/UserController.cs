@@ -17,6 +17,22 @@ namespace notfiy.Controllers
         {
             UserModel = new UserModel();
         }
+
+        public List<User> GetAllUsers()
+        {
+            return UserModel.GetAllUsers();
+        }
+
+        public User? GetUserById(int idUser)
+        {
+            return UserModel.GetUserById(idUser);
+        }
+
+        public int GetUserLoggedIn()
+        {
+            return SystemSingleton.Instance.UserLoggedIn?.IdUser ?? 0;
+        }
+
         public bool AuthAttempt(string username, string password)
         {
             User? user = UserModel.UserAuth(username, password);
@@ -36,6 +52,21 @@ namespace notfiy.Controllers
             user.Email = email;
             
             return UserModel.UpdateUser(user);
+        }
+
+        public bool DeleteUser(int idUser)
+        {
+            try
+            {
+                // Hapus akun pengguna dari database
+                return UserModel.DeleteUser(idUser);
+            }
+            catch (Exception ex)
+            {
+                // Handle exception (log it, rethrow it, etc.)
+                MessageBoxHelper.ShowErrorMessageBox(ex.Message);
+                return false;
+            }
         }
 
         public bool CreateUser(string username, string password, string email)

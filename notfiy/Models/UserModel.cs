@@ -126,7 +126,7 @@ namespace notfiy.Models
                 string QueryDel = @"DELETE FROM users WHERE id_user = @IdUser";
                 using(NpgsqlCommand command = new NpgsqlCommand(QueryDel, Connection))
                 {
-                    command.Parameters.AddWithValue("id_user", IdUser);
+                    command.Parameters.AddWithValue("IdUser", IdUser);
                     int row = command.ExecuteNonQuery();
                     return row > 0;
                 }
