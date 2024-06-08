@@ -14,7 +14,7 @@ namespace notfiy.Views.Homepage
 {
     public partial class HomepageDetail : UserControl
     {
-        public HomepageDetail(int? idNote)
+        public HomepageDetail(int? idNote = null)
         {
             InitializeComponent();
         }

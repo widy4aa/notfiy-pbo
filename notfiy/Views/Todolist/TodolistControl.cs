@@ -1,5 +1,4 @@
 ﻿using notfiy.Views.Other;
-using notfiy.Views.addToDoList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

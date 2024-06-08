@@ -76,7 +76,7 @@
             // 
             // kryptonButton3
             // 
-            kryptonButton3.Location = new Point(431, 9);
+            kryptonButton3.Location = new Point(431, 8);
             kryptonButton3.Name = "kryptonButton3";
             kryptonButton3.Size = new Size(97, 44);
             kryptonButton3.StateCommon.Back.Color1 = Color.Red;
