@@ -54,6 +54,7 @@
             kryptonButton7 = new Krypton.Toolkit.KryptonButton();
             kryptonButton8 = new Krypton.Toolkit.KryptonButton();
             kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
@@ -436,11 +437,26 @@
             kryptonLabel4.TabIndex = 29;
             kryptonLabel4.Values.Text = "New Draft";
             // 
+            // kryptonButton1
+            // 
+            kryptonButton1.Location = new Point(321, 335);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.Size = new Size(17, 17);
+            kryptonButton1.StateNormal.Back.Color1 = Color.White;
+            kryptonButton1.StateNormal.Back.Color2 = Color.White;
+            kryptonButton1.StateNormal.Border.Color1 = Color.White;
+            kryptonButton1.StateNormal.Border.Color2 = Color.White;
+            kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.TabIndex = 33;
+            kryptonButton1.Values.Image = (Image)resources.GetObject("kryptonButton1.Values.Image");
+            kryptonButton1.Values.Text = "";
+            // 
             // AddToDoList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton1);
             Controls.Add(kryptonLabel4);
             Controls.Add(kryptonButton8);
             Controls.Add(kryptonButton7);
@@ -500,5 +516,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton7;
         private Krypton.Toolkit.KryptonButton kryptonButton8;
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
