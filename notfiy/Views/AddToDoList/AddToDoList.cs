@@ -31,5 +31,10 @@ namespace notfiy.Views.AddToDoList
                 kryptonTextBox1.Text = "Judul";
             }
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
