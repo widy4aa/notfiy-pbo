@@ -20,69 +20,16 @@ namespace notfiy.Views.Todolist
         {
             InitializeComponent();
         }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TodoItem_Click(object sender, EventArgs e)
         {
             TodoDetail detail = new TodoDetail();
             NotifyViewManager.MoveView(detail);
 
         }
-
-        private void todoItem1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void todoItem3_Load(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void todoItem12_Load(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void kryptonButton2_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
         private void TodolistControl_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.AutoScroll = true;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void HamburgerButton_Click(object sender, EventArgs e)
         {
             //Sidebar sidebar = new Sidebar();
@@ -98,15 +45,10 @@ namespace notfiy.Views.Todolist
             navbar.BackColor = Color.Transparent;
             navbar.Location = new Point(1000, 0);
         }
-
-        private void todoItem12_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            
+            AddToDoList.AddToDoList addtodolist = new AddToDoList.AddToDoList();
+            NotifyViewManager.MoveView(addtodolist);
         }
     }
 }

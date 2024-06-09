@@ -70,7 +70,6 @@
             kryptonPanel2.StateNormal.Color1 = Color.Black;
             kryptonPanel2.StateNormal.Color2 = Color.Black;
             kryptonPanel2.TabIndex = 7;
-            kryptonPanel2.Paint += kryptonPanel2_Paint;
             // 
             // kryptonPanel1
             // 
@@ -207,7 +206,6 @@
             BtnEdit.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnEdit.TabIndex = 16;
             BtnEdit.Values.Text = "Save";
-            BtnEdit.Click += BtnEdit_Click;
             // 
             // kryptonButton2
             // 
@@ -291,6 +289,8 @@
             kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonTextBox1.TabIndex = 22;
             kryptonTextBox1.Text = "Judul";
+            kryptonTextBox1.Enter += kryptonTextBox1_Enter;
+            kryptonTextBox1.Leave += kryptonTextBox1_Leave;
             // 
             // flowLayoutPanel1
             // 

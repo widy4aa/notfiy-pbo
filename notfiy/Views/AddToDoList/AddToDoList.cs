@@ -16,20 +16,20 @@ namespace notfiy.Views.AddToDoList
         {
             InitializeComponent();
         }
-
-        private void kryptonPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void AddToDoList_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
         {
-
+            kryptonTextBox1.Text = "";
+        }
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(kryptonTextBox1.Text))
+            {
+                kryptonTextBox1.Text = "Judul";
+            }
         }
     }
 }
