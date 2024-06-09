@@ -99,7 +99,6 @@
             // 
             // kryptonPictureBox1
             // 
-
             kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
             kryptonPictureBox1.Location = new Point(63, 30);
             kryptonPictureBox1.Name = "kryptonPictureBox1";
@@ -178,7 +177,6 @@
             kryptonTextBox1.TabIndex = 17;
             kryptonTextBox1.Text = "Note";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
-            kryptonTextBox1.Click += kryptonTextBox1_ButtonClick;
             // 
             // kryptonButton4
             // 
@@ -196,6 +194,7 @@
             kryptonButton4.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonButton4.TabIndex = 20;
             kryptonButton4.Values.Text = "+";
+            kryptonButton4.Click += kryptonButton4_Click;
             // 
             // HomepageControl
             // 

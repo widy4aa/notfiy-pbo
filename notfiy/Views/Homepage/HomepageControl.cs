@@ -178,7 +178,8 @@ namespace notfiy.Views.Homepage
         }
 
         // button create
-        private void kryptonTextBox1_ButtonClick(object sender, EventArgs e)
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
         {
             CoreViewManager.MoveView(new AddNoteHomepage(IdLabel));
         }
