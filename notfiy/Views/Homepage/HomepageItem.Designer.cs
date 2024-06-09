@@ -36,7 +36,9 @@
             NoteName = new Krypton.Toolkit.KryptonLabel();
             NoteTextBox = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
+            kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // kryptonButton2
@@ -84,6 +86,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Controls.Add(kryptonPictureBox1);
             flowLayoutPanel1.Controls.Add(NoteName);
             flowLayoutPanel1.Controls.Add(NoteTextBox);
             flowLayoutPanel1.Location = new Point(28, 57);
@@ -94,7 +97,7 @@
             // 
             // NoteName
             // 
-            NoteName.Location = new Point(3, 3);
+            NoteName.Location = new Point(3, 91);
             NoteName.Name = "NoteName";
             NoteName.Size = new Size(153, 26);
             NoteName.StateNormal.ShortText.Color1 = Color.Black;
@@ -106,7 +109,7 @@
             // 
             NoteTextBox.DetectUrls = false;
             NoteTextBox.ImeMode = ImeMode.Disable;
-            NoteTextBox.Location = new Point(3, 35);
+            NoteTextBox.Location = new Point(3, 123);
             NoteTextBox.Name = "NoteTextBox";
             NoteTextBox.ReadOnly = true;
             NoteTextBox.ScrollBars = RichTextBoxScrollBars.None;
@@ -133,6 +136,16 @@
             kryptonButton3.Values.Text = "";
             kryptonButton3.Click += kryptonButton3_Click;
             // 
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.Location = new Point(3, 3);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(243, 82);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            kryptonPictureBox1.TabIndex = 14;
+            kryptonPictureBox1.TabStop = false;
+            kryptonPictureBox1.Visible = false;
+            // 
             // HomepageItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -148,6 +161,7 @@
             Load += HomepageItem_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -160,5 +174,6 @@
         public Krypton.Toolkit.KryptonLabel NoteName;
         private Krypton.Toolkit.KryptonRichTextBox NoteTextBox;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
+        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
     }
 }

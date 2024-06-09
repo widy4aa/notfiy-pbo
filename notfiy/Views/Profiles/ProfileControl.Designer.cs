@@ -39,17 +39,16 @@
             kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox3 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
-            kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             kryptonTextBox5 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox6 = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox7 = new Krypton.Toolkit.KryptonTextBox();
-            kryptonTextBox8 = new Krypton.Toolkit.KryptonTextBox();
             kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonRichTextBox2 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonRichTextBox3 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             kryptonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
@@ -332,16 +331,6 @@
             kryptonTextBox4.Text = "Hapus akun";
             kryptonTextBox4.TextAlign = HorizontalAlignment.Center;
             // 
-            // kryptonPictureBox1
-            // 
-            kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
-            kryptonPictureBox1.Location = new Point(292, 288);
-            kryptonPictureBox1.Name = "kryptonPictureBox1";
-            kryptonPictureBox1.Size = new Size(310, 299);
-            kryptonPictureBox1.TabIndex = 28;
-            kryptonPictureBox1.TabStop = false;
-            kryptonPictureBox1.Click += kryptonPictureBox1_Click;
-            // 
             // kryptonTextBox5
             // 
             kryptonTextBox5.AlwaysActive = false;
@@ -433,36 +422,6 @@
             kryptonTextBox7.Text = "JumlahTodo";
             kryptonTextBox7.TextAlign = HorizontalAlignment.Center;
             // 
-            // kryptonTextBox8
-            // 
-            kryptonTextBox8.AlwaysActive = false;
-            kryptonTextBox8.Cursor = Cursors.IBeam;
-            kryptonTextBox8.Location = new Point(581, 255);
-            kryptonTextBox8.Name = "kryptonTextBox8";
-            kryptonTextBox8.ReadOnly = true;
-            kryptonTextBox8.Size = new Size(53, 48);
-            kryptonTextBox8.StateActive.Back.Color1 = Color.FromArgb(46, 26, 94);
-            kryptonTextBox8.StateActive.Border.Color1 = Color.Black;
-            kryptonTextBox8.StateActive.Border.Color2 = Color.Black;
-            kryptonTextBox8.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox8.StateActive.Border.Rounding = 20F;
-            kryptonTextBox8.StateActive.Border.Width = 1;
-            kryptonTextBox8.StateActive.Content.Color1 = Color.White;
-            kryptonTextBox8.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonTextBox8.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            kryptonTextBox8.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox8.StateCommon.Border.Width = 1;
-            kryptonTextBox8.StateCommon.Content.Color1 = Color.White;
-            kryptonTextBox8.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonTextBox8.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
-            kryptonTextBox8.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox8.StateNormal.Border.Rounding = 20F;
-            kryptonTextBox8.StateNormal.Border.Width = 1;
-            kryptonTextBox8.TabIndex = 33;
-            kryptonTextBox8.Text = "+";
-            kryptonTextBox8.TextAlign = HorizontalAlignment.Center;
-            kryptonTextBox8.TextChanged += kryptonTextBox8_TextChanged;
-            // 
             // kryptonRichTextBox1
             // 
             kryptonRichTextBox1.Location = new Point(665, 288);
@@ -529,22 +488,33 @@
             kryptonLabel2.UseWaitCursor = true;
             kryptonLabel2.Values.Text = "Password";
             // 
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
+            kryptonPictureBox1.Location = new Point(302, 265);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(319, 307);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            kryptonPictureBox1.TabIndex = 40;
+            kryptonPictureBox1.TabStop = false;
+            kryptonPictureBox1.Click += kryptonPictureBox1_Click_1;
+            // 
             // ProfileControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonPictureBox1);
             Controls.Add(kryptonLabel2);
             Controls.Add(kryptonLabel1);
             Controls.Add(kryptonLabel4);
             Controls.Add(kryptonRichTextBox3);
             Controls.Add(kryptonRichTextBox2);
             Controls.Add(kryptonRichTextBox1);
-            Controls.Add(kryptonTextBox8);
             Controls.Add(kryptonTextBox7);
             Controls.Add(kryptonTextBox6);
             Controls.Add(kryptonTextBox5);
-            Controls.Add(kryptonPictureBox1);
             Controls.Add(kryptonTextBox4);
             Controls.Add(kryptonTextBox3);
             Controls.Add(kryptonTextBox2);
@@ -576,11 +546,9 @@
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
-        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox7;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox8;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox2;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox3;
@@ -588,5 +556,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
     }
 }

@@ -61,11 +61,12 @@
             // 
             // kryptonPictureBox1
             // 
-            kryptonPictureBox1.BackgroundImage = (Image)resources.GetObject("kryptonPictureBox1.BackgroundImage");
             kryptonPictureBox1.BackgroundImageLayout = ImageLayout.Center;
-            kryptonPictureBox1.Location = new Point(47, 63);
+            kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
+            kryptonPictureBox1.Location = new Point(84, 67);
             kryptonPictureBox1.Name = "kryptonPictureBox1";
-            kryptonPictureBox1.Size = new Size(125, 113);
+            kryptonPictureBox1.Size = new Size(88, 100);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             kryptonPictureBox1.TabIndex = 1;
             kryptonPictureBox1.TabStop = false;
             kryptonPictureBox1.Click += kryptonPictureBox1_Click;
