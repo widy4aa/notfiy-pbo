@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Views.Homepage;
+using System.Xml.Serialization;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
@@ -58,7 +59,7 @@ namespace notfiy.Views.NoteHomepagePartial
         }
 
         // button add gambar
-        private void kryptonButton3_Click(object sender, EventArgs e)
+        private void ButtonAddImage_Click(object sender, EventArgs e)
         {
             HomepageAddImage homePageAddImage = new HomepageAddImage(SetImageUrl, CloseUploadImageSubControl);
             this.Controls.Add(homePageAddImage);
@@ -72,11 +73,35 @@ namespace notfiy.Views.NoteHomepagePartial
         {
             this.ImageFileUrl = fileUrl;
             this.NotePictureBox.ImageLocation = filePath;
+            this.NotePictureBox.Visible = true;
         }
 
         private void CloseUploadImageSubControl()
         {
             HomePageAddImage.Dispose();
+        }
+
+        private void PerformUpdate()
+        {
+
+        }
+
+        private void PerformCreate()
+        {
+
+        }
+
+        private void ButtonSave_Click(object sender, EventArgs e)
+        {
+            if (Note != null)
+            {
+                PerformCreate();
+            } 
+            else
+            {
+                PerformUpdate();
+            }
+                    
         }
     }
 }

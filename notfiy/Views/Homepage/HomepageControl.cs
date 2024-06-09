@@ -21,57 +21,52 @@ namespace notfiy.Views.Homepage
 {
     public partial class HomepageControl : UserControl
     {
-        NoteController NoteController { get; set; }
-        List<HomepageItem> HomepageItems = new List<HomepageItem>();
+        NoteController NoteController;
+        List<Tuple<int, HomepageItem>> HomepageItems = new List<Tuple<int, HomepageItem>>();
         int IdLabel;
         FlowLayoutPanel FlowLayoutPanel;
+
         public HomepageControl(int? idLabel = null)
         {
             if (idLabel == null)
             {
                 IdLabel = (int)StatusHelper.Default;
             }
+            else
+            {
+                IdLabel = idLabel.Value;
+            }
             InitializeComponent();
         }
+
         private void HomepageControl_Load(object sender, EventArgs e)
         {
-            FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+            FlowLayoutPanel = new FlowLayoutPanel
+            {
+                Size = new Size(1288, 584),
+                Location = new Point(93, 254),
+                BackColor = Color.White,
+                AutoScroll = true
+            };
 
-            // Mengatur ukuran FlowLayoutPanel
-            flowLayoutPanel.Size = new Size(1288, 584); // Contoh ukuran 500x300 piksel
-            flowLayoutPanel.Location = new Point(93, 254); // Mengatur lokasi di dalam form
-
-            // Mengatur properti lain jika diperlukan
-            flowLayoutPanel.BackColor = Color.White; // Untuk memastikan terlihat
-            flowLayoutPanel.AutoScroll = true;
-            FlowLayoutPanel = flowLayoutPanel;
-            // Menambahkan FlowLayoutPanel ke Form
-            this.Controls.Add(flowLayoutPanel);
-
-
+            this.Controls.Add(FlowLayoutPanel);
         }
 
         private void SetNoteItems()
         {
             List<Note> notes = NoteController.GetAllNote();
 
-            // Menambahkan beberapa tombol ke dalam FlowLayoutPanel
             foreach (Note note in notes)
             {
-                HomepageItem homepageItem = new HomepageItem(note, UpdateNoteArangement);
-
-                // Mengatur margin
-                homepageItem.Margin = new Padding(3); // Margin kiri, atas, kanan, bawah sama 10 piksel
-
-                // Menambahkan kontrol ke FlowLayoutPanel
+                HomepageItem homepageItem = new HomepageItem(note, UpdateNoteArrangement);
+                homepageItem.Margin = new Padding(3);
                 FlowLayoutPanel.Controls.Add(homepageItem);
-
-                // Menambah Event Handler delegate ketika mengeklick note
                 homepageItem.Click += delegate
                 {
                     CoreViewManager.MoveView(new HomepageDetail(note));
                 };
 
+                HomepageItems.Add(new Tuple<int, HomepageItem>(note.IdNote, homepageItem));
             }
         }
 
@@ -79,31 +74,42 @@ namespace notfiy.Views.Homepage
         {
             if (SearchTextbox.Text == "Search")
             {
-                SearchTextbox.Text = "\0";
+                SearchTextbox.Text = string.Empty;
             }
-
         }
 
-        public void UpdateNoteArangement()
+        public void UpdateNoteArrangement()
         {
-            List<HomepageItem> homepageItems = new List<HomepageItem>();
-            // loop pertama untuk mendapatkan yanng di pinned
-            foreach (HomepageItem homepageItem in HomepageItems)
-            {
-                if (homepageItem.IsPinned)
-                {
-                    homepageItems.Add(homepageItem);
-                    HomepageItems.Remove(homepageItem);
-                }
-            }
-            // loop pertama untuk mendapatkan yanng tdk di pinned
-            foreach (HomepageItem homepageItem in HomepageItems)
-            {
-                homepageItems.Add(homepageItem);
-            }
+            // Menyaring item yang di-pin (pinned) dari HomepageItems dan menyimpannya ke dalam daftar pinnedItems
+            List<Tuple<int, HomepageItem>> pinnedItems = HomepageItems
+                .Where(item => item.Item2.IsPinned) // Memeriksa apakah item di-pin
+                .ToList(); // Mengubah hasil penyaringan menjadi daftar (list)
 
-            SetNoteItems();
+            // Menyaring item yang tidak di-pin (unpinned) dari HomepageItems dan menyimpannya ke dalam daftar unpinnedItems
+            List<Tuple<int, HomepageItem>> unpinnedItems = HomepageItems
+                .Where(item => !item.Item2.IsPinned) // Memeriksa apakah item tidak di-pin
+                .ToList(); // Mengubah hasil penyaringan menjadi daftar (list)
+
+            // Menghapus semua elemen dari HomepageItems untuk mengosongkannya
+            HomepageItems.Clear();
+
+            // Menambahkan semua item yang di-pin ke HomepageItems sehingga mereka berada di bagian atas
+            HomepageItems.AddRange(pinnedItems);
+
+            // Menambahkan semua item yang tidak di-pin ke HomepageItems sehingga mereka berada di bagian bawah
+            HomepageItems.AddRange(unpinnedItems);
+
+            // Menghapus semua kontrol dari FlowLayoutPanel untuk mereset tata letak visual
+            FlowLayoutPanel.Controls.Clear();
+
+            // Menambahkan kembali semua HomepageItems ke FlowLayoutPanel dalam urutan baru
+            foreach (var item in HomepageItems)
+            {
+                // Menambahkan kontrol HomepageItem (kolom kedua dari tuple) ke FlowLayoutPanel
+                FlowLayoutPanel.Controls.Add(item.Item2);
+            }
         }
+
 
         private void SearchTextbox_Leave(object sender, EventArgs e)
         {

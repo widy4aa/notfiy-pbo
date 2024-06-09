@@ -31,28 +31,28 @@ namespace notfiy.Views.NoteHomepagePartial
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNoteHomepage));
-            kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
-            kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            HamburgerButton = new Krypton.Toolkit.KryptonButton();
-            kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            kryptonCheckedListBox2 = new Krypton.Toolkit.KryptonCheckedListBox();
-            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton4 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton5 = new Krypton.Toolkit.KryptonButton();
-            kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
-            NoteName = new Krypton.Toolkit.KryptonTextBox();
-            kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
-            kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            kryptonBorderEdge2 = new Krypton.Toolkit.KryptonBorderEdge();
+            kryptonCheckedListBox1 = new KryptonCheckedListBox();
+            kryptonPanel1 = new KryptonPanel();
+            HamburgerButton = new KryptonButton();
+            kryptonPictureBox1 = new KryptonPictureBox();
+            kryptonCheckedListBox2 = new KryptonCheckedListBox();
+            ButtonAddImage = new KryptonButton();
+            kryptonButton4 = new KryptonButton();
+            kryptonButton5 = new KryptonButton();
+            kryptonBorderEdge1 = new KryptonBorderEdge();
+            NoteName = new KryptonTextBox();
+            kryptonLabel4 = new KryptonLabel();
+            kryptonLabel1 = new KryptonLabel();
+            kryptonLabel3 = new KryptonLabel();
+            kryptonBorderEdge2 = new KryptonBorderEdge();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            NotePictureBox = new Krypton.Toolkit.KryptonPictureBox();
-            NoteContentTextBox = new Krypton.Toolkit.KryptonRichTextBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton8 = new Krypton.Toolkit.KryptonButton();
-            BtnEdit = new Krypton.Toolkit.KryptonButton();
-            kryptonBorderEdge3 = new Krypton.Toolkit.KryptonBorderEdge();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            NotePictureBox = new KryptonPictureBox();
+            NoteContentTextBox = new KryptonRichTextBox();
+            kryptonButton1 = new KryptonButton();
+            kryptonButton8 = new KryptonButton();
+            ButtonSave = new KryptonButton();
+            kryptonBorderEdge3 = new KryptonBorderEdge();
+            ButtonCancel = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -67,7 +67,7 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonCheckedListBox1.Size = new Size(861, 605);
             kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
             kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.Black;
-            kryptonCheckedListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonCheckedListBox1.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             kryptonCheckedListBox1.StateCommon.Border.Rounding = 20F;
             kryptonCheckedListBox1.StateCommon.Border.Width = 3;
             kryptonCheckedListBox1.TabIndex = 10;
@@ -90,52 +90,52 @@ namespace notfiy.Views.NoteHomepagePartial
             HamburgerButton.OverrideDefault.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.OverrideDefault.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.OverrideDefault.Back.Image = (Image)resources.GetObject("HamburgerButton.OverrideDefault.Back.Image");
-            HamburgerButton.OverrideDefault.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            HamburgerButton.OverrideDefault.Back.ImageStyle = PaletteImageStyle.CenterMiddle;
             HamburgerButton.OverrideDefault.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.OverrideDefault.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None;
-            HamburgerButton.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            HamburgerButton.OverrideDefault.Border.DrawBorders = PaletteDrawBorders.None;
+            HamburgerButton.OverrideDefault.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             HamburgerButton.OverrideFocus.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.OverrideFocus.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.OverrideFocus.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.OverrideFocus.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.OverrideFocus.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            HamburgerButton.OverrideFocus.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             HamburgerButton.Size = new Size(66, 56);
             HamburgerButton.StateCommon.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateCommon.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateCommon.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateCommon.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            HamburgerButton.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             HamburgerButton.StateDisabled.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateDisabled.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateDisabled.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateDisabled.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            HamburgerButton.StateDisabled.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             HamburgerButton.StateNormal.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateNormal.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateNormal.Back.Image = (Image)resources.GetObject("HamburgerButton.StateNormal.Back.Image");
-            HamburgerButton.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            HamburgerButton.StateNormal.Back.ImageStyle = PaletteImageStyle.CenterMiddle;
             HamburgerButton.StateNormal.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateNormal.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            HamburgerButton.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             HamburgerButton.StatePressed.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StatePressed.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StatePressed.Back.Image = (Image)resources.GetObject("HamburgerButton.StatePressed.Back.Image");
-            HamburgerButton.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            HamburgerButton.StatePressed.Back.ImageStyle = PaletteImageStyle.CenterMiddle;
             HamburgerButton.StatePressed.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StatePressed.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None;
-            HamburgerButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            HamburgerButton.StatePressed.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            HamburgerButton.StatePressed.Border.DrawBorders = PaletteDrawBorders.None;
+            HamburgerButton.StatePressed.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
+            HamburgerButton.StatePressed.Border.ImageStyle = PaletteImageStyle.CenterMiddle;
             HamburgerButton.StateTracking.Back.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateTracking.Back.Color2 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateTracking.Back.Image = (Image)resources.GetObject("HamburgerButton.StateTracking.Back.Image");
-            HamburgerButton.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            HamburgerButton.StateTracking.Back.ImageStyle = PaletteImageStyle.CenterMiddle;
             HamburgerButton.StateTracking.Border.Color1 = Color.FromArgb(51, 15, 126);
             HamburgerButton.StateTracking.Border.Color2 = Color.FromArgb(51, 15, 126);
-            HamburgerButton.StateTracking.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.GlassCheckedSimple;
-            HamburgerButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None;
-            HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
+            HamburgerButton.StateTracking.Border.ColorStyle = PaletteColorStyle.GlassCheckedSimple;
+            HamburgerButton.StateTracking.Border.DrawBorders = PaletteDrawBorders.None;
+            HamburgerButton.StateTracking.Border.GraphicsHint = PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
             // 
@@ -156,25 +156,24 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonCheckedListBox2.Size = new Size(88, 304);
             kryptonCheckedListBox2.StateCommon.Border.Color1 = Color.Black;
             kryptonCheckedListBox2.StateCommon.Border.Color2 = Color.Black;
-            kryptonCheckedListBox2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonCheckedListBox2.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             kryptonCheckedListBox2.StateCommon.Border.Rounding = 10F;
             kryptonCheckedListBox2.StateCommon.Border.Width = 1;
             kryptonCheckedListBox2.TabIndex = 19;
             // 
-            // kryptonButton3
+            // ButtonAddImage
             // 
-            kryptonButton3.Location = new Point(196, 236);
-            kryptonButton3.Name = "kryptonButton3";
-            kryptonButton3.Size = new Size(61, 62);
-            kryptonButton3.StateNormal.Back.Color1 = Color.White;
-            kryptonButton3.StateNormal.Back.Color2 = Color.White;
-            kryptonButton3.StateNormal.Border.Color1 = Color.White;
-            kryptonButton3.StateNormal.Border.Color2 = Color.White;
-            kryptonButton3.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton3.TabIndex = 20;
-            kryptonButton3.Values.Image = (Image)resources.GetObject("kryptonButton3.Values.Image");
-            kryptonButton3.Values.Text = "";
-            kryptonButton3.Click += kryptonButton3_Click;
+            ButtonAddImage.Location = new Point(196, 236);
+            ButtonAddImage.Name = "ButtonAddImage";
+            ButtonAddImage.Size = new Size(61, 62);
+            ButtonAddImage.StateNormal.Back.Color1 = Color.White;
+            ButtonAddImage.StateNormal.Back.Color2 = Color.White;
+            ButtonAddImage.StateNormal.Border.Color1 = Color.White;
+            ButtonAddImage.StateNormal.Border.Color2 = Color.White;
+            ButtonAddImage.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            ButtonAddImage.TabIndex = 20;
+            ButtonAddImage.Values.Text = "";
+            ButtonAddImage.Click += ButtonAddImage_Click;
             // 
             // kryptonButton4
             // 
@@ -185,7 +184,7 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonButton4.StateNormal.Back.Color2 = Color.White;
             kryptonButton4.StateNormal.Border.Color1 = Color.White;
             kryptonButton4.StateNormal.Border.Color2 = Color.White;
-            kryptonButton4.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton4.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             kryptonButton4.TabIndex = 21;
             kryptonButton4.Values.Image = (Image)resources.GetObject("kryptonButton4.Values.Image");
             kryptonButton4.Values.Text = "";
@@ -199,7 +198,7 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonButton5.StateNormal.Back.Color2 = Color.Transparent;
             kryptonButton5.StateNormal.Border.Color1 = Color.Transparent;
             kryptonButton5.StateNormal.Border.Color2 = Color.Transparent;
-            kryptonButton5.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton5.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             kryptonButton5.TabIndex = 22;
             kryptonButton5.Values.Image = (Image)resources.GetObject("kryptonButton5.Values.Image");
             kryptonButton5.Values.Text = "";
@@ -218,10 +217,10 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             NoteName.Location = new Point(309, 249);
             NoteName.Name = "NoteName";
-            NoteName.Size = new Size(827, 38); 
+            NoteName.Size = new Size(827, 38);
             NoteName.StateActive.Border.Color1 = Color.White;
             NoteName.StateActive.Border.Color2 = Color.White;
-            NoteName.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            NoteName.StateActive.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             NoteName.StateActive.Content.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NoteName.TabIndex = 29;
             NoteName.Text = "Judul";
@@ -307,7 +306,7 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonButton1.StateNormal.Back.Color2 = Color.White;
             kryptonButton1.StateNormal.Border.Color1 = Color.White;
             kryptonButton1.StateNormal.Border.Color2 = Color.White;
-            kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             kryptonButton1.TabIndex = 37;
             kryptonButton1.Values.Image = (Image)resources.GetObject("kryptonButton1.Values.Image");
             kryptonButton1.Values.Text = "";
@@ -320,29 +319,30 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonButton8.StateCommon.Back.Color1 = Color.White;
             kryptonButton8.StateCommon.Back.Color2 = Color.White;
             kryptonButton8.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton8.StateCommon.Back.Image");
-            kryptonButton8.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            kryptonButton8.StateCommon.Back.ImageStyle = PaletteImageStyle.CenterMiddle;
             kryptonButton8.StateCommon.Border.Color1 = Color.White;
             kryptonButton8.StateCommon.Border.Color2 = Color.White;
-            kryptonButton8.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton8.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             kryptonButton8.TabIndex = 38;
             kryptonButton8.Values.Text = "";
             // 
-            // BtnEdit
+            // ButtonSave
             // 
-            BtnEdit.Location = new Point(984, 760);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(136, 41);
-            BtnEdit.StateCommon.Back.Color1 = Color.FromArgb(77, 150, 255);
-            BtnEdit.StateCommon.Back.Color2 = Color.FromArgb(77, 150, 255);
-            BtnEdit.StateCommon.Border.Color1 = Color.Black;
-            BtnEdit.StateCommon.Border.Color2 = Color.Black;
-            BtnEdit.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            BtnEdit.StateCommon.Border.Rounding = 20F;
-            BtnEdit.StateCommon.Border.Width = 1;
-            BtnEdit.StateNormal.Content.ShortText.Color1 = Color.White;
-            BtnEdit.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtnEdit.TabIndex = 39;
-            BtnEdit.Values.Text = "Save";
+            ButtonSave.Location = new Point(984, 760);
+            ButtonSave.Name = "ButtonSave";
+            ButtonSave.Size = new Size(136, 41);
+            ButtonSave.StateCommon.Back.Color1 = Color.FromArgb(77, 150, 255);
+            ButtonSave.StateCommon.Back.Color2 = Color.FromArgb(77, 150, 255);
+            ButtonSave.StateCommon.Border.Color1 = Color.Black;
+            ButtonSave.StateCommon.Border.Color2 = Color.Black;
+            ButtonSave.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            ButtonSave.StateCommon.Border.Rounding = 20F;
+            ButtonSave.StateCommon.Border.Width = 1;
+            ButtonSave.StateNormal.Content.ShortText.Color1 = Color.White;
+            ButtonSave.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonSave.TabIndex = 39;
+            ButtonSave.Values.Text = "Save";
+            ButtonSave.Click += ButtonSave_Click;
             // 
             // kryptonBorderEdge3
             // 
@@ -354,31 +354,31 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonBorderEdge3.StateCommon.Width = 3;
             kryptonBorderEdge3.Text = "kryptonBorderEdge3";
             // 
-            // kryptonButton2
+            // ButtonCancel
             // 
-            kryptonButton2.Location = new Point(807, 760);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(136, 41);
-            kryptonButton2.StateCommon.Back.Color1 = Color.White;
-            kryptonButton2.StateCommon.Back.Color2 = Color.White;
-            kryptonButton2.StateCommon.Border.Color1 = Color.Black;
-            kryptonButton2.StateCommon.Border.Color2 = Color.Black;
-            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Rounding = 20F;
-            kryptonButton2.StateCommon.Border.Width = 1;
-            kryptonButton2.StateNormal.Content.ShortText.Color1 = Color.Black;
-            kryptonButton2.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton2.TabIndex = 42;
-            kryptonButton2.Values.Text = "Cancel";
+            ButtonCancel.Location = new Point(807, 760);
+            ButtonCancel.Name = "ButtonCancel";
+            ButtonCancel.Size = new Size(136, 41);
+            ButtonCancel.StateCommon.Back.Color1 = Color.White;
+            ButtonCancel.StateCommon.Back.Color2 = Color.White;
+            ButtonCancel.StateCommon.Border.Color1 = Color.Black;
+            ButtonCancel.StateCommon.Border.Color2 = Color.Black;
+            ButtonCancel.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            ButtonCancel.StateCommon.Border.Rounding = 20F;
+            ButtonCancel.StateCommon.Border.Width = 1;
+            ButtonCancel.StateNormal.Content.ShortText.Color1 = Color.Black;
+            ButtonCancel.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonCancel.TabIndex = 42;
+            ButtonCancel.Values.Text = "Cancel";
             // 
             // AddNoteHomepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(kryptonButton2);
+            Controls.Add(ButtonCancel);
             Controls.Add(kryptonBorderEdge3);
-            Controls.Add(BtnEdit);
+            Controls.Add(ButtonSave);
             Controls.Add(kryptonButton8);
             Controls.Add(kryptonButton1);
             Controls.Add(flowLayoutPanel1);
@@ -390,7 +390,7 @@ namespace notfiy.Views.NoteHomepagePartial
             Controls.Add(kryptonBorderEdge1);
             Controls.Add(kryptonButton5);
             Controls.Add(kryptonButton4);
-            Controls.Add(kryptonButton3);
+            Controls.Add(ButtonAddImage);
             Controls.Add(kryptonCheckedListBox2);
             Controls.Add(kryptonPanel1);
             Controls.Add(kryptonCheckedListBox1);
@@ -413,7 +413,7 @@ namespace notfiy.Views.NoteHomepagePartial
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox2;
-        private Krypton.Toolkit.KryptonButton kryptonButton3;
+        private Krypton.Toolkit.KryptonButton ButtonAddImage;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton kryptonButton5;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
@@ -427,8 +427,8 @@ namespace notfiy.Views.NoteHomepagePartial
         private Krypton.Toolkit.KryptonRichTextBox NoteContentTextBox;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton8;
-        private Krypton.Toolkit.KryptonButton BtnEdit;
+        private Krypton.Toolkit.KryptonButton ButtonSave;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge3;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton ButtonCancel;
     }
 }

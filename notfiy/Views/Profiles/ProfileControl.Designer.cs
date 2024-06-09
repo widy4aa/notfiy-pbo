@@ -584,6 +584,5 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
     }
 }
