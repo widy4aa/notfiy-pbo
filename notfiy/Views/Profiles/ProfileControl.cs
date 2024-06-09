@@ -66,5 +66,10 @@ namespace notfiy.Views.Profiles
             navbar.BackColor = Color.Transparent;
             navbar.Location = new Point(1000, 0);
         }
+
+        private void kryptonPictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
