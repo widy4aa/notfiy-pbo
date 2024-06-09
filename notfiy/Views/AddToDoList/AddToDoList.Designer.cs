@@ -52,10 +52,12 @@
             kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            doItemEdit1 = new DoItemEdit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPanel2
@@ -381,11 +383,20 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.White;
+            flowLayoutPanel1.Controls.Add(doItemEdit1);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(318, 436);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(588, 113);
+            flowLayoutPanel1.Size = new Size(326, 92);
             flowLayoutPanel1.TabIndex = 23;
+            // 
+            // doItemEdit1
+            // 
+            doItemEdit1.BackColor = Color.White;
+            doItemEdit1.Location = new Point(3, 3);
+            doItemEdit1.Name = "doItemEdit1";
+            doItemEdit1.Size = new Size(158, 30);
+            doItemEdit1.TabIndex = 0;
             // 
             // AddToDoList
             // 
@@ -420,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -449,5 +461,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private FlowLayoutPanel flowLayoutPanel1;
+        private DoItemEdit doItemEdit1;
     }
 }

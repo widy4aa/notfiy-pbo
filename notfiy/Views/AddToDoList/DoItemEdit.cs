@@ -16,5 +16,10 @@ namespace notfiy.Views.AddToDoList
         {
             InitializeComponent();
         }
+
+        private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
