@@ -40,10 +40,10 @@ namespace notfiy.Views.Other
 
             int IdUser = userController.GetUserLoggedIn(); //mendapatkan id dari user yang sedang login
             currentUser = userController.GetUserById(IdUser);
-            
+
             if (currentUser != null)
             {
-                label1.Text = $"{ currentUser.Username}";
+                label1.Text = $"{currentUser.Username}";
             }
 
         }
@@ -78,6 +78,21 @@ namespace notfiy.Views.Other
         {
             TodolistControl todolist = new TodolistControl();
             NotifyViewManager.MoveView(todolist);
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonCheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

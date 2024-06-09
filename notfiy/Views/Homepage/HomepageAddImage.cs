@@ -97,5 +97,10 @@ namespace notfiy.Views.Homepage
         {
             CloseUploadImageSubControl.Invoke();
         }
+
+        private void NotePictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
