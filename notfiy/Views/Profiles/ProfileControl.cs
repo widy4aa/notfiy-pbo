@@ -83,7 +83,7 @@ namespace notfiy.Views.Profiles
                 passwordPlaceholder = currentUser.Password;
 
                 // Menampilkan pesan selamat datang
-                GreetingTextBox.Text = $"Halo, {currentUser.Username}!";
+                GreetingTextBox.Text = $"Halo {currentUser.Username}!";
 
                 kryptonRichTextBox1.Text = usernamePlaceholder;
                 kryptonRichTextBox2.Text = emailPlaceholder;
@@ -142,7 +142,7 @@ namespace notfiy.Views.Profiles
 
         //private void BtnDelete_TextChanged(object sender, EventArgs e)
         //{
-            
+
         //}
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -167,6 +167,25 @@ namespace notfiy.Views.Profiles
                     MessageBox.Show("Gagal menghapus akun!");
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            userController.Logout();
+            LoginControl login = new LoginControl();
+            NotifyViewManager.MoveView(login);
+        }
+
+        private void btnNote_Click(object sender, EventArgs e)
+        {
+            HomepageControl note = new HomepageControl();
+            NotifyViewManager.MoveView(note);
+        }
+
+        private void btnTodolist_Click(object sender, EventArgs e)
+        {
+            TodolistControl todolist = new TodolistControl();
+            NotifyViewManager.MoveView(todolist);
         }
     }
 }

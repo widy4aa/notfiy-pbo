@@ -33,6 +33,11 @@ namespace notfiy.Controllers
             return SystemSingleton.Instance.UserLoggedIn?.IdUser ?? 0;
         }
 
+        public void Logout()
+        {
+            SystemSingleton.Instance.UserLoggedIn = null;
+        }
+
         public bool AuthAttempt(string username, string password)
         {
             User? user = UserModel.UserAuth(username, password);

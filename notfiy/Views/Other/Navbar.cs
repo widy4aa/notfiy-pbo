@@ -1,4 +1,6 @@
-﻿using notfiy.Views.Homepage;
+﻿using notfiy.Controllers;
+using notfiy.Entities;
+using notfiy.Views.Homepage;
 using notfiy.Views.Profiles;
 using notfiy.Views.Todolist;
 using System;
@@ -16,10 +18,13 @@ namespace notfiy.Views.Other
 {
     public partial class Navbar : UserControl
     {
+        private UserController userController;
+        private User currentUser;
         public Navbar()
         {
             InitializeComponent();
             kryptonPictureBox1.BackColor = Color.FromArgb(46, 26, 94);
+            userController = new UserController();
         }
 
         private void kryptonPictureBox1_Click(object sender, EventArgs e)
@@ -32,6 +37,15 @@ namespace notfiy.Views.Other
         {
             this.BackColor = Color.Transparent;
             flowLayoutPanel1.AutoScroll = true;
+
+            int IdUser = userController.GetUserLoggedIn(); //mendapatkan id dari user yang sedang login
+            currentUser = userController.GetUserById(IdUser);
+            
+            if (currentUser != null)
+            {
+                label1.Text = $"{ currentUser.Username}";
+            }
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
