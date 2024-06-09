@@ -121,7 +121,7 @@
   <data name="kryptonPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACMAAAAjACAYAAADb8MMlAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAA/7JJREFUeF7s3QmUpVV5922rmmZqbQQEQQUVkEkcQCHCK6IRFTFGTRwgKGaQQUOi
+        DAAACwwBP0AiyAAA/7JJREFUeF7s3QmUpVV5922rmmZqbQQEQQUVkEkcQCHCK6IRFTFGTRwgKGaQQUOi
         ib4Rk9egRnCAGGOSTxwQUVAkglM0TmhUEBGCihgRI6O0EZnHbqD7+f53eZI4bKC76pyqM1y/ta61shKD
         3VXn7L2ffR+q7iVJkiRJkjRCLYr7xKbxkNgxHht7xtPiOXFAvCT+NA6PN8TR8U9xfHwoPhKnxsfjU/GZ
         +Fx8Mf4tvhZfj7Pj3Ph2fDf+I34Q/xmXxBWxLH4aV8d1cVPcGivizuh66n+u/1393+o/U//Z+v+p/9/6
@@ -2733,7 +2733,7 @@
   <data name="kryptonButton3.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA6IAAADDCAYAAACYuKzlAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
-        NwAAITcBM1ifegAAGhhJREFUeF7t3T2PLNl9HnB+DEOfQIkUyoFiA8wNhTQkR8okMBbITMAaXEARF9gN
+        NgAAITYB4R99ngAAGhhJREFUeF7t3T2PLNl9HnB+DEOfQIkUyoFiA8wNhTQkR8okMBbITMAaXEARF9gN
         HOxNlJhWdjcgAwlwQJGRCJCpbChSJAOO1/tc38JtD2rqnFPnpat7fn/gB+zemequl1On/k9Vz8z3lFJK
         KaWUUkoppZRSSimllFLqeesPfu8H/xUAAABW+d4f/t5/+hYAAABWEUQBAABYShAFAABgKUEUAACApQRR
         AAAAlhJEAQAAWEoQBQAAYClBFAAAgKUEUQAAAJYSRAEAAFhKEAUAAGApQRQAAIClBFEAAACWEkQBAABY
@@ -2850,7 +2850,7 @@
   <data name="kryptonButton3.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA6IAAADHCAYAAAADKe7zAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
-        NwAAITcBM1ifegAAJhNJREFUeF7t3TuvLNd5JmD/Dv8CJzPhOHBsQPnA4QjwRM5sKBasbAACIuBIBMhg
+        NgAAITYB4R99ngAAJhNJREFUeF7t3TuvLNd5JmD/Dv8CJzPhOHBsQPnA4QjwRM5sKBasbAACIuBIBMhg
         AjJhYo2yw0AKRsAEGimSATHVGIoU2YBjDt/jU0Czvbq+uqxVVd37+YAHPNx7V1/q1utda1X1nyillFJK
         KaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJK
         KaWUUkoppcbXf/rT//Y/AQAA4Ch/8p//9PvfAAAAwFEEUQAAAA4liAIAAHAoQRQAAIBDCaIAAAAcShAF

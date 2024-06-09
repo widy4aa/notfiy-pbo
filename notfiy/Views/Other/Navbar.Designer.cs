@@ -92,6 +92,7 @@
             labelItem1.Name = "labelItem1";
             labelItem1.Size = new Size(321, 58);
             labelItem1.TabIndex = 0;
+            labelItem1.Load += labelItem1_Load;
             // 
             // labelItem2
             // 

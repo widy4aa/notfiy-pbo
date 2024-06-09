@@ -1,4 +1,5 @@
-﻿namespace notfiy.Views.Other
+﻿
+namespace notfiy.Views.Other
 {
     partial class PopUpShare
     {
@@ -50,6 +51,9 @@
             SearchTextbox.StateNormal.Back.Color1 = Color.Transparent;
             SearchTextbox.TabIndex = 12;
             SearchTextbox.Text = "Search";
+            SearchTextbox.TextChanged += SearchTextbox_TextChanged;
+            SearchTextbox.Enter += SearchTextbox_Enter;
+            SearchTextbox.KeyDown += SearchTextbox_KeyDown;
             // 
             // kryptonLabel1
             // 
@@ -98,6 +102,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
 
         #endregion
 
