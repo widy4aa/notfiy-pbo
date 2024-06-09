@@ -218,7 +218,6 @@
             label1.Name = "label1";
             label1.Size = new Size(151, 76);
             label1.TabIndex = 3;
-            label1.Text = "Rafky";
             label1.Click += label1_Click;
             // 
             // Navbar
