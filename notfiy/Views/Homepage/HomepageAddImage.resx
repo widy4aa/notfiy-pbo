@@ -876,7 +876,7 @@
         ra39H2sLm9GR+rxxAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonChooseFile.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAb8AAACKCAYAAAA600TYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
         JQAAFiUBSVIk8AAAEEBJREFUeF7t3Ttz3NYZxnF9BH0D6yOw9FALmm0qq4lbKe4TunUau3FaxukTuo0b
@@ -951,7 +951,7 @@
         8264sRIBANepzZS8Y/FwE3KrxcmmfX12+ErR5E68bt36P5hILkrM5OamAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="kryptonButton2.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonUpload.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAb8AAACKCAYAAAA600TYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
         JQAAFiUBSVIk8AAADsRJREFUeF7t3c2SG9UZxvG5BN8BXMJsXBp5w2yyxlxAYm9hM2zC1i7YM+yhatjY

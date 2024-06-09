@@ -176,6 +176,7 @@
             kryptonTextBox1.TabIndex = 17;
             kryptonTextBox1.Text = "Note";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
+            kryptonTextBox1.Click += kryptonTextBox1_ButtonClick;
             // 
             // HomepageControl
             // 

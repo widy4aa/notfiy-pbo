@@ -9,21 +9,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using notfiy.Controllers;
 
 namespace notfiy.Views.Homepage
 {
     public partial class HomepageDetail : UserControl
     {
-        public HomepageDetail(int? idNote = null)
+        Note Note;
+        ImageController ImageController = new ImageController();
+
+        public HomepageDetail(Note note)
         {
+            Note = note;
             InitializeComponent();
         }
 
         private void HomepageDetail_Load(object sender, EventArgs e)
         {
-
+            this.NotePictureBox.Visible = false;
+            SetProperties();
         }
 
+        private void SetProperties()
+        {
+            if (Note != null)
+            {
+                this.NoteName.Text = Note.NoteName;
+                this.NoteContentTextBox.Text = Note.Content;
+                if (Note.ImageUrl == null)
+                {
+                    return;
+                }
+
+                string? imageFileLocation = ImageController.GetImage(Note.IdNote, Note.ImageUrl);
+                if (imageFileLocation != null)
+                {
+                    NotePictureBox.ImageLocation = imageFileLocation;
+                }
+            }
+        }
         private void kryptonRichTextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -49,13 +73,5 @@ namespace notfiy.Views.Homepage
 
         }
 
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-            HomepageAddImage homepageaddimage = new HomepageAddImage();
-            this.Controls.Add(homepageaddimage);
-            homepageaddimage.BringToFront();
-            homepageaddimage.BackColor = Color.Transparent;
-            homepageaddimage.Location = new Point(438, 227);
-        }
     }
 }

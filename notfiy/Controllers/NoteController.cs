@@ -21,9 +21,9 @@ namespace notfiy.Controllers
             return NoteModel.GetAllNote();
         }
 
-        public int CreateNote(string noteName, string content, string? imageFileName, int idLabel, int idStatus)
+        public int CreateNote(string noteName, string content, string? imageUrl, int idLabel, int idStatus)
         {
-            string? imageUrl = ImageController.ProcessImage(imageFileName);
+            
 
             Note note = new Note()
             {

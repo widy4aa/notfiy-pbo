@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageAddImage));
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            ButtonChooseFile = new Krypton.Toolkit.KryptonButton();
+            ButtonUpload = new Krypton.Toolkit.KryptonButton();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
+            NotePictureBox = new Krypton.Toolkit.KryptonPictureBox();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NotePictureBox).BeginInit();
             SuspendLayout();
             // 
             // kryptonPictureBox1
@@ -46,33 +48,35 @@
             kryptonPictureBox1.TabIndex = 0;
             kryptonPictureBox1.TabStop = false;
             // 
-            // kryptonButton1
+            // ButtonChooseFile
             // 
-            kryptonButton1.Location = new Point(42, 351);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(223, 69);
-            kryptonButton1.StateCommon.Back.Color1 = Color.White;
-            kryptonButton1.StateCommon.Back.Color2 = Color.White;
-            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
-            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateCommon.Border.Width = -2;
-            kryptonButton1.TabIndex = 1;
-            kryptonButton1.Values.Text = "";
+            ButtonChooseFile.Location = new Point(42, 351);
+            ButtonChooseFile.Name = "ButtonChooseFile";
+            ButtonChooseFile.Size = new Size(223, 69);
+            ButtonChooseFile.StateCommon.Back.Color1 = Color.White;
+            ButtonChooseFile.StateCommon.Back.Color2 = Color.White;
+            ButtonChooseFile.StateCommon.Back.Image = (Image)resources.GetObject("ButtonChooseFile.StateCommon.Back.Image");
+            ButtonChooseFile.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            ButtonChooseFile.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            ButtonChooseFile.StateCommon.Border.Width = -2;
+            ButtonChooseFile.TabIndex = 1;
+            ButtonChooseFile.Values.Text = "";
+            ButtonChooseFile.Click += ButtonChooseFile_Click;
             // 
-            // kryptonButton2
+            // ButtonUpload
             // 
-            kryptonButton2.Location = new Point(324, 351);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(223, 69);
-            kryptonButton2.StateCommon.Back.Color1 = Color.White;
-            kryptonButton2.StateCommon.Back.Color2 = Color.White;
-            kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
-            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Width = -2;
-            kryptonButton2.TabIndex = 2;
-            kryptonButton2.Values.Text = "";
+            ButtonUpload.Location = new Point(324, 351);
+            ButtonUpload.Name = "ButtonUpload";
+            ButtonUpload.Size = new Size(223, 69);
+            ButtonUpload.StateCommon.Back.Color1 = Color.White;
+            ButtonUpload.StateCommon.Back.Color2 = Color.White;
+            ButtonUpload.StateCommon.Back.Image = (Image)resources.GetObject("ButtonUpload.StateCommon.Back.Image");
+            ButtonUpload.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            ButtonUpload.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            ButtonUpload.StateCommon.Border.Width = -2;
+            ButtonUpload.TabIndex = 2;
+            ButtonUpload.Values.Text = "";
+            ButtonUpload.Click += ButtonUpload_Click;
             // 
             // kryptonButton3
             // 
@@ -89,28 +93,43 @@
             kryptonButton3.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
             kryptonButton3.TabIndex = 3;
             kryptonButton3.Values.Text = "X";
+            kryptonButton3.Click += kryptonButton3_Click;
+            // 
+            // NotePictureBox
+            // 
+            NotePictureBox.Location = new Point(89, 71);
+            NotePictureBox.MaximumSize = new Size(417, 243);
+            NotePictureBox.Name = "NotePictureBox";
+            NotePictureBox.Size = new Size(417, 243);
+            NotePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            NotePictureBox.TabIndex = 4;
+            NotePictureBox.TabStop = false;
+            NotePictureBox.Visible = false;
             // 
             // HomepageAddImage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(NotePictureBox);
             Controls.Add(kryptonButton3);
-            Controls.Add(kryptonButton2);
-            Controls.Add(kryptonButton1);
+            Controls.Add(ButtonUpload);
+            Controls.Add(ButtonChooseFile);
             Controls.Add(kryptonPictureBox1);
             Name = "HomepageAddImage";
             Size = new Size(600, 500);
             Load += HomepageAddImage_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NotePictureBox).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton ButtonChooseFile;
+        private Krypton.Toolkit.KryptonButton ButtonUpload;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
+        private Krypton.Toolkit.KryptonPictureBox NotePictureBox;
     }
 }

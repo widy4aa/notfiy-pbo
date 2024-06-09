@@ -12,7 +12,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Controllers;
 using notfiy.Entities;
+using StatusHelper = notfiy.Helpers.Status;
 using CoreViewManager = notfiy.Core.ViewManager;
+using notfiy.Views.NoteHomepagePartial;
+
 
 namespace notfiy.Views.Homepage
 {
@@ -20,10 +23,14 @@ namespace notfiy.Views.Homepage
     {
         NoteController NoteController { get; set; }
         List<HomepageItem> HomepageItems = new List<HomepageItem>();
-
+        int IdLabel;
         FlowLayoutPanel FlowLayoutPanel;
-        public HomepageControl()
+        public HomepageControl(int? idLabel = null)
         {
+            if (idLabel == null)
+            {
+                IdLabel = (int)StatusHelper.Default;
+            }
             InitializeComponent();
         }
         private void HomepageControl_Load(object sender, EventArgs e)
@@ -62,7 +69,7 @@ namespace notfiy.Views.Homepage
                 // Menambah Event Handler delegate ketika mengeklick note
                 homepageItem.Click += delegate
                 {
-                    CoreViewManager.MoveView(new HomepageDetail(note.IdNote));
+                    CoreViewManager.MoveView(new HomepageDetail(note));
                 };
 
             }
@@ -81,7 +88,7 @@ namespace notfiy.Views.Homepage
         {
             List<HomepageItem> homepageItems = new List<HomepageItem>();
             // loop pertama untuk mendapatkan yanng di pinned
-            foreach(HomepageItem homepageItem in HomepageItems)
+            foreach (HomepageItem homepageItem in HomepageItems)
             {
                 if (homepageItem.IsPinned)
                 {
@@ -95,7 +102,7 @@ namespace notfiy.Views.Homepage
                 homepageItems.Add(homepageItem);
             }
 
-            SetNoteItems(); 
+            SetNoteItems();
         }
 
         private void SearchTextbox_Leave(object sender, EventArgs e)
@@ -162,6 +169,12 @@ namespace notfiy.Views.Homepage
         private void SearchTextbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        // button create
+        private void kryptonTextBox1_ButtonClick(object sender, EventArgs e)
+        {
+            CoreViewManager.MoveView(new AddNoteHomepage(IdLabel));
         }
     }
 }
