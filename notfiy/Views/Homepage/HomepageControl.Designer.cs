@@ -37,6 +37,7 @@
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            kryptonButton4 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -177,11 +178,29 @@
             kryptonTextBox1.Text = "Note";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
             // 
+            // kryptonButton4
+            // 
+            kryptonButton4.Location = new Point(1258, 731);
+            kryptonButton4.Name = "kryptonButton4";
+            kryptonButton4.Size = new Size(136, 100);
+            kryptonButton4.StateCommon.Back.Color1 = Color.FromArgb(51, 15, 126);
+            kryptonButton4.StateCommon.Back.Color2 = Color.FromArgb(51, 15, 126);
+            kryptonButton4.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Rounding4;
+            kryptonButton4.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.True;
+            kryptonButton4.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton4.StateCommon.Border.Rounding = 20F;
+            kryptonButton4.StateCommon.Content.ShortText.Color1 = Color.White;
+            kryptonButton4.StateCommon.Content.ShortText.Color2 = Color.White;
+            kryptonButton4.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonButton4.TabIndex = 20;
+            kryptonButton4.Values.Text = "+";
+            // 
             // HomepageControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton4);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel2);
             Controls.Add(kryptonPanel1);
@@ -209,5 +228,6 @@
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonButton kryptonButton4;
     }
 }
