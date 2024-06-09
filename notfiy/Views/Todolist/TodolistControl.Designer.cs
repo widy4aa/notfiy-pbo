@@ -237,6 +237,7 @@
             todoItem11.Name = "todoItem11";
             todoItem11.Size = new Size(298, 266);
             todoItem11.TabIndex = 0;
+            todoItem11.Load += todoItem11_Load;
             // 
             // todoItem12
             // 

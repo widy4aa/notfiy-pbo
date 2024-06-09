@@ -50,5 +50,10 @@ namespace notfiy.Views.Todolist
             AddToDoList.AddToDoList addtodolist = new AddToDoList.AddToDoList();
             NotifyViewManager.MoveView(addtodolist);
         }
+
+        private void todoItem11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

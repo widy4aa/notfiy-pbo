@@ -169,6 +169,7 @@
             kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton1.TabIndex = 9;
             kryptonButton1.Values.Text = "";
+            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // kryptonButton2
             // 
