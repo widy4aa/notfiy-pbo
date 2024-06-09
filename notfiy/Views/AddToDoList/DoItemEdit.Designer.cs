@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoItemEdit));
             kryptonCheckBox1 = new Krypton.Toolkit.KryptonCheckBox();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             SuspendLayout();
             // 
             // kryptonCheckBox1
@@ -69,15 +70,31 @@
             kryptonTextBox1.TabIndex = 9;
             kryptonTextBox1.Text = "kryptonTextBox1";
             // 
+            // kryptonButton1
+            // 
+            kryptonButton1.Location = new Point(489, 2);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.Size = new Size(56, 33);
+            kryptonButton1.StateCommon.Back.Color1 = Color.White;
+            kryptonButton1.StateCommon.Back.Color2 = Color.White;
+            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
+            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            kryptonButton1.StateCommon.Border.Color1 = Color.White;
+            kryptonButton1.StateCommon.Border.Color2 = Color.White;
+            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.TabIndex = 10;
+            kryptonButton1.Values.Text = "";
+            // 
             // DoItemEdit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton1);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonCheckBox1);
             Name = "DoItemEdit";
-            Size = new Size(186, 38);
+            Size = new Size(548, 38);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,5 +103,6 @@
 
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

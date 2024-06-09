@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,20 @@ namespace notfiy.Views.AddToDoList
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            //flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            //DoItemEdit doitem = new DoItemEdit();
+            flowLayoutPanel2.Controls.Add(new DoItemEdit());
+
+            //kryptonTextBox1.Controls.Add(doitem);
+
+            //KryptonTextBox textbox = doitem.GetKrypto
+
+            //flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
+            //flowLayoutPanel2.AutoScroll = true;
         }
     }
 }
