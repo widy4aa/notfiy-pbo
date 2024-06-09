@@ -120,4 +120,21 @@
   <data name="kryptonRichTextBox1.Text" xml:space="preserve">
     <value>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
+        JQAAFiUBSVIk8AAAAjhJREFUeF7tmu1NAzEQRFMCJVACJdAJdAIdUAJ0AB1QSkqgBPCgWLJWcx/2TgR7
+        3ie9H2SPXXlySU7nOyVJMhO3FxMCgjlfzJAMNZzvixlSgw0nQ2pYCqc6dUhb4VSnDGlvONWpQuoNpzpF
+        SEvhvO187dAhrYUD7OtgmpC2wgG2Vjl8SHvCAbbectiQ9oYD7DGWQ4a0Nxxgj2MshXRTDMdd0S7mubiE
+        PXYJ9LDHPhbDgXe1PYPWwgHtguEaNiS8GSHB9wMW8/D71zrtguEWOGtei3t6H4LegKYjA9ogA9ogdEBP
+        xa+iXYRHS2/dI9byUpSARmyIV0tvXeHWpccu1GdO1dJbV4i1uWGNFVp66yrdsKYKLb11lW5YU4WW3rpK
+        N6ypQktvXaUb1lShpbeu0g1rqtDSW1fphjVVaOmtq3TDmiq09NZVumFNFVp66yrD0F6x405kYsAdQgSD
+        oELeY04SH+0Xm0p8pNY2/rBb0e6MKJXDhqjE7kTdusF20X0RN+nYsSrlsCGRlcOGRFYOGxJZOWxIZOWw
+        ISPiCY2RpzHwa8ee7hhVDhsyoud5HgTLeo4ohw0Z0fMsD8JlPUeUw4aMiGuekbMIweJ/Wc8R5bAhkZXD
+        hkRWDhsSWTlsSGTlsCGRlcOGRFYOGxJZOWxIZOWwIZGVw4ZEVg4bElk5bEhk5bAhkZXDhkRWzrWedv0r
+        5XwW2aCIfhTl4CbXEc4irMFz23cVNH4vssH/XQSDT8HVwkmSJNFyOv0A6EBdDr2mh/oAAAAASUVORK5C
+        YII=
+</value>
+  </data>
 </root>
