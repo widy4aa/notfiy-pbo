@@ -41,7 +41,7 @@ namespace notfiy
 
             //mainForm.Controls.Add(new TodolistControl());
             mainForm.Controls.Add(new LoginControl());
-            mainForm.Controls.Add(new HomepageControl());
+            //mainForm.Controls.Add(new HomepageControl());
 
 
             Application.Run(mainForm);
