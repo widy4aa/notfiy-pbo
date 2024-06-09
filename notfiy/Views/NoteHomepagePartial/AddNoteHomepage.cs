@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Views.Homepage;
 using System.Xml.Serialization;
+using System.Reflection.Metadata;
+using StatusEnum = notfiy.Helpers.Status;
+using notfiy.Helpers;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
@@ -19,10 +22,11 @@ namespace notfiy.Views.NoteHomepagePartial
         // jika melakukan mode edit
         Note? Note;
         ImageController ImageController = new ImageController();
-        int IdLabel;
-        string ImageFileUrl;
+        NoteController NoteController = new NoteController();
+        int? IdLabel;
+        string ImageUrl;
         HomepageAddImage HomePageAddImage;
-        public AddNoteHomepage(int idLabel, Note? note = null)
+        public AddNoteHomepage(int? idLabel = null, Note? note = null)
         {
             IdLabel = idLabel;
             Note = note;
@@ -71,7 +75,7 @@ namespace notfiy.Views.NoteHomepagePartial
 
         private void SetImageUrl(string filePath, string fileUrl)
         {
-            this.ImageFileUrl = fileUrl;
+            this.ImageUrl = fileUrl;
             this.NotePictureBox.ImageLocation = filePath;
             this.NotePictureBox.Visible = true;
         }
@@ -83,12 +87,23 @@ namespace notfiy.Views.NoteHomepagePartial
 
         private void PerformUpdate()
         {
+            Note.Content = this.NoteContentTextBox.Text;
+            Note.IdLabel = IdLabel ?? 0;
+            Note.ImageUrl = ImageUrl;
 
         }
 
         private void PerformCreate()
         {
-
+            int IdNewNote = NoteController.CreateNote(NoteName.Text,
+                NoteContentTextBox.Text,
+                this.ImageUrl,
+                IdLabel ?? 0,
+                (int)StatusEnum.Default);
+            if (IdNewNote > 0)
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Dibuat");
+            }
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
@@ -96,12 +111,14 @@ namespace notfiy.Views.NoteHomepagePartial
             if (Note != null)
             {
                 PerformCreate();
-            } 
+            }
             else
             {
                 PerformUpdate();
             }
-                    
+
         }
+
+
     }
 }

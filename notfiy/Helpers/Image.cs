@@ -1,13 +1,15 @@
 using System;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using Newtonsoft.Json;
+
 
 namespace notfiy.Helpers
 {
     internal class Image
     {
-        static string apiUrl = "https://dc-img-tranceiver.neiaozora.my.id/";
+        static string apiUrl = "https://dc-img-tranceiver.neiaozora.my.id/tranceiver";
 
         public static bool IsImageFile(string filePath)
         {
@@ -25,20 +27,34 @@ namespace notfiy.Helpers
             return false;
         }
 
-        public static string UploadImage(string imageUrl)
+        public static string? UploadImage(string filePath)
         {
+            FileInfo fileInfo = new FileInfo(filePath);
+
+            // Check if file size is less than or equal to 64KB (64 * 1024 bytes)
+            if (fileInfo.Length > 65 * 1024)
+            {
+                MessageBoxHelper.ShowErrorMessageBox("Batas File Gambar melebihi 64KB.");
+                return null;
+            }
+
             using (HttpClient client = new HttpClient())
             using (var formData = new MultipartFormDataContent())
             {
                 // Baca file gambar
-                byte[] imageBytes = File.ReadAllBytes(imageUrl);
+                byte[] imageBytes = File.ReadAllBytes(filePath);
                 var imageContent = new ByteArrayContent(imageBytes);
+                imageContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/" + Path.GetExtension(filePath));
+
 
                 // Tambahkan konten gambar ke form data
-                formData.Add(imageContent, "source", Path.GetFileName(imageUrl));
+                string fileName = Path.GetFileName(filePath);
+                imageContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
 
                 // Kirim permintaan POST
                 HttpResponseMessage response = client.PostAsync(apiUrl, formData).Result;
+                File.WriteAllText("dump.txt", ObjectDumper.Dump(response));
 
                 // Periksa apakah unggahan berhasil
                 if (response.IsSuccessStatusCode)
@@ -50,7 +66,7 @@ namespace notfiy.Helpers
                 }
                 else
                 {
-                    Console.WriteLine("Gagal mengunggah gambar. Kode status: " + response.StatusCode);
+                    MessageBoxHelper.ShowErrorMessageBox("Gagal mengunggah gambar. Kode status: " + response.StatusCode);
                     return null;
                 }
             }

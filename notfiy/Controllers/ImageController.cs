@@ -89,6 +89,7 @@ namespace notfiy.Controllers
         {
             if (string.IsNullOrEmpty(imageFileName))
             {
+                MessageBoxHelper.ShowErrorMessageBox($"Target File string kosong'{imageFileName}' Tidak Ada!");
                 return null;
             }
 
@@ -105,11 +106,11 @@ namespace notfiy.Controllers
             }
 
             string? imageUrl = Helpers.Image.UploadImage(imageFileName);
-            if (imageUrl == null)
+            if (string.IsNullOrEmpty(imageUrl))
             {
-                MessageBoxHelper.ShowErrorMessageBox("Tidak Dapat Mengupload Gambar!");
+                MessageBoxHelper.ShowErrorMessageBox($"Result Failed!");
             }
-
+            MessageBoxHelper.ShowInfoMessageBox(imageUrl);
             return imageUrl;
         }
 

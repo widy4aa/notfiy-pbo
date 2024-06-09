@@ -6,6 +6,7 @@ namespace notfiy
     using notfiy.Views;
     using notfiy.Views.Other;
     using notfiy.Views.Homepage;
+    using notfiy.Views.NoteHomepagePartial;
 
     internal static class Program
     {
@@ -40,7 +41,7 @@ namespace notfiy
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
             //mainForm.Controls.Add(new TodolistControl());
-            mainForm.Controls.Add(new LoginControl());
+            //mainForm.Controls.Add(new AddNoteHomepage());
             //mainForm.Controls.Add(new HomepageControl());
 
 
