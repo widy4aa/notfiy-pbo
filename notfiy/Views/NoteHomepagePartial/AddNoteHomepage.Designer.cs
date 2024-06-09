@@ -1,4 +1,6 @@
-﻿namespace notfiy.Views.NoteHomepagePartial
+﻿using Krypton.Toolkit;
+
+namespace notfiy.Views.NoteHomepagePartial
 {
     partial class AddNoteHomepage
     {
@@ -216,7 +218,7 @@
             // 
             NoteName.Location = new Point(309, 249);
             NoteName.Name = "NoteName";
-            NoteName.Size = new Size(138, 38);
+            NoteName.Size = new Size(827, 38); 
             NoteName.StateActive.Border.Color1 = Color.White;
             NoteName.StateActive.Border.Color2 = Color.White;
             NoteName.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;

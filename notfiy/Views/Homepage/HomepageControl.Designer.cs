@@ -99,6 +99,7 @@
             // 
             // kryptonPictureBox1
             // 
+
             kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
             kryptonPictureBox1.Location = new Point(63, 30);
             kryptonPictureBox1.Name = "kryptonPictureBox1";

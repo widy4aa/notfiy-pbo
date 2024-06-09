@@ -97,6 +97,7 @@
             // 
             // NoteName
             // 
+
             NoteName.Location = new Point(3, 91);
             NoteName.Name = "NoteName";
             NoteName.Size = new Size(153, 26);
