@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Views.Other;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,6 +76,15 @@ namespace notfiy.Views.Todolist
         {
             kryptonButton3.Hide();
             kryptonButton2.Show();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            PopUpShare popupshare = new PopUpShare();
+            this.Controls.Add(popupshare);
+            popupshare.BringToFront();
+            popupshare.BackColor = Color.Transparent;
+            popupshare.Location = new Point(100, 0);
         }
     }
 }

@@ -16,5 +16,24 @@ namespace notfiy.Views.Other
         {
             InitializeComponent();
         }
+
+        private void SearchTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void SearchTextbox_Enter(object sender, EventArgs e)
+        {
+            if (SearchTextbox.Text == "Search")
+            {
+                SearchTextbox.Text = string.Empty;
+            }
+        }
+        private void SearchTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchTextbox.Text = "berhasil diinputkan";
+            }
+        }
     }
 }

@@ -105,6 +105,7 @@
             NotePictureBox.TabIndex = 4;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
+            NotePictureBox.Click += NotePictureBox_Click;
             // 
             // HomepageAddImage
             // 

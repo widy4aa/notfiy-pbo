@@ -40,8 +40,13 @@ namespace notfiy
         SystemSingleton.Instance.EnableDatabase(connectionString);
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
+<<<<<<< HEAD
             //mainForm.Controls.Add(new TodolistControl());
             //mainForm.Controls.Add(new AddNoteHomepage());
+=======
+            mainForm.Controls.Add(new TodolistControl());
+            //mainForm.Controls.Add(new HomepageControl());
+>>>>>>> 3bdbb53a9fb67433a8c56a76271e44684518c696
             //mainForm.Controls.Add(new HomepageControl());
 
 

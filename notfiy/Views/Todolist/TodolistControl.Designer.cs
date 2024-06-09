@@ -208,7 +208,6 @@
             UsernameTextbox.TabIndex = 11;
             UsernameTextbox.ToolTipValues.EnableToolTips = true;
             UsernameTextbox.UseSystemPasswordChar = true;
-            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             // 
             // flowLayoutPanel1
             // 
@@ -230,7 +229,6 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1251, 611);
             flowLayoutPanel1.TabIndex = 2;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // todoItem11
             // 
@@ -239,6 +237,7 @@
             todoItem11.Name = "todoItem11";
             todoItem11.Size = new Size(298, 266);
             todoItem11.TabIndex = 0;
+            todoItem11.Load += todoItem11_Load;
             // 
             // todoItem12
             // 
@@ -247,7 +246,6 @@
             todoItem12.Name = "todoItem12";
             todoItem12.Size = new Size(298, 266);
             todoItem12.TabIndex = 1;
-            todoItem12.Load += todoItem12_Load_1;
             // 
             // todoItem13
             // 
@@ -377,7 +375,6 @@
             label1.Size = new Size(120, 29);
             label1.TabIndex = 17;
             label1.Text = "To do List";
-            label1.Click += label1_Click;
             // 
             // kryptonButton4
             // 

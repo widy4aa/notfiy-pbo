@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
+  <!-- 
     Microsoft ResX Schema 
-
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,24 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="kryptonRichTextBox1.Text" xml:space="preserve">
-    <value>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
-        JQAAFiUBSVIk8AAAAjhJREFUeF7tmu1NAzEQRFMCJVACJdAJdAIdUAJ0AB1QSkqgBPCgWLJWcx/2TgR7
-        3ie9H2SPXXlySU7nOyVJMhO3FxMCgjlfzJAMNZzvixlSgw0nQ2pYCqc6dUhb4VSnDGlvONWpQuoNpzpF
-        SEvhvO187dAhrYUD7OtgmpC2wgG2Vjl8SHvCAbbectiQ9oYD7DGWQ4a0Nxxgj2MshXRTDMdd0S7mubiE
-        PXYJ9LDHPhbDgXe1PYPWwgHtguEaNiS8GSHB9wMW8/D71zrtguEWOGtei3t6H4LegKYjA9ogA9ogdEBP
-        xa+iXYRHS2/dI9byUpSARmyIV0tvXeHWpccu1GdO1dJbV4i1uWGNFVp66yrdsKYKLb11lW5YU4WW3rpK
-        N6ypQktvXaUb1lShpbeu0g1rqtDSW1fphjVVaOmtq3TDmiq09NZVumFNFVp66yrD0F6x405kYsAdQgSD
-        oELeY04SH+0Xm0p8pNY2/rBb0e6MKJXDhqjE7kTdusF20X0RN+nYsSrlsCGRlcOGRFYOGxJZOWxIZOWw
-        ISPiCY2RpzHwa8ee7hhVDhsyoud5HgTLeo4ohw0Z0fMsD8JlPUeUw4aMiGuekbMIweJ/Wc8R5bAhkZXD
-        hkRWDhsSWTlsSGTlsCGRlcOGRFYOGxJZOWxIZOWwIZGVw4ZEVg4bElk5bEhk5bAhkZXDhkRWzrWedv0r
-        5XwW2aCIfhTl4CbXEc4irMFz23cVNH4vssH/XQSDT8HVwkmSJNFyOv0A6EBdDr2mh/oAAAAASUVORK5C
-        YII=
-</value>
-  </data>
 </root>

@@ -37,11 +37,11 @@
             labelItem3 = new LabelItem();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             kryptonButton4 = new Krypton.Toolkit.KryptonButton();
             kryptonButton5 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton6 = new Krypton.Toolkit.KryptonButton();
             label1 = new Label();
+            kryptonButton6 = new Krypton.Toolkit.KryptonButton();
+            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -58,6 +58,7 @@
             kryptonCheckedListBox1.StateCommon.Border.Rounding = 0F;
             kryptonCheckedListBox1.StateCommon.Border.Width = 5;
             kryptonCheckedListBox1.TabIndex = 0;
+            kryptonCheckedListBox1.SelectedIndexChanged += kryptonCheckedListBox1_SelectedIndexChanged;
             // 
             // kryptonPictureBox1
             // 
@@ -78,9 +79,9 @@
             flowLayoutPanel1.Controls.Add(labelItem1);
             flowLayoutPanel1.Controls.Add(labelItem2);
             flowLayoutPanel1.Controls.Add(labelItem3);
-            flowLayoutPanel1.Location = new Point(64, 361);
+            flowLayoutPanel1.Location = new Point(84, 373);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(315, 138);
+            flowLayoutPanel1.Size = new Size(374, 138);
             flowLayoutPanel1.TabIndex = 2;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -89,15 +90,16 @@
             labelItem1.BackColor = Color.FromArgb(46, 26, 96);
             labelItem1.Location = new Point(3, 3);
             labelItem1.Name = "labelItem1";
-            labelItem1.Size = new Size(227, 58);
+            labelItem1.Size = new Size(321, 58);
             labelItem1.TabIndex = 0;
+            labelItem1.Load += labelItem1_Load;
             // 
             // labelItem2
             // 
             labelItem2.BackColor = Color.FromArgb(46, 26, 96);
             labelItem2.Location = new Point(3, 67);
             labelItem2.Name = "labelItem2";
-            labelItem2.Size = new Size(227, 58);
+            labelItem2.Size = new Size(321, 58);
             labelItem2.TabIndex = 1;
             labelItem2.Load += labelItem2_Load;
             // 
@@ -106,7 +108,7 @@
             labelItem3.BackColor = Color.FromArgb(46, 26, 96);
             labelItem3.Location = new Point(3, 131);
             labelItem3.Name = "labelItem3";
-            labelItem3.Size = new Size(227, 58);
+            labelItem3.Size = new Size(321, 58);
             labelItem3.TabIndex = 2;
             // 
             // kryptonButton1
@@ -142,22 +144,6 @@
             kryptonButton2.Values.Text = "";
             kryptonButton2.Click += kryptonButton2_Click;
             // 
-            // kryptonButton3
-            // 
-            kryptonButton3.Location = new Point(47, 517);
-            kryptonButton3.Name = "kryptonButton3";
-            kryptonButton3.Size = new Size(310, 64);
-            kryptonButton3.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton3.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton3.StateCommon.Back.Image");
-            kryptonButton3.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton3.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton3.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton3.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton3.StateTracking.Back.Image = (Image)resources.GetObject("kryptonButton3.StateTracking.Back.Image");
-            kryptonButton3.TabIndex = 5;
-            kryptonButton3.Values.Text = "";
-            // 
             // kryptonButton4
             // 
             kryptonButton4.Location = new Point(47, 587);
@@ -174,6 +160,7 @@
             kryptonButton4.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
             kryptonButton4.TabIndex = 6;
             kryptonButton4.Values.Text = "";
+            kryptonButton4.Click += kryptonButton4_Click;
             // 
             // kryptonButton5
             // 
@@ -192,6 +179,17 @@
             kryptonButton5.Values.Text = "";
             kryptonButton5.Click += kryptonButton5_Click;
             // 
+            // label1
+            // 
+            label1.BackColor = Color.FromArgb(46, 26, 96);
+            label1.Font = new Font("Segoe UI Semibold", 35F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(178, 81);
+            label1.Name = "label1";
+            label1.Size = new Size(151, 76);
+            label1.TabIndex = 3;
+            label1.Click += label1_Click;
+            // 
             // kryptonButton6
             // 
             kryptonButton6.Location = new Point(47, 727);
@@ -209,17 +207,22 @@
             kryptonButton6.TabIndex = 8;
             kryptonButton6.Values.Text = "";
             // 
-            // label1
+            // kryptonButton3
             // 
-            label1.BackColor = Color.FromArgb(46, 26, 96);
-            label1.Font = new Font("Segoe UI Semibold", 35F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(178, 81);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 76);
-            label1.TabIndex = 3;
-            label1.Text = "Rafky";
-            label1.Click += label1_Click;
+            kryptonButton3.Location = new Point(68, 517);
+            kryptonButton3.Name = "kryptonButton3";
+            kryptonButton3.Size = new Size(310, 64);
+            kryptonButton3.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton3.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton3.StateCommon.Back.Image");
+            kryptonButton3.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            kryptonButton3.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
+            kryptonButton3.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
+            kryptonButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton3.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton3.StateTracking.Back.Image = (Image)resources.GetObject("kryptonButton3.StateTracking.Back.Image");
+            kryptonButton3.TabIndex = 5;
+            kryptonButton3.Values.Text = "";
+            kryptonButton3.Click += kryptonButton3_Click;
             // 
             // Navbar
             // 
@@ -251,13 +254,13 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
-        private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton kryptonButton5;
-        private Krypton.Toolkit.KryptonButton kryptonButton6;
         private LabelItem labelItem1;
         private LabelItem labelItem2;
         private LabelItem labelItem3;
         private Label label1;
+        private Krypton.Toolkit.KryptonButton kryptonButton6;
+        private Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

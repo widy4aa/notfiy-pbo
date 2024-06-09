@@ -33,11 +33,15 @@
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
+            kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Controls.Add(kryptonPictureBox1);
             flowLayoutPanel1.Controls.Add(kryptonLabel1);
             flowLayoutPanel1.Controls.Add(kryptonRichTextBox1);
             flowLayoutPanel1.Location = new Point(25, 68);
@@ -47,7 +51,7 @@
             // 
             // kryptonLabel1
             // 
-            kryptonLabel1.Location = new Point(3, 3);
+            kryptonLabel1.Location = new Point(3, 91);
             kryptonLabel1.Name = "kryptonLabel1";
             kryptonLabel1.Size = new Size(153, 26);
             kryptonLabel1.StateNormal.ShortText.Color1 = Color.Black;
@@ -59,7 +63,7 @@
             // 
             kryptonRichTextBox1.DetectUrls = false;
             kryptonRichTextBox1.ImeMode = ImeMode.Disable;
-            kryptonRichTextBox1.Location = new Point(3, 35);
+            kryptonRichTextBox1.Location = new Point(3, 123);
             kryptonRichTextBox1.Name = "kryptonRichTextBox1";
             kryptonRichTextBox1.ReadOnly = true;
             kryptonRichTextBox1.ScrollBars = RichTextBoxScrollBars.None;
@@ -82,11 +86,37 @@
             kryptonListBox1.TabIndex = 17;
             kryptonListBox1.SelectedIndexChanged += kryptonListBox1_SelectedIndexChanged;
             // 
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.Location = new Point(3, 3);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(243, 82);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            kryptonPictureBox1.TabIndex = 15;
+            kryptonPictureBox1.TabStop = false;
+            kryptonPictureBox1.Visible = false;
+            // 
+            // kryptonButton1
+            // 
+            kryptonButton1.Location = new Point(243, 14);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.Size = new Size(28, 34);
+            kryptonButton1.StateCommon.Back.Color1 = Color.White;
+            kryptonButton1.StateCommon.Back.Color2 = Color.White;
+            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
+            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            kryptonButton1.StateCommon.Border.Color1 = Color.White;
+            kryptonButton1.StateCommon.Border.Color2 = Color.White;
+            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.TabIndex = 19;
+            kryptonButton1.Values.Text = "";
+            // 
             // ArchiveItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonListBox1);
             Name = "ArchiveItem";
@@ -94,6 +124,7 @@
             Load += ArchiveItem_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -103,5 +134,7 @@
         public Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
+        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

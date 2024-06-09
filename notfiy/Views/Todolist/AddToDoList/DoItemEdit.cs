@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace notfiy.Views.AddToDoList
 {
-    public partial class AddToDoList : UserControl
+    public partial class DoItemEdit : UserControl
     {
-        public AddToDoList()
+        public DoItemEdit()
         {
             InitializeComponent();
         }
 
-        private void kryptonPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void AddToDoList_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
