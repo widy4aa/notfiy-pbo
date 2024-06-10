@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 using System.Reflection.Metadata;
 using StatusEnum = notfiy.Helpers.Status;
 using notfiy.Helpers;
+using notfiy.Views.Other;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
@@ -49,6 +50,7 @@ namespace notfiy.Views.NoteHomepagePartial
                 string? imageFileLocation = ImageController.ProcessImage(Note.IdNote, Note.ImageUrl);
                 if (imageFileLocation != null)
                 {
+                    NotePictureBox.Visible = true;
                     NotePictureBox.ImageLocation = imageFileLocation;
                 }
             }
@@ -103,7 +105,7 @@ namespace notfiy.Views.NoteHomepagePartial
             if (idNewNote > 0)
             {
                 MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Dibuat");
-                Core.ViewManager.MoveView(new HomepageDetail(NoteController.GetNote(idNewNote)));
+                Core.ViewManager.MoveView(new HomepageControl());
             }
         }
 
@@ -120,6 +122,23 @@ namespace notfiy.Views.NoteHomepagePartial
 
         }
 
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            Navbar navbar = new Navbar();
+            this.Controls.Add(navbar);
+            navbar.BringToFront();
+            navbar.BackColor = Color.Transparent;
+            navbar.Location = new Point(1000, 0);
+        }
 
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new HomepageControl());
+        }
+
+        private void NotePictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

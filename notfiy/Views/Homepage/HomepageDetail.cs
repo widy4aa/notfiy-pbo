@@ -43,12 +43,14 @@ namespace notfiy.Views.Homepage
                 this.NoteContentTextBox.Text = Note.Content;
                 if (Note.ImageUrl == null || Note.ImageUrl.Length < 1)
                 {
+                    
                     return;
                 }
-                
+
                 string? imageFileLocation = ImageController.ProcessImage(Note.IdNote, Note.ImageUrl);
                 if (imageFileLocation != null)
                 {
+                    NotePictureBox.Visible = true;
                     NotePictureBox.ImageLocation = imageFileLocation;
                 }
             }
@@ -110,6 +112,11 @@ namespace notfiy.Views.Homepage
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NotePictureBox_Click(object sender, EventArgs e)
         {
 
         }
