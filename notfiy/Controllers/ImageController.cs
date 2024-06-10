@@ -81,6 +81,36 @@ namespace notfiy.Controllers
             return integrityData;
         }
 
+        public bool DeleteCache(int idNote)
+        {
+            // Muat data integritas dari file CSV
+            Dictionary<int, string> integrityData = LoadIntegrityData();
+
+            // Hapus entri dari data integritas
+            bool isRemoved = integrityData.Remove(idNote);
+
+            // Jika entri dihapus, simpan data integritas yang diperbarui dan hapus file gambar
+            if (isRemoved)
+            {
+                SaveIntegrityData(integrityData);
+
+                // Tentukan jalur file gambar
+                string imageFilePath = Path.Combine(dataFolder, $"{idNote}.jpg");
+
+                // Periksa apakah file gambar ada dan hapus jika ada
+                if (File.Exists(imageFilePath))
+                {
+                    File.Delete(imageFilePath);
+                }
+
+                return true;
+            }
+
+            // Jika entri tidak ditemukan, kembalikan false
+            return false;
+        }
+
+
         // Menyimpan data integritas ke file CSV
         private void SaveIntegrityData(Dictionary<int, string> integrityData)
         {

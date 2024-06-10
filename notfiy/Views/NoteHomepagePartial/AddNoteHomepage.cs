@@ -91,9 +91,25 @@ namespace notfiy.Views.NoteHomepagePartial
         private void PerformUpdate()
         {
             Note.Content = this.NoteContentTextBox.Text;
-            Note.IdLabel = IdLabel ?? 0;
-            Note.ImageUrl = ImageUrl;
+            Note.IdLabel = IdLabel;
+            MessageBoxHelper.ShowInfoMessageBox(ImageUrl);
+            if (ImageUrl != null)
+            {
+                ImageController.DeleteCache(Note.IdNote);
+                Note.ImageUrl = ImageUrl;
+            }
 
+            bool hasil = NoteController.UpdateNote(Note);
+            
+            if (hasil)
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Di Ubah");
+                Core.ViewManager.MoveView(new HomepageDetail(NoteController.GetNote(Note.IdNote)));
+            }
+            else
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Gagal di Ubah");
+            }
         }
 
         private void PerformCreate()
