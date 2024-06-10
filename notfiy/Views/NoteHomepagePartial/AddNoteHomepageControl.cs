@@ -15,6 +15,7 @@ using System.Reflection.Metadata;
 using StatusEnum = notfiy.Helpers.Status;
 using notfiy.Helpers;
 using notfiy.Views.Other;
+using notfiy.Views.AddToDoList;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
@@ -90,9 +91,25 @@ namespace notfiy.Views.NoteHomepagePartial
         private void PerformUpdate()
         {
             Note.Content = this.NoteContentTextBox.Text;
-            Note.IdLabel = IdLabel ?? 0;
-            Note.ImageUrl = ImageUrl;
+            Note.IdLabel = IdLabel;
+            MessageBoxHelper.ShowInfoMessageBox(ImageUrl);
+            if (ImageUrl != null)
+            {
+                ImageController.DeleteCache(Note.IdNote);
+                Note.ImageUrl = ImageUrl;
+            }
 
+            bool hasil = NoteController.UpdateNote(Note);
+            
+            if (hasil)
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Di Ubah");
+                Core.ViewManager.MoveView(new HomepageDetail(NoteController.GetNote(Note.IdNote)));
+            }
+            else
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Gagal di Ubah");
+            }
         }
 
         private void PerformCreate()
@@ -144,6 +161,11 @@ namespace notfiy.Views.NoteHomepagePartial
         private void AddNoteHomepage_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.AutoScroll = true;
+        }
+
+        private void kryptonLabel3_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new AddToDoListControl());
         }
     }
 }

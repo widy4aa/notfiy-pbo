@@ -116,6 +116,7 @@
             HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 

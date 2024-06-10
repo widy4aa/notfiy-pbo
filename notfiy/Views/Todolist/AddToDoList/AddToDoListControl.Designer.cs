@@ -1,6 +1,6 @@
 ﻿namespace notfiy.Views.AddToDoList
 {
-    partial class AddToDoList
+    partial class AddToDoListControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddToDoList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddToDoListControl));
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
@@ -45,7 +45,6 @@
             kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             kryptonButton7 = new Krypton.Toolkit.KryptonButton();
             kryptonButton8 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel2 = new FlowLayoutPanel();
             doItemEdit1 = new DoItemEdit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
@@ -257,6 +256,7 @@
             kryptonLabel2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonLabel2.TabIndex = 25;
             kryptonLabel2.Values.Text = "Note";
+            kryptonLabel2.Click += kryptonLabel2_Click;
             // 
             // kryptonLabel3
             // 
@@ -298,20 +298,6 @@
             kryptonButton8.TabIndex = 28;
             kryptonButton8.Values.Text = "";
             // 
-            // kryptonButton1
-            // 
-            kryptonButton1.Location = new Point(321, 335);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(17, 17);
-            kryptonButton1.StateNormal.Back.Color1 = Color.White;
-            kryptonButton1.StateNormal.Back.Color2 = Color.White;
-            kryptonButton1.StateNormal.Border.Color1 = Color.White;
-            kryptonButton1.StateNormal.Border.Color2 = Color.White;
-            kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.TabIndex = 33;
-            kryptonButton1.Values.Image = (Image)resources.GetObject("kryptonButton1.Values.Image");
-            kryptonButton1.Values.Text = "";
-            // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.AllowDrop = true;
@@ -337,7 +323,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(flowLayoutPanel2);
-            Controls.Add(kryptonButton1);
             Controls.Add(kryptonButton8);
             Controls.Add(kryptonButton7);
             Controls.Add(kryptonLabel3);
@@ -382,7 +367,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private Krypton.Toolkit.KryptonButton kryptonButton7;
         private Krypton.Toolkit.KryptonButton kryptonButton8;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
         public FlowLayoutPanel flowLayoutPanel2;
         private DoItemEdit doItemEdit4;
         private DoItemEdit doItemEdit1;

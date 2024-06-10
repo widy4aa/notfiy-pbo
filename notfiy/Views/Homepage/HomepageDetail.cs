@@ -31,7 +31,9 @@ namespace notfiy.Views.Homepage
 
         private void HomepageDetail_Load(object sender, EventArgs e)
         {
-            this.NotePictureBox.Visible = false;
+            NotePictureBox.Visible = false;
+            NoteContentTextBox.Location = new Point(3, 3);
+
             SetProperties();
         }
 
@@ -117,6 +119,11 @@ namespace notfiy.Views.Homepage
         }
 
         private void NotePictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NoteContentTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
