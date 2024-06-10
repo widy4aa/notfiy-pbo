@@ -23,6 +23,7 @@ namespace notfiy.Controllers
 
         public int CreateNote(string noteName, string content, string? imageUrl, int? idLabel, int idStatus)
         {
+
             
 
             Note note = new Note()
@@ -36,7 +37,14 @@ namespace notfiy.Controllers
                 IdLabel = idLabel
             };
 
-            return NoteModel.CreateNote(note);
+
+
+            int idNewNote = NoteModel.CreateNote(note);
+            if(imageUrl != null)
+            {
+                ImageController.ProcessImage(idNewNote, imageUrl);
+            }
+            return idNewNote;
         }
 
         public string? GetImage(int idNote)
