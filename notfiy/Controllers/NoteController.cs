@@ -18,7 +18,7 @@ namespace notfiy.Controllers
 
         public List<Note> GetAllNote()
         {
-            return NoteModel.GetAllNote();
+            return NoteModel.GetAllNote(SystemSingleton.Instance.UserLoggedIn.IdUser, (int) Helpers.Status.Default);
         }
 
         public int CreateNote(string noteName, string content, string? imageUrl, int? idLabel, int idStatus)
