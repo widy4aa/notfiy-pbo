@@ -1,10 +1,12 @@
 ﻿using notfiy.Entities;
+using notfiy.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,21 +23,24 @@ namespace notfiy.Views.Homepage
         public HomepageItem(Note note, Action rearangeNoteItemsAction)
         {
             InitializeComponent();
-       
+
             this.Name = "NoteId" + note.IdNote;
             this.NoteName.Text = note.NoteName;
             this.NoteTextBox.Text = note.Content;
             IsPinned = note.Pinned;
             RearangeNoteItemsAction = rearangeNoteItemsAction;
+          
+
         }
 
         private void ChangeButtonState()
         {
             if (IsPinned)
             {
-                kryptonButton2.Hide();
-                kryptonButton3.Show();
-            } else
+                kryptonButton2.Show();
+                kryptonButton3.Hide();
+            }
+            else
             {
                 kryptonButton3.Show();
                 kryptonButton2.Hide();
@@ -74,7 +79,8 @@ namespace notfiy.Views.Homepage
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            IsPinned = true;
+            IsPinned = false;
+            ChangeButtonState();
             RearangeNoteItemsAction.Invoke();
         }
 
@@ -86,7 +92,13 @@ namespace notfiy.Views.Homepage
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
             IsPinned = true;
+            ChangeButtonState();
             RearangeNoteItemsAction.Invoke();
+        }
+
+        private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

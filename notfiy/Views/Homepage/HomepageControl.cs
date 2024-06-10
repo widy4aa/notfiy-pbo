@@ -45,6 +45,7 @@ namespace notfiy.Views.Homepage
 
             this.Controls.Add(FlowLayoutPanel);
             SetNoteItems();
+            UpdateNoteArrangement();
 
         }
 
