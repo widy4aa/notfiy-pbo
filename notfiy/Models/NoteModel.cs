@@ -10,14 +10,14 @@ namespace notfiy.Models
 {
     internal class NoteModel : Model
     {
-        public List<Note> GetAllNote()
+        public List<Note> GetAllNote(int idUser, int idStatus)
         {
             List<Note> ListNotes = new List<Note>();
 
             try
             {
                 Connection.Open();
-                NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM notes", Connection);
+                NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"SELECT * FROM notes where id_user = {idUser} and id_status = {idStatus}", Connection);
                 NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
