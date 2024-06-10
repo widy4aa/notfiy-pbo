@@ -1,13 +1,15 @@
 using System;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using Newtonsoft.Json;
+
 
 namespace notfiy.Helpers
 {
     internal class Image
     {
-        static string apiUrl = "https://dc-img-tranceiver.neiaozora.my.id/";
+        static string apiUrl = "https://dc-img-tranceiver.neiaozora.my.id/tranceiver";
 
         public static bool IsImageFile(string filePath)
         {
@@ -25,32 +27,51 @@ namespace notfiy.Helpers
             return false;
         }
 
-        public static string UploadImage(string imageUrl)
+        public static string? UploadImage(string filePath)
         {
+            FileInfo fileInfo = new FileInfo(filePath);
+
+            // Check if file size is less than or equal to 64KB (64 * 1024 bytes)
+            if (fileInfo.Length > 64 * 1024)
+            {
+                MessageBoxHelper.ShowErrorMessageBox("Batas File Gambar melebihi 64KB.");
+                return null;
+            }
+
             using (HttpClient client = new HttpClient())
             using (var formData = new MultipartFormDataContent())
             {
                 // Baca file gambar
-                byte[] imageBytes = File.ReadAllBytes(imageUrl);
+                byte[] imageBytes = File.ReadAllBytes(filePath);
                 var imageContent = new ByteArrayContent(imageBytes);
+                string fileName = Path.GetFileName(filePath);
+                imageContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/" + Path.GetExtension(fileName).TrimStart('.'));
+
 
                 // Tambahkan konten gambar ke form data
-                formData.Add(imageContent, "source", Path.GetFileName(imageUrl));
+
+                formData.Add(imageContent, "source", fileName);
 
                 // Kirim permintaan POST
                 HttpResponseMessage response = client.PostAsync(apiUrl, formData).Result;
+                File.WriteAllText("dump.txt", ObjectDumper.Dump(response));
 
                 // Periksa apakah unggahan berhasil
                 if (response.IsSuccessStatusCode)
                 {
                     string responseContent = response.Content.ReadAsStringAsync().Result;
                     dynamic responseData = JsonConvert.DeserializeObject(responseContent);
-                    string uploadedImageUrl = responseData["image-link"];
+                    string jsonString = JsonConvert.SerializeObject(responseData, Formatting.Indented);
+
+                    // Write the JSON string to a file
+                    File.WriteAllText("result.json", jsonString);
+                    string uploadedImageUrl = responseData["image-url"] != null ? responseData["image-url"].ToString() : null;
+
                     return uploadedImageUrl;
                 }
                 else
                 {
-                    Console.WriteLine("Gagal mengunggah gambar. Kode status: " + response.StatusCode);
+                    MessageBoxHelper.ShowErrorMessageBox("Gagal mengunggah gambar. Kode status: " + response.StatusCode);
                     return null;
                 }
             }

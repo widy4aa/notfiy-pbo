@@ -1,62 +1,47 @@
+using notfiy.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
-using System.Security.Policy;
-using notfiy.Helpers;
-
 
 namespace notfiy.Controllers
 {
     class ImageController
     {
-        private readonly string dataFolder = "data"; // Tentukan jalur folder data
-        private readonly string integrityFile; // file integritas
+        private readonly string dataFolder = "data";
+        private readonly string integrityFile;
 
         public ImageController()
         {
-            integrityFile = Path.Combine(dataFolder, "integrity.csv"); // Inisialisasi jalur file integritas
+            // Inisialisasi jalur file integritas
+            integrityFile = Path.Combine(dataFolder, "integrity.csv");
 
-            // Periksa apakah folder "data" sudah ada, buat jika belum
+            // Periksa dan buat folder "data" jika belum ada
             if (!Directory.Exists(dataFolder))
             {
                 Directory.CreateDirectory(dataFolder);
             }
         }
 
-        // Metode ini mengambil gambar berdasarkan ID catatan. Jika gambarnya sudah ada
-        // diunduh dan integritasnya diverifikasi, ia mengembalikan path file lokal.
+        // Metod ini mengambil gambar berdasarkan ID catatan. Jika gambarnya sudah ada di lokal dan terunduh
+        // dan integritasnya keaslian file terjaga, ia mengembalikan path file gambar lokal.
         // Jika tidak, ia akan mengunduh gambar, dan menyimpan atau menimpa hash yang ada di integrity.csv.
-        public string? GetImage(int idNote, string imageUrl)
+        public string? ProcessImage(int idNote, string imageUrl)
         {
             // Tentukan jalur file gambar
             string imageFilePath = Path.Combine(dataFolder, $"{idNote}.jpg");
 
             // Muat data integritas jika file ada
-            Dictionary<int, string> integrityData = new Dictionary<int, string>();
-            if (File.Exists(integrityFile))
-            {
-                // Membaca file csv
-                foreach (var line in File.ReadLines(integrityFile))
-                {
-                    var parts = line.Split(',');
-                    // Jika panjangg parts 2 dan jika parse int dari parts[0] berhasil,
-                    // akan membuat variable yg berisi noteId yg tersimpan di integrity.csv 
-                    if (parts.Length == 2 && int.TryParse(parts[0], out int noteId))
-                    {
-                        // menimpa var integrityData dari Key noteId dengan nilai parts[2] (berisi hash)
-                        integrityData[noteId] = parts[1];
-                    }
-                }
-            }
+            Dictionary<int, string> integrityData = LoadIntegrityData();
 
             // Periksa apakah file gambar ada dan integritasnya terjaga
             if (File.Exists(imageFilePath) && integrityData.TryGetValue(idNote, out string savedHash))
             {
                 string currentHash = ComputeFileHash(imageFilePath);
+                // JIka hash yang tersimpan di .csv dan hash dari gambar lokal sama
                 if (currentHash == savedHash)
                 {
-                    return imageFilePath; // Kembalikan gambar yang sudah ada jika hash cocok
+                    return imageFilePath;
                 }
             }
 
@@ -73,6 +58,32 @@ namespace notfiy.Controllers
 
             // Tulis ke file integritas (timpa atau tambahkan entri baru)
             integrityData[idNote] = sha256Hash;
+            SaveIntegrityData(integrityData);
+
+            return imageFilePath;
+        }
+
+        // Memuat data integritas dari file CSV
+        private Dictionary<int, string> LoadIntegrityData()
+        {
+            var integrityData = new Dictionary<int, string>();
+            if (File.Exists(integrityFile))
+            {
+                foreach (var line in File.ReadLines(integrityFile))
+                {
+                    var parts = line.Split(',');
+                    if (parts.Length == 2 && int.TryParse(parts[0], out int noteId))
+                    {
+                        integrityData[noteId] = parts[1];
+                    }
+                }
+            }
+            return integrityData;
+        }
+
+        // Menyimpan data integritas ke file CSV
+        private void SaveIntegrityData(Dictionary<int, string> integrityData)
+        {
             using (StreamWriter sw = new StreamWriter(integrityFile, false))
             {
                 foreach (var entry in integrityData)
@@ -80,15 +91,28 @@ namespace notfiy.Controllers
                     sw.WriteLine($"{entry.Key},{entry.Value}");
                 }
             }
-
-            return imageFilePath;
         }
 
+        // Menghitung hash SHA256 dari file
+        private string ComputeFileHash(string filePath)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                using (FileStream fs = File.OpenRead(filePath))
+                {
+                    byte[] hashBytes = sha256.ComputeHash(fs);
+                    return BitConverter.ToString(hashBytes).Replace("-", "").ToLowerInvariant();
+                }
+            }
+        }
+
+
         // Digunakan untuk mendapatkan URL dari image yg di upload
-        public string? ProcessImage(string? imageFileName)
+        public string? UploadImage(string? imageFileName)
         {
             if (string.IsNullOrEmpty(imageFileName))
             {
+                MessageBoxHelper.ShowErrorMessageBox($"Target File string kosong'{imageFileName}' Tidak Ada!");
                 return null;
             }
 
@@ -105,24 +129,9 @@ namespace notfiy.Controllers
             }
 
             string? imageUrl = Helpers.Image.UploadImage(imageFileName);
-            if (imageUrl == null)
-            {
-                MessageBoxHelper.ShowErrorMessageBox("Tidak Dapat Mengupload Gambar!");
-            }
 
             return imageUrl;
         }
 
-        private string ComputeFileHash(string filePath)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                using (FileStream fs = File.OpenRead(filePath))
-                {
-                    byte[] hashBytes = sha256.ComputeHash(fs);
-                    return BitConverter.ToString(hashBytes).Replace("-", "").ToLowerInvariant();
-                }
-            }
-        }
     }
 }

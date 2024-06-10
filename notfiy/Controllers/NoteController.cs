@@ -18,11 +18,12 @@ namespace notfiy.Controllers
 
         public List<Note> GetAllNote()
         {
-            return NoteModel.GetAllNote();
+            return NoteModel.GetAllNote(SystemSingleton.Instance.UserLoggedIn.IdUser, (int) Helpers.Status.Default);
         }
 
-        public int CreateNote(string noteName, string content, string? imageUrl, int idLabel, int idStatus)
+        public int CreateNote(string noteName, string content, string? imageUrl, int? idLabel, int idStatus)
         {
+
             
 
             Note note = new Note()
@@ -36,7 +37,14 @@ namespace notfiy.Controllers
                 IdLabel = idLabel
             };
 
-            return NoteModel.CreateNote(note);
+
+
+            int idNewNote = NoteModel.CreateNote(note);
+            if(imageUrl != null)
+            {
+                ImageController.ProcessImage(idNewNote, imageUrl);
+            }
+            return idNewNote;
         }
 
         public string? GetImage(int idNote)
@@ -47,14 +55,14 @@ namespace notfiy.Controllers
                 return null; // Note not found or no image URL
             }
 
-            return ImageController.GetImage(idNote, note.ImageUrl);
+            return ImageController.ProcessImage(idNote, note.ImageUrl);
         }
 
         public bool UpdateNote(int idNote, string noteName, string content, string? imageFileName, bool pinned, int idLabel, int idStatus)
         {
             Note ?note = NoteModel.GetNoteById(idNote);
 
-            string? imageUrl = ImageController.ProcessImage(imageFileName);
+            string? imageUrl = ImageController.UploadImage(imageFileName);
 
             note.NoteName = noteName;
             note.Content = content;
@@ -90,6 +98,11 @@ namespace notfiy.Controllers
         public bool DeleteNote(int idNote)
         {
             return NoteModel.DeleteNote(idNote);
+        }
+
+        public Note? GetNote(int idNote) 
+        {
+            return NoteModel.GetNoteById(idNote);
         }
 
         public int CopyNoteToUser(int idNote, int targetIdUser)

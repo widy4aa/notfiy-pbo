@@ -36,7 +36,6 @@ namespace notfiy.Views.NoteHomepagePartial
             HamburgerButton = new KryptonButton();
             kryptonPictureBox1 = new KryptonPictureBox();
             kryptonCheckedListBox2 = new KryptonCheckedListBox();
-            ButtonAddImage = new KryptonButton();
             kryptonButton4 = new KryptonButton();
             kryptonButton5 = new KryptonButton();
             kryptonBorderEdge1 = new KryptonBorderEdge();
@@ -53,6 +52,7 @@ namespace notfiy.Views.NoteHomepagePartial
             ButtonSave = new KryptonButton();
             kryptonBorderEdge3 = new KryptonBorderEdge();
             ButtonCancel = new KryptonButton();
+            ButtonAddImage = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -62,9 +62,9 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonCheckedListBox1
             // 
-            kryptonCheckedListBox1.Location = new Point(290, 224);
+            kryptonCheckedListBox1.Location = new Point(404, 247);
             kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
-            kryptonCheckedListBox1.Size = new Size(861, 605);
+            kryptonCheckedListBox1.Size = new Size(861, 648);
             kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
             kryptonCheckedListBox1.StateCommon.Border.Color2 = Color.Black;
             kryptonCheckedListBox1.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
@@ -151,7 +151,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonCheckedListBox2
             // 
-            kryptonCheckedListBox2.Location = new Point(184, 224);
+            kryptonCheckedListBox2.Location = new Point(298, 247);
             kryptonCheckedListBox2.Name = "kryptonCheckedListBox2";
             kryptonCheckedListBox2.Size = new Size(88, 304);
             kryptonCheckedListBox2.StateCommon.Border.Color1 = Color.Black;
@@ -161,23 +161,9 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonCheckedListBox2.StateCommon.Border.Width = 1;
             kryptonCheckedListBox2.TabIndex = 19;
             // 
-            // ButtonAddImage
-            // 
-            ButtonAddImage.Location = new Point(196, 236);
-            ButtonAddImage.Name = "ButtonAddImage";
-            ButtonAddImage.Size = new Size(61, 62);
-            ButtonAddImage.StateNormal.Back.Color1 = Color.White;
-            ButtonAddImage.StateNormal.Back.Color2 = Color.White;
-            ButtonAddImage.StateNormal.Border.Color1 = Color.White;
-            ButtonAddImage.StateNormal.Border.Color2 = Color.White;
-            ButtonAddImage.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            ButtonAddImage.TabIndex = 20;
-            ButtonAddImage.Values.Text = "";
-            ButtonAddImage.Click += ButtonAddImage_Click;
-            // 
             // kryptonButton4
             // 
-            kryptonButton4.Location = new Point(196, 344);
+            kryptonButton4.Location = new Point(310, 367);
             kryptonButton4.Name = "kryptonButton4";
             kryptonButton4.Size = new Size(61, 56);
             kryptonButton4.StateNormal.Back.Color1 = Color.White;
@@ -191,7 +177,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonButton5
             // 
-            kryptonButton5.Location = new Point(192, 429);
+            kryptonButton5.Location = new Point(306, 452);
             kryptonButton5.Name = "kryptonButton5";
             kryptonButton5.Size = new Size(73, 85);
             kryptonButton5.StateNormal.Back.Color1 = Color.Transparent;
@@ -205,7 +191,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonBorderEdge1
             // 
-            kryptonBorderEdge1.Location = new Point(290, 314);
+            kryptonBorderEdge1.Location = new Point(404, 337);
             kryptonBorderEdge1.Name = "kryptonBorderEdge1";
             kryptonBorderEdge1.Size = new Size(861, 3);
             kryptonBorderEdge1.StateCommon.Color1 = Color.Black;
@@ -215,7 +201,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // NoteName
             // 
-            NoteName.Location = new Point(309, 249);
+            NoteName.Location = new Point(423, 272);
             NoteName.Name = "NoteName";
             NoteName.Size = new Size(827, 38);
             NoteName.StateActive.Border.Color1 = Color.White;
@@ -228,7 +214,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonLabel4
             // 
-            kryptonLabel4.Location = new Point(290, 189);
+            kryptonLabel4.Location = new Point(404, 212);
             kryptonLabel4.Name = "kryptonLabel4";
             kryptonLabel4.Size = new Size(109, 29);
             kryptonLabel4.StateNormal.ShortText.Color1 = Color.Black;
@@ -239,7 +225,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonLabel1
             // 
-            kryptonLabel1.Location = new Point(355, 334);
+            kryptonLabel1.Location = new Point(469, 357);
             kryptonLabel1.Name = "kryptonLabel1";
             kryptonLabel1.Size = new Size(69, 33);
             kryptonLabel1.StateNormal.ShortText.Color1 = Color.Black;
@@ -250,7 +236,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonLabel3
             // 
-            kryptonLabel3.Location = new Point(355, 373);
+            kryptonLabel3.Location = new Point(469, 396);
             kryptonLabel3.Name = "kryptonLabel3";
             kryptonLabel3.Size = new Size(118, 33);
             kryptonLabel3.StateNormal.ShortText.Color1 = Color.Black;
@@ -261,7 +247,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonBorderEdge2
             // 
-            kryptonBorderEdge2.Location = new Point(290, 429);
+            kryptonBorderEdge2.Location = new Point(404, 452);
             kryptonBorderEdge2.Name = "kryptonBorderEdge2";
             kryptonBorderEdge2.Size = new Size(861, 3);
             kryptonBorderEdge2.StateCommon.Color1 = Color.Black;
@@ -274,16 +260,17 @@ namespace notfiy.Views.NoteHomepagePartial
             flowLayoutPanel1.Controls.Add(NotePictureBox);
             flowLayoutPanel1.Controls.Add(NoteContentTextBox);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(309, 438);
+            flowLayoutPanel1.Location = new Point(423, 461);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(827, 283);
+            flowLayoutPanel1.Size = new Size(827, 357);
             flowLayoutPanel1.TabIndex = 35;
             // 
             // NotePictureBox
             // 
             NotePictureBox.Location = new Point(3, 3);
+            NotePictureBox.MaximumSize = new Size(824, 124);
             NotePictureBox.Name = "NotePictureBox";
-            NotePictureBox.Size = new Size(100, 50);
+            NotePictureBox.Size = new Size(824, 124);
             NotePictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
@@ -291,15 +278,15 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // NoteContentTextBox
             // 
-            NoteContentTextBox.Location = new Point(3, 59);
+            NoteContentTextBox.Location = new Point(3, 133);
             NoteContentTextBox.Name = "NoteContentTextBox";
-            NoteContentTextBox.Size = new Size(808, 212);
+            NoteContentTextBox.Size = new Size(824, 212);
             NoteContentTextBox.TabIndex = 1;
             NoteContentTextBox.Text = "kryptonRichTextBox1";
             // 
             // kryptonButton1
             // 
-            kryptonButton1.Location = new Point(332, 344);
+            kryptonButton1.Location = new Point(446, 367);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.Size = new Size(17, 17);
             kryptonButton1.StateNormal.Back.Color1 = Color.White;
@@ -313,7 +300,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonButton8
             // 
-            kryptonButton8.Location = new Point(1088, 185);
+            kryptonButton8.Location = new Point(1202, 208);
             kryptonButton8.Name = "kryptonButton8";
             kryptonButton8.Size = new Size(32, 33);
             kryptonButton8.StateCommon.Back.Color1 = Color.White;
@@ -328,9 +315,9 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // ButtonSave
             // 
-            ButtonSave.Location = new Point(984, 760);
+            ButtonSave.Location = new Point(1097, 847);
             ButtonSave.Name = "ButtonSave";
-            ButtonSave.Size = new Size(136, 41);
+            ButtonSave.Size = new Size(136, 36);
             ButtonSave.StateCommon.Back.Color1 = Color.FromArgb(77, 150, 255);
             ButtonSave.StateCommon.Back.Color2 = Color.FromArgb(77, 150, 255);
             ButtonSave.StateCommon.Border.Color1 = Color.Black;
@@ -346,7 +333,7 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // kryptonBorderEdge3
             // 
-            kryptonBorderEdge3.Location = new Point(290, 727);
+            kryptonBorderEdge3.Location = new Point(404, 824);
             kryptonBorderEdge3.Name = "kryptonBorderEdge3";
             kryptonBorderEdge3.Size = new Size(861, 3);
             kryptonBorderEdge3.StateCommon.Color1 = Color.Black;
@@ -356,9 +343,9 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             // ButtonCancel
             // 
-            ButtonCancel.Location = new Point(807, 760);
+            ButtonCancel.Location = new Point(914, 847);
             ButtonCancel.Name = "ButtonCancel";
-            ButtonCancel.Size = new Size(136, 41);
+            ButtonCancel.Size = new Size(136, 36);
             ButtonCancel.StateCommon.Back.Color1 = Color.White;
             ButtonCancel.StateCommon.Back.Color2 = Color.White;
             ButtonCancel.StateCommon.Border.Color1 = Color.Black;
@@ -371,11 +358,27 @@ namespace notfiy.Views.NoteHomepagePartial
             ButtonCancel.TabIndex = 42;
             ButtonCancel.Values.Text = "Cancel";
             // 
+            // ButtonAddImage
+            // 
+            ButtonAddImage.Location = new Point(310, 261);
+            ButtonAddImage.Name = "ButtonAddImage";
+            ButtonAddImage.Size = new Size(61, 62);
+            ButtonAddImage.StateNormal.Back.Color1 = Color.White;
+            ButtonAddImage.StateNormal.Back.Color2 = Color.White;
+            ButtonAddImage.StateNormal.Border.Color1 = Color.White;
+            ButtonAddImage.StateNormal.Border.Color2 = Color.White;
+            ButtonAddImage.StateNormal.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            ButtonAddImage.TabIndex = 46;
+            ButtonAddImage.Values.Image = (Image)resources.GetObject("ButtonAddImage.Values.Image");
+            ButtonAddImage.Values.Text = "";
+            ButtonAddImage.Click += ButtonAddImage_Click;
+            // 
             // AddNoteHomepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(ButtonAddImage);
             Controls.Add(ButtonCancel);
             Controls.Add(kryptonBorderEdge3);
             Controls.Add(ButtonSave);
@@ -390,7 +393,6 @@ namespace notfiy.Views.NoteHomepagePartial
             Controls.Add(kryptonBorderEdge1);
             Controls.Add(kryptonButton5);
             Controls.Add(kryptonButton4);
-            Controls.Add(ButtonAddImage);
             Controls.Add(kryptonCheckedListBox2);
             Controls.Add(kryptonPanel1);
             Controls.Add(kryptonCheckedListBox1);
@@ -413,7 +415,6 @@ namespace notfiy.Views.NoteHomepagePartial
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox2;
-        private Krypton.Toolkit.KryptonButton ButtonAddImage;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton kryptonButton5;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
@@ -430,5 +431,6 @@ namespace notfiy.Views.NoteHomepagePartial
         private Krypton.Toolkit.KryptonButton ButtonSave;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge3;
         private Krypton.Toolkit.KryptonButton ButtonCancel;
+        private KryptonButton ButtonAddImage;
     }
 }

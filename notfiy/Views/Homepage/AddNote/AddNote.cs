@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace notfiy.Views.Other
+namespace notfiy.Views.Homepage.AddNote
 {
-    public partial class PopUpNotif : UserControl
+    public partial class AddNote : UserControl
     {
-        public PopUpNotif()
+        public AddNote()
         {
             InitializeComponent();
         }

@@ -9,11 +9,11 @@ namespace notfiy.Models
 {
     class TodoListModel : Model
     {
-        public List<TodoList> GetAllTodoList()
+        public List<TodoList> GetAllTodoList(int idUser, int idStatus)
         {
             List<TodoList> todoLists = new List<TodoList>();
               
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("select * from todolists", Connection);
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = {idStatus}", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             while (reader.Read())
             {

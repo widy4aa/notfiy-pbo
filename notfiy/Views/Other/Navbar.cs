@@ -3,6 +3,7 @@ using notfiy.Entities;
 using notfiy.Views.Homepage;
 using notfiy.Views.Profiles;
 using notfiy.Views.Todolist;
+using notfiy.Views.Trash;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,6 +99,12 @@ namespace notfiy.Views.Other
         private void labelItem1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            TrashControl trashcontrol = new TrashControl();
+            NotifyViewManager.MoveView(trashcontrol);
         }
     }
 }

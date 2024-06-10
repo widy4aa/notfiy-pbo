@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using notfiy.Entities;
 using notfiy.Helpers;
 using notfiy.Core;
-
 namespace notfiy.Controllers
 {
     class UserController
@@ -48,10 +47,16 @@ namespace notfiy.Controllers
             return true;
         }
 
-        public bool IsUserTaken(string username, string email, int idUser)
+        public bool IsUsernameTakenWithId(string username, int idUser)
         {
             var users = UserModel.GetAllUsers();
-            return users.Any(user => (user.Username == username || user.Email == email) && user.IdUser != idUser);
+            return users.Any(user => user.Username == username && user.IdUser != idUser);
+        }
+
+        public bool IsEmailTakenWithId(string email, int idUser)
+        {
+            var users = UserModel.GetAllUsers();
+            return users.Any(user => user.Email == email && user.IdUser != idUser);
         }
 
         public bool UpdateUser(int idUser, string username, string password, string email)

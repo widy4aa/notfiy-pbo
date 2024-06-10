@@ -93,6 +93,7 @@
             HamburgerButton.StateTracking.Border.Width = -5;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -156,6 +157,7 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1251, 611);
             flowLayoutPanel1.TabIndex = 19;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // kryptonPanel2
             // 

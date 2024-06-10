@@ -23,7 +23,7 @@ namespace notfiy.Controllers
 
         public List<TodoList> GetAllTodoList()
         {
-            return TodoListModel.GetAllTodoList();
+            return TodoListModel.GetAllTodoList(SystemSingleton.Instance.UserLoggedIn.IdUser, (int)Helpers.Status.Default);
         }
 
         public TodoList? GetTodoList(int idTodoList)

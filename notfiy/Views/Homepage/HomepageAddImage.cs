@@ -1,14 +1,5 @@
 ﻿using notfiy.Controllers;
 using notfiy.Helpers;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace notfiy.Views.Homepage
 {
@@ -16,7 +7,7 @@ namespace notfiy.Views.Homepage
     {
         private Action<string, string> SetImageUrl;
         private Action CloseUploadImageSubControl;
-        private ImageController ImageController;
+        private ImageController ImageController = new ImageController();
         private string ImageFilePath;
         public HomepageAddImage(Action<string, string> setImageUrl, Action closeUploadImageSubControl)
         {
@@ -82,15 +73,27 @@ namespace notfiy.Views.Homepage
 
         private void ButtonUpload_Click(object sender, EventArgs e)
         {
+            var connectionForm = new Form
+            {
+                Text = "Berusaha Mengupload Gambar!",
+                Size = new System.Drawing.Size(500, 1),
+                StartPosition = FormStartPosition.CenterScreen,
+            };
 
-            string? imageUrl = ImageController.ProcessImage(ImageFilePath);
+            connectionForm.Show();
+            string? imageUrl = ImageController.UploadImage(ImageFilePath);
+            connectionForm.Close();
+            connectionForm.Dispose();
             if (imageUrl == null)
             {
                 MessageBoxHelper.ShowErrorMessageBox("Gagal Mengupload Gambar!, Ada bisa coba sekali lagi!");
                 return;
             }
 
-            SetImageUrl.Invoke(imageUrl, ImageFilePath);
+            MessageBoxHelper.ShowInfoMessageBox("Gambar Berhasil diupload");
+
+            SetImageUrl.Invoke(ImageFilePath, imageUrl);
+            CloseUploadImageSubControl.Invoke();
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
