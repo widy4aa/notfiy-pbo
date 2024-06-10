@@ -10,12 +10,20 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CoreViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.Homepage
 {
     public partial class HomepageItem : UserControl
     {
-        public int IdNote { get; set; }
+        private Note Note;
+        public int IdNote
+        {
+            get
+            {
+                return Note.IdNote;
+            }
+        }
         public bool IsPinned;
         private Action RearangeNoteItemsAction;
 
@@ -25,6 +33,7 @@ namespace notfiy.Views.Homepage
             InitializeComponent();
 
             this.Name = "NoteId" + note.IdNote;
+            this.Note = note;
             this.NoteName.Text = note.NoteName;
             this.NoteTextBox.Text = note.Content;
             IsPinned = note.Pinned;
@@ -45,6 +54,11 @@ namespace notfiy.Views.Homepage
                 kryptonButton3.Show();
                 kryptonButton2.Hide();
             }
+        }
+
+        private void ClickItem(object sender, EventArgs e)
+        {
+            CoreViewManager.MoveView(new HomepageDetail(Note));
         }
 
         private void HomepageItem_Load(object sender, EventArgs e)
@@ -72,7 +86,7 @@ namespace notfiy.Views.Homepage
 
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void flowLayoutPanel1_Click(object sender, PaintEventArgs e)
         {
 
         }
@@ -84,10 +98,7 @@ namespace notfiy.Views.Homepage
             RearangeNoteItemsAction.Invoke();
         }
 
-        private void kryptonRichTextBox1_TextChanged_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
