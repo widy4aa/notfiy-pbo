@@ -120,6 +120,7 @@
             Controls.Add(kryptonListBox1);
             Name = "TrashNoteItem";
             Size = new Size(298, 266);
+            Load += TrashNoteItem_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
