@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace notfiy.Views.Trash
 {
     public partial class TrashNoteItem : UserControl
     {
-        public TrashNoteItem()
+        public TrashNoteItem(Note note)
         {
             InitializeComponent();
+            this.Name = "NoteId" + note.IdNote;
+            this.NoteName.Text = note.NoteName;
+            this.NoteTextBox.Text = note.Content;
+        }
+
+        private void TrashNoteItem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
