@@ -93,7 +93,18 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
             flowLayoutPanel1.TabIndex = 14;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            flowLayoutPanel1.Click += ClickItem;
+            // 
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.Location = new Point(3, 3);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(243, 82);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            kryptonPictureBox1.TabIndex = 14;
+            kryptonPictureBox1.TabStop = false;
+            kryptonPictureBox1.Visible = false;
+            kryptonPictureBox1.Click += ClickItem;
             // 
             // kryptonPictureBox1
             // 
@@ -114,6 +125,7 @@
             NoteName.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NoteName.TabIndex = 12;
             NoteName.Values.Text = "Judul Pekerjaan";
+            NoteName.Click += ClickItem;
             // 
             // NoteTextBox
             // 
@@ -128,7 +140,7 @@
             NoteTextBox.StateCommon.Border.Width = -2;
             NoteTextBox.TabIndex = 13;
             NoteTextBox.Text = resources.GetString("NoteTextBox.Text");
-            NoteTextBox.TextChanged += kryptonRichTextBox1_TextChanged_1;
+            NoteTextBox.Click += ClickItem;
             // 
             // kryptonButton3
             // 

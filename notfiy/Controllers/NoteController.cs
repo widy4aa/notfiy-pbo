@@ -58,18 +58,9 @@ namespace notfiy.Controllers
             return ImageController.ProcessImage(idNote, note.ImageUrl);
         }
 
-        public bool UpdateNote(int idNote, string noteName, string content, string? imageFileName, bool pinned, int idLabel, int idStatus)
+        public bool UpdateNote(Note note)
         {
-            Note ?note = NoteModel.GetNoteById(idNote);
-
-            string? imageUrl = ImageController.UploadImage(imageFileName);
-
-            note.NoteName = noteName;
-            note.Content = content;
-            note.ImageUrl = imageUrl ?? note.ImageUrl; // Retain existing image URL if no new image is uploaded
-            note.Pinned = pinned;
-            note.IdLabel = idLabel;
-            note.IdStatus = idStatus;
+            ImageController.ProcessImage(note.IdNote, note.ImageUrl);
 
             return NoteModel.UpdateNote(note);
         }
