@@ -140,7 +140,7 @@
             NoteTextBox.StateCommon.Border.Width = -2;
             NoteTextBox.TabIndex = 13;
             NoteTextBox.Text = resources.GetString("NoteTextBox.Text");
-            NoteTextBox.TextChanged += ClickItem;
+            NoteTextBox.Click += ClickItem;
             // 
             // kryptonButton3
             // 
