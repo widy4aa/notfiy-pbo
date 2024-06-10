@@ -32,7 +32,7 @@ namespace notfiy.Views.Homepage
         private void HomepageDetail_Load(object sender, EventArgs e)
         {
             NotePictureBox.Visible = false;
-            NoteContentTextBox.Location = new Point(3,3);
+            NoteContentTextBox.Location = new Point(3, 3);
 
             SetProperties();
         }
@@ -126,6 +126,15 @@ namespace notfiy.Views.Homepage
         private void NoteContentTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            Navbar navbar = new Navbar();
+            this.Controls.Add(navbar);
+            navbar.BringToFront();
+            navbar.BackColor = Color.Transparent;
+            navbar.Location = new Point(1000, 0);
         }
     }
 }
