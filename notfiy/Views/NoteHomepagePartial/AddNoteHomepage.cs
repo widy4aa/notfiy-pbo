@@ -140,5 +140,10 @@ namespace notfiy.Views.NoteHomepagePartial
         {
 
         }
+
+        private void AddNoteHomepage_Load(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.AutoScroll = true;
+        }
     }
 }
