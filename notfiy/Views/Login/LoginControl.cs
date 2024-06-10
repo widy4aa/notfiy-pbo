@@ -63,11 +63,15 @@ namespace notfiy.Views.Login
                 if (UsernameTextbox.Text == "Username" || kryptonTextBox1.Text == "Password" || string.IsNullOrWhiteSpace(kryptonTextBox1.Text) || string.IsNullOrWhiteSpace(UsernameTextbox.Text))
                 {
                     MessageBoxHelper.ShowInfoMessageBox("Mohon lengkapi data terlebih dahulu!");
+                    UsernameTextbox.Text = "Username";
+                    kryptonTextBox1.Text = "Password";
+                    kryptonTextBox1.PasswordChar = '\0';
                 }
                 else
                 {
                     MessageBoxHelper.ShowCustomMessageBox("Username atau Password Salah", "Login Gagal!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    kryptonTextBox1.Text = "";
+                    kryptonTextBox1.Text = "Password";
+                    kryptonTextBox1.PasswordChar = '\0';
                 }
             }
         }
