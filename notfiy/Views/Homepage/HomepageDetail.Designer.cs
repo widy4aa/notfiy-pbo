@@ -184,9 +184,11 @@
             NotePictureBox.Location = new Point(3, 3);
             NotePictureBox.Name = "NotePictureBox";
             NotePictureBox.Size = new Size(803, 125);
+            NotePictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
+            NotePictureBox.Click += NotePictureBox_Click;
             // 
             // NoteContentTextBox
             // 
@@ -280,6 +282,7 @@
             kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NotePictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

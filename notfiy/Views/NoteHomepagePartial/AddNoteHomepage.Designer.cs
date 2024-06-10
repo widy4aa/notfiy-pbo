@@ -138,6 +138,7 @@ namespace notfiy.Views.NoteHomepagePartial
             HamburgerButton.StateTracking.Border.GraphicsHint = PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -275,6 +276,7 @@ namespace notfiy.Views.NoteHomepagePartial
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
+            NotePictureBox.Click += NotePictureBox_Click;
             // 
             // NoteContentTextBox
             // 
@@ -357,6 +359,7 @@ namespace notfiy.Views.NoteHomepagePartial
             ButtonCancel.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonCancel.TabIndex = 42;
             ButtonCancel.Values.Text = "Cancel";
+            ButtonCancel.Click += ButtonCancel_Click;
             // 
             // ButtonAddImage
             // 
