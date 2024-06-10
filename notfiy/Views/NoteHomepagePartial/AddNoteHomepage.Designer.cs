@@ -271,8 +271,8 @@ namespace notfiy.Views.NoteHomepagePartial
             NotePictureBox.Location = new Point(3, 3);
             NotePictureBox.MaximumSize = new Size(824, 124);
             NotePictureBox.Name = "NotePictureBox";
-            NotePictureBox.Size = new Size(824, 124);
-            NotePictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            NotePictureBox.Size = new Size(808, 124);
+            NotePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
@@ -282,9 +282,9 @@ namespace notfiy.Views.NoteHomepagePartial
             // 
             NoteContentTextBox.Location = new Point(3, 133);
             NoteContentTextBox.Name = "NoteContentTextBox";
-            NoteContentTextBox.Size = new Size(824, 212);
+            NoteContentTextBox.Size = new Size(808, 212);
             NoteContentTextBox.TabIndex = 1;
-            NoteContentTextBox.Text = "kryptonRichTextBox1";
+            NoteContentTextBox.Text = "";
             // 
             // kryptonButton1
             // 
@@ -401,11 +401,11 @@ namespace notfiy.Views.NoteHomepagePartial
             Controls.Add(kryptonCheckedListBox1);
             Name = "AddNoteHomepage";
             Size = new Size(1440, 1024);
+            Load += AddNoteHomepage_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NotePictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

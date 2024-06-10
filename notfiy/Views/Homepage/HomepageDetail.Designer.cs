@@ -171,20 +171,22 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Controls.Add(NotePictureBox);
             flowLayoutPanel1.Controls.Add(NoteContentTextBox);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(398, 304);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(815, 499);
+            flowLayoutPanel1.Size = new Size(827, 499);
             flowLayoutPanel1.TabIndex = 30;
             // 
             // NotePictureBox
             // 
+            NotePictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             NotePictureBox.Location = new Point(3, 3);
             NotePictureBox.Name = "NotePictureBox";
-            NotePictureBox.Size = new Size(803, 125);
-            NotePictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            NotePictureBox.Size = new Size(812, 125);
+            NotePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
@@ -197,7 +199,8 @@
             NoteContentTextBox.ReadOnly = true;
             NoteContentTextBox.Size = new Size(812, 334);
             NoteContentTextBox.TabIndex = 1;
-            NoteContentTextBox.Text = "kryptonRichTextBox1";
+            NoteContentTextBox.Text = "";
+            NoteContentTextBox.TextChanged += NoteContentTextBox_TextChanged;
             // 
             // kryptonLabel3
             // 
@@ -282,7 +285,6 @@
             kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NotePictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
