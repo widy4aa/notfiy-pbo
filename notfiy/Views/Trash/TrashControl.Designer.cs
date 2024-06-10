@@ -35,8 +35,9 @@
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             SearchTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            FlowLayoutNote = new FlowLayoutPanel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -126,7 +127,7 @@
             // 
             kryptonTextBox1.AlwaysActive = false;
             kryptonTextBox1.Cursor = Cursors.IBeam;
-            kryptonTextBox1.Location = new Point(93, 169);
+            kryptonTextBox1.Location = new Point(93, 156);
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.ReadOnly = true;
             kryptonTextBox1.Size = new Size(218, 48);
@@ -151,14 +152,6 @@
             kryptonTextBox1.Text = "Trash";
             kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(93, 221);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1251, 611);
-            flowLayoutPanel1.TabIndex = 19;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
-            // 
             // kryptonPanel2
             // 
             kryptonPanel2.Location = new Point(0, 860);
@@ -168,17 +161,35 @@
             kryptonPanel2.StateNormal.Color2 = Color.Black;
             kryptonPanel2.TabIndex = 20;
             // 
+            // FlowLayoutNote
+            // 
+            FlowLayoutNote.AutoScroll = true;
+            FlowLayoutNote.Location = new Point(93, 232);
+            FlowLayoutNote.Name = "FlowLayoutNote";
+            FlowLayoutNote.Size = new Size(605, 581);
+            FlowLayoutNote.TabIndex = 21;
+            FlowLayoutNote.Paint += FlowLayoutNote_Paint;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(718, 232);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(607, 581);
+            flowLayoutPanel1.TabIndex = 22;
+            // 
             // TrashControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(kryptonPanel2);
             Controls.Add(flowLayoutPanel1);
+            Controls.Add(FlowLayoutNote);
+            Controls.Add(kryptonPanel2);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel1);
             Name = "TrashControl";
             Size = new Size(1440, 1024);
+            Load += TrashControl_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
@@ -196,7 +207,8 @@
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonTextBox SearchTextbox;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        public FlowLayoutPanel FlowLayoutNote;
+        public FlowLayoutPanel flowLayoutPanel1;
     }
 }
