@@ -10,6 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Controllers;
+using Krypton.Toolkit;
+using notfiy.Views.NoteHomepagePartial;
+using StatusHelper = notfiy.Helpers.Status;
+using notfiy.Helpers;
 
 namespace notfiy.Views.Homepage
 {
@@ -17,6 +21,7 @@ namespace notfiy.Views.Homepage
     {
         Note Note;
         ImageController ImageController = new ImageController();
+        NoteController NoteController = new NoteController();
 
         public HomepageDetail(Note note)
         {
@@ -73,5 +78,40 @@ namespace notfiy.Views.Homepage
 
         }
 
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new HomepageControl(Note.IdLabel));
+        }
+
+        private void ButtonEdit_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new AddNoteHomepage(Note.IdLabel, Note));
+        }
+
+        private void ButtonTrash_Click(object sender, EventArgs e)
+        {
+
+            if (NoteController.UpdateNoteStatus(Note.IdNote, (int)StatusHelper.Trashed))
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Telah di Trashed");
+                Core.ViewManager.MoveView(new HomepageControl(Note.IdLabel));
+
+            }
+            else
+            {
+                MessageBoxHelper.ShowErrorMessageBox("Note gagal di Trashed");
+            }
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
