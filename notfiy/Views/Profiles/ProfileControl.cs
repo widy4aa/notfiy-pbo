@@ -82,16 +82,12 @@ namespace notfiy.Views.Profiles
                 emailPlaceholder = currentUser.Email;
                 passwordPlaceholder = currentUser.Password;
 
-                // Menampilkan pesan selamat datang
-                GreetingTextBox.Text = $"Halo {currentUser.Username}!";
-
                 kryptonRichTextBox1.Text = usernamePlaceholder;
                 kryptonRichTextBox2.Text = emailPlaceholder;
                 kryptonRichTextBox3.Text = passwordPlaceholder;
 
-                kryptonRichTextBox1.ForeColor = Color.Gray;
-                kryptonRichTextBox2.ForeColor = Color.Gray;
-                kryptonRichTextBox3.ForeColor = Color.Gray;
+                // Menampilkan pesan selamat datang
+                GreetingTextBox.Text = $"Halo {currentUser.Username}!";
             }
         }
 
@@ -122,17 +118,57 @@ namespace notfiy.Views.Profiles
             string email = kryptonRichTextBox2.Text;
             string password = kryptonRichTextBox3.Text;
 
-            // Cek apakah username sudah ada
-            if (userController.IsUserTaken(username, email, currentUser.IdUser))
+
+
+            if (string.IsNullOrWhiteSpace(kryptonRichTextBox1.Text) || string.IsNullOrWhiteSpace(kryptonRichTextBox2.Text) || string.IsNullOrWhiteSpace(kryptonRichTextBox3.Text))
             {
-                MessageBox.Show("Username atau Email sudah ada! Silakan gunakan yang lain.");
+                MessageBoxHelper.ShowInfoMessageBox("Data tidak boleh kosong!");
+                kryptonRichTextBox1.Text = currentUser.Username;
+                kryptonRichTextBox2.Text = currentUser.Email;
+                kryptonRichTextBox3.Text = currentUser.Password;
+                return;
+            }
+
+            if (!kryptonRichTextBox1.Text.Any(char.IsDigit))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Username harus mengandung angka!");
+                kryptonRichTextBox1.Text = currentUser.Username;
+                return;
+            }
+
+            // Cek apakah username sudah ada
+            if (userController.IsUsernameTakenWithId(username, currentUser.IdUser))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Username sudah ada! Silakan gunakan yang lain.");
+                kryptonRichTextBox1.Text = currentUser.Username;
+                return;
+            }
+
+            if (userController.IsEmailTakenWithId(email, currentUser.IdUser))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Email sudah ada! Silakan gunakan yang lain.");
+                kryptonRichTextBox2.Text = currentUser.Email;
+                return;
+            }
+
+            if (!(kryptonRichTextBox2.Text.Contains("@mail") || kryptonRichTextBox2.Text.Contains("@gmail")))
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Format Email yang anda masukkan salah!");
+                kryptonRichTextBox2.Text = currentUser.Email;
+                return;
+            }
+
+            if (kryptonRichTextBox3.Text.Length < 8) 
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Password harus memiliki minimal panjang 8 karakter");
+                kryptonRichTextBox3.Text = currentUser.Password;
                 return;
             }
 
             // update data user
             if (userController.UpdateUser(currentUser.IdUser, username, password, email))
             {
-                MessageBoxHelper.ShowInfoMessageBox($"Data user {username} sudah di update!");
+                MessageBox.Show($"Data user {username} sudah di update!");
             }
             else
             {
