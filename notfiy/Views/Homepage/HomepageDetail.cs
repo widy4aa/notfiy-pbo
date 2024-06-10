@@ -127,5 +127,14 @@ namespace notfiy.Views.Homepage
         {
 
         }
+
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            Navbar navbar = new Navbar();
+            this.Controls.Add(navbar);
+            navbar.BringToFront();
+            navbar.BackColor = Color.Transparent;
+            navbar.Location = new Point(1000, 0);
+        }
     }
 }

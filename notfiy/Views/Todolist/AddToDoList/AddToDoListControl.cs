@@ -124,7 +124,7 @@ namespace notfiy.Views.AddToDoList
 
         private void kryptonLabel2_Click(object sender, EventArgs e)
         {
-            Core.ViewManager.MoveView(new AddNoteHomepage());
+            Core.ViewManager.MoveView(new AddNoteHomepageControl());
         }
     }
 }
