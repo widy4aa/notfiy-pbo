@@ -109,6 +109,7 @@
             kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
             kryptonButton1.TabIndex = 17;
             kryptonButton1.Values.Text = "";
+            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // TrashNoteItem
             // 
