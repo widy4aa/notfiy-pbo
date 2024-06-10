@@ -21,7 +21,7 @@ namespace notfiy.Views.Homepage
     {
         Note Note;
         ImageController ImageController = new ImageController();
-        NoteController NoteController = new NoteController();   
+        NoteController NoteController = new NoteController();
 
         public HomepageDetail(Note note)
         {
@@ -101,6 +101,16 @@ namespace notfiy.Views.Homepage
             {
                 MessageBoxHelper.ShowErrorMessageBox("Note gagal di Trashed");
             }
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
 
         }
     }
