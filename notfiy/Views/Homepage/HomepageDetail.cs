@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Controllers;
 using Krypton.Toolkit;
+using notfiy.Views.NoteHomepagePartial;
+using StatusHelper = notfiy.Helpers.Status;
+using notfiy.Helpers;
 
 namespace notfiy.Views.Homepage
 {
@@ -18,6 +21,7 @@ namespace notfiy.Views.Homepage
     {
         Note Note;
         ImageController ImageController = new ImageController();
+        NoteController NoteController = new NoteController();   
 
         public HomepageDetail(Note note)
         {
@@ -74,26 +78,30 @@ namespace notfiy.Views.Homepage
 
         }
 
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
-            if (BtnEdit.Text == "Save")
-            {
-                BtnEdit.Text = "Edit";
-                NoteName.ReadOnly = true;
-                NoteContentTextBox.ReadOnly = true;
-            }
-            else if (BtnEdit.Text == "Edit")
-            {
-                BtnEdit.Text = "Save";
-                NoteName.ReadOnly = false;
-                NoteContentTextBox.ReadOnly = false;
-            }
+            Core.ViewManager.MoveView(new HomepageControl(Note.IdLabel));
         }
 
-        private void BtnBack_Click(object sender, EventArgs e)
+        private void ButtonEdit_Click(object sender, EventArgs e)
         {
-            HomepageControl homepagecontrol = new HomepageControl();
-            Core.ViewManager.MoveView(homepagecontrol);
+            Core.ViewManager.MoveView(new AddNoteHomepage(Note.IdLabel, Note));
+        }
+
+        private void ButtonTrash_Click(object sender, EventArgs e)
+        {
+
+            if (NoteController.UpdateNoteStatus(Note.IdNote, (int)StatusHelper.Trashed))
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Telah di Trashed");
+                Core.ViewManager.MoveView(new HomepageControl(Note.IdLabel));
+
+            }
+            else
+            {
+                MessageBoxHelper.ShowErrorMessageBox("Note gagal di Trashed");
+            }
+
         }
     }
 }

@@ -209,7 +209,7 @@
             // 
             kryptonListBox1.Location = new Point(380, 212);
             kryptonListBox1.Name = "kryptonListBox1";
-            kryptonListBox1.Size = new Size(861, 605);
+            kryptonListBox1.Size = new Size(861, 671);
             kryptonListBox1.StateCommon.Border.Color1 = Color.Black;
             kryptonListBox1.StateCommon.Border.Color2 = Color.Black;
             kryptonListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -219,7 +219,7 @@
             // 
             // kryptonBorderEdge1
             // 
-            kryptonBorderEdge1.Location = new Point(380, 729);
+            kryptonBorderEdge1.Location = new Point(380, 809);
             kryptonBorderEdge1.Name = "kryptonBorderEdge1";
             kryptonBorderEdge1.Size = new Size(861, 3);
             kryptonBorderEdge1.StateCommon.Color1 = Color.Black;
@@ -247,7 +247,7 @@
             BtnBack.Values.Text = "Back";
             BtnBack.Click += BtnBack_Click;
             // 
-            // BtnEdit
+            // ButtonEdit
             // 
             BtnEdit.Location = new Point(946, 757);
             BtnEdit.Name = "BtnEdit";
@@ -265,23 +265,25 @@
             BtnEdit.Values.Text = "Edit";
             BtnEdit.Click += BtnEdit_Click;
             // 
-            // BtnDelete
+            // ButtonTrash
             // 
-            BtnDelete.Location = new Point(421, 757);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(130, 31);
-            BtnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 107, 107);
-            BtnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 107, 107);
-            BtnDelete.StateCommon.Border.Color1 = Color.Black;
-            BtnDelete.StateCommon.Border.Color2 = Color.Black;
-            BtnDelete.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            BtnDelete.StateCommon.Border.Rounding = 20F;
-            BtnDelete.StateCommon.Border.Width = 1;
-            BtnDelete.StateNormal.Content.ShortText.Color1 = Color.Black;
-            BtnDelete.StateNormal.Content.ShortText.Color2 = Color.Black;
-            BtnDelete.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnDelete.TabIndex = 28;
-            BtnDelete.Values.Text = "Delete";
+            ButtonTrash.Enabled = false;
+            ButtonTrash.Location = new Point(421, 829);
+            ButtonTrash.Name = "ButtonTrash";
+            ButtonTrash.Size = new Size(130, 31);
+            ButtonTrash.StateCommon.Back.Color1 = Color.FromArgb(255, 107, 107);
+            ButtonTrash.StateCommon.Back.Color2 = Color.FromArgb(255, 107, 107);
+            ButtonTrash.StateCommon.Border.Color1 = Color.Black;
+            ButtonTrash.StateCommon.Border.Color2 = Color.Black;
+            ButtonTrash.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            ButtonTrash.StateCommon.Border.Rounding = 20F;
+            ButtonTrash.StateCommon.Border.Width = 1;
+            ButtonTrash.StateNormal.Content.ShortText.Color1 = Color.Black;
+            ButtonTrash.StateNormal.Content.ShortText.Color2 = Color.Black;
+            ButtonTrash.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonTrash.TabIndex = 28;
+            ButtonTrash.Values.Text = "Trash";
+            ButtonTrash.Click += ButtonTrash_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -290,22 +292,21 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(398, 304);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(815, 419);
+            flowLayoutPanel1.Size = new Size(815, 499);
             flowLayoutPanel1.TabIndex = 30;
             // 
             // NotePictureBox
             // 
             NotePictureBox.Location = new Point(3, 3);
             NotePictureBox.Name = "NotePictureBox";
-            NotePictureBox.Size = new Size(100, 50);
-            NotePictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            NotePictureBox.Size = new Size(803, 125);
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
             // 
             // NoteContentTextBox
             // 
-            NoteContentTextBox.Location = new Point(3, 59);
+            NoteContentTextBox.Location = new Point(3, 134);
             NoteContentTextBox.Name = "NoteContentTextBox";
             NoteContentTextBox.ReadOnly = true;
             NoteContentTextBox.Size = new Size(812, 334);
@@ -357,7 +358,6 @@
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NotePictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
