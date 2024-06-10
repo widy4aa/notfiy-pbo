@@ -206,6 +206,7 @@
             kryptonButton6.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
             kryptonButton6.TabIndex = 8;
             kryptonButton6.Values.Text = "";
+            kryptonButton6.Click += kryptonButton6_Click;
             // 
             // kryptonButton3
             // 

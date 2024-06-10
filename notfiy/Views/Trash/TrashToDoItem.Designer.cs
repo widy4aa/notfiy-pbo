@@ -36,12 +36,13 @@
             kryptonCheckBox2 = new Krypton.Toolkit.KryptonCheckBox();
             kryptonCheckBox3 = new Krypton.Toolkit.KryptonCheckBox();
             kryptonCheckBox4 = new Krypton.Toolkit.KryptonCheckBox();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonCheckedListBox1
             // 
-            kryptonCheckedListBox1.Location = new Point(13, 31);
+            kryptonCheckedListBox1.Location = new Point(14, 42);
             kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
             kryptonCheckedListBox1.Size = new Size(272, 205);
             kryptonCheckedListBox1.StateCommon.Border.Color1 = Color.Black;
@@ -73,7 +74,7 @@
             flowLayoutPanel1.Controls.Add(kryptonCheckBox3);
             flowLayoutPanel1.Controls.Add(kryptonCheckBox4);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(28, 45);
+            flowLayoutPanel1.Location = new Point(30, 56);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
             flowLayoutPanel1.TabIndex = 10;
@@ -150,11 +151,24 @@
             kryptonCheckBox4.TabIndex = 10;
             kryptonCheckBox4.Values.Text = "kryptonCheckBox4";
             // 
+            // kryptonButton1
+            // 
+            kryptonButton1.Location = new Point(245, 10);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.Size = new Size(31, 26);
+            kryptonButton1.StateCommon.Back.Color1 = Color.White;
+            kryptonButton1.StateCommon.Back.Color2 = Color.White;
+            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
+            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            kryptonButton1.TabIndex = 0;
+            kryptonButton1.Values.Text = "";
+            // 
             // TrashToDoItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonCheckedListBox1);
             Name = "TrashToDoItem";
@@ -173,5 +187,6 @@
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox3;
         private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox4;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
