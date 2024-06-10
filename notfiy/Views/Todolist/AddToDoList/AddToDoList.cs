@@ -1,4 +1,7 @@
-﻿using Krypton.Toolkit;
+﻿using notfiy.Controllers;
+using notfiy.Helpers;
+using notfiy.Models;
+using Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,14 +11,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using notfiy.Views.Todolist;
+using Npgsql;
 
 namespace notfiy.Views.AddToDoList
 {
     public partial class AddToDoList : UserControl
     {
+        private TodoListController TodoListController;
+        private TodoListModel TodoListModel;
+        private DoItemController DoItemController;
+        private MessageBoxHelper MessageBoxHelper;
+        private DoItemEdit DoItemEdit;
+
         public AddToDoList()
         {
             InitializeComponent();
+            TodoListController = new TodoListController();
+            TodoListModel = new TodoListModel();
+            DoItemController = new DoItemController();
+            MessageBoxHelper = new MessageBoxHelper();
+            DoItemEdit = new DoItemEdit();
         }
         private void AddToDoList_Load(object sender, EventArgs e)
         {
@@ -23,13 +40,13 @@ namespace notfiy.Views.AddToDoList
         }
         private void kryptonTextBox1_Enter(object sender, EventArgs e)
         {
-            kryptonTextBox1.Text = "";
+            InJudulTodolist.Text = "";
         }
         private void kryptonTextBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(kryptonTextBox1.Text))
+            if (string.IsNullOrEmpty(InJudulTodolist.Text))
             {
-                kryptonTextBox1.Text = "Judul";
+                InJudulTodolist.Text = "Judul";
             }
         }
 
@@ -40,16 +57,68 @@ namespace notfiy.Views.AddToDoList
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            //flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            //DoItemEdit doitem = new DoItemEdit();
             flowLayoutPanel2.Controls.Add(new DoItemEdit());
+        }
 
-            //kryptonTextBox1.Controls.Add(doitem);
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            //TodoListController todoListController = new TodoListController();
+            //DoItemEdit doitemedit = new DoItemEdit();
 
-            //KryptonTextBox textbox = doitem.GetKrypto
+            int IdStatus = 1;
+            bool IsPinned = true;
+            string Judul = InJudulTodolist.Text;
 
-            //flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
-            //flowLayoutPanel2.AutoScroll = true;
+            //foreach (DoItemEdit doitem in flowLayoutPanel2.Controls)
+            //{
+
+            //}
+
+            if (TodoListController.CreateTodoList(Judul, IdStatus, IsPinned) > 0)
+            {
+                int idtodolist = TodoListController.GetIdNewTodoList();
+                //string text = DoItemController.TextBoxvalue();
+                bool checkbox = DoItemController.CheckBoxvalue();
+
+                foreach (DoItemEdit doitem in flowLayoutPanel2.Controls)
+                {
+                    if (doitem.kryptonTextBox1.Visible)
+                    {
+                        DoItemController.CreateDoItem(doitem.kryptonTextBox1.Text, checkbox, idtodolist);
+                    }
+                }
+                MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
+                TodolistControl todolistControl = new TodolistControl();
+                
+
+
+                //if (DoItemController.CreateDoItem(text, checkbox, idtodolist) > 0)
+                //{
+                //    MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
+                //    TodolistControl todolistControl = new TodolistControl();
+                //}
+
+            }
+        }
+
+        private void doItemEdit1_Load(object sender, EventArgs e)
+        {
+            //foreach (DoItemEdit doItem in flowLayoutPanel2.Controls)
+            //{
+            //    doItem.kryptonButton1_Click(this, e);
+            //}
+
+            //private void kryptonButton1_Click(object sender, EventArgs e)
+            //{
+            //    //this.Visible = false;
+            //    DoItemEdit doitem = new DoItemEdit();
+            //    AddToDoList addToDoList = new AddToDoList();
+            //    foreach (DoItemEdit item in addToDoList.flowLayoutPanel2.Controls)
+            //    {
+            //        addToDoList.flowLayoutPanel2.Controls.Remove(doitem);
+            //    }
+            //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
+            //}
         }
     }
 }

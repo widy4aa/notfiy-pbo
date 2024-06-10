@@ -2,7 +2,8 @@ using Microsoft.VisualBasic.ApplicationServices;
 using notfiy.Core;
 using notfiy.Entities;
 using notfiy.Models;
-
+using notfiy.Views.AddToDoList;
+using notfiy.Views.Todolist;
 using System.Runtime.CompilerServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -30,7 +31,13 @@ namespace notfiy.Controllers
             return TodoListModel.GetTodoList(idTodoList);
         }
 
-        public int CreateTodoList(string todoListName, int idStatus)
+        public int GetIdNewTodoList()
+        {
+            int idTodoList = SystemSingleton.Instance.UserLoggedIn.IdUser;
+            return TodoListModel.GetIdNewTodoList(idTodoList);
+        }
+
+        public int CreateTodoList(string todoListName, int idStatus, bool IsPinned)
         {
             TodoList todoList = new TodoList()
             {
@@ -38,6 +45,8 @@ namespace notfiy.Controllers
                 TimeCreated = DateTime.Now,
                 IdUser = SystemSingleton.Instance.UserLoggedIn.IdUser,
                 IdStatus = idStatus,
+                Pinned = IsPinned
+
             };
             return TodoListModel.CreateTodoList(todoList);
         }

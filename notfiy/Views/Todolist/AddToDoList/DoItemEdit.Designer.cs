@@ -51,13 +51,12 @@
             kryptonCheckBox1.StateNormal.ShortText.Color1 = Color.Black;
             kryptonCheckBox1.TabIndex = 8;
             kryptonCheckBox1.Values.Text = "";
-            kryptonCheckBox1.CheckedChanged += kryptonCheckBox1_CheckedChanged;
             // 
             // kryptonTextBox1
             // 
             kryptonTextBox1.Location = new Point(23, 3);
             kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(150, 31);
+            kryptonTextBox1.Size = new Size(707, 31);
             kryptonTextBox1.StateActive.Back.Color1 = Color.White;
             kryptonTextBox1.StateActive.Border.Color1 = Color.White;
             kryptonTextBox1.StateActive.Border.Color2 = Color.White;
@@ -68,11 +67,12 @@
             kryptonTextBox1.StateNormal.Border.Color2 = Color.White;
             kryptonTextBox1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonTextBox1.TabIndex = 9;
-            kryptonTextBox1.Text = "kryptonTextBox1";
+            kryptonTextBox1.Text = "Masukkan Judul";
+            kryptonTextBox1.Enter += kryptonTextBox1_Enter;
             // 
             // kryptonButton1
             // 
-            kryptonButton1.Location = new Point(489, 2);
+            kryptonButton1.Location = new Point(736, 2);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.Size = new Size(56, 33);
             kryptonButton1.StateCommon.Back.Color1 = Color.White;
@@ -84,6 +84,7 @@
             kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton1.TabIndex = 10;
             kryptonButton1.Values.Text = "";
+            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // DoItemEdit
             // 
@@ -94,15 +95,14 @@
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonCheckBox1);
             Name = "DoItemEdit";
-            Size = new Size(548, 38);
+            Size = new Size(798, 38);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        public Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        public Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
+        public Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

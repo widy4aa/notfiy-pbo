@@ -35,17 +35,6 @@
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            todoItem11 = new TodoItem();
-            todoItem12 = new TodoItem();
-            todoItem13 = new TodoItem();
-            todoItem14 = new TodoItem();
-            todoItem22 = new TodoItem();
-            todoItem21 = new TodoItem();
-            todoItem15 = new TodoItem();
-            todoItem16 = new TodoItem();
-            todoItem17 = new TodoItem();
-            todoItem18 = new TodoItem();
-            todoItem20 = new TodoItem();
             todoItem19 = new TodoItem();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
@@ -213,116 +202,17 @@
             // 
             flowLayoutPanel1.AllowDrop = true;
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(todoItem11);
-            flowLayoutPanel1.Controls.Add(todoItem12);
-            flowLayoutPanel1.Controls.Add(todoItem13);
-            flowLayoutPanel1.Controls.Add(todoItem14);
-            flowLayoutPanel1.Controls.Add(todoItem22);
-            flowLayoutPanel1.Controls.Add(todoItem21);
-            flowLayoutPanel1.Controls.Add(todoItem15);
-            flowLayoutPanel1.Controls.Add(todoItem16);
-            flowLayoutPanel1.Controls.Add(todoItem17);
-            flowLayoutPanel1.Controls.Add(todoItem18);
-            flowLayoutPanel1.Controls.Add(todoItem20);
             flowLayoutPanel1.Controls.Add(todoItem19);
             flowLayoutPanel1.Location = new Point(93, 221);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1251, 611);
             flowLayoutPanel1.TabIndex = 2;
-            // 
-            // todoItem11
-            // 
-            todoItem11.BackColor = Color.White;
-            todoItem11.Location = new Point(3, 3);
-            todoItem11.Name = "todoItem11";
-            todoItem11.Size = new Size(298, 266);
-            todoItem11.TabIndex = 0;
-            todoItem11.Load += todoItem11_Load;
-            // 
-            // todoItem12
-            // 
-            todoItem12.BackColor = Color.White;
-            todoItem12.Location = new Point(307, 3);
-            todoItem12.Name = "todoItem12";
-            todoItem12.Size = new Size(298, 266);
-            todoItem12.TabIndex = 1;
-            // 
-            // todoItem13
-            // 
-            todoItem13.BackColor = Color.White;
-            todoItem13.Location = new Point(611, 3);
-            todoItem13.Name = "todoItem13";
-            todoItem13.Size = new Size(298, 266);
-            todoItem13.TabIndex = 2;
-            // 
-            // todoItem14
-            // 
-            todoItem14.BackColor = Color.White;
-            todoItem14.Location = new Point(915, 3);
-            todoItem14.Name = "todoItem14";
-            todoItem14.Size = new Size(298, 266);
-            todoItem14.TabIndex = 3;
-            // 
-            // todoItem22
-            // 
-            todoItem22.BackColor = Color.White;
-            todoItem22.Location = new Point(3, 275);
-            todoItem22.Name = "todoItem22";
-            todoItem22.Size = new Size(298, 266);
-            todoItem22.TabIndex = 11;
-            // 
-            // todoItem21
-            // 
-            todoItem21.BackColor = Color.White;
-            todoItem21.Location = new Point(307, 275);
-            todoItem21.Name = "todoItem21";
-            todoItem21.Size = new Size(298, 266);
-            todoItem21.TabIndex = 10;
-            // 
-            // todoItem15
-            // 
-            todoItem15.BackColor = Color.White;
-            todoItem15.Location = new Point(611, 275);
-            todoItem15.Name = "todoItem15";
-            todoItem15.Size = new Size(298, 266);
-            todoItem15.TabIndex = 4;
-            // 
-            // todoItem16
-            // 
-            todoItem16.BackColor = Color.White;
-            todoItem16.Location = new Point(915, 275);
-            todoItem16.Name = "todoItem16";
-            todoItem16.Size = new Size(298, 266);
-            todoItem16.TabIndex = 5;
-            // 
-            // todoItem17
-            // 
-            todoItem17.BackColor = Color.White;
-            todoItem17.Location = new Point(3, 547);
-            todoItem17.Name = "todoItem17";
-            todoItem17.Size = new Size(298, 266);
-            todoItem17.TabIndex = 6;
-            // 
-            // todoItem18
-            // 
-            todoItem18.BackColor = Color.White;
-            todoItem18.Location = new Point(307, 547);
-            todoItem18.Name = "todoItem18";
-            todoItem18.Size = new Size(298, 266);
-            todoItem18.TabIndex = 7;
-            // 
-            // todoItem20
-            // 
-            todoItem20.BackColor = Color.White;
-            todoItem20.Location = new Point(611, 547);
-            todoItem20.Name = "todoItem20";
-            todoItem20.Size = new Size(298, 266);
-            todoItem20.TabIndex = 9;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // todoItem19
             // 
             todoItem19.BackColor = Color.White;
-            todoItem19.Location = new Point(915, 547);
+            todoItem19.Location = new Point(3, 3);
             todoItem19.Name = "todoItem19";
             todoItem19.Size = new Size(298, 266);
             todoItem19.TabIndex = 8;
@@ -439,17 +329,6 @@
         private TodoItem todoItem10;
         public FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
-        private TodoItem todoItem11;
-        private TodoItem todoItem12;
-        private TodoItem todoItem13;
-        private TodoItem todoItem14;
-        private TodoItem todoItem22;
-        private TodoItem todoItem21;
-        private TodoItem todoItem15;
-        private TodoItem todoItem16;
-        private TodoItem todoItem17;
-        private TodoItem todoItem18;
-        private TodoItem todoItem20;
         private TodoItem todoItem19;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
     }

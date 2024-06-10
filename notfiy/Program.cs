@@ -41,6 +41,11 @@ namespace notfiy
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
             //mainForm.Controls.Add(new TodolistControl());
+<<<<<<< HEAD
+            //mainForm.Controls.Add(new HomepageControl());
+            //mainForm.Controls.Add(new HomepageControl());
+=======
+>>>>>>> dc01e76ac3f954bca732f40314f7f43b1b4cbec6
             mainForm.Controls.Add(new LoginControl());
 
 

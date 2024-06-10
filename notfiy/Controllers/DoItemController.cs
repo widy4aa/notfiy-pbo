@@ -1,5 +1,6 @@
 using notfiy.Entities;
 using notfiy.Models;
+using notfiy.Views.AddToDoList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace notfiy.Controllers
 {
-    class DoItemController
+    class DoItemController : DoItemEdit
     {
         private DoItemModel doItemModel;
 
@@ -49,6 +50,16 @@ namespace notfiy.Controllers
         public bool DoItemCheck(int idTodoList, bool Checked)
         {
             return doItemModel.DoItemCheck(idTodoList, Checked);
+        }
+
+        //public string TextBoxvalue()
+        //{
+        //    return TextBoxValue(kryptonTextBox1.Text);
+        //}
+
+        public bool CheckBoxvalue()
+        {
+            return CheckBoxValue;
         }
     }
 }

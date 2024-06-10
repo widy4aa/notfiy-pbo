@@ -24,13 +24,23 @@ namespace notfiy.Models
                     TimeCreated = (DateTime)reader["time_created"],
                     IdUser = (int) reader["id_user"],
                     IdStatus = (int) reader["id_status"],
-                    Pinned = (int) reader["pinned"]
+                    Pinned = (bool) reader["pinned"]
                 };
 
                 todoLists.Add(todoList);
             }
 
             return todoLists;
+        }
+
+        public int GetIdNewTodoList(int Iduser)
+        {
+            Connection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("select max(id_user) from todolists WHERE id_user = @idUser", Connection);
+            npgsqlCommand.Parameters.AddWithValue("@idUser", Iduser);
+            object ?result = npgsqlCommand.ExecuteScalar();
+            Connection.Close();
+            return result != null ? Convert.ToInt32(result) : 1;
         }
 
         public int CreateTodoList(TodoList todoList)
@@ -142,7 +152,7 @@ namespace notfiy.Models
                                 TimeCreated = (DateTime)reader["time_created"],
                                 IdUser = (int)reader["id_user"],
                                 IdStatus = (int)reader["id_status"],
-                                Pinned = (int)reader["pinned"]
+                                Pinned = (bool)reader["pinned"]
                             };
                         }
                         else
