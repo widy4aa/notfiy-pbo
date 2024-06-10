@@ -92,7 +92,7 @@ namespace notfiy.Views.Homepage
 
             MessageBoxHelper.ShowInfoMessageBox("Gambar Berhasil diupload");
 
-            SetImageUrl.Invoke(imageUrl, ImageFilePath);
+            SetImageUrl.Invoke(ImageFilePath, imageUrl);
             CloseUploadImageSubControl.Invoke();
         }
 
