@@ -32,7 +32,7 @@ namespace notfiy.Views.Trash
 
         private void SetNoteItems()
         {
-            List<Note> notes = NoteController.GetAllNote();
+            List<Note> notes = NoteController.GetAllNote(2);
 
             foreach (Note note in notes)
             {
