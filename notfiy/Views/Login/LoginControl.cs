@@ -23,16 +23,32 @@ namespace notfiy.Views.Login
     {
         private UserController UserController;
         private MessageBoxHelper MessageBoxHelper;
+        private System.Windows.Forms.Timer timer;
         public LoginControl()
         {
             InitializeComponent();
             UserController = new UserController();
             MessageBoxHelper = new MessageBoxHelper();
         }
-
         private void LoginControl_Load(object sender, EventArgs e)
         {
             this.Width = this.ClientSize.Width;
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 2000;
+            timer.Tick += Timer_Tick;
+            EventHandler eventHandler = ControlLoaded;
+            this.Load += eventHandler;
+        }
+        
+        private void ControlLoaded(object sender, EventArgs e)
+        {
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            timer.Stop();
+            //pictureBox1.Hide();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -47,11 +63,15 @@ namespace notfiy.Views.Login
                 if (UsernameTextbox.Text == "Username" || kryptonTextBox1.Text == "Password" || string.IsNullOrWhiteSpace(kryptonTextBox1.Text) || string.IsNullOrWhiteSpace(UsernameTextbox.Text))
                 {
                     MessageBoxHelper.ShowInfoMessageBox("Mohon lengkapi data terlebih dahulu!");
+                    UsernameTextbox.Text = "Username";
+                    kryptonTextBox1.Text = "Password";
+                    kryptonTextBox1.PasswordChar = '\0';
                 }
                 else
                 {
                     MessageBoxHelper.ShowCustomMessageBox("Username atau Password Salah", "Login Gagal!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    kryptonTextBox1.Text = "";
+                    kryptonTextBox1.Text = "Password";
+                    kryptonTextBox1.PasswordChar = '\0';
                 }
             }
         }
@@ -77,7 +97,7 @@ namespace notfiy.Views.Login
             if (kryptonTextBox1.Text == "Password")
             {
                 kryptonTextBox1.Text = "";
-                kryptonTextBox1.PasswordChar = '*';
+                kryptonTextBox1.PasswordChar = '●';
             }
         }
         private void kryptonTextBox1_Leave(object sender, EventArgs e)

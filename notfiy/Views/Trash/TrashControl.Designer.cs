@@ -93,6 +93,7 @@
             HamburgerButton.StateTracking.Border.Width = -5;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 

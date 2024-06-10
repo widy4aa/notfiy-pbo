@@ -34,13 +34,14 @@
             NoteName = new Krypton.Toolkit.KryptonLabel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             NoteTextBox = new Krypton.Toolkit.KryptonRichTextBox();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonListBox1
             // 
-            kryptonListBox1.Location = new Point(13, 31);
+            kryptonListBox1.Location = new Point(14, 45);
             kryptonListBox1.Name = "kryptonListBox1";
             kryptonListBox1.Size = new Size(272, 205);
             kryptonListBox1.StateCommon.Back.Color1 = Color.White;
@@ -78,7 +79,7 @@
             flowLayoutPanel1.Controls.Add(kryptonPictureBox1);
             flowLayoutPanel1.Controls.Add(NoteName);
             flowLayoutPanel1.Controls.Add(NoteTextBox);
-            flowLayoutPanel1.Location = new Point(28, 45);
+            flowLayoutPanel1.Location = new Point(27, 60);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(246, 176);
             flowLayoutPanel1.TabIndex = 16;
@@ -97,11 +98,24 @@
             NoteTextBox.TabIndex = 13;
             NoteTextBox.Text = resources.GetString("NoteTextBox.Text");
             // 
+            // kryptonButton1
+            // 
+            kryptonButton1.Location = new Point(242, 13);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.Size = new Size(31, 26);
+            kryptonButton1.StateCommon.Back.Color1 = Color.White;
+            kryptonButton1.StateCommon.Back.Color2 = Color.White;
+            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
+            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            kryptonButton1.TabIndex = 17;
+            kryptonButton1.Values.Text = "";
+            // 
             // TrashNoteItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonListBox1);
             Name = "TrashNoteItem";
@@ -119,5 +133,6 @@
         public Krypton.Toolkit.KryptonLabel NoteName;
         private FlowLayoutPanel flowLayoutPanel1;
         private Krypton.Toolkit.KryptonRichTextBox NoteTextBox;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
