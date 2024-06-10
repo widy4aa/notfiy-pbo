@@ -19,7 +19,7 @@ using notfiy.Views.AddToDoList;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
-    public partial class AddNoteHomepage : UserControl
+    public partial class AddNoteHomepageControl : UserControl
     {
         // jika melakukan mode edit
         Note? Note;
@@ -28,7 +28,7 @@ namespace notfiy.Views.NoteHomepagePartial
         int? IdLabel;
         string ImageUrl;
         HomepageAddImage HomePageAddImage;
-        public AddNoteHomepage(int? idLabel = null, Note? note = null)
+        public AddNoteHomepageControl(int? idLabel = null, Note? note = null)
         {
             IdLabel = idLabel;
             Note = note;

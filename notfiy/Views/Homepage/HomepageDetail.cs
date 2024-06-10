@@ -45,7 +45,7 @@ namespace notfiy.Views.Homepage
                 this.NoteContentTextBox.Text = Note.Content;
                 if (Note.ImageUrl == null || Note.ImageUrl.Length < 1)
                 {
-
+                    
                     return;
                 }
 
@@ -89,7 +89,7 @@ namespace notfiy.Views.Homepage
 
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
-            Core.ViewManager.MoveView(new AddNoteHomepage(Note.IdLabel, Note));
+            Core.ViewManager.MoveView(new AddNoteHomepageControl(Note.IdLabel, Note));
         }
 
         private void ButtonTrash_Click(object sender, EventArgs e)
@@ -126,15 +126,6 @@ namespace notfiy.Views.Homepage
         private void NoteContentTextBox_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void HamburgerButton_Click(object sender, EventArgs e)
-        {
-            Navbar navbar = new Navbar();
-            this.Controls.Add(navbar);
-            navbar.BringToFront();
-            navbar.BackColor = Color.Transparent;
-            navbar.Location = new Point(1000, 0);
         }
     }
 }

@@ -201,7 +201,6 @@
             NoteContentTextBox.Size = new Size(812, 334);
             NoteContentTextBox.TabIndex = 1;
             NoteContentTextBox.Text = "";
-            NoteContentTextBox.TextChanged += NoteContentTextBox_TextChanged;
             // 
             // kryptonLabel3
             // 

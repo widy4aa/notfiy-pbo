@@ -21,6 +21,22 @@ namespace notfiy.Controllers
             return NoteModel.GetAllNote(SystemSingleton.Instance.UserLoggedIn.IdUser, (int) Helpers.Status.Default);
         }
 
+        public List<Note> GetAllNoteFromLabel(int idLabel)
+        {
+            return NoteModel.GetAllNoteFromLabel(SystemSingleton.Instance.UserLoggedIn.IdUser, idLabel);
+        }
+
+        public List<Note> GetAllNote(int idStatus)
+        {
+            return NoteModel.GetAllNote(SystemSingleton.Instance.UserLoggedIn.IdUser, idStatus);
+        }
+
+        public List<Note> SearchNotes(int idStatus, string querySearchNoteName)
+        {
+            return NoteModel.SearchNotes(SystemSingleton.Instance.UserLoggedIn.IdUser, idStatus, querySearchNoteName);
+        }
+
+
         public int CreateNote(string noteName, string content, string? imageUrl, int? idLabel, int idStatus)
         {
 

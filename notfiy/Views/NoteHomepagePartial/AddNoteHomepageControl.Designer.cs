@@ -2,7 +2,7 @@
 
 namespace notfiy.Views.NoteHomepagePartial
 {
-    partial class AddNoteHomepage
+    partial class AddNoteHomepageControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace notfiy.Views.NoteHomepagePartial
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNoteHomepage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNoteHomepageControl));
             kryptonCheckedListBox1 = new KryptonCheckedListBox();
             kryptonPanel1 = new KryptonPanel();
             HamburgerButton = new KryptonButton();
