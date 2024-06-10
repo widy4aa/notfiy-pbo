@@ -41,7 +41,7 @@ namespace notfiy.Views.Homepage
                     return;
                 }
 
-                string? imageFileLocation = ImageController.GetImage(Note.IdNote, Note.ImageUrl);
+                string? imageFileLocation = ImageController.ProcessImage(Note.IdNote, Note.ImageUrl);
                 if (imageFileLocation != null)
                 {
                     NotePictureBox.ImageLocation = imageFileLocation;

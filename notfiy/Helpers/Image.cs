@@ -32,7 +32,7 @@ namespace notfiy.Helpers
             FileInfo fileInfo = new FileInfo(filePath);
 
             // Check if file size is less than or equal to 64KB (64 * 1024 bytes)
-            if (fileInfo.Length > 65 * 1024)
+            if (fileInfo.Length > 64 * 1024)
             {
                 MessageBoxHelper.ShowErrorMessageBox("Batas File Gambar melebihi 64KB.");
                 return null;
@@ -44,13 +44,13 @@ namespace notfiy.Helpers
                 // Baca file gambar
                 byte[] imageBytes = File.ReadAllBytes(filePath);
                 var imageContent = new ByteArrayContent(imageBytes);
-                imageContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/" + Path.GetExtension(filePath));
+                string fileName = Path.GetFileName(filePath);
+                imageContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/" + Path.GetExtension(fileName).TrimStart('.'));
 
 
                 // Tambahkan konten gambar ke form data
-                string fileName = Path.GetFileName(filePath);
-                imageContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
 
+                formData.Add(imageContent, "source", fileName);
 
                 // Kirim permintaan POST
                 HttpResponseMessage response = client.PostAsync(apiUrl, formData).Result;
@@ -61,7 +61,12 @@ namespace notfiy.Helpers
                 {
                     string responseContent = response.Content.ReadAsStringAsync().Result;
                     dynamic responseData = JsonConvert.DeserializeObject(responseContent);
-                    string uploadedImageUrl = responseData["image-link"];
+                    string jsonString = JsonConvert.SerializeObject(responseData, Formatting.Indented);
+
+                    // Write the JSON string to a file
+                    File.WriteAllText("result.json", jsonString);
+                    string uploadedImageUrl = responseData["image-url"] != null ? responseData["image-url"].ToString() : null;
+
                     return uploadedImageUrl;
                 }
                 else

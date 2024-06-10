@@ -81,7 +81,7 @@ namespace notfiy.Views.Homepage
             };
 
             connectionForm.Show();
-            string? imageUrl = ImageController.ProcessImage(ImageFilePath);
+            string? imageUrl = ImageController.UploadImage(ImageFilePath);
             connectionForm.Close();
             connectionForm.Dispose();
             if (imageUrl == null)
@@ -90,7 +90,10 @@ namespace notfiy.Views.Homepage
                 return;
             }
 
+            MessageBoxHelper.ShowInfoMessageBox("Gambar Berhasil diupload");
+
             SetImageUrl.Invoke(imageUrl, ImageFilePath);
+            CloseUploadImageSubControl.Invoke();
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)

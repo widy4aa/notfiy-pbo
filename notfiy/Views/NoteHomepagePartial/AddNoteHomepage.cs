@@ -46,7 +46,7 @@ namespace notfiy.Views.NoteHomepagePartial
                     return;
                 }
 
-                string? imageFileLocation = ImageController.GetImage(Note.IdNote, Note.ImageUrl);
+                string? imageFileLocation = ImageController.ProcessImage(Note.IdNote, Note.ImageUrl);
                 if (imageFileLocation != null)
                 {
                     NotePictureBox.ImageLocation = imageFileLocation;
@@ -95,20 +95,21 @@ namespace notfiy.Views.NoteHomepagePartial
 
         private void PerformCreate()
         {
-            int IdNewNote = NoteController.CreateNote(NoteName.Text,
+            int idNewNote = NoteController.CreateNote(NoteName.Text,
                 NoteContentTextBox.Text,
                 this.ImageUrl,
-                IdLabel ?? 0,
+                IdLabel,
                 (int)StatusEnum.Default);
-            if (IdNewNote > 0)
+            if (idNewNote > 0)
             {
                 MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Dibuat");
+                Core.ViewManager.MoveView(new HomepageDetail(NoteController.GetNote(idNewNote)));
             }
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            if (Note != null)
+            if (Note == null)
             {
                 PerformCreate();
             }

@@ -54,10 +54,11 @@ CREATE TABLE notes (
     CONSTRAINT fk_user FOREIGN KEY (id_user) REFERENCES users (id_user)
         ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT fk_label FOREIGN KEY (id_label) REFERENCES labels (id_label)
-        ON DELETE SET NULL ON UPDATE CASCADE,
+        ON DELETE SET NULL ON UPDATE CASCADE, -- Allow NULL values for id_label
     CONSTRAINT fk_note_status FOREIGN KEY (id_status) REFERENCES statuses (id_status)
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
 
 CREATE TABLE todolists (
     id_todolist serial PRIMARY KEY,

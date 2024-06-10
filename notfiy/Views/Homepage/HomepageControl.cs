@@ -23,19 +23,12 @@ namespace notfiy.Views.Homepage
     {
         NoteController NoteController = new NoteController();
         List<HomepageItem> HomepageItems = new List<HomepageItem>();
-        int IdLabel;
+        int? IdLabel;
         FlowLayoutPanel FlowLayoutPanel;
 
         public HomepageControl(int? idLabel = null)
         {
-            if (idLabel == null)
-            {
-                IdLabel = (int)StatusHelper.Default;
-            }
-            else
-            {
-                IdLabel = idLabel.Value;
-            }
+            IdLabel = idLabel;
             InitializeComponent();
 
         }
