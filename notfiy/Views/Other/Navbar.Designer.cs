@@ -64,7 +64,7 @@
             // 
             kryptonPictureBox1.BackgroundImageLayout = ImageLayout.Center;
             kryptonPictureBox1.Image = (Image)resources.GetObject("kryptonPictureBox1.Image");
-            kryptonPictureBox1.Location = new Point(84, 67);
+            kryptonPictureBox1.Location = new Point(47, 67);
             kryptonPictureBox1.Name = "kryptonPictureBox1";
             kryptonPictureBox1.Size = new Size(88, 100);
             kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -184,9 +184,9 @@
             label1.BackColor = Color.FromArgb(46, 26, 96);
             label1.Font = new Font("Segoe UI Semibold", 35F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(178, 81);
+            label1.Location = new Point(141, 81);
             label1.Name = "label1";
-            label1.Size = new Size(151, 76);
+            label1.Size = new Size(267, 76);
             label1.TabIndex = 3;
             label1.Click += label1_Click;
             // 
