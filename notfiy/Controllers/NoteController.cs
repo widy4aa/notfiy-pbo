@@ -21,7 +21,7 @@ namespace notfiy.Controllers
             return NoteModel.GetAllNote(SystemSingleton.Instance.UserLoggedIn.IdUser, (int) Helpers.Status.Default);
         }
 
-        public List<Note> GetAllNoteFromLabel(int idLabel)
+        public List<Note> GetAllNoteFromLabel(int idLabel) 
         {
             return NoteModel.GetAllNoteFromLabel(SystemSingleton.Instance.UserLoggedIn.IdUser, idLabel);
         }

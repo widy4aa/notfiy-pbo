@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Navbar));
             kryptonCheckedListBox1 = new Krypton.Toolkit.KryptonCheckedListBox();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            labelItem1 = new LabelItem();
+            FlowLayoutPanelLabels = new FlowLayoutPanel();
+            labelItem = new LabelItem();
             labelItem2 = new LabelItem();
             labelItem3 = new LabelItem();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
@@ -43,7 +43,7 @@
             kryptonButton6 = new Krypton.Toolkit.KryptonButton();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
+            FlowLayoutPanelLabels.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonCheckedListBox1
@@ -72,27 +72,27 @@
             kryptonPictureBox1.TabStop = false;
             kryptonPictureBox1.Click += kryptonPictureBox1_Click;
             // 
-            // flowLayoutPanel1
+            // FlowLayoutPanelLabels
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.BackColor = Color.FromArgb(46, 26, 96);
-            flowLayoutPanel1.Controls.Add(labelItem1);
-            flowLayoutPanel1.Controls.Add(labelItem2);
-            flowLayoutPanel1.Controls.Add(labelItem3);
-            flowLayoutPanel1.Location = new Point(84, 373);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(374, 138);
-            flowLayoutPanel1.TabIndex = 2;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            FlowLayoutPanelLabels.AutoScroll = true;
+            FlowLayoutPanelLabels.BackColor = Color.FromArgb(46, 26, 96);
+            FlowLayoutPanelLabels.Controls.Add(labelItem);
+            FlowLayoutPanelLabels.Controls.Add(labelItem2);
+            FlowLayoutPanelLabels.Controls.Add(labelItem3);
+            FlowLayoutPanelLabels.Location = new Point(84, 373);
+            FlowLayoutPanelLabels.Name = "FlowLayoutPanelLabels";
+            FlowLayoutPanelLabels.Size = new Size(374, 138);
+            FlowLayoutPanelLabels.TabIndex = 2;
+            FlowLayoutPanelLabels.Paint += flowLayoutPanel1_Paint;
             // 
-            // labelItem1
+            // labelItem
             // 
-            labelItem1.BackColor = Color.FromArgb(46, 26, 96);
-            labelItem1.Location = new Point(3, 3);
-            labelItem1.Name = "labelItem1";
-            labelItem1.Size = new Size(321, 58);
-            labelItem1.TabIndex = 0;
-            labelItem1.Load += labelItem1_Load;
+            labelItem.BackColor = Color.FromArgb(46, 26, 96);
+            labelItem.Location = new Point(3, 3);
+            labelItem.Name = "labelItem";
+            labelItem.Size = new Size(321, 58);
+            labelItem.TabIndex = 0;
+            labelItem.Load += labelItem1_Load;
             // 
             // labelItem2
             // 
@@ -237,14 +237,14 @@
             Controls.Add(kryptonButton3);
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton1);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(FlowLayoutPanelLabels);
             Controls.Add(kryptonPictureBox1);
             Controls.Add(kryptonCheckedListBox1);
             Name = "Navbar";
             Size = new Size(430, 1024);
             Load += Navbar_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
+            FlowLayoutPanelLabels.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -252,12 +252,12 @@
 
         private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox1;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel FlowLayoutPanelLabels;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton kryptonButton5;
-        private LabelItem labelItem1;
+        private LabelItem labelItem;
         private LabelItem labelItem2;
         private LabelItem labelItem3;
         private Label label1;

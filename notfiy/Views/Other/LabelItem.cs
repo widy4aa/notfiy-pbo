@@ -1,4 +1,6 @@
 ﻿using Krypton.Toolkit;
+using notfiy.Entities;
+using notfiy.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,27 +10,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LabelEntity = notfiy.Entities.Label;
 
 namespace notfiy.Views.Other
 {
     public partial class LabelItem : UserControl
     {
+        LabelEntity Label;
         public LabelItem()
         {
             InitializeComponent();
-            kryptonTextBox1.Text = kryptonButton7.Text;
-            kryptonTextBox1.Hide();
+            LabelTextBox.Text = LabelChooseButton.Text;
+            LabelTextBox.Hide();
 
 
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            kryptonButton7.Hide();
-            kryptonButton2.Hide();
-            kryptonButton1.Hide();
+            LabelChooseButton.Hide();
+            ButtonLabelDelete.Hide();
+            ButtonLabelEdit.Hide();
 
-            kryptonTextBox1.Show();
+            LabelTextBox.Show();
 
 
         }
@@ -38,8 +42,14 @@ namespace notfiy.Views.Other
 
         }
 
-        private void kryptonButton2_Click(object sender, EventArgs e)
+        private void ButtonLabelEdit_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ButtonLabelDelete_Click(object sender, EventArgs e)
+        {
+            bool keputusan = MessageBoxHelper.ShowCustomMessageBoxYesOrNo("Apakah anda yakin menghapus label?", "Hapus Label", "Ya", "Tidak", MessageBoxIcon.Warning);
 
         }
 
@@ -52,12 +62,12 @@ namespace notfiy.Views.Other
         {
             if (e.KeyCode == Keys.Enter)
             {
-                kryptonButton7.Text = kryptonTextBox1.Text;
-                kryptonTextBox1.Hide();
+                LabelChooseButton.Text = LabelTextBox.Text;
+                LabelTextBox.Hide();
 
-                kryptonButton7.Show();
-                kryptonButton2.Show();
-                kryptonButton1.Show();
+                LabelChooseButton.Show();
+                ButtonLabelDelete.Show();
+                ButtonLabelEdit.Show();
 
 
             }

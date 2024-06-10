@@ -243,8 +243,8 @@
             ButtonTrash.StateNormal.Content.ShortText.Color2 = Color.Black;
             ButtonTrash.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonTrash.TabIndex = 43;
-            ButtonTrash.Values.Text = "Hapus";
-            ButtonTrash.Click += kryptonButton1_Click;
+            ButtonTrash.Values.Text = "Trash";
+            ButtonTrash.Click += ButtonTrash_Click;
             // 
             // ButtonEdit
             // 

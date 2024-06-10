@@ -108,11 +108,6 @@ namespace notfiy.Views.Homepage
 
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnEdit_Click(object sender, EventArgs e)
         {
 
@@ -126,6 +121,15 @@ namespace notfiy.Views.Homepage
         private void NoteContentTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            Navbar navbar = new Navbar();
+            this.Controls.Add(navbar);
+            navbar.BringToFront();
+            navbar.BackColor = Color.Transparent;
+            navbar.Location = new Point(1000, 0);
         }
     }
 }

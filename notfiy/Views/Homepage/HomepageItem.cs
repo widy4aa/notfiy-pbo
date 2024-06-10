@@ -1,4 +1,5 @@
-﻿using notfiy.Entities;
+﻿using notfiy.Controllers;
+using notfiy.Entities;
 using notfiy.Helpers;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace notfiy.Views.Homepage
     public partial class HomepageItem : UserControl
     {
         private Note Note;
+        private NoteController NoteController = new NoteController();
         public int IdNote
         {
             get
@@ -54,6 +56,7 @@ namespace notfiy.Views.Homepage
                 kryptonButton3.Show();
                 kryptonButton2.Hide();
             }
+            NoteController.UpdateNotePin(IdNote, IsPinned);
         }
 
         private void ClickItem(object sender, EventArgs e)

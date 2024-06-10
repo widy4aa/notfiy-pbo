@@ -123,6 +123,11 @@ namespace notfiy.Views.NoteHomepagePartial
             {
                 MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Dibuat");
                 Core.ViewManager.MoveView(new HomepageControl());
+            } 
+            else
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Gagal Dibuat");
+
             }
         }
 
