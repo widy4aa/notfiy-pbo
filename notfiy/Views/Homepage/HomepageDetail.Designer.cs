@@ -36,7 +36,6 @@
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
             kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
-            NoteName = new Krypton.Toolkit.KryptonLabel();
             BtnBack = new Krypton.Toolkit.KryptonButton();
             BtnEdit = new Krypton.Toolkit.KryptonButton();
             BtnDelete = new Krypton.Toolkit.KryptonButton();
@@ -44,6 +43,7 @@
             NotePictureBox = new Krypton.Toolkit.KryptonPictureBox();
             NoteContentTextBox = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            NoteName = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -228,17 +228,6 @@
             kryptonBorderEdge1.Text = "kryptonBorderEdge1";
             kryptonBorderEdge1.Paint += kryptonBorderEdge1_Paint;
             // 
-            // NoteName
-            // 
-            NoteName.Location = new Point(398, 234);
-            NoteName.Name = "NoteName";
-            NoteName.Size = new Size(175, 43);
-            NoteName.StateNormal.ShortText.Color1 = Color.Black;
-            NoteName.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NoteName.TabIndex = 23;
-            NoteName.Values.Text = "Judul Note";
-            NoteName.Click += kryptonLabel2_Click;
-            // 
             // BtnBack
             // 
             BtnBack.Location = new Point(1094, 757);
@@ -256,6 +245,7 @@
             BtnBack.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnBack.TabIndex = 26;
             BtnBack.Values.Text = "Back";
+            BtnBack.Click += BtnBack_Click;
             // 
             // BtnEdit
             // 
@@ -273,6 +263,7 @@
             BtnEdit.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnEdit.TabIndex = 27;
             BtnEdit.Values.Text = "Edit";
+            BtnEdit.Click += BtnEdit_Click;
             // 
             // BtnDelete
             // 
@@ -316,6 +307,7 @@
             // 
             NoteContentTextBox.Location = new Point(3, 59);
             NoteContentTextBox.Name = "NoteContentTextBox";
+            NoteContentTextBox.ReadOnly = true;
             NoteContentTextBox.Size = new Size(812, 334);
             NoteContentTextBox.TabIndex = 1;
             NoteContentTextBox.Text = "kryptonRichTextBox1";
@@ -330,17 +322,30 @@
             kryptonLabel3.TabIndex = 36;
             kryptonLabel3.Values.Text = "Detail Note";
             // 
+            // NoteName
+            // 
+            NoteName.Location = new Point(398, 237);
+            NoteName.Name = "NoteName";
+            NoteName.ReadOnly = true;
+            NoteName.Size = new Size(827, 38);
+            NoteName.StateActive.Border.Color1 = Color.White;
+            NoteName.StateActive.Border.Color2 = Color.White;
+            NoteName.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            NoteName.StateActive.Content.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NoteName.TabIndex = 38;
+            NoteName.Text = "Judul";
+            // 
             // HomepageDetail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(NoteName);
             Controls.Add(kryptonLabel3);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(BtnDelete);
             Controls.Add(BtnEdit);
             Controls.Add(BtnBack);
-            Controls.Add(NoteName);
             Controls.Add(kryptonBorderEdge1);
             Controls.Add(kryptonPanel1);
             Controls.Add(kryptonListBox1);
@@ -366,7 +371,6 @@
         private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
-        private Krypton.Toolkit.KryptonLabel NoteName;
         private Krypton.Toolkit.KryptonButton BtnBack;
         private Krypton.Toolkit.KryptonButton BtnEdit;
         private Krypton.Toolkit.KryptonButton BtnDelete;
@@ -374,5 +378,6 @@
         private Krypton.Toolkit.KryptonPictureBox NotePictureBox;
         private Krypton.Toolkit.KryptonRichTextBox NoteContentTextBox;
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonTextBox NoteName;
     }
 }

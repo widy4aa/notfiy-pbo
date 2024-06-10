@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using notfiy.Controllers;
+using Krypton.Toolkit;
 
 namespace notfiy.Views.Homepage
 {
@@ -73,5 +74,26 @@ namespace notfiy.Views.Homepage
 
         }
 
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            if (BtnEdit.Text == "Save")
+            {
+                BtnEdit.Text = "Edit";
+                NoteName.ReadOnly = true;
+                NoteContentTextBox.ReadOnly = true;
+            }
+            else if (BtnEdit.Text == "Edit")
+            {
+                BtnEdit.Text = "Save";
+                NoteName.ReadOnly = false;
+                NoteContentTextBox.ReadOnly = false;
+            }
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            HomepageControl homepagecontrol = new HomepageControl();
+            Core.ViewManager.MoveView(homepagecontrol);
+        }
     }
 }
