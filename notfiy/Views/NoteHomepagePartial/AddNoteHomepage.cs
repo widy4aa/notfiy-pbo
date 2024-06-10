@@ -15,6 +15,7 @@ using System.Reflection.Metadata;
 using StatusEnum = notfiy.Helpers.Status;
 using notfiy.Helpers;
 using notfiy.Views.Other;
+using notfiy.Views.AddToDoList;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
@@ -144,6 +145,11 @@ namespace notfiy.Views.NoteHomepagePartial
         private void AddNoteHomepage_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.AutoScroll = true;
+        }
+
+        private void kryptonLabel3_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new AddToDoListControl());
         }
     }
 }

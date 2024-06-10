@@ -13,11 +13,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using notfiy.Views.Todolist;
+using notfiy.Views.NoteHomepagePartial;
 using Npgsql;
 
 namespace notfiy.Views.AddToDoList
 {
-    public partial class AddToDoList : UserControl
+    public partial class AddToDoListControl : UserControl
     {
         private TodoListController TodoListController;
         private TodoListModel TodoListModel;
@@ -25,7 +26,7 @@ namespace notfiy.Views.AddToDoList
         private MessageBoxHelper MessageBoxHelper;
         private DoItemEdit DoItemEdit;
 
-        public AddToDoList()
+        public AddToDoListControl()
         {
             InitializeComponent();
             TodoListController = new TodoListController();
@@ -89,7 +90,7 @@ namespace notfiy.Views.AddToDoList
                 }
                 MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 TodolistControl todolistControl = new TodolistControl();
-                
+
 
 
                 //if (DoItemController.CreateDoItem(text, checkbox, idtodolist) > 0)
@@ -119,6 +120,11 @@ namespace notfiy.Views.AddToDoList
             //    }
             //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
             //}
+        }
+
+        private void kryptonLabel2_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new AddNoteHomepage());
         }
     }
 }

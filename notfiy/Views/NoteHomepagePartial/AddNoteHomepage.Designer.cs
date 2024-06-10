@@ -245,6 +245,7 @@ namespace notfiy.Views.NoteHomepagePartial
             kryptonLabel3.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonLabel3.TabIndex = 32;
             kryptonLabel3.Values.Text = "To do list";
+            kryptonLabel3.Click += kryptonLabel3_Click;
             // 
             // kryptonBorderEdge2
             // 
