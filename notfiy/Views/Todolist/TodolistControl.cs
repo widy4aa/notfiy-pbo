@@ -1,4 +1,6 @@
 ﻿using notfiy.Views.Other;
+using notfiy.Controllers;
+using notfiy.Entities;
 using notfiy.Views.AddToDoList;
 using System;
 using System.Collections.Generic;
@@ -10,12 +12,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NotifyViewManager = notfiy.Core.ViewManager;
+using notfiy.Views.Homepage;
 
 
 namespace notfiy.Views.Todolist
 {
+
     public partial class TodolistControl : UserControl
     {
+        private TodoListController TodoListController;
+        List<Tuple<int, TodoItem>> TodolistItem = new List<Tuple<int, TodoItem>>();
+
         public TodolistControl()
         {
             InitializeComponent();
@@ -24,7 +31,6 @@ namespace notfiy.Views.Todolist
         {
             TodoDetail detail = new TodoDetail();
             NotifyViewManager.MoveView(detail);
-
         }
         private void TodolistControl_Load(object sender, EventArgs e)
         {
@@ -51,9 +57,15 @@ namespace notfiy.Views.Todolist
             NotifyViewManager.MoveView(addtodolist);
         }
 
-        private void todoItem11_Load(object sender, EventArgs e)
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void setTodolistItem()
+        {
+            //List<string> todoList = new List<string>();
+            //TodolistItem = TodoListController.GetAllTodoList();
         }
     }
 }
