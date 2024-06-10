@@ -69,7 +69,7 @@ namespace notfiy.Views.Register
             if (kryptonTextBox2.Text == "Confirm Password")
             {
                 kryptonTextBox2.Text = "";
-                kryptonTextBox2.PasswordChar = '*';
+                kryptonTextBox2.PasswordChar = '●';
             }
         }
         private void kryptonTextBox2_Leave(object sender, EventArgs e)
@@ -142,7 +142,7 @@ namespace notfiy.Views.Register
                 return;
             }
 
-            if (kryptonTextBox2.Text.Length <= 8)
+            if (kryptonTextBox2.Text.Length < 8)
             {
                 MessageBoxHelper.ShowWarningMessageBox("Password harus memiliki minimal panjang 8 karakter");
                 kryptonTextBox5.Text = "";
