@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageItem));
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            NoteName = new Krypton.Toolkit.KryptonLabel();
             NoteTextBox = new Krypton.Toolkit.KryptonWrapLabel();
+            NoteName = new Krypton.Toolkit.KryptonLabel();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -54,21 +53,6 @@
             kryptonButton2.TabIndex = 11;
             kryptonButton2.Values.Text = "";
             kryptonButton2.Click += kryptonButton2_Click;
-            // 
-            // kryptonButton1
-            // 
-            kryptonButton1.Location = new Point(246, 3);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(28, 34);
-            kryptonButton1.StateCommon.Back.Color1 = Color.White;
-            kryptonButton1.StateCommon.Back.Color2 = Color.White;
-            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
-            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StateCommon.Border.Color1 = Color.White;
-            kryptonButton1.StateCommon.Border.Color2 = Color.White;
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.TabIndex = 12;
-            kryptonButton1.Values.Text = "";
             // 
             // kryptonListBox1
             // 
@@ -93,17 +77,6 @@
             flowLayoutPanel1.Click += ClickItem;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
-            // NoteName
-            // 
-            NoteName.Location = new Point(28, 54);
-            NoteName.Name = "NoteName";
-            NoteName.Size = new Size(153, 26);
-            NoteName.StateNormal.ShortText.Color1 = Color.Black;
-            NoteName.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NoteName.TabIndex = 12;
-            NoteName.Values.Text = "Judul Pekerjaan";
-            NoteName.Click += ClickItem;
-            // 
             // NoteTextBox
             // 
             NoteTextBox.Font = new Font("Segoe UI", 9F);
@@ -115,6 +88,17 @@
             NoteTextBox.Size = new Size(110, 15);
             NoteTextBox.Text = "kryptonWrapLabel1";
             NoteTextBox.Click += NoteTextBox_Click;
+            // 
+            // NoteName
+            // 
+            NoteName.Location = new Point(28, 54);
+            NoteName.Name = "NoteName";
+            NoteName.Size = new Size(153, 26);
+            NoteName.StateNormal.ShortText.Color1 = Color.Black;
+            NoteName.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NoteName.TabIndex = 12;
+            NoteName.Values.Text = "Judul Pekerjaan";
+            NoteName.Click += ClickItem;
             // 
             // kryptonButton3
             // 
@@ -141,7 +125,6 @@
             Controls.Add(kryptonButton3);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonListBox1);
-            Controls.Add(kryptonButton1);
             Controls.Add(kryptonButton2);
             Name = "HomepageItem";
             Size = new Size(298, 266);
@@ -155,7 +138,6 @@
         #endregion
 
         private Krypton.Toolkit.KryptonButton kryptonButton2;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
         private FlowLayoutPanel flowLayoutPanel1;
         public Krypton.Toolkit.KryptonLabel NoteName;
