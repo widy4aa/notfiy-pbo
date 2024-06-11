@@ -4,7 +4,6 @@ using notfiy.Entities;
 using notfiy.Helpers;
 using notfiy.Views.Homepage;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using LabelEntity = notfiy.Entities.Label;
 
 namespace notfiy.Views.Other
@@ -20,15 +21,15 @@ namespace notfiy.Views.Other
     {
         LabelEntity Label;
         LabelController LabelController = new LabelController();
-        Action RefreshLabelList;
-        public LabelItem(LabelEntity label, Action refreshLabelList)
+        Action RefreshFlowLayoutPanelLabels;
+        public LabelItem(LabelEntity label, Action refreshFlowLayoutPanelLabels)
         {
             InitializeComponent();
             LabelChooseButton.Text = label.LabelName;
             LabelTextBox.Text = LabelChooseButton.Text;
             LabelTextBox.Hide();
             Label = label;
-            RefreshLabelList = refreshLabelList;
+            RefreshFlowLayoutPanelLabels = refreshFlowLayoutPanelLabels;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace notfiy.Views.Other
                 bool keputusan = MessageBoxHelper.ShowCustomMessageBoxYesOrNo("Apakah anda yakin mengedit label?", "Edit Label", "Ya", "Tidak", MessageBoxIcon.Warning);
                 if (keputusan)
                 {
-                    Label.LabelName = 
+                    Label.LabelName = LabelTextBox.Text;
                     if (LabelController.UpdateLabel(Label))
                     {
                         MessageBoxHelper.ShowInfoMessageBox("Label berhasil diubah!");
@@ -69,7 +70,7 @@ namespace notfiy.Views.Other
                         ButtonLabelEdit.Show();
 
                         LabelTextBox.Hide();
-                        RefreshLabelList.Invoke();
+                        RefreshFlowLayoutPanelLabels.Invoke();
                     } else
                     {
                         MessageBoxHelper.ShowErrorMessageBox("Label gagal diubah!");
@@ -86,7 +87,7 @@ namespace notfiy.Views.Other
                 if (LabelController.DeleteLabel(Label.IdLabel))
                 {
                     MessageBoxHelper.ShowInfoMessageBox("Label berhasil Di hapus!");
-                    RefreshLabelList.Invoke();
+                    RefreshFlowLayoutPanelLabels.Invoke();
 
                 }
                 else

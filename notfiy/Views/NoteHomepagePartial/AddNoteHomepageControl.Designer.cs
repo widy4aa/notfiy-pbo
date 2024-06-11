@@ -253,6 +253,9 @@ namespace notfiy.Views.NoteHomepagePartial
             NoteContentTextBox.Location = new Point(3, 133);
             NoteContentTextBox.Name = "NoteContentTextBox";
             NoteContentTextBox.Size = new Size(808, 212);
+            NoteContentTextBox.StateCommon.Border.Color1 = Color.White;
+            NoteContentTextBox.StateCommon.Border.Color2 = Color.White;
+            NoteContentTextBox.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             NoteContentTextBox.TabIndex = 1;
             NoteContentTextBox.Text = "";
             // 

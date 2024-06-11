@@ -1,3 +1,4 @@
+using notfiy.Core;
 using notfiy.Entities;
 using notfiy.Models;
 using notfiy.Views.AddToDoList;
@@ -12,11 +13,26 @@ namespace notfiy.Controllers
 {
     class DoItemController : DoItemEdit
     {
-        private DoItemModel doItemModel;
+        private DoItemModel DoItemModel;
 
         public DoItemController()
         {
-            doItemModel = new DoItemModel();
+            DoItemModel = new DoItemModel();
+        }
+
+        //public bool ReadDoItem()
+        //{
+        //    DoItem doItem = new DoItem()
+        //    {
+
+        //    };
+
+        //    return doItemModel.ReadDoItem(doItem);
+        //}
+
+        public List<DoItem> GetAllDoItems(int idTodolist)
+        {
+            return DoItemModel.GetAllDoItems(idTodolist);
         }
 
         public int CreateDoItem(string doItemName, bool Checked, int idTodoList)
@@ -27,7 +43,7 @@ namespace notfiy.Controllers
                 Checked = Checked,
                 IdTodoList = idTodoList
             };
-            return doItemModel.CreateDoItem(doItem);
+            return DoItemModel.CreateDoItem(doItem);
         }
 
         public bool UpdateDoItem(int idDoItem, string doItemName, bool Checked, int idTodoList)
@@ -39,17 +55,17 @@ namespace notfiy.Controllers
                 Checked = Checked,
                 IdTodoList = idTodoList
             };
-            return doItemModel.UpdateDoItem(doItem);
+            return DoItemModel.UpdateDoItem(doItem);
         }
 
         public bool DeleteDoItem(int idTodoList)
         {
-            return doItemModel.DeleteDoItem(idTodoList);
+            return DoItemModel.DeleteDoItem(idTodoList);
         }
 
         public bool DoItemCheck(int idTodoList, bool Checked)
         {
-            return doItemModel.DoItemCheck(idTodoList, Checked);
+            return DoItemModel.DoItemCheck(idTodoList, Checked);
         }
 
         //public string TextBoxvalue()

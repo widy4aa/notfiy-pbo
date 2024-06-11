@@ -15,6 +15,8 @@ using System.Drawing.Text;
 using notfiy.Views.Todolist;
 using notfiy.Views.NoteHomepagePartial;
 using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using NotifyViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.AddToDoList
 {
@@ -79,17 +81,36 @@ namespace notfiy.Views.AddToDoList
             {
                 int idtodolist = TodoListController.GetIdNewTodoList();
                 //string text = DoItemController.TextBoxvalue();
-                bool checkbox = DoItemController.CheckBoxvalue();
+                //bool checkbox = DoItemController.CheckBoxvalue();
 
                 foreach (DoItemEdit doitem in flowLayoutPanel2.Controls)
                 {
                     if (doitem.kryptonTextBox1.Visible)
                     {
-                        DoItemController.CreateDoItem(doitem.kryptonTextBox1.Text, checkbox, idtodolist);
+                        if (doitem.kryptonCheckBox1.Checked)
+                        {
+                            bool checkbox = true; 
+                            DoItemController.CreateDoItem(doitem.kryptonTextBox1.Text, checkbox, idtodolist);
+                        }
+                        else
+                        {
+                            bool checkbox = false;
+                            DoItemController.CreateDoItem(doitem.kryptonTextBox1.Text, checkbox, idtodolist);
+                        }
+                    
                     }
                 }
                 MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 TodolistControl todolistControl = new TodolistControl();
+//<<<<<<< HEAD
+
+                NotifyViewManager.MoveView(todolistControl);
+
+//=======
+//<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
+  //              NotifyViewManager.MoveView(todolistControl);
+//=======
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
 
 
 
@@ -98,17 +119,44 @@ namespace notfiy.Views.AddToDoList
                 //    MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 //    TodolistControl todolistControl = new TodolistControl();
                 //}
+//<<<<<<< HEAD
+
+//=======
+//>>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
 
             }
         }
 
-        private void doItemEdit1_Load(object sender, EventArgs e)
-        {
-            //foreach (DoItemEdit doItem in flowLayoutPanel2.Controls)
-            //{
-            //    doItem.kryptonButton1_Click(this, e);
-            //}
+        //private void doItemEdit1_Load(object sender, EventArgs e)
+        //{
+        //    //foreach (DoItemEdit doItem in flowLayoutPanel2.Controls)
+        //    //{
+        //    //    doItem.kryptonButton1_Click(this, e);
+        //    //}
 
+//<<<<<<< HEAD
+
+//=======
+//<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
+        //    //private void kryptonButton1_Click(object sender, EventArgs e)
+        //    //{
+        //    //    //this.Visible = false;
+        //    //    DoItemEdit doitem = new DoItemEdit();
+        //    //    AddToDoList addToDoList = new AddToDoList();
+        //    //    foreach (DoItemEdit item in addToDoList.flowLayoutPanel2.Controls)
+        //    //    {
+        //    //        addToDoList.flowLayoutPanel2.Controls.Remove(doitem);
+        //    //    }
+        //    //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
+        //    //}
+        //}
+//<<<<<<< HEAD
+
+//=======
+//=======
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
             //private void kryptonButton1_Click(object sender, EventArgs e)
             //{
             //    //this.Visible = false;
@@ -122,10 +170,17 @@ namespace notfiy.Views.AddToDoList
             //}
         }
 
-        private void kryptonLabel2_Click(object sender, EventArgs e)
-        {
-            Core.ViewManager.MoveView(new AddNoteHomepageControl());
+        //private void kryptonLabel2_Click(object sender, EventArgs e)
+        //{
+        //    Core.ViewManager.MoveView(new AddNoteHomepageControl());
+//<<<<<<< HEAD
 
-        }
+        //}
+
     }
-}
+//=======
+
+        //}
+//>>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
+ 
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815

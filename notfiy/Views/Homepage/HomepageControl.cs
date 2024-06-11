@@ -45,8 +45,18 @@ namespace notfiy.Views.Homepage
             };
 
             this.Controls.Add(FlowLayoutPanel);
-            List<Note> notes = NoteController.GetAllNote();
-            SetNoteItems(notes);
+
+
+            if (IdLabel.HasValue)
+            {
+                List<Note> notes = NoteController.GetAllNoteFromLabel(IdLabel.Value);
+                SetNoteItems(notes);
+            }
+            else
+            {
+                List<Note> notes = NoteController.GetAllNote();
+                SetNoteItems(notes);
+            }
             UpdateNoteArrangement();
 
         }
