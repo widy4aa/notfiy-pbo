@@ -562,6 +562,7 @@
             btnLogout.TabIndex = 45;
             btnLogout.Text = "Logout";
             btnLogout.TextAlign = HorizontalAlignment.Center;
+            btnLogout.TextChanged += btnLogout_TextChanged;
             btnLogout.Click += btnLogout_Click;
             // 
             // ProfileControl

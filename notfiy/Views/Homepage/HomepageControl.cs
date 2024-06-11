@@ -16,6 +16,7 @@ using StatusHelper = notfiy.Helpers.Status;
 using CoreViewManager = notfiy.Core.ViewManager;
 using notfiy.Views.NoteHomepagePartial;
 using notfiy.Helpers;
+using notfiy.Views.Archive;
 
 
 namespace notfiy.Views.Homepage
@@ -48,7 +49,6 @@ namespace notfiy.Views.Homepage
             List<Note> notes = NoteController.GetAllNote();
             SetNoteItems(notes);
             UpdateNoteArrangement();
-
         }
 
 
@@ -102,7 +102,7 @@ namespace notfiy.Views.Homepage
 
         private void PerformSearch()
         {
-          
+
             if (SearchTextbox.Text == "Search")
             {
                 MessageBoxHelper.ShowWarningMessageBox("Tolong untuk mengisi nama note yang ingin anda cari di kolom search!");
@@ -235,6 +235,11 @@ namespace notfiy.Views.Homepage
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
             CoreViewManager.MoveView(new AddNoteHomepageControl(IdLabel));
+        }
+
+        private void NoteNotFoundResultStatus_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

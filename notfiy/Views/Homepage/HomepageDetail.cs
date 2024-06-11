@@ -145,5 +145,10 @@ namespace notfiy.Views.Homepage
                 MessageBoxHelper.ShowErrorMessageBox("Note gagal di Archive");
             }
         }
+
+        private void NoteName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

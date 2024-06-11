@@ -158,7 +158,7 @@ namespace notfiy.Views.Profiles
                 return;
             }
 
-            if (kryptonRichTextBox3.Text.Length < 8) 
+            if (kryptonRichTextBox3.Text.Length < 8)
             {
                 MessageBoxHelper.ShowWarningMessageBox("Password harus memiliki minimal panjang 8 karakter");
                 kryptonRichTextBox3.Text = currentUser.Password;
@@ -222,6 +222,11 @@ namespace notfiy.Views.Profiles
         {
             TodolistControl todolist = new TodolistControl();
             NotifyViewManager.MoveView(todolist);
+        }
+
+        private void btnLogout_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

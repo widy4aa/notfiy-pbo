@@ -1,4 +1,5 @@
-﻿using System;
+﻿using notfiy.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace notfiy.Views.Archive
 {
     public partial class ArchiveDetail : UserControl
     {
-        public ArchiveDetail()
+        Note Note;
+        public ArchiveDetail(Note note)
         {
+            Note = note;
             InitializeComponent();
         }
     }

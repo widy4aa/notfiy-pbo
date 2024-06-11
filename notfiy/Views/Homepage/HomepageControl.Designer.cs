@@ -209,6 +209,7 @@
             NoteNotFoundResultStatus.TabIndex = 37;
             NoteNotFoundResultStatus.Values.Text = "Tidak ada Note";
             NoteNotFoundResultStatus.Visible = false;
+            NoteNotFoundResultStatus.Click += NoteNotFoundResultStatus_Click;
             // 
             // HomepageControl
             // 

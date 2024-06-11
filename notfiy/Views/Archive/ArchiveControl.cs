@@ -11,6 +11,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
+using notfiy.Helpers;
+using notfiy.Views.Homepage;
+using CoreViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.Archive
 {
@@ -41,8 +45,13 @@ namespace notfiy.Views.Archive
                 ArchiveItem archiveitem = new ArchiveItem(note);
                 archiveitem.Margin = new Padding(2);
                 ArchivePanel.Controls.Add(archiveitem);
-                ArchiveItem.Add(archiveitem);
+                archiveitem.Click += delegate
+                 {
+                     CoreViewManager.MoveView(new ArchiveDetail(note));
+                 };
 
+
+                ArchiveItem.Add(archiveitem);
             }
         }
 

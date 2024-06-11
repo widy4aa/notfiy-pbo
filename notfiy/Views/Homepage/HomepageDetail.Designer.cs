@@ -227,6 +227,7 @@
             NoteName.StateActive.Content.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NoteName.TabIndex = 38;
             NoteName.Text = "Judul";
+            NoteName.TextChanged += NoteName_TextChanged;
             // 
             // ButtonTrash
             // 
