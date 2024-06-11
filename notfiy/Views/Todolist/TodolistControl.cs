@@ -94,7 +94,7 @@ namespace notfiy.Views.Todolist
         }
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            AddToDoList.AddToDoList addtodolist = new AddToDoList.AddToDoList();
+            AddToDoList.AddToDoListControl addtodolist = new AddToDoList.AddToDoListControl();
             NotifyViewManager.MoveView(addtodolist);
         }
 

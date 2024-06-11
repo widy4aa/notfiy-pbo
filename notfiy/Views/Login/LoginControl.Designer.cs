@@ -130,7 +130,9 @@
             UsernameTextbox.StateNormal.Back.Color1 = Color.Transparent;
             UsernameTextbox.TabIndex = 10;
             UsernameTextbox.Text = "Username";
+            UsernameTextbox.TextChanged += UsernameTextbox_TextChanged;
             UsernameTextbox.Enter += UsernameTextbox_Enter;
+            UsernameTextbox.KeyDown += UsernameTextBox_KeyDown;
             UsernameTextbox.Leave += UsernameTextbox_Leave;
             // 
             // kryptonPanel1
@@ -210,6 +212,7 @@
             kryptonTextBox1.Text = "Password";
             kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
             kryptonTextBox1.Enter += kryptonTextBox1_Enter;
+            kryptonTextBox1.KeyDown += kryptonTextBox1_KeyDown;
             kryptonTextBox1.Leave += kryptonTextBox1_Leave;
             // 
             // LoginControl

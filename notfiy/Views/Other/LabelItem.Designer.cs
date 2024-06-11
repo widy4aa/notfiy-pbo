@@ -29,114 +29,114 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabelItem));
-            kryptonButton7 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            LabelChooseButton = new Krypton.Toolkit.KryptonButton();
+            ButtonLabelEdit = new Krypton.Toolkit.KryptonButton();
+            ButtonLabelDelete = new Krypton.Toolkit.KryptonButton();
+            LabelTextBox = new Krypton.Toolkit.KryptonTextBox();
             SuspendLayout();
             // 
-            // kryptonButton7
+            // LabelChooseButton
             // 
-            kryptonButton7.Location = new Point(-2, -1);
-            kryptonButton7.Name = "kryptonButton7";
-            kryptonButton7.Size = new Size(163, 54);
-            kryptonButton7.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton7.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton7.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton7.StateCommon.Back.Image");
-            kryptonButton7.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
-            kryptonButton7.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton7.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton7.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton7.StateCommon.Border.Width = 2;
-            kryptonButton7.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton7.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton7.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonButton7.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
-            kryptonButton7.TabIndex = 1;
-            kryptonButton7.Values.Text = "Label";
-            kryptonButton7.Click += kryptonButton7_Click;
+            LabelChooseButton.Location = new Point(-2, -1);
+            LabelChooseButton.Name = "LabelChooseButton";
+            LabelChooseButton.Size = new Size(163, 54);
+            LabelChooseButton.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
+            LabelChooseButton.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
+            LabelChooseButton.StateCommon.Back.Image = (Image)resources.GetObject("LabelChooseButton.StateCommon.Back.Image");
+            LabelChooseButton.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            LabelChooseButton.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
+            LabelChooseButton.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
+            LabelChooseButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            LabelChooseButton.StateCommon.Border.Width = 2;
+            LabelChooseButton.StateCommon.Content.ShortText.Color1 = Color.White;
+            LabelChooseButton.StateCommon.Content.ShortText.Color2 = Color.White;
+            LabelChooseButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelChooseButton.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
+            LabelChooseButton.TabIndex = 1;
+            LabelChooseButton.Values.Text = "Label";
+            LabelChooseButton.Click += kryptonButton7_Click;
             // 
-            // kryptonButton1
+            // ButtonLabelEdit
             // 
-            kryptonButton1.Location = new Point(201, -14);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(48, 80);
-            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
-            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
-            kryptonButton1.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton1.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateCommon.Border.Width = 2;
-            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonButton1.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
-            kryptonButton1.TabIndex = 2;
-            kryptonButton1.Values.Text = " ";
-            kryptonButton1.Click += kryptonButton1_Click;
+            ButtonLabelEdit.Location = new Point(201, -14);
+            ButtonLabelEdit.Name = "ButtonLabelEdit";
+            ButtonLabelEdit.Size = new Size(48, 80);
+            ButtonLabelEdit.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
+            ButtonLabelEdit.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
+            ButtonLabelEdit.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
+            ButtonLabelEdit.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            ButtonLabelEdit.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
+            ButtonLabelEdit.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
+            ButtonLabelEdit.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            ButtonLabelEdit.StateCommon.Border.Width = 2;
+            ButtonLabelEdit.StateCommon.Content.ShortText.Color1 = Color.White;
+            ButtonLabelEdit.StateCommon.Content.ShortText.Color2 = Color.White;
+            ButtonLabelEdit.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonLabelEdit.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
+            ButtonLabelEdit.TabIndex = 2;
+            ButtonLabelEdit.Values.Text = " ";
+            ButtonLabelEdit.Click += ButtonLabelEdit_Click;
             // 
-            // kryptonButton2
+            // ButtonLabelDelete
             // 
-            kryptonButton2.Location = new Point(258, -9);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(38, 67);
-            kryptonButton2.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton2.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
-            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
-            kryptonButton2.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton2.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Width = 2;
-            kryptonButton2.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton2.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton2.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonButton2.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
-            kryptonButton2.TabIndex = 3;
-            kryptonButton2.Values.Text = "";
-            kryptonButton2.Click += kryptonButton2_Click;
+            ButtonLabelDelete.Location = new Point(258, -9);
+            ButtonLabelDelete.Name = "ButtonLabelDelete";
+            ButtonLabelDelete.Size = new Size(38, 67);
+            ButtonLabelDelete.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
+            ButtonLabelDelete.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
+            ButtonLabelDelete.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
+            ButtonLabelDelete.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            ButtonLabelDelete.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
+            ButtonLabelDelete.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
+            ButtonLabelDelete.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            ButtonLabelDelete.StateCommon.Border.Width = 2;
+            ButtonLabelDelete.StateCommon.Content.ShortText.Color1 = Color.White;
+            ButtonLabelDelete.StateCommon.Content.ShortText.Color2 = Color.White;
+            ButtonLabelDelete.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonLabelDelete.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
+            ButtonLabelDelete.TabIndex = 3;
+            ButtonLabelDelete.Values.Text = "";
+            ButtonLabelDelete.Click += ButtonLabelDelete_Click;
             // 
-            // kryptonTextBox1
+            // LabelTextBox
             // 
-            kryptonTextBox1.AlwaysActive = false;
-            kryptonTextBox1.Cursor = Cursors.IBeam;
-            kryptonTextBox1.Location = new Point(-13, -1);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(375, 48);
-            kryptonTextBox1.StateActive.Back.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonTextBox1.StateActive.Border.Color1 = Color.Transparent;
-            kryptonTextBox1.StateActive.Border.Color2 = Color.Transparent;
-            kryptonTextBox1.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox1.StateActive.Border.Rounding = 20F;
-            kryptonTextBox1.StateActive.Border.Width = 1;
-            kryptonTextBox1.StateActive.Content.Color1 = Color.White;
-            kryptonTextBox1.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox1.StateCommon.Border.Width = 1;
-            kryptonTextBox1.StateCommon.Content.Color1 = Color.White;
-            kryptonTextBox1.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonTextBox1.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
-            kryptonTextBox1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox1.StateNormal.Border.Rounding = 20F;
-            kryptonTextBox1.StateNormal.Border.Width = 1;
-            kryptonTextBox1.TabIndex = 18;
-            kryptonTextBox1.Text = "Note";
-            kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
-            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
-            kryptonTextBox1.KeyDown += kryptonTextBox1_KeyDown;
+            LabelTextBox.AlwaysActive = false;
+            LabelTextBox.Cursor = Cursors.IBeam;
+            LabelTextBox.Location = new Point(-13, -1);
+            LabelTextBox.Name = "LabelTextBox";
+            LabelTextBox.Size = new Size(375, 48);
+            LabelTextBox.StateActive.Back.Color1 = Color.FromArgb(46, 26, 96);
+            LabelTextBox.StateActive.Border.Color1 = Color.Transparent;
+            LabelTextBox.StateActive.Border.Color2 = Color.Transparent;
+            LabelTextBox.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            LabelTextBox.StateActive.Border.Rounding = 20F;
+            LabelTextBox.StateActive.Border.Width = 1;
+            LabelTextBox.StateActive.Content.Color1 = Color.White;
+            LabelTextBox.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelTextBox.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
+            LabelTextBox.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            LabelTextBox.StateCommon.Border.Width = 1;
+            LabelTextBox.StateCommon.Content.Color1 = Color.White;
+            LabelTextBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelTextBox.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
+            LabelTextBox.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            LabelTextBox.StateNormal.Border.Rounding = 20F;
+            LabelTextBox.StateNormal.Border.Width = 1;
+            LabelTextBox.TabIndex = 18;
+            LabelTextBox.Text = "Note";
+            LabelTextBox.TextAlign = HorizontalAlignment.Center;
+            LabelTextBox.TextChanged += kryptonTextBox1_TextChanged;
+            LabelTextBox.KeyDown += kryptonTextBox1_KeyDown;
             // 
             // LabelItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 26, 96);
-            Controls.Add(kryptonButton2);
-            Controls.Add(kryptonButton1);
-            Controls.Add(kryptonButton7);
-            Controls.Add(kryptonTextBox1);
+            Controls.Add(ButtonLabelDelete);
+            Controls.Add(ButtonLabelEdit);
+            Controls.Add(LabelChooseButton);
+            Controls.Add(LabelTextBox);
             Name = "LabelItem";
             Size = new Size(325, 49);
             ResumeLayout(false);
@@ -150,9 +150,9 @@
 
         #endregion
 
-        private Krypton.Toolkit.KryptonButton kryptonButton7;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonButton LabelChooseButton;
+        private Krypton.Toolkit.KryptonButton ButtonLabelEdit;
+        private Krypton.Toolkit.KryptonButton ButtonLabelDelete;
+        private Krypton.Toolkit.KryptonTextBox LabelTextBox;
     }
 }

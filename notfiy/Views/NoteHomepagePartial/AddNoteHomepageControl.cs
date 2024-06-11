@@ -14,10 +14,12 @@ using System.Xml.Serialization;
 using System.Reflection.Metadata;
 using StatusEnum = notfiy.Helpers.Status;
 using notfiy.Helpers;
+using notfiy.Views.Other;
+using notfiy.Views.AddToDoList;
 
 namespace notfiy.Views.NoteHomepagePartial
 {
-    public partial class AddNoteHomepage : UserControl
+    public partial class AddNoteHomepageControl : UserControl
     {
         // jika melakukan mode edit
         Note? Note;
@@ -26,7 +28,7 @@ namespace notfiy.Views.NoteHomepagePartial
         int? IdLabel;
         string ImageUrl;
         HomepageAddImage HomePageAddImage;
-        public AddNoteHomepage(int? idLabel = null, Note? note = null)
+        public AddNoteHomepageControl(int? idLabel = null, Note? note = null)
         {
             IdLabel = idLabel;
             Note = note;
@@ -49,6 +51,7 @@ namespace notfiy.Views.NoteHomepagePartial
                 string? imageFileLocation = ImageController.ProcessImage(Note.IdNote, Note.ImageUrl);
                 if (imageFileLocation != null)
                 {
+                    NotePictureBox.Visible = true;
                     NotePictureBox.ImageLocation = imageFileLocation;
                 }
             }
@@ -88,9 +91,25 @@ namespace notfiy.Views.NoteHomepagePartial
         private void PerformUpdate()
         {
             Note.Content = this.NoteContentTextBox.Text;
-            Note.IdLabel = IdLabel ?? 0;
-            Note.ImageUrl = ImageUrl;
+            Note.IdLabel = IdLabel;
+            MessageBoxHelper.ShowInfoMessageBox(ImageUrl);
+            if (ImageUrl != null)
+            {
+                ImageController.DeleteCache(Note.IdNote);
+                Note.ImageUrl = ImageUrl;
+            }
 
+            bool hasil = NoteController.UpdateNote(Note);
+            
+            if (hasil)
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Di Ubah");
+                Core.ViewManager.MoveView(new HomepageDetail(NoteController.GetNote(Note.IdNote)));
+            }
+            else
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Gagal di Ubah");
+            }
         }
 
         private void PerformCreate()
@@ -103,7 +122,12 @@ namespace notfiy.Views.NoteHomepagePartial
             if (idNewNote > 0)
             {
                 MessageBoxHelper.ShowInfoMessageBox("Note Berhasil Dibuat");
-                Core.ViewManager.MoveView(new HomepageDetail(NoteController.GetNote(idNewNote)));
+                Core.ViewManager.MoveView(new HomepageControl());
+            } 
+            else
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Gagal Dibuat");
+
             }
         }
 
@@ -120,6 +144,33 @@ namespace notfiy.Views.NoteHomepagePartial
 
         }
 
+        private void HamburgerButton_Click(object sender, EventArgs e)
+        {
+            Navbar navbar = new Navbar();
+            this.Controls.Add(navbar);
+            navbar.BringToFront();
+            navbar.BackColor = Color.Transparent;
+            navbar.Location = new Point(1000, 0);
+        }
 
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new HomepageControl());
+        }
+
+        private void NotePictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddNoteHomepage_Load(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.AutoScroll = true;
+        }
+
+        private void kryptonLabel3_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new AddToDoListControl());
+        }
     }
 }

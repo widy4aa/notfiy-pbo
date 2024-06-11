@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageControl));
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            ButtonSearch = new Krypton.Toolkit.KryptonButton();
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             SearchTextbox = new Krypton.Toolkit.KryptonTextBox();
@@ -38,6 +38,7 @@
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             kryptonButton4 = new Krypton.Toolkit.KryptonButton();
+            NoteNotFoundResultStatus = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -47,7 +48,7 @@
             // 
             // kryptonPanel1
             // 
-            kryptonPanel1.Controls.Add(kryptonButton2);
+            kryptonPanel1.Controls.Add(ButtonSearch);
             kryptonPanel1.Controls.Add(HamburgerButton);
             kryptonPanel1.Controls.Add(kryptonPictureBox1);
             kryptonPanel1.Controls.Add(SearchTextbox);
@@ -58,20 +59,21 @@
             kryptonPanel1.StateCommon.Color2 = Color.FromArgb(31, 12, 70);
             kryptonPanel1.TabIndex = 0;
             // 
-            // kryptonButton2
+            // ButtonSearch
             // 
-            kryptonButton2.Location = new Point(1062, 37);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(40, 40);
-            kryptonButton2.StateCommon.Back.Color1 = Color.White;
-            kryptonButton2.StateCommon.Back.Color2 = Color.White;
-            kryptonButton2.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
-            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Width = -3;
-            kryptonButton2.TabIndex = 18;
-            kryptonButton2.Values.Text = "";
+            ButtonSearch.Location = new Point(1062, 37);
+            ButtonSearch.Name = "ButtonSearch";
+            ButtonSearch.Size = new Size(40, 40);
+            ButtonSearch.StateCommon.Back.Color1 = Color.White;
+            ButtonSearch.StateCommon.Back.Color2 = Color.White;
+            ButtonSearch.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            ButtonSearch.StateCommon.Back.Image = (Image)resources.GetObject("ButtonSearch.StateCommon.Back.Image");
+            ButtonSearch.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            ButtonSearch.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            ButtonSearch.StateCommon.Border.Width = -3;
+            ButtonSearch.TabIndex = 18;
+            ButtonSearch.Values.Text = "";
+            ButtonSearch.Click += ButtonSearch_Click;
             // 
             // HamburgerButton
             // 
@@ -125,6 +127,7 @@
             SearchTextbox.Text = "Search";
             SearchTextbox.TextChanged += SearchTextbox_TextChanged;
             SearchTextbox.Enter += SearchTextbox_Enter;
+            SearchTextbox.KeyDown += KeyDownSearch;
             SearchTextbox.Leave += SearchTextbox_Leave;
             // 
             // kryptonPanel2
@@ -196,11 +199,23 @@
             kryptonButton4.Values.Text = "+";
             kryptonButton4.Click += kryptonButton4_Click;
             // 
+            // NoteNotFoundResultStatus
+            // 
+            NoteNotFoundResultStatus.Location = new Point(625, 414);
+            NoteNotFoundResultStatus.Name = "NoteNotFoundResultStatus";
+            NoteNotFoundResultStatus.Size = new Size(240, 43);
+            NoteNotFoundResultStatus.StateNormal.ShortText.Color1 = Color.Black;
+            NoteNotFoundResultStatus.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NoteNotFoundResultStatus.TabIndex = 37;
+            NoteNotFoundResultStatus.Values.Text = "Tidak ada Note";
+            NoteNotFoundResultStatus.Visible = false;
+            // 
             // HomepageControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(NoteNotFoundResultStatus);
             Controls.Add(kryptonButton4);
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel2);
@@ -227,8 +242,9 @@
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton ButtonSearch;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
+        private Krypton.Toolkit.KryptonLabel NoteNotFoundResultStatus;
     }
 }

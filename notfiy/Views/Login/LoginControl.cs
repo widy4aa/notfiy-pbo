@@ -39,7 +39,7 @@ namespace notfiy.Views.Login
             EventHandler eventHandler = ControlLoaded;
             this.Load += eventHandler;
         }
-        
+
         private void ControlLoaded(object sender, EventArgs e)
         {
             timer.Start();
@@ -75,7 +75,33 @@ namespace notfiy.Views.Login
                 }
             }
         }
-
+        private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (UserController.AuthAttempt(UsernameTextbox.Text, kryptonTextBox1.Text))
+                {
+                    HomepageControl homepage = new HomepageControl();
+                    NotifyViewManager.MoveView(homepage);
+                }
+                else
+                {
+                    if (UsernameTextbox.Text == "Username" || kryptonTextBox1.Text == "Password" || string.IsNullOrWhiteSpace(kryptonTextBox1.Text) || string.IsNullOrWhiteSpace(UsernameTextbox.Text))
+                    {
+                        MessageBoxHelper.ShowInfoMessageBox("Mohon lengkapi data terlebih dahulu!");
+                        UsernameTextbox.Text = "Username";
+                        kryptonTextBox1.Text = "Password";
+                        kryptonTextBox1.PasswordChar = '\0';
+                    }
+                    else
+                    {
+                        MessageBoxHelper.ShowCustomMessageBox("Username atau Password Salah", "Login Gagal!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        kryptonTextBox1.Text = "Password";
+                        kryptonTextBox1.PasswordChar = '\0';
+                    }
+                }
+            }
+        }
         private void UsernameTextbox_Enter(object sender, EventArgs e)
         {
             if (UsernameTextbox.Text == "Username")
@@ -121,6 +147,19 @@ namespace notfiy.Views.Login
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                kryptonTextBox1.Focus();
+            }
+        }
+
+        private void UsernameTextbox_TextChanged(object sender, EventArgs e)
         {
 
         }

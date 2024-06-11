@@ -37,7 +37,7 @@ namespace notfiy.Views.Other
         private void Navbar_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.Transparent;
-            flowLayoutPanel1.AutoScroll = true;
+            FlowLayoutPanelLabels.AutoScroll = true;
 
             int IdUser = userController.GetUserLoggedIn(); //mendapatkan id dari user yang sedang login
             currentUser = userController.GetUserById(IdUser);
@@ -47,6 +47,12 @@ namespace notfiy.Views.Other
                 label1.Text = $"{currentUser.Username}";
             }
 
+        }
+
+
+        private void LoadLabels()
+        {
+            FlowLayoutPanelLabels.Controls.Add(label1);
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

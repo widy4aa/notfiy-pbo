@@ -15,6 +15,7 @@ using notfiy.Entities;
 using StatusHelper = notfiy.Helpers.Status;
 using CoreViewManager = notfiy.Core.ViewManager;
 using notfiy.Views.NoteHomepagePartial;
+using notfiy.Helpers;
 
 
 namespace notfiy.Views.Homepage
@@ -44,13 +45,16 @@ namespace notfiy.Views.Homepage
             };
 
             this.Controls.Add(FlowLayoutPanel);
-            SetNoteItems();
+            List<Note> notes = NoteController.GetAllNote();
+            SetNoteItems(notes);
+            UpdateNoteArrangement();
 
         }
 
-        private void SetNoteItems()
+
+
+        private void SetNoteItems(List<Note> notes)
         {
-            List<Note> notes = NoteController.GetAllNote();
 
             foreach (Note note in notes)
             {
@@ -64,6 +68,15 @@ namespace notfiy.Views.Homepage
 
                 HomepageItems.Add(homepageItem);
             }
+
+            if (HomepageItems.Count < 1)
+            {
+                this.NoteNotFoundResultStatus.Visible = true;
+            }
+            else
+            {
+                this.NoteNotFoundResultStatus.Visible = false;
+            }
         }
 
         private void SearchTextbox_Enter(object sender, EventArgs e)
@@ -72,6 +85,32 @@ namespace notfiy.Views.Homepage
             {
                 SearchTextbox.Text = string.Empty;
             }
+        }
+
+        private void KeyDownSearch(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                PerformSearch();
+            }
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            PerformSearch();
+        }
+
+        private void PerformSearch()
+        {
+          
+            if (SearchTextbox.Text == "Search")
+            {
+                MessageBoxHelper.ShowWarningMessageBox("Tolong untuk mengisi nama note yang ingin anda cari di kolom search!");
+                return;
+            }
+            HomepageItems.Clear();
+            FlowLayoutPanel.Controls.Clear();
+            SetNoteItems(NoteController.SearchNotes((int)StatusHelper.Default, SearchTextbox.Text));
         }
 
         public void TogglePinAndMoveToTop(int id)
@@ -107,8 +146,8 @@ namespace notfiy.Views.Homepage
                 .ToList(); // Mengubah hasil penyaringan menjadi daftar (list)
 
             List<HomepageItem> unpinnedItems = HomepageItems
-                .Where(item => !item.IsPinned) 
-                .ToList(); 
+                .Where(item => !item.IsPinned)
+                .ToList();
 
             HomepageItems.Clear();
 
@@ -195,7 +234,7 @@ namespace notfiy.Views.Homepage
         }
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            CoreViewManager.MoveView(new AddNoteHomepage(IdLabel));
+            CoreViewManager.MoveView(new AddNoteHomepageControl(IdLabel));
         }
     }
 }

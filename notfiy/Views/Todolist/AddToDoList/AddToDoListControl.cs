@@ -13,13 +13,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using notfiy.Views.Todolist;
+using notfiy.Views.NoteHomepagePartial;
 using Npgsql;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using NotifyViewManager = notfiy.Core.ViewManager;
 
 namespace notfiy.Views.AddToDoList
 {
-    public partial class AddToDoList : UserControl
+    public partial class AddToDoListControl : UserControl
     {
         private TodoListController TodoListController;
         private TodoListModel TodoListModel;
@@ -27,7 +28,7 @@ namespace notfiy.Views.AddToDoList
         private MessageBoxHelper MessageBoxHelper;
         private DoItemEdit DoItemEdit;
 
-        public AddToDoList()
+        public AddToDoListControl()
         {
             InitializeComponent();
             TodoListController = new TodoListController();
@@ -101,7 +102,18 @@ namespace notfiy.Views.AddToDoList
                 }
                 MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 TodolistControl todolistControl = new TodolistControl();
+<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
                 NotifyViewManager.MoveView(todolistControl);
+=======
+
+
+
+                //if (DoItemController.CreateDoItem(text, checkbox, idtodolist) > 0)
+                //{
+                //    MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
+                //    TodolistControl todolistControl = new TodolistControl();
+                //}
+>>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
 
             }
         }
@@ -113,6 +125,7 @@ namespace notfiy.Views.AddToDoList
         //    //    doItem.kryptonButton1_Click(this, e);
         //    //}
 
+<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
         //    //private void kryptonButton1_Click(object sender, EventArgs e)
         //    //{
         //    //    //this.Visible = false;
@@ -125,5 +138,25 @@ namespace notfiy.Views.AddToDoList
         //    //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
         //    //}
         //}
+=======
+            //private void kryptonButton1_Click(object sender, EventArgs e)
+            //{
+            //    //this.Visible = false;
+            //    DoItemEdit doitem = new DoItemEdit();
+            //    AddToDoList addToDoList = new AddToDoList();
+            //    foreach (DoItemEdit item in addToDoList.flowLayoutPanel2.Controls)
+            //    {
+            //        addToDoList.flowLayoutPanel2.Controls.Remove(doitem);
+            //    }
+            //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
+            //}
+        }
+
+        private void kryptonLabel2_Click(object sender, EventArgs e)
+        {
+            Core.ViewManager.MoveView(new AddNoteHomepageControl());
+
+        }
+>>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
     }
 }

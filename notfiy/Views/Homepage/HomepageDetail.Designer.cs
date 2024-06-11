@@ -116,6 +116,7 @@
             HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            //HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -171,22 +172,26 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Controls.Add(NotePictureBox);
             flowLayoutPanel1.Controls.Add(NoteContentTextBox);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(398, 304);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(815, 499);
+            flowLayoutPanel1.Size = new Size(827, 499);
             flowLayoutPanel1.TabIndex = 30;
             // 
             // NotePictureBox
             // 
+            NotePictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             NotePictureBox.Location = new Point(3, 3);
             NotePictureBox.Name = "NotePictureBox";
-            NotePictureBox.Size = new Size(803, 125);
+            NotePictureBox.Size = new Size(812, 125);
+            NotePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             NotePictureBox.TabIndex = 0;
             NotePictureBox.TabStop = false;
             NotePictureBox.Visible = false;
+            NotePictureBox.Click += NotePictureBox_Click;
             // 
             // NoteContentTextBox
             // 
@@ -195,7 +200,7 @@
             NoteContentTextBox.ReadOnly = true;
             NoteContentTextBox.Size = new Size(812, 334);
             NoteContentTextBox.TabIndex = 1;
-            NoteContentTextBox.Text = "kryptonRichTextBox1";
+            NoteContentTextBox.Text = "";
             // 
             // kryptonLabel3
             // 
@@ -238,8 +243,8 @@
             ButtonTrash.StateNormal.Content.ShortText.Color2 = Color.Black;
             ButtonTrash.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonTrash.TabIndex = 43;
-            ButtonTrash.Values.Text = "Hapus";
-            ButtonTrash.Click += kryptonButton1_Click;
+            ButtonTrash.Values.Text = "Trash";
+            ButtonTrash.Click += ButtonTrash_Click;
             // 
             // ButtonEdit
             // 
