@@ -14,18 +14,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NotifyViewManager = notfiy.Core.ViewManager;
+using LabelEntity = notfiy.Entities.Label;
+using System.Reflection.Emit;
 
 namespace notfiy.Views.Other
 {
     public partial class Navbar : UserControl
     {
-        private UserController userController;
-        private User currentUser;
+        private UserController UserController;
+        private User CurrentUser;
+        private LabelController LabelController;
         public Navbar()
         {
             InitializeComponent();
             kryptonPictureBox1.BackColor = Color.FromArgb(46, 26, 94);
-            userController = new UserController();
+            UserController = new UserController();
+            LabelController = new LabelController();
         }
 
         private void kryptonPictureBox1_Click(object sender, EventArgs e)
@@ -39,20 +43,52 @@ namespace notfiy.Views.Other
             this.BackColor = Color.Transparent;
             FlowLayoutPanelLabels.AutoScroll = true;
 
-            int IdUser = userController.GetUserLoggedIn(); //mendapatkan id dari user yang sedang login
-            currentUser = userController.GetUserById(IdUser);
+            int IdUser = UserController.GetUserLoggedIn(); //mendapatkan id dari user yang sedang login
+            CurrentUser = UserController.GetUserById(IdUser);
 
-            if (currentUser != null)
+            if (CurrentUser != null)
             {
-                label1.Text = $"{currentUser.Username}";
+                label1.Text = $"{CurrentUser.Username}";
             }
-
+            SetLabelItems();
         }
 
-
-        private void LoadLabels()
+        private void ResetFlowLayoutPanelLabels()
         {
-            FlowLayoutPanelLabels.Controls.Add(label1);
+            FlowLayoutPanelLabels.Controls.Clear();
+            //FlowLayoutPanelLabels = new FlowLayoutPanel();
+            FlowLayoutPanelLabels.AutoScroll = true;
+            FlowLayoutPanelLabels.BackColor = Color.FromArgb(46, 26, 96);
+            FlowLayoutPanelLabels.Location = new Point(84, 373);
+            FlowLayoutPanelLabels.Name = "FlowLayoutPanelLabels";
+            FlowLayoutPanelLabels.Size = new Size(374, 138);
+            FlowLayoutPanelLabels.TabIndex = 2;
+            FlowLayoutPanelLabels.Paint += flowLayoutPanel1_Paint;
+            this.Controls.Add(FlowLayoutPanelLabels);
+            FlowLayoutPanelLabels.BringToFront();
+        }
+
+        private void SetLabelItems()
+        {
+            ResetFlowLayoutPanelLabels();
+            List<LabelEntity> labels = LabelController.GetAllLabel();
+            foreach (var label in labels)
+            {
+                LabelItem labelControl = new LabelItem(label, SetLabelItems);
+                labelControl.Text = label.LabelName;
+                labelControl.Location = new Point(3, 3);
+                labelControl.Size = new Size(321, 58);
+                labelControl.TabIndex = 0;                
+                labelControl.BackColor = Color.FromArgb(61, 44, 94);
+                labelControl.ForeColor = Color.White;
+                labelControl.Margin = new Padding(5);
+                labelControl.BorderStyle = BorderStyle.FixedSingle;
+                labelControl.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+
+                FlowLayoutPanelLabels.Controls.Add(labelControl);
+
+
+            }
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -87,9 +123,35 @@ namespace notfiy.Views.Other
             NotifyViewManager.MoveView(todolist);
         }
 
+        //nambah label 1 baris
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            LabelEntity labelEntity = new LabelEntity
+            {
+                LabelName = "Label Baru",
+            };
+            int idNewLabel = LabelController.CreateLabel(labelEntity.LabelName);
+            labelEntity.IdLabel = idNewLabel;
+            LabelItem labelControl = new LabelItem(labelEntity, SetLabelItems);
+            labelControl.Text = "Label Baru";
+            labelControl.Location = new Point(3, 3);
+            labelControl.Size = new Size(321, 58);
+            labelControl.TabIndex = 0;            
+            labelControl.BackColor = Color.FromArgb(61, 44, 94);
+            labelControl.ForeColor = Color.White;
+            labelControl.Margin = new Padding(5);
+            labelControl.BorderStyle = BorderStyle.FixedSingle;
+            labelControl.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 
+            FlowLayoutPanelLabels.Controls.Add(labelControl);
+            if (idNewLabel > 0)
+            {
+                Helpers.MessageBoxHelper.ShowInfoMessageBox("Label Kosongan telah telah dibuat jangan lupa untuk mengganti namanya");
+                SetLabelItems();
+            } else
+            {
+                Helpers.MessageBoxHelper.ShowErrorMessageBox("Tidak Dapat membuat label baru!");
+            }
         }
 
         private void kryptonCheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
