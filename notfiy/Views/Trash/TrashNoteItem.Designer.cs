@@ -35,6 +35,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             NoteTextBox = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -111,11 +112,25 @@
             kryptonButton1.Values.Text = "";
             kryptonButton1.Click += kryptonButton1_Click;
             // 
+            // kryptonButton2
+            // 
+            kryptonButton2.Location = new Point(205, 13);
+            kryptonButton2.Name = "kryptonButton2";
+            kryptonButton2.Size = new Size(31, 26);
+            kryptonButton2.StateCommon.Back.Color1 = Color.White;
+            kryptonButton2.StateCommon.Back.Color2 = Color.White;
+            kryptonButton2.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
+            kryptonButton2.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            kryptonButton2.TabIndex = 18;
+            kryptonButton2.Values.Text = "";
+            kryptonButton2.Click += kryptonButton2_Click;
+            // 
             // TrashNoteItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonListBox1);
@@ -136,5 +151,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Krypton.Toolkit.KryptonRichTextBox NoteTextBox;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }
