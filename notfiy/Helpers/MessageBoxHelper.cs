@@ -40,23 +40,24 @@ namespace notfiy.Helpers
 
             // Mengatur teks dan posisi dari label
             label.Text = message;
-            label.SetBounds(9, 20, 372, 13);
             label.AutoSize = true;
+            label.Location = new System.Drawing.Point(10, 20);
 
             // Mengatur teks dan posisi dari button1
             button1.Text = buttonAcceptText;
-            button1.SetBounds(228, 72, 75, 23);
+            button1.AutoSize = true;
+            button1.Location = new System.Drawing.Point(10, label.Bottom + 20);
             button1.DialogResult = DialogResult.OK;
 
             // Mengatur teks dan posisi dari button2
             button2.Text = buttonDeniedText;
-            button2.SetBounds(309, 72, 75, 23);
+            button2.AutoSize = true;
+            button2.Location = new System.Drawing.Point(button1.Right + 10, label.Bottom + 20);
             button2.DialogResult = DialogResult.Cancel;
 
             // Menambahkan kontrol ke form
-            form.ClientSize = new System.Drawing.Size(396, 107);
+            form.Text = caption;
             form.Controls.AddRange(new Control[] { label, button1, button2 });
-            form.ClientSize = new System.Drawing.Size(Math.Max(300, label.Right + 10), form.ClientSize.Height);
             form.FormBorderStyle = FormBorderStyle.FixedDialog;
             form.StartPosition = FormStartPosition.CenterScreen;
             form.MinimizeBox = false;
@@ -64,27 +65,34 @@ namespace notfiy.Helpers
             form.AcceptButton = button1;
             form.CancelButton = button2;
 
+            // Mengatur ukuran form berdasarkan ukuran kontrol yang ada
+            form.ClientSize = new System.Drawing.Size(
+                Math.Max(300, label.Width + 20),
+                label.Height + button1.Height + 60 + 20
+            );
+
             // Menentukan icon dari MessageBox
-            if (icon == MessageBoxIcon.Information)
+            switch (icon)
             {
-                form.Icon = SystemIcons.Information;
-            }
-            else if (icon == MessageBoxIcon.Warning)
-            {
-                form.Icon = SystemIcons.Warning;
-            }
-            else if (icon == MessageBoxIcon.Error)
-            {
-                form.Icon = SystemIcons.Error;
-            }
-            else if (icon == MessageBoxIcon.Question)
-            {
-                form.Icon = SystemIcons.Question;
+                case MessageBoxIcon.Information:
+                    form.Icon = SystemIcons.Information;
+                    break;
+                case MessageBoxIcon.Warning:
+                    form.Icon = SystemIcons.Warning;
+                    break;
+                case MessageBoxIcon.Error:
+                    form.Icon = SystemIcons.Error;
+                    break;
+                case MessageBoxIcon.Question:
+                    form.Icon = SystemIcons.Question;
+                    break;
             }
 
             // Menampilkan form sebagai dialog dan mengembalikan hasilnya
             DialogResult dialogResult = form.ShowDialog();
             return dialogResult == DialogResult.OK;
         }
+
+
     }
 }

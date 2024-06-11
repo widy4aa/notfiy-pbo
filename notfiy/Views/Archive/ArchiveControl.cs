@@ -1,8 +1,4 @@
-﻿using notfiy.Controllers;
-using notfiy.Entities;
-using notfiy.Views.Other;
-using notfiy.Views.Trash;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,43 +12,24 @@ namespace notfiy.Views.Archive
 {
     public partial class ArchiveControl : UserControl
     {
-        NoteController NoteController = new NoteController();
-        List<ArchiveItem> ArchiveItem = new List<ArchiveItem>();
         public ArchiveControl()
         {
             InitializeComponent();
         }
 
+        private void homepageItem5_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void ArchiveControl_Load(object sender, EventArgs e)
         {
-            SetNoteItems();
-        }
-
-        private void ArchivePanel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
-        private void SetNoteItems()
+
+        private void homepageItem10_Load(object sender, EventArgs e)
         {
-            List<Note> notes = NoteController.GetAllNote(3);
 
-            foreach (Note note in notes)
-            {
-                ArchiveItem archiveitem = new ArchiveItem(note);
-                archiveitem.Margin = new Padding(2);
-                ArchivePanel.Controls.Add(archiveitem);
-                ArchiveItem.Add(archiveitem);
-
-            }
-        }
-
-        private void HamburgerButton_Click(object sender, EventArgs e)
-        {
-            Navbar navbar = new Navbar();
-            this.Controls.Add(navbar);
-            navbar.BringToFront();
-            navbar.BackColor = Color.Transparent;
-            navbar.Location = new Point(1000, 0);
         }
     }
 }

@@ -21,9 +21,9 @@ namespace notfiy.Controllers
             //todoListView = new TodoListControl();
         }
 
-        public List<TodoList> GetAllTodoList(int idstatus)
+        public List<TodoList> GetAllTodoList()
         {
-            return TodoListModel.GetAllTodoList(SystemSingleton.Instance.UserLoggedIn.IdUser, idstatus);
+            return TodoListModel.GetAllTodoList(SystemSingleton.Instance.UserLoggedIn.IdUser, (int)Helpers.Status.Default);
         }
 
         public TodoList? GetTodoList(int idTodoList)

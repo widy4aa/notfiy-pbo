@@ -12,14 +12,14 @@ namespace notfiy.Models
         public List<TodoList> GetAllTodoList(int idUser, int idStatus)
         {
             List<TodoList> todoLists = new List<TodoList>();
-            Connection.Open();
+              
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = {idStatus}", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             while (reader.Read())
             {
                 TodoList todoList = new TodoList
                 {
-                    IdTodoList = (int) reader["id_todolist"],
+                    IdTodoList = (int) reader["id_todo]ist"],
                     TodoListName = (string)reader["todolist_name"],
                     TimeCreated = (DateTime)reader["time_created"],
                     IdUser = (int) reader["id_user"],
@@ -29,14 +29,14 @@ namespace notfiy.Models
 
                 todoLists.Add(todoList);
             }
-            Connection.Close();
+
             return todoLists;
         }
 
         public int GetIdNewTodoList(int Iduser)
         {
             Connection.Open();
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("select max(id_todolist) from todolists WHERE id_user = @idUser", Connection);
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("select max(id_user) from todolists WHERE id_user = @idUser", Connection);
             npgsqlCommand.Parameters.AddWithValue("@idUser", Iduser);
             object ?result = npgsqlCommand.ExecuteScalar();
             Connection.Close();
@@ -78,12 +78,7 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string del_doitem = @"DELETE FROM do_items WHERE id_todolist = @id_todolist";
                 string delete = @"DELETE FROM todolists WHERE id_todolist = @id_todolist";
-                using (NpgsqlCommand cmd = new NpgsqlCommand(del_doitem, Connection))
-                {
-                    cmd.Parameters.AddWithValue("id_todolist", idTodoList);
-                }
                 using (NpgsqlCommand cmd = new NpgsqlCommand(delete, Connection))
                 {
                     cmd.Parameters.AddWithValue("id_todolist", idTodoList);

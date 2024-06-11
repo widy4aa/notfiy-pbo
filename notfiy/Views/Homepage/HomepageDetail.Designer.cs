@@ -42,8 +42,6 @@
             NoteName = new Krypton.Toolkit.KryptonTextBox();
             ButtonTrash = new Krypton.Toolkit.KryptonButton();
             ButtonEdit = new Krypton.Toolkit.KryptonButton();
-            kryptonCheckedListBox2 = new Krypton.Toolkit.KryptonCheckedListBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -118,6 +116,7 @@
             HamburgerButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            //HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -200,8 +199,6 @@
             NoteContentTextBox.Name = "NoteContentTextBox";
             NoteContentTextBox.ReadOnly = true;
             NoteContentTextBox.Size = new Size(812, 334);
-            NoteContentTextBox.StateCommon.Border.Color1 = Color.White;
-            NoteContentTextBox.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             NoteContentTextBox.TabIndex = 1;
             NoteContentTextBox.Text = "";
             // 
@@ -267,41 +264,11 @@
             ButtonEdit.Values.Text = "Edit";
             ButtonEdit.Click += ButtonEdit_Click;
             // 
-            // kryptonCheckedListBox2
-            // 
-            kryptonCheckedListBox2.Location = new Point(269, 224);
-            kryptonCheckedListBox2.Name = "kryptonCheckedListBox2";
-            kryptonCheckedListBox2.Size = new Size(88, 100);
-            kryptonCheckedListBox2.StateCommon.Border.Color1 = Color.Black;
-            kryptonCheckedListBox2.StateCommon.Border.Color2 = Color.Black;
-            kryptonCheckedListBox2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonCheckedListBox2.StateCommon.Border.Rounding = 10F;
-            kryptonCheckedListBox2.StateCommon.Border.Width = 1;
-            kryptonCheckedListBox2.TabIndex = 45;
-            // 
-            // kryptonButton1
-            // 
-            kryptonButton1.Location = new Point(277, 245);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(73, 62);
-            kryptonButton1.StateCommon.Back.Color1 = Color.White;
-            kryptonButton1.StateCommon.Back.Color2 = Color.White;
-            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
-            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StateCommon.Border.Color1 = Color.White;
-            kryptonButton1.StateCommon.Border.Color2 = Color.White;
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.TabIndex = 47;
-            kryptonButton1.Values.Text = "";
-            kryptonButton1.Click += kryptonButton1_Click;
-            // 
             // HomepageDetail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(kryptonButton1);
-            Controls.Add(kryptonCheckedListBox2);
             Controls.Add(ButtonTrash);
             Controls.Add(ButtonBack);
             Controls.Add(NoteName);
@@ -337,7 +304,5 @@
         private Krypton.Toolkit.KryptonTextBox NoteName;
         private Krypton.Toolkit.KryptonButton ButtonTrash;
         private Krypton.Toolkit.KryptonButton ButtonEdit;
-        private Krypton.Toolkit.KryptonCheckedListBox kryptonCheckedListBox2;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

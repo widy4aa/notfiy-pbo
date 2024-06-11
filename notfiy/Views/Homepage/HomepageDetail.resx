@@ -582,22 +582,4 @@
         RK5CYII=
 </value>
   </data>
-  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAtBJREFUaEPt2knPDEEcx/GxRIgQIsKB2BISDpY42V0Q8S6sCe/AO3DgYLsLrkJc
-        XFwcOFjjeUJCbBdiuXBACL6/pCspk/90dXd1K/2kfsknmcxUVc+/09NV3dODnJycnJyeZQo24go+4HcF
-        v/ASJ7AAvcpWPINVWMh3XMN89CKTcAFWMXUch46U/z46HO/DKqKOd9iHpSX8TMUiWO3qmofJqJQlGINV
-        RF1vMF7Cz0JchdWurru4BP00tSNLoz2kTlYBbfPTxXZfYz1KM5EKlssoPby72vA36Myvn4uzxrMLz2H1
-        jaHDu3Sa7KrgJ9gCje9o3nb0e9dOsfrG0I7VeWlkuirY2rDVrm254OHkgjvk51/u6L+SC+6QnwlXsKYc
-        TT0vPNqWoynrKay+MZIVrEWHFherPdqOo0VHnodbkAseTlcFP8Zi+NGXcbT0/Aqrb4xkBd/CTPjRtpxV
-        eACrb4xkBZ9BKGdh9Y2RpGDd0TyAUA5Cba0xmkpS8Gdong1lE77AGqOpJAXrhLUCoSyD2lpjNJWk4BuY
-        g1DU5jqsMZpKUvA5VLltqnvi52GN0VSSgg+hao7AGqOpJAXvRNXshjVGU0kKXgk/2saxwvAdRS1ArDGa
-        SlLwXLho43fgPntUvOeitn7fWEkKngaX/fgB95n+bfQXJdPh942VpOBZcNFJyV9N/cRhuMyG3zdWkoL9
-        VdZy3Ib77Gbxnss2+H1jJSn4NGbARXc7dMI6Wrx2UZu2LyCSFPwR2xHKHnyCNUZTSQoW3dPagVHRXP0Q
-        Vt8YyQp2D72cxF7of9u1xetTeI+2Lw0lWcE+TUtvC5qWrDZtqVSwGlmd+yhYsJ61uAercx/pD3E95DIy
-        uozTYwJW5z66iOCl6Qa8gjVAn+gkuRnB6FEfrY706I8Ob/0O+kTfWUfpOgQfW/KjQ0HHv05kfaJLzip3
-        WHJycnJycnJyusxg8Afm0mWoAyJD+gAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

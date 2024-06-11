@@ -26,7 +26,7 @@ namespace notfiy.Models
                         {
                             DoItem doItem = new DoItem
                             {
-                                IdDoItem = reader.GetInt32(reader.GetOrdinal("id_do_item")),
+                                IdDoItem = reader.GetInt32(reader.GetOrdinal("id_doitem")),
                                 DoItemName = reader.GetString(reader.GetOrdinal("do_item_name")),
                                 Checked = reader.GetBoolean(reader.GetOrdinal("checked")),
                                 IdTodoList = reader.GetInt32(reader.GetOrdinal("id_todolist"))
@@ -107,7 +107,7 @@ namespace notfiy.Models
         //    }
         //}
 
-        public bool DeleteDoItem(int idDoItem)
+            public bool DeleteDoItem(int idDoItem)
         {
             try
             {

@@ -6,6 +6,7 @@ namespace notfiy.Helpers
     {
         Default = 1,
         Trashed = 2,
-        Archived = 3
+        Archived = 3,
+        Drafted = 4
     }
 }
