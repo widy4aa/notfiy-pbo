@@ -35,7 +35,6 @@
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            todoItem19 = new TodoItem();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             label1 = new Label();
@@ -43,7 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             SuspendLayout();
             // 
@@ -202,20 +200,11 @@
             // 
             flowLayoutPanel1.AllowDrop = true;
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(todoItem19);
             flowLayoutPanel1.Location = new Point(93, 221);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1251, 611);
             flowLayoutPanel1.TabIndex = 2;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
-            // 
-            // todoItem19
-            // 
-            todoItem19.BackColor = Color.White;
-            todoItem19.Location = new Point(3, 3);
-            todoItem19.Name = "todoItem19";
-            todoItem19.Size = new Size(298, 266);
-            todoItem19.TabIndex = 8;
             // 
             // kryptonPanel2
             // 
@@ -302,7 +291,6 @@
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -329,7 +317,6 @@
         private TodoItem todoItem10;
         public FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
-        private TodoItem todoItem19;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
     }
 }

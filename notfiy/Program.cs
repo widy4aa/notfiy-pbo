@@ -36,21 +36,17 @@ namespace notfiy
         string connectionString = $"Host={host};Port={port};Username={username};Password={password};Database={database};SSL Mode={sslMode};Trust Server Certificate={trustServerCertificate}";
         //string connectionString = "Host=localhost:5050;Username=postgres;Password=noxzan123;Database=notify_pbo;";
 
-
         SystemSingleton.Instance.EnableDatabase(connectionString);
         SystemSingleton.Instance.ViewManager.MainForm = mainForm;
 
             //mainForm.Controls.Add(new TodolistControl());
-<<<<<<< HEAD
             //mainForm.Controls.Add(new HomepageControl());
             //mainForm.Controls.Add(new HomepageControl());
-=======
->>>>>>> dc01e76ac3f954bca732f40314f7f43b1b4cbec6
+
             mainForm.Controls.Add(new LoginControl());
 
-
             Application.Run(mainForm);
-            //Application.Run(new LoginUnitTesterForm());
+        //Application.Run(new LoginUnitTesterForm());
         }
     }
 }
