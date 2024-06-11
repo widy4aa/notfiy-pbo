@@ -61,9 +61,9 @@ namespace notfiy.Views.Trash
             NotfiyViewManager.MoveView(trashControl);
         }
 
-        private void TrashToDoItem_Load(object sender, EventArgs e)
-        {
+        //private void TrashToDoItem_Load(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }
