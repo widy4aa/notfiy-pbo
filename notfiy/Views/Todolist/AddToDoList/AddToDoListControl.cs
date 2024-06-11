@@ -102,9 +102,9 @@ namespace notfiy.Views.AddToDoList
                 }
                 MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 TodolistControl todolistControl = new TodolistControl();
-<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
+
                 NotifyViewManager.MoveView(todolistControl);
-=======
+
 
 
 
@@ -113,7 +113,7 @@ namespace notfiy.Views.AddToDoList
                 //    MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 //    TodolistControl todolistControl = new TodolistControl();
                 //}
->>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
+
 
             }
         }
@@ -125,7 +125,7 @@ namespace notfiy.Views.AddToDoList
         //    //    doItem.kryptonButton1_Click(this, e);
         //    //}
 
-<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
+
         //    //private void kryptonButton1_Click(object sender, EventArgs e)
         //    //{
         //    //    //this.Visible = false;
@@ -138,7 +138,7 @@ namespace notfiy.Views.AddToDoList
         //    //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
         //    //}
         //}
-=======
+
             //private void kryptonButton1_Click(object sender, EventArgs e)
             //{
             //    //this.Visible = false;
@@ -152,11 +152,10 @@ namespace notfiy.Views.AddToDoList
             //}
         }
 
-        private void kryptonLabel2_Click(object sender, EventArgs e)
-        {
-            Core.ViewManager.MoveView(new AddNoteHomepageControl());
+        //private void kryptonLabel2_Click(object sender, EventArgs e)
+        //{
+        //    Core.ViewManager.MoveView(new AddNoteHomepageControl());
 
-        }
->>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
+        //}
+
     }
-}

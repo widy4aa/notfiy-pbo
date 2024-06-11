@@ -13,7 +13,7 @@ namespace notfiy.Models
         {
             List<TodoList> todoLists = new List<TodoList>();
             Connection.Open();
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = {idStatus}", Connection);
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = 1", Connection);
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             while (reader.Read())
             {

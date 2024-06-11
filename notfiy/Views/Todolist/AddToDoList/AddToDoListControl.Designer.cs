@@ -256,7 +256,7 @@
             kryptonLabel2.StateNormal.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonLabel2.TabIndex = 25;
             kryptonLabel2.Values.Text = "Note";
-            kryptonLabel2.Click += kryptonLabel2_Click;
+            //kryptonLabel2.Click += kryptonLabel2_Click;
             // 
             // kryptonLabel3
             // 
