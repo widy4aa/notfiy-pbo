@@ -40,7 +40,7 @@
             // 
             // kryptonButton2
             // 
-            kryptonButton2.Location = new Point(208, 3);
+            kryptonButton2.Location = new Point(242, 4);
             kryptonButton2.Name = "kryptonButton2";
             kryptonButton2.Size = new Size(32, 33);
             kryptonButton2.StateCommon.Back.Color1 = Color.White;
@@ -102,7 +102,7 @@
             // 
             // kryptonButton3
             // 
-            kryptonButton3.Location = new Point(208, 0);
+            kryptonButton3.Location = new Point(242, 4);
             kryptonButton3.Name = "kryptonButton3";
             kryptonButton3.Size = new Size(32, 33);
             kryptonButton3.StateCommon.Back.Color1 = Color.White;
