@@ -41,8 +41,6 @@
             BtnDelete = new Krypton.Toolkit.KryptonTextBox();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             GreetingTextBox = new Krypton.Toolkit.KryptonTextBox();
-            btnNote = new Krypton.Toolkit.KryptonTextBox();
-            btnTodolist = new Krypton.Toolkit.KryptonTextBox();
             kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonRichTextBox2 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonRichTextBox3 = new Krypton.Toolkit.KryptonRichTextBox();
@@ -243,7 +241,7 @@
             // BtnSave
             // 
             BtnSave.AlwaysActive = false;
-            BtnSave.Location = new Point(1053, 620);
+            BtnSave.Location = new Point(1029, 660);
             BtnSave.Name = "BtnSave";
             BtnSave.ReadOnly = true;
             BtnSave.Size = new Size(150, 69);
@@ -275,7 +273,7 @@
             // BtnCancel
             // 
             BtnCancel.AlwaysActive = false;
-            BtnCancel.Location = new Point(867, 620);
+            BtnCancel.Location = new Point(854, 660);
             BtnCancel.Name = "BtnCancel";
             BtnCancel.ReadOnly = true;
             BtnCancel.Size = new Size(153, 69);
@@ -305,7 +303,7 @@
             // BtnDelete
             // 
             BtnDelete.AlwaysActive = false;
-            BtnDelete.Location = new Point(302, 620);
+            BtnDelete.Location = new Point(302, 660);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.ReadOnly = true;
             BtnDelete.Size = new Size(206, 69);
@@ -373,68 +371,6 @@
             GreetingTextBox.TabIndex = 30;
             GreetingTextBox.TextAlign = HorizontalAlignment.Center;
             GreetingTextBox.TextChanged += kryptonTextBox5_TextChanged;
-            // 
-            // btnNote
-            // 
-            btnNote.AlwaysActive = false;
-            btnNote.Cursor = Cursors.IBeam;
-            btnNote.Location = new Point(371, 741);
-            btnNote.Name = "btnNote";
-            btnNote.ReadOnly = true;
-            btnNote.Size = new Size(250, 63);
-            btnNote.StateActive.Back.Color1 = Color.FromArgb(46, 26, 94);
-            btnNote.StateActive.Border.Color1 = Color.Black;
-            btnNote.StateActive.Border.Color2 = Color.Black;
-            btnNote.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnNote.StateActive.Border.Rounding = 20F;
-            btnNote.StateActive.Border.Width = 1;
-            btnNote.StateActive.Content.Color1 = Color.White;
-            btnNote.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnNote.StateActive.Content.Padding = new Padding(-1, 10, -1, 10);
-            btnNote.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            btnNote.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnNote.StateCommon.Border.Width = 1;
-            btnNote.StateCommon.Content.Color1 = Color.White;
-            btnNote.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnNote.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
-            btnNote.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnNote.StateNormal.Border.Rounding = 20F;
-            btnNote.StateNormal.Border.Width = 1;
-            btnNote.TabIndex = 31;
-            btnNote.Text = "Jumlah Note";
-            btnNote.TextAlign = HorizontalAlignment.Center;
-            btnNote.Click += btnNote_Click;
-            // 
-            // btnTodolist
-            // 
-            btnTodolist.AlwaysActive = false;
-            btnTodolist.Cursor = Cursors.IBeam;
-            btnTodolist.Location = new Point(814, 741);
-            btnTodolist.Name = "btnTodolist";
-            btnTodolist.ReadOnly = true;
-            btnTodolist.Size = new Size(250, 63);
-            btnTodolist.StateActive.Back.Color1 = Color.FromArgb(46, 26, 94);
-            btnTodolist.StateActive.Border.Color1 = Color.Black;
-            btnTodolist.StateActive.Border.Color2 = Color.Black;
-            btnTodolist.StateActive.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnTodolist.StateActive.Border.Rounding = 20F;
-            btnTodolist.StateActive.Border.Width = 1;
-            btnTodolist.StateActive.Content.Color1 = Color.White;
-            btnTodolist.StateActive.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTodolist.StateActive.Content.Padding = new Padding(-1, 10, -1, 10);
-            btnTodolist.StateCommon.Back.Color1 = Color.FromArgb(128, 128, 255);
-            btnTodolist.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnTodolist.StateCommon.Border.Width = 1;
-            btnTodolist.StateCommon.Content.Color1 = Color.White;
-            btnTodolist.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTodolist.StateNormal.Back.Color1 = Color.FromArgb(61, 44, 94);
-            btnTodolist.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnTodolist.StateNormal.Border.Rounding = 20F;
-            btnTodolist.StateNormal.Border.Width = 1;
-            btnTodolist.TabIndex = 32;
-            btnTodolist.Text = "Jumlah Todolist";
-            btnTodolist.TextAlign = HorizontalAlignment.Center;
-            btnTodolist.Click += btnTodolist_Click;
             // 
             // kryptonRichTextBox1
             // 
@@ -544,8 +480,6 @@
             Controls.Add(kryptonRichTextBox3);
             Controls.Add(kryptonRichTextBox2);
             Controls.Add(kryptonRichTextBox1);
-            Controls.Add(btnTodolist);
-            Controls.Add(btnNote);
             Controls.Add(GreetingTextBox);
             Controls.Add(kryptonPictureBox1);
             Controls.Add(BtnDelete);
@@ -581,8 +515,6 @@
         private Krypton.Toolkit.KryptonTextBox BtnDelete;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonTextBox GreetingTextBox;
-        private Krypton.Toolkit.KryptonTextBox btnNote;
-        private Krypton.Toolkit.KryptonTextBox btnTodolist;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox2;
         private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox3;

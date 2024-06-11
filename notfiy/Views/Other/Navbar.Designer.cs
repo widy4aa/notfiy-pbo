@@ -38,7 +38,6 @@
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             kryptonButton4 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton5 = new Krypton.Toolkit.KryptonButton();
             label1 = new Label();
             kryptonButton6 = new Krypton.Toolkit.KryptonButton();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
@@ -162,23 +161,6 @@
             kryptonButton4.Values.Text = "";
             kryptonButton4.Click += kryptonButton4_Click;
             // 
-            // kryptonButton5
-            // 
-            kryptonButton5.Location = new Point(47, 657);
-            kryptonButton5.Name = "kryptonButton5";
-            kryptonButton5.Size = new Size(310, 64);
-            kryptonButton5.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton5.StateCommon.Back.Image");
-            kryptonButton5.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton5.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
-            kryptonButton5.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
-            kryptonButton5.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton5.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton5.StateTracking.Back.Image = (Image)resources.GetObject("kryptonButton5.StateTracking.Back.Image");
-            kryptonButton5.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton5.TabIndex = 7;
-            kryptonButton5.Values.Text = "";
-            kryptonButton5.Click += kryptonButton5_Click;
-            // 
             // label1
             // 
             label1.BackColor = Color.FromArgb(46, 26, 96);
@@ -192,7 +174,7 @@
             // 
             // kryptonButton6
             // 
-            kryptonButton6.Location = new Point(47, 727);
+            kryptonButton6.Location = new Point(47, 657);
             kryptonButton6.Name = "kryptonButton6";
             kryptonButton6.Size = new Size(310, 64);
             kryptonButton6.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -231,7 +213,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(kryptonButton6);
-            Controls.Add(kryptonButton5);
             Controls.Add(kryptonButton4);
             Controls.Add(label1);
             Controls.Add(kryptonButton3);
@@ -256,7 +237,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
-        private Krypton.Toolkit.KryptonButton kryptonButton5;
         private LabelItem labelItem;
         private LabelItem labelItem2;
         private LabelItem labelItem3;
