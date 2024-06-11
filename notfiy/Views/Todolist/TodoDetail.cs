@@ -21,6 +21,7 @@ namespace notfiy.Views.Todolist
         private TodoListController TodoListController;
         //private TodoItem Todoitem;
         public int IdTodo;
+        public string JudulTodoList;
         private TodolistControl TodolistControl;
         private DoItemController DoItemController;
 
@@ -33,6 +34,7 @@ namespace notfiy.Views.Todolist
             TodoListController = new TodoListController();
             this.JudulDetail.Text = todolist.TodoListName;
             this.IdTodo = todolist.IdTodoList;
+            this.JudulTodoList = todolist.TodoListName;
 
         }
 
@@ -84,14 +86,14 @@ namespace notfiy.Views.Todolist
             //popupdelete.Show();
             //TodoDetail tododetail = new TodoDetail();
 
-            if (TodoListController.DeleteTodoList(this.IdTodo))
+            if (TodoListController.UpdateTodoList(this.IdTodo, this.JudulTodoList, 2))
             {
-                MessageBox.Show("Todolist Dihapus");
+                MessageBox.Show("Todolist disampahkan");
                 NotifyViewManager.MoveView(TodolistControl);
             }
             else
             {
-                MessageBoxHelper.ShowErrorMessageBox("Registrasi Gagal! Silahkan mencoba lagi" + this.IdTodo);
+                MessageBoxHelper.ShowErrorMessageBox("Delete Gagal");
             }
 
             //PopUpEdit popUpEdit = new PopUpEdit();

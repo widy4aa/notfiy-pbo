@@ -65,6 +65,10 @@ namespace notfiy.Views.Todolist
                         //todoitem.kryptonCheckBox1.Text = doitem.DoItemName;
                         KryptonCheckBox kryptonCheckBox= new KryptonCheckBox();
                         kryptonCheckBox.Text = doitem.DoItemName;
+                        if (doitem.Checked)
+                        {
+                            kryptonCheckBox.Checked = true;
+                        }
                         todoitem.flowLayoutPanel1.Controls.Add(kryptonCheckBox);
                     }
                 }
@@ -102,16 +106,6 @@ namespace notfiy.Views.Todolist
         {
         }
 
-        //private void setTodolistItem()
-        //{
-        //    List<TodoList> todoList = TodoListController.GetAllTodoList();
-        //    //todoList = TodoListController.GetAllTodoList();
-        //    TodoItem todoitem = new TodoItem();
 
-        //    foreach (TodoList todolist in todoList)
-        //    {
-        //        flowLayoutPanel1.Controls.Add(todoitem);
-        //    }
-        //}
     }
 }
