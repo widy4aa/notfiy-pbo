@@ -46,5 +46,10 @@ namespace notfiy.Views.Trash
             NoteController.UpdateNoteStatus(idNote, 1);
             NotfiyViewManager.MoveView(trashControl);
         }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

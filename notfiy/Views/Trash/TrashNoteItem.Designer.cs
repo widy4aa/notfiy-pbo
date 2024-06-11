@@ -63,6 +63,7 @@
             kryptonPictureBox1.TabIndex = 14;
             kryptonPictureBox1.TabStop = false;
             kryptonPictureBox1.Visible = false;
+            kryptonPictureBox1.Click += kryptonPictureBox1_Click;
             // 
             // NoteName
             // 
