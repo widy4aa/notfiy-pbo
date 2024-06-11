@@ -36,10 +36,6 @@
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
-            kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
-            kryptonTextBox3 = new Krypton.Toolkit.KryptonTextBox();
-            kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
-            kryptonTextBox5 = new Krypton.Toolkit.KryptonTextBox();
             BtnSave = new Krypton.Toolkit.KryptonTextBox();
             BtnCancel = new Krypton.Toolkit.KryptonTextBox();
             BtnDelete = new Krypton.Toolkit.KryptonTextBox();
@@ -243,34 +239,6 @@
             kryptonListBox1.StateCommon.Border.Width = 3;
             kryptonListBox1.TabIndex = 21;
             kryptonListBox1.SelectedIndexChanged += kryptonListBox1_SelectedIndexChanged;
-            // 
-            // kryptonTextBox2
-            // 
-            kryptonTextBox2.Location = new Point(0, 0);
-            kryptonTextBox2.Name = "kryptonTextBox2";
-            kryptonTextBox2.Size = new Size(100, 23);
-            kryptonTextBox2.TabIndex = 44;
-            // 
-            // kryptonTextBox3
-            // 
-            kryptonTextBox3.Location = new Point(0, 0);
-            kryptonTextBox3.Name = "kryptonTextBox3";
-            kryptonTextBox3.Size = new Size(100, 23);
-            kryptonTextBox3.TabIndex = 43;
-            // 
-            // kryptonTextBox4
-            // 
-            kryptonTextBox4.Location = new Point(0, 0);
-            kryptonTextBox4.Name = "kryptonTextBox4";
-            kryptonTextBox4.Size = new Size(100, 23);
-            kryptonTextBox4.TabIndex = 42;
-            // 
-            // kryptonTextBox5
-            // 
-            kryptonTextBox5.Location = new Point(0, 0);
-            kryptonTextBox5.Name = "kryptonTextBox5";
-            kryptonTextBox5.Size = new Size(100, 23);
-            kryptonTextBox5.TabIndex = 41;
             // 
             // BtnSave
             // 
@@ -578,10 +546,6 @@
             Controls.Add(kryptonRichTextBox1);
             Controls.Add(btnTodolist);
             Controls.Add(btnNote);
-            Controls.Add(kryptonTextBox5);
-            Controls.Add(kryptonTextBox4);
-            Controls.Add(kryptonTextBox3);
-            Controls.Add(kryptonTextBox2);
             Controls.Add(GreetingTextBox);
             Controls.Add(kryptonPictureBox1);
             Controls.Add(BtnDelete);
@@ -612,10 +576,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox2;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private Krypton.Toolkit.KryptonTextBox BtnSave;
         private Krypton.Toolkit.KryptonTextBox BtnCancel;
         private Krypton.Toolkit.KryptonTextBox BtnDelete;
