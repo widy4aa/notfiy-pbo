@@ -92,7 +92,7 @@ namespace notfiy.Views.Register
             if (kryptonTextBox5.Text == "Password")
             {
                 kryptonTextBox5.Text = "";
-                kryptonTextBox5.PasswordChar = '*';
+                kryptonTextBox5.PasswordChar = '●';
             }
         }
         private void kryptonTextBox5_Leave(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace notfiy.Views.Register
         }
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "Confirm Password" || kryptonTextBox3.Text == "Username" || kryptonTextBox4.Text == "Email" || kryptonTextBox5.Text == "Password" 
+            if (kryptonTextBox2.Text == "Confirm Password" || kryptonTextBox3.Text == "Username" || kryptonTextBox4.Text == "Email" || kryptonTextBox5.Text == "Password"
                 || string.IsNullOrWhiteSpace(kryptonTextBox2.Text) || string.IsNullOrWhiteSpace(kryptonTextBox3.Text) || string.IsNullOrWhiteSpace(kryptonTextBox4.Text) || string.IsNullOrWhiteSpace(kryptonTextBox5.Text))
             {
                 MessageBoxHelper.ShowInfoMessageBox("Mohon lengkapi data terlebih dahulu!");
@@ -164,7 +164,7 @@ namespace notfiy.Views.Register
                 LoginControl log = new LoginControl();
                 NotifyViewManager.MoveView(log);
             }
-            else 
+            else
             {
                 MessageBoxHelper.ShowErrorMessageBox("Registrasi Gagal! Silahkan mencoba lagi");
                 kryptonTextBox3.Text = "Username";
@@ -172,6 +172,11 @@ namespace notfiy.Views.Register
                 kryptonTextBox5.Text = "Password";
                 kryptonTextBox2.Text = "Confirm Password";
             }
+        }
+
+        private void kryptonTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

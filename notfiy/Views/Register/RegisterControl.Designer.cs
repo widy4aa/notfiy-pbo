@@ -209,6 +209,7 @@
             kryptonTextBox5.StateNormal.Back.Color1 = Color.Transparent;
             kryptonTextBox5.TabIndex = 16;
             kryptonTextBox5.Text = "Password";
+            kryptonTextBox5.TextChanged += kryptonTextBox5_TextChanged;
             kryptonTextBox5.Enter += kryptonTextBox5_Enter;
             kryptonTextBox5.Leave += kryptonTextBox5_Leave;
             // 
