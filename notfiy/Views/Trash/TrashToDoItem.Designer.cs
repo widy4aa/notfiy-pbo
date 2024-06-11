@@ -173,6 +173,7 @@
             Controls.Add(kryptonCheckedListBox1);
             Name = "TrashToDoItem";
             Size = new Size(298, 266);
+            Load += TrashToDoItem_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);

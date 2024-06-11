@@ -16,5 +16,10 @@ namespace notfiy.Views.Trash
         {
             InitializeComponent();
         }
+
+        private void TrashToDoItem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
