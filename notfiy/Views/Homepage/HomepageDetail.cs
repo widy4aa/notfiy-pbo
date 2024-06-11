@@ -45,7 +45,7 @@ namespace notfiy.Views.Homepage
                 this.NoteContentTextBox.Text = Note.Content;
                 if (Note.ImageUrl == null || Note.ImageUrl.Length < 1)
                 {
-                    
+
                     return;
                 }
 
@@ -130,6 +130,20 @@ namespace notfiy.Views.Homepage
             navbar.BringToFront();
             navbar.BackColor = Color.Transparent;
             navbar.Location = new Point(1000, 0);
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            if (NoteController.UpdateNoteStatus(Note.IdNote, (int)StatusHelper.Archived))
+            {
+                MessageBoxHelper.ShowInfoMessageBox("Note Telah di Archive");
+                Core.ViewManager.MoveView(new HomepageControl(Note.IdLabel));
+
+            }
+            else
+            {
+                MessageBoxHelper.ShowErrorMessageBox("Note gagal di Archive");
+            }
         }
     }
 }
