@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveControl));
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
@@ -80,62 +79,6 @@
             kryptonPanel2.StateNormal.Color1 = Color.Black;
             kryptonPanel2.StateNormal.Color2 = Color.Black;
             kryptonPanel2.TabIndex = 20;
-            // 
-            // kryptonButton1
-            // 
-            kryptonButton1.Location = new Point(1216, 30);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.OverrideDefault.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideDefault.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideDefault.Back.Image = Properties.Resources.notif_icon;
-            kryptonButton1.OverrideDefault.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.OverrideDefault.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideDefault.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None;
-            kryptonButton1.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.OverrideFocus.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideFocus.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideFocus.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideFocus.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.OverrideFocus.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.Size = new Size(66, 56);
-            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateCommon.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateCommon.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateDisabled.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateDisabled.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateDisabled.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateDisabled.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateNormal.Back.Image = Properties.Resources.notif_icon;
-            kryptonButton1.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StateNormal.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateNormal.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StatePressed.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StatePressed.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StatePressed.Back.Image = Properties.Resources.notif_icon;
-            kryptonButton1.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StatePressed.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StatePressed.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None;
-            kryptonButton1.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StatePressed.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StateTracking.Back.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateTracking.Back.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateTracking.Back.Image = Properties.Resources.notif_icon;
-            kryptonButton1.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            kryptonButton1.StateTracking.Border.Color1 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateTracking.Border.Color2 = Color.FromArgb(51, 15, 126);
-            kryptonButton1.StateTracking.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.GlassCheckedSimple;
-            kryptonButton1.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None;
-            kryptonButton1.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
-            kryptonButton1.TabIndex = 15;
-            kryptonButton1.Values.Text = "";
             // 
             // HamburgerButton
             // 
@@ -194,6 +137,7 @@
             HamburgerButton.StateTracking.Border.Width = -2;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -235,7 +179,6 @@
             // 
             // kryptonPanel1
             // 
-            kryptonPanel1.Controls.Add(kryptonButton1);
             kryptonPanel1.Controls.Add(HamburgerButton);
             kryptonPanel1.Controls.Add(kryptonPictureBox1);
             kryptonPanel1.Controls.Add(UsernameTextbox);
@@ -272,7 +215,6 @@
         private Archive.ArchiveItem homepageItem5;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonPanel kryptonPanel2;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
