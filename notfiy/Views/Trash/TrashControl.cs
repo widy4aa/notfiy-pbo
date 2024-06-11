@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 using notfiy.Controllers;
 using notfiy.Entities;
 using notfiy.Views.Homepage;
@@ -18,6 +19,7 @@ namespace notfiy.Views.Trash
     public partial class TrashControl : UserControl
     {
         NoteController NoteController = new NoteController();
+        DoItemController DoItemController = new DoItemController(); 
         List<TrashNoteItem> TrashItems = new List<TrashNoteItem>();
         TodoListController todoListController = new TodoListController();
         List<TodoItem> TodolistItem = new List<TodoItem>();
@@ -46,6 +48,7 @@ namespace notfiy.Views.Trash
                 FlowLayoutNote.Controls.Add(trashNoteItem);
                 TrashItems.Add(trashNoteItem);
 
+
             }
         }
 
@@ -55,11 +58,30 @@ namespace notfiy.Views.Trash
 
             foreach (TodoList todoList in todoLists)
             {
-                TodoItem todoitem = new TodoItem(todoList);
+                TrashToDoItem todoitem = new TrashToDoItem(todoList);
                 todoitem.Margin = new Padding(2);
                 FlowLayoutTodo.Controls.Add(todoitem);
 
-               
+                if (DoItemController.GetAllDoItems(todoList.IdTodoList).Count > 0)
+                {
+                    List<DoItem> doItems = DoItemController.GetAllDoItems(todoList.IdTodoList);
+                    foreach (DoItem doitem in doItems)
+                    {
+                        //todoitem.kryptonCheckBox1.Text = doitem.DoItemName;
+                        KryptonCheckBox kryptonCheckBox = new KryptonCheckBox();
+                        kryptonCheckBox.Text = doitem.DoItemName;
+                        kryptonCheckBox.Enabled = false;
+                        if (doitem.Checked)
+                        {
+                            kryptonCheckBox.Checked = true;
+                        }
+                        todoitem.flowLayoutPanel1.Controls.Add(kryptonCheckBox);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("gagal");
+                }
 
             }
 
