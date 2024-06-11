@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace notfiy.Views.Trash
 {
-    
+
 
     public partial class TrashNoteItem : UserControl
     {
@@ -38,7 +38,13 @@ namespace notfiy.Views.Trash
         {
             NoteController.DeleteNote(idNote);
             NotfiyViewManager.MoveView(trashControl);
- 
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            NoteController.UpdateNoteStatus(idNote, 1);
+            NotfiyViewManager.MoveView(trashControl);
         }
     }
 }

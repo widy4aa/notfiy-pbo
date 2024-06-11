@@ -36,15 +36,15 @@ namespace notfiy.Views.Todolist
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             //this.Visible = false;
-            TodoDetail todoDetail = new TodoDetail();
-            NotifyViewManager.MoveView(todoDetail);
+            //TodoDetail todoDetail = new TodoDetail();
+            //NotifyViewManager.MoveView(todoDetail);
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
             //this.Visible = false;
-            TodoDetail todoDetail = new TodoDetail();
-            NotifyViewManager.MoveView(todoDetail);
+            //TodoDetail todoDetail = new TodoDetail();
+            //NotifyViewManager.MoveView(todoDetail);
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
