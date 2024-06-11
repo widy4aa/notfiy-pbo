@@ -43,8 +43,8 @@
             ButtonEdit = new Krypton.Toolkit.KryptonButton();
             kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
             ArchiveFlow = new FlowLayoutPanel();
-            kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
-            kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
+            NotePictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
+            NoteContentTextBox2 = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             kryptonBorderEdge2 = new Krypton.Toolkit.KryptonBorderEdge();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)NotePictureBox).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             ArchiveFlow.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NotePictureBox2).BeginInit();
             SuspendLayout();
             // 
             // NoteName
@@ -269,33 +269,33 @@
             // ArchiveFlow
             // 
             ArchiveFlow.AutoScroll = true;
-            ArchiveFlow.Controls.Add(kryptonPictureBox2);
-            ArchiveFlow.Controls.Add(kryptonRichTextBox1);
+            ArchiveFlow.Controls.Add(NotePictureBox2);
+            ArchiveFlow.Controls.Add(NoteContentTextBox2);
             ArchiveFlow.FlowDirection = FlowDirection.TopDown;
             ArchiveFlow.Location = new Point(398, 307);
             ArchiveFlow.Name = "ArchiveFlow";
             ArchiveFlow.Size = new Size(827, 499);
             ArchiveFlow.TabIndex = 57;
             // 
-            // kryptonPictureBox2
+            // NotePictureBox2
             // 
-            kryptonPictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            kryptonPictureBox2.Location = new Point(3, 3);
-            kryptonPictureBox2.Name = "kryptonPictureBox2";
-            kryptonPictureBox2.Size = new Size(812, 125);
-            kryptonPictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            kryptonPictureBox2.TabIndex = 0;
-            kryptonPictureBox2.TabStop = false;
-            kryptonPictureBox2.Visible = false;
+            NotePictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NotePictureBox2.Location = new Point(3, 3);
+            NotePictureBox2.Name = "NotePictureBox2";
+            NotePictureBox2.Size = new Size(812, 125);
+            NotePictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            NotePictureBox2.TabIndex = 0;
+            NotePictureBox2.TabStop = false;
+            NotePictureBox2.Visible = false;
             // 
-            // kryptonRichTextBox1
+            // NoteContentTextBox2
             // 
-            kryptonRichTextBox1.Location = new Point(3, 134);
-            kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            kryptonRichTextBox1.ReadOnly = true;
-            kryptonRichTextBox1.Size = new Size(812, 334);
-            kryptonRichTextBox1.TabIndex = 1;
-            kryptonRichTextBox1.Text = "";
+            NoteContentTextBox2.Location = new Point(3, 134);
+            NoteContentTextBox2.Name = "NoteContentTextBox2";
+            NoteContentTextBox2.ReadOnly = true;
+            NoteContentTextBox2.Size = new Size(812, 334);
+            NoteContentTextBox2.TabIndex = 1;
+            NoteContentTextBox2.Text = "";
             // 
             // kryptonButton1
             // 
@@ -316,6 +316,7 @@
             kryptonButton1.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonButton1.TabIndex = 58;
             kryptonButton1.Values.Text = "Trash";
+            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // kryptonButton2
             // 
@@ -334,6 +335,7 @@
             kryptonButton2.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonButton2.TabIndex = 55;
             kryptonButton2.Values.Text = "Back";
+            kryptonButton2.Click += kryptonButton2_Click;
             // 
             // kryptonBorderEdge2
             // 
@@ -365,13 +367,14 @@
             Controls.Add(kryptonBorderEdge1);
             Name = "ArchiveDetail";
             Size = new Size(1440, 1024);
+            Load += ArchiveDetail_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)NotePictureBox).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             ArchiveFlow.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NotePictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -392,10 +395,10 @@
         private Krypton.Toolkit.KryptonButton ButtonEdit;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
         private FlowLayoutPanel ArchiveFlow;
-        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox2;
-        private Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        private Krypton.Toolkit.KryptonRichTextBox NoteContentTextBox2;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge2;
+        private Krypton.Toolkit.KryptonPictureBox NotePictureBox2;
     }
 }
