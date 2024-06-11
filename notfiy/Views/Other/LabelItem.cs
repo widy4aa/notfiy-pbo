@@ -26,7 +26,7 @@ namespace notfiy.Views.Other
         public LabelItem()
         {
             InitializeComponent();
-            Label = new LabelEntity();
+           // Label = new LabelEntity();
             noteController = new NoteController();
             labelController = new LabelController();
             LabelTextBox.Text = LabelChooseButton.Text;
@@ -55,14 +55,14 @@ namespace notfiy.Views.Other
             List<Note> note = noteController.GetAllNoteFromLabel(Label.IdLabel);
             string LabelName = LabelChooseButton.Text;
 
-            if (LabelController.CreateLabel(LabelName))
-            {
-                MessageBox.Show($"Data label {LabelName} sudah di update!");
-            }
-            else
-            {
-                MessageBoxHelper.ShowInfoMessageBox($"Gagal mengupdate data user {LabelName}!");
-            }
+            //if (LabelController.CreateLabel(LabelName))
+            //{
+            //    MessageBox.Show($"Data label {LabelName} sudah di update!");
+            //}
+            //else
+            //{
+            //    MessageBoxHelper.ShowInfoMessageBox($"Gagal mengupdate data user {LabelName}!");
+            //}
         }
 
         private void ButtonLabelDelete_Click(object sender, EventArgs e)
