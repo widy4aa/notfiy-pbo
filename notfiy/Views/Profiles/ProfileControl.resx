@@ -118,30 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="kryptonButton2.OverrideDefault.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAFdJREFUWEft1bENwDAMxEBvEm8W77+ELANpnY7FAzzge1bSqDAG0wymGUyLDH6T
-        NiTpX5+KmTQ/Hc1gmsE0g2kn+Ena9+8k6aZPxUqan45mMM1gmsGsqg1rh6onkdgKaAAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="kryptonButton2.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAFdJREFUWEft1bENwDAMxEBvEm8W77+ELANpnY7FAzzge1bSqDAG0wymGUyLDH6T
-        NiTpX5+KmTQ/Hc1gmsE0g2kn+Ena9+8k6aZPxUqan45mMM1gmsGsqg1rh6onkdgKaAAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="kryptonButton2.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC4AAAAqCAYAAADMKGkhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAFtJREFUWEft1sEJACAQxEA70c60/yZOBWsIrGRg/3kcYqtQhtMMpxlOM5wWHT4T
-        16TfnUMfifMdpxlOM5xmOM1w2g3viXs/Fulf59BX4nzHaYbTDKcZTjOcVbUBeRHPRuSMd38AAAAASUVO
-        RK5CYII=
-</value>
-  </data>
   <data name="kryptonButton3.OverrideDefault.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -609,7 +585,7 @@
   <data name="kryptonPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACMAAAAjACAYAAADb8MMlAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7s3QmUpVV5922rmmZqbQQEQQUVkEkcQCHCK6IRFTFGTRwgKGaQQUOi
+        DAAACwwBP0AiyAAA/7JJREFUeF7s3QmUpVV5922rmmZqbQQEQQUVkEkcQCHCK6IRFTFGTRwgKGaQQUOi
         ib4Rk9egRnCAGGOSTxwQUVAkglM0TmhUEBGCihgRI6O0EZnHbqD7+f53eZI4bKC76pyqM1y/ta61shKD
         3VXn7L2ffR+q7iVJkiRJkjRCLYr7xKbxkNgxHht7xtPiOXFAvCT+NA6PN8TR8U9xfHwoPhKnxsfjU/GZ
         +Fx8Mf4tvhZfj7Pj3Ph2fDf+I34Q/xmXxBWxLH4aV8d1cVPcGivizuh66n+u/1393+o/U//Z+v+p/9/6

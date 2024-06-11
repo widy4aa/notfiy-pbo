@@ -3,7 +3,9 @@ using notfiy.Entities;
 using notfiy.Views.Homepage;
 using notfiy.Views.Profiles;
 using notfiy.Views.Todolist;
+using notfiy.Views.Other;
 using notfiy.Views.Trash;
+using notfiy.Views.Archive;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -126,6 +128,12 @@ namespace notfiy.Views.Other
         //nambah label 1 baris
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            //string newLabelName = labelItem2.Text;
+            //if (!string.IsNullOrEmpty(newLabelName))
+            //{
+            //    // Tambahkan logika untuk menambahkan label baru
+            //    var labelController = new LabelController();
+            //    int newLabelId = labelController.CreateLabel(newLabelName);
             LabelEntity labelEntity = new LabelEntity
             {
                 LabelName = "Label Baru",
@@ -143,6 +151,24 @@ namespace notfiy.Views.Other
             labelControl.BorderStyle = BorderStyle.FixedSingle;
             labelControl.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 
+            //    if (newLabelId > 0)
+            //    {
+            //        Entities.Label newLabel = new Entities.Label { IdLabel = newLabelId, LabelName = newLabelName };
+            //        AddLabelToPanel(newLabel);
+            //        //labelItem2.Clear();
+            //        labelItem2.Visible = false;
+            //        labelItem2.Visible = false;
+            //        kryptonButton5.Location = new Point(kryptonButton5.Location.X, kryptonButton5.Location.Y - 30); // Kembalikan tombol ke posisi semula
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Failed to add label.");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Label name cannot be empty.");
+            //}
             FlowLayoutPanelLabels.Controls.Add(labelControl);
             if (idNewLabel > 0)
             {
@@ -154,6 +180,12 @@ namespace notfiy.Views.Other
             }
         }
 
+        private void AddLabelToPanel(Entities.Label label)
+        {
+            var labelItem = new LabelItem(label, ResetFlowLayoutPanelLabels);
+            FlowLayoutPanelLabels.Controls.Add(labelItem);
+        }
+
         private void kryptonCheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -161,7 +193,8 @@ namespace notfiy.Views.Other
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-
+            ArchiveControl archiveControl = new ArchiveControl();
+            NotifyViewManager.MoveView(archiveControl);
         }
 
         private void labelItem1_Load(object sender, EventArgs e)
