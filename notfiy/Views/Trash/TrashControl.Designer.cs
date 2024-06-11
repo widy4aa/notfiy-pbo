@@ -35,7 +35,7 @@
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             FlowLayoutNote = new FlowLayoutPanel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            FlowLayoutTodo = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
@@ -134,19 +134,20 @@
             FlowLayoutNote.TabIndex = 21;
             FlowLayoutNote.Paint += FlowLayoutNote_Paint;
             // 
-            // flowLayoutPanel1
+            // FlowLayoutTodo
             // 
-            flowLayoutPanel1.Location = new Point(718, 232);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(607, 581);
-            flowLayoutPanel1.TabIndex = 22;
+            FlowLayoutTodo.Location = new Point(718, 232);
+            FlowLayoutTodo.Name = "FlowLayoutTodo";
+            FlowLayoutTodo.Size = new Size(607, 581);
+            FlowLayoutTodo.TabIndex = 22;
+            FlowLayoutTodo.Paint += flowLayoutPanel1_Paint_1;
             // 
             // TrashControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(FlowLayoutTodo);
             Controls.Add(FlowLayoutNote);
             Controls.Add(kryptonPanel2);
             Controls.Add(kryptonTextBox1);
@@ -170,6 +171,6 @@
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Krypton.Toolkit.KryptonPanel kryptonPanel2;
         public FlowLayoutPanel FlowLayoutNote;
-        public FlowLayoutPanel flowLayoutPanel1;
+        public FlowLayoutPanel FlowLayoutTodo;
     }
 }
