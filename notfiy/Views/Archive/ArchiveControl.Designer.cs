@@ -35,12 +35,10 @@
             HamburgerButton = new Krypton.Toolkit.KryptonButton();
             kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             UsernameTextbox = new Krypton.Toolkit.KryptonTextBox();
-            ArchivePanel1 = new FlowLayoutPanel();
+            ArchivePanel = new FlowLayoutPanel();
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            homepageItem10 = new Archive.ArchiveItem();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
-            ArchivePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             SuspendLayout();
@@ -225,15 +223,15 @@
             UsernameTextbox.TabIndex = 11;
             UsernameTextbox.Text = "Search";
             // 
-            // ArchivePanel1
+            // ArchivePanel
             // 
-            ArchivePanel1.AllowDrop = true;
-            ArchivePanel1.AutoScroll = true;
-            ArchivePanel1.Controls.Add(homepageItem10);
-            ArchivePanel1.Location = new Point(93, 221);
-            ArchivePanel1.Name = "ArchivePanel1";
-            ArchivePanel1.Size = new Size(1251, 611);
-            ArchivePanel1.TabIndex = 22;
+            ArchivePanel.AllowDrop = true;
+            ArchivePanel.AutoScroll = true;
+            ArchivePanel.Location = new Point(93, 221);
+            ArchivePanel.Name = "ArchivePanel";
+            ArchivePanel.Size = new Size(1251, 611);
+            ArchivePanel.TabIndex = 22;
+            ArchivePanel.Paint += ArchivePanel1_Paint;
             // 
             // kryptonPanel1
             // 
@@ -248,15 +246,6 @@
             kryptonPanel1.StateNormal.Color2 = Color.FromArgb(51, 15, 126);
             kryptonPanel1.TabIndex = 19;
             // 
-            // homepageItem10
-            // 
-            homepageItem10.BackColor = Color.White;
-            homepageItem10.Location = new Point(3, 3);
-            homepageItem10.Name = "homepageItem10";
-            homepageItem10.Size = new Size(298, 266);
-            homepageItem10.TabIndex = 10;
-            homepageItem10.Load += homepageItem10_Load;
-            // 
             // ArchiveControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -264,14 +253,13 @@
             BackColor = Color.White;
             Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonPanel2);
-            Controls.Add(ArchivePanel1);
+            Controls.Add(ArchivePanel);
             Controls.Add(kryptonPanel1);
             Name = "ArchiveControl";
             Size = new Size(1440, 1024);
             Load += ArchiveControl_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
-            ArchivePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();
@@ -288,8 +276,7 @@
         private Krypton.Toolkit.KryptonButton HamburgerButton;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private Krypton.Toolkit.KryptonTextBox UsernameTextbox;
-        public FlowLayoutPanel ArchivePanel1;
+        public FlowLayoutPanel ArchivePanel;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Archive.ArchiveItem homepageItem10;
     }
 }

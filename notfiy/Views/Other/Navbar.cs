@@ -4,6 +4,7 @@ using notfiy.Views.Homepage;
 using notfiy.Views.Profiles;
 using notfiy.Views.Todolist;
 using notfiy.Views.Trash;
+using notfiy.Views.Archive;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -99,7 +100,8 @@ namespace notfiy.Views.Other
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-
+            ArchiveControl archiveControl = new ArchiveControl();
+            NotifyViewManager.MoveView(archiveControl);
         }
 
         private void labelItem1_Load(object sender, EventArgs e)
