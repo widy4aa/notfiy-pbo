@@ -27,7 +27,7 @@ namespace notfiy.Views.Todolist
         private DoItemController DoItemController;
         List<TodoItem> TodolistItem = new List<TodoItem>();
         List<DoItem> doItems = new List<DoItem>();
-        FlowLayoutPanel FlowLayoutPanel;
+        private FlowLayoutPanel FlowLayoutPanel;
 
         public TodolistControl()
         {
@@ -35,11 +35,7 @@ namespace notfiy.Views.Todolist
             TodoListController = new TodoListController();
             DoItemController = new DoItemController();
         }
-        private void TodoItem_Click(object sender, EventArgs e)
-        {
-            //TodoDetail detail = new TodoDetail();
-            //NotifyViewManager.MoveView(detail);
-        }
+        
         private void TodolistControl_Load(object sender, EventArgs e)
         {
             List<TodoList> todoList = TodoListController.GetAllTodoList();
@@ -56,13 +52,17 @@ namespace notfiy.Views.Todolist
                     NotifyViewManager.MoveView(new TodoDetail(todolist));
                 };
 
+                todoitem.flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
                 flowLayoutPanel1.Controls.Add(todoitem);
+
                 if (DoItemController.GetAllDoItems(todolist.IdTodoList).Count > 0)
                 {
                     List<DoItem> doItems = DoItemController.GetAllDoItems(todolist.IdTodoList);
                     foreach (DoItem doitem in doItems)
                     {
                         //todoitem.kryptonCheckBox1.Text = doitem.DoItemName;
+                        DoItemEdit doItemEdit = new DoItemEdit();
+                        doItemEdit.IdTodoItem += doitem.IdDoItem;
                         KryptonCheckBox kryptonCheckBox= new KryptonCheckBox();
                         kryptonCheckBox.Text = doitem.DoItemName;
                         if (doitem.Checked)

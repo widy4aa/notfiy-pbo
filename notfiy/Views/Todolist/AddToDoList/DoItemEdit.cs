@@ -14,10 +14,12 @@ namespace notfiy.Views.AddToDoList
 {
     public partial class DoItemEdit : UserControl
     {
+        public int IdTodoItem;
 
         public DoItemEdit()
         {
             InitializeComponent();
+            this.IdTodoItem = this.IdTodoItem;
         }
 
         public void kryptonTextBox1_Enter(object sender, EventArgs e)

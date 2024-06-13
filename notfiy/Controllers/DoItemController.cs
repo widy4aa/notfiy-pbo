@@ -58,9 +58,9 @@ namespace notfiy.Controllers
             return DoItemModel.UpdateDoItem(doItem);
         }
 
-        public bool DeleteDoItem(int idTodoList)
+        public bool DeleteDoItem(int idDoItem)
         {
-            return DoItemModel.DeleteDoItem(idTodoList);
+            return DoItemModel.DeleteDoItem(idDoItem);
         }
 
         public bool DoItemCheck(int idTodoList, bool Checked)

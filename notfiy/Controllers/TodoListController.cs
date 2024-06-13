@@ -51,7 +51,7 @@ namespace notfiy.Controllers
             return TodoListModel.CreateTodoList(todoList);
         }
 
-        public bool UpdateTodoList(int idTodoList, string todoListName, int idStatus)
+        public bool UpdateTodoList(int idTodoList, string todoListName, int idStatus, bool Pinned)
         {
             TodoList todoList = GetTodoList(idTodoList);
 
@@ -59,6 +59,7 @@ namespace notfiy.Controllers
                 todoList.TodoListName = todoListName;
                 todoList.IdUser = SystemSingleton.Instance.UserLoggedIn.IdUser;
                 todoList.IdStatus = idStatus;
+                todoList.Pinned = Pinned;
             
             return TodoListModel.UpdateTodoList(todoList);
         }

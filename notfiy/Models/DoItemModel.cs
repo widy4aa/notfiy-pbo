@@ -136,10 +136,10 @@ namespace notfiy.Models
             try
             {
                 Connection.Open();
-                string update = @"UPDATE doitems SET 
+                string update = @"UPDATE do_items SET 
                                   do_item_name = @do_item_name, 
                                   checked = @checked, 
-                                  id_todolist = @id_todolist, 
+                                  id_todolist = @id_todolist 
                                   WHERE id_do_item = @id_do_item";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(update, Connection))
                 {

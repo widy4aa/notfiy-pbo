@@ -19,6 +19,8 @@ namespace notfiy.Views.Todolist
     public partial class TodoItem : UserControl
     {
         public int IdTodo;
+        public int IdStatus;
+        //public string JudulTodolist;
         private DoItemController DoItemController;
         public KryptonCheckBox KryptonCheckBox;
         List<DoItem> doItems = new List<DoItem>();
@@ -29,12 +31,13 @@ namespace notfiy.Views.Todolist
             DoItemController = new DoItemController();
             this.JudulItem.Text = todolist.TodoListName;
             this.IdTodo = todolist.IdTodoList;
+            this.IdStatus = todolist.IdStatus;
             //this.KryptonCheckBox.Text =;
         }
 
         public void kryptonLabel1_Click(object sender, EventArgs e)
         {
-            kryptonButton2.Hide();
+            //kryptonButton2.Hide();
         }
 
         private void flowLayoutPanel1_Click(object sender, EventArgs e)
@@ -87,17 +90,7 @@ namespace notfiy.Views.Todolist
             //}
         }
 
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-            kryptonButton2.Hide();
-            kryptonButton3.Show();
-        }
-
-        private void kryptonButton3_Click(object sender, EventArgs e)
-        {
-            kryptonButton3.Hide();
-            kryptonButton2.Show();
-        }
+        
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
@@ -107,5 +100,7 @@ namespace notfiy.Views.Todolist
             popupshare.BackColor = Color.Transparent;
             popupshare.Location = new Point(100, 0);
         }
+
+        
     }
 }
