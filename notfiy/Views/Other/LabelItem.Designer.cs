@@ -39,7 +39,7 @@
             // 
             LabelChooseButton.Location = new Point(-2, -1);
             LabelChooseButton.Name = "LabelChooseButton";
-            LabelChooseButton.Size = new Size(163, 54);
+            LabelChooseButton.Size = new Size(197, 54);
             LabelChooseButton.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
             LabelChooseButton.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
             LabelChooseButton.StateCommon.Back.Image = (Image)resources.GetObject("LabelChooseButton.StateCommon.Back.Image");
@@ -63,7 +63,7 @@
             ButtonLabelEdit.Size = new Size(48, 80);
             ButtonLabelEdit.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
             ButtonLabelEdit.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
-            ButtonLabelEdit.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
+            ButtonLabelEdit.StateCommon.Back.Image = (Image)resources.GetObject("ButtonLabelEdit.StateCommon.Back.Image");
             ButtonLabelEdit.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             ButtonLabelEdit.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
             ButtonLabelEdit.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
@@ -84,7 +84,7 @@
             ButtonLabelDelete.Size = new Size(38, 67);
             ButtonLabelDelete.StateCommon.Back.Color1 = Color.FromArgb(46, 26, 96);
             ButtonLabelDelete.StateCommon.Back.Color2 = Color.FromArgb(46, 26, 96);
-            ButtonLabelDelete.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton2.StateCommon.Back.Image");
+            ButtonLabelDelete.StateCommon.Back.Image = (Image)resources.GetObject("ButtonLabelDelete.StateCommon.Back.Image");
             ButtonLabelDelete.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             ButtonLabelDelete.StateCommon.Border.Color1 = Color.FromArgb(46, 26, 96);
             ButtonLabelDelete.StateCommon.Border.Color2 = Color.FromArgb(46, 26, 96);
@@ -126,7 +126,7 @@
             LabelTextBox.Text = "Note";
             LabelTextBox.TextAlign = HorizontalAlignment.Center;
             LabelTextBox.TextChanged += kryptonTextBox1_TextChanged;
-            LabelTextBox.KeyDown += kryptonTextBox1_KeyDown;
+            LabelTextBox.KeyDown += KeyDownPressEnterEdit_Click;
             // 
             // LabelItem
             // 

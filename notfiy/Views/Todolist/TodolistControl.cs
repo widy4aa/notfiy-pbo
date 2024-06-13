@@ -38,7 +38,7 @@ namespace notfiy.Views.Todolist
         
         private void TodolistControl_Load(object sender, EventArgs e)
         {
-            List<TodoList> todoList = TodoListController.GetAllTodoList();
+            List<TodoList> todoList = TodoListController.GetAllTodoList(1);
             //List<DoItem> doItems = DoItemController.GetAllDoItems(idTodolist);
             //todoList = TodoListController.GetAllTodoList();
             //TodoItem todoitem = new TodoItem(todoList);

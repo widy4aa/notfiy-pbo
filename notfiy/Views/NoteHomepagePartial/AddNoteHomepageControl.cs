@@ -98,6 +98,7 @@ namespace notfiy.Views.NoteHomepagePartial
                 ImageController.DeleteCache(Note.IdNote);
                 Note.ImageUrl = ImageUrl;
             }
+            Note.NoteName = NoteName.Text;
 
             bool hasil = NoteController.UpdateNote(Note);
             

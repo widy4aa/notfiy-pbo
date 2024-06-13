@@ -28,6 +28,11 @@ namespace notfiy.Controllers
             return LabelModel.GetLabel(id); 
         }
 
+        public bool UpdateLabel(LabelEntity labelEntity)
+        {
+            return LabelModel.UpdateLabel(labelEntity) > 0;
+        }
+
         public int CreateLabel(string labelName)
         {
             LabelEntity label = new LabelEntity

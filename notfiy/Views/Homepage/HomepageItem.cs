@@ -1,4 +1,5 @@
-﻿using notfiy.Controllers;
+﻿using Krypton.Toolkit;
+using notfiy.Controllers;
 using notfiy.Entities;
 using notfiy.Helpers;
 using System;
@@ -40,7 +41,7 @@ namespace notfiy.Views.Homepage
             this.NoteTextBox.Text = note.Content;
             IsPinned = note.Pinned;
             RearangeNoteItemsAction = rearangeNoteItemsAction;
-          
+
 
         }
 
@@ -67,6 +68,7 @@ namespace notfiy.Views.Homepage
         private void HomepageItem_Load(object sender, EventArgs e)
         {
             ChangeButtonState();
+            flowLayoutPanel1.AutoScroll = true;
         }
 
         private void kryptonLabel2_Click(object sender, EventArgs e)
@@ -111,6 +113,21 @@ namespace notfiy.Views.Homepage
         }
 
         private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NoteTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NoteTextBox_Click(object sender, EventArgs e)
+        {
+            CoreViewManager.MoveView(new HomepageDetail(Note));
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

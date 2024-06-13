@@ -49,7 +49,7 @@ CREATE TABLE notes (
     time_created TIMESTAMP NOT NULL,
     pinned BOOLEAN,
     id_user INT,
-    id_label INT,
+    id_label INT NULL,
     id_status INT,
     CONSTRAINT fk_user FOREIGN KEY (id_user) REFERENCES users (id_user)
         ON DELETE CASCADE ON UPDATE CASCADE,

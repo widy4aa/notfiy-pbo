@@ -33,7 +33,7 @@
             NoteName = new Krypton.Toolkit.KryptonLabel();
             NoteTextBox = new Krypton.Toolkit.KryptonRichTextBox();
             kryptonListBox1 = new Krypton.Toolkit.KryptonListBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            buttonArchive = new Krypton.Toolkit.KryptonButton();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,27 +84,28 @@
             kryptonListBox1.TabIndex = 17;
             kryptonListBox1.SelectedIndexChanged += kryptonListBox1_SelectedIndexChanged;
             // 
-            // kryptonButton1
+            // buttonArchive
             // 
-            kryptonButton1.Location = new Point(243, 14);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(28, 34);
-            kryptonButton1.StateCommon.Back.Color1 = Color.White;
-            kryptonButton1.StateCommon.Back.Color2 = Color.White;
-            kryptonButton1.StateCommon.Back.Image = (Image)resources.GetObject("kryptonButton1.StateCommon.Back.Image");
-            kryptonButton1.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
-            kryptonButton1.StateCommon.Border.Color1 = Color.White;
-            kryptonButton1.StateCommon.Border.Color2 = Color.White;
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.TabIndex = 19;
-            kryptonButton1.Values.Text = "";
+            buttonArchive.Location = new Point(243, 14);
+            buttonArchive.Name = "buttonArchive";
+            buttonArchive.Size = new Size(28, 34);
+            buttonArchive.StateCommon.Back.Color1 = Color.White;
+            buttonArchive.StateCommon.Back.Color2 = Color.White;
+            buttonArchive.StateCommon.Back.Image = (Image)resources.GetObject("ArchiveButton.StateCommon.Back.Image");
+            buttonArchive.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
+            buttonArchive.StateCommon.Border.Color1 = Color.White;
+            buttonArchive.StateCommon.Border.Color2 = Color.White;
+            buttonArchive.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonArchive.TabIndex = 19;
+            buttonArchive.Values.Text = "";
+            buttonArchive.Click += kryptonButton1_Click;
             // 
             // ArchiveItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(kryptonButton1);
+            Controls.Add(buttonArchive);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(kryptonListBox1);
             Name = "ArchiveItem";
@@ -121,6 +122,6 @@
         public Krypton.Toolkit.KryptonLabel NoteName;
         private Krypton.Toolkit.KryptonRichTextBox NoteTextBox;
         private Krypton.Toolkit.KryptonListBox kryptonListBox1;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        public Krypton.Toolkit.KryptonButton buttonArchive;
     }
 }

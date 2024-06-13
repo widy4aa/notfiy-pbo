@@ -27,6 +27,32 @@ namespace notfiy.Helpers
             return false;
         }
 
+        public static bool IsServerAlive()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = client.GetAsync("https://dc-img-tranceiver.neiaozora.my.id").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBoxHelper.ShowErrorMessageBox("Server tidak tersedia. Kode status: " + response.StatusCode + "\nServer Telah Mati, Tolong Hubungi saya di WA +6283119624458");
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBoxHelper.ShowErrorMessageBox("Gagal menghubungi server: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
         public static string? UploadImage(string filePath)
         {
             FileInfo fileInfo = new FileInfo(filePath);

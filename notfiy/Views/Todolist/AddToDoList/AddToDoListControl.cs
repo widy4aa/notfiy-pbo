@@ -102,23 +102,100 @@ namespace notfiy.Views.AddToDoList
                 }
                 MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
                 TodolistControl todolistControl = new TodolistControl();
+<<<<<<< HEAD
 
 
                 NotifyViewManager.MoveView(todolistControl);
 
 
                 NotifyViewManager.MoveView(todolistControl);
+=======
+//<<<<<<< HEAD
+
+                NotifyViewManager.MoveView(todolistControl);
+
+//=======
+//<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
+  //              NotifyViewManager.MoveView(todolistControl);
+//=======
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
+
+
+
+                //if (DoItemController.CreateDoItem(text, checkbox, idtodolist) > 0)
+                //{
+                //    MessageBoxHelper.ShowInfoMessageBox("Todolist berhasil ditambahkan");
+                //    TodolistControl todolistControl = new TodolistControl();
+                //}
+//<<<<<<< HEAD
+
+//=======
+//>>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
+
+>>>>>>> 1795e3bbb25f6e7c400e6b68e473907f44e949d1
             }
         }
 
       
 
+<<<<<<< HEAD
         }
 
+=======
+//<<<<<<< HEAD
+
+//=======
+//<<<<<<< HEAD:notfiy/Views/Todolist/AddToDoList/AddToDoList.cs
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
+        //    //private void kryptonButton1_Click(object sender, EventArgs e)
+        //    //{
+        //    //    //this.Visible = false;
+        //    //    DoItemEdit doitem = new DoItemEdit();
+        //    //    AddToDoList addToDoList = new AddToDoList();
+        //    //    foreach (DoItemEdit item in addToDoList.flowLayoutPanel2.Controls)
+        //    //    {
+        //    //        addToDoList.flowLayoutPanel2.Controls.Remove(doitem);
+        //    //    }
+        //    //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
+        //    //}
+        //}
+//<<<<<<< HEAD
+
+//=======
+//=======
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
+            //private void kryptonButton1_Click(object sender, EventArgs e)
+            //{
+            //    //this.Visible = false;
+            //    DoItemEdit doitem = new DoItemEdit();
+            //    AddToDoList addToDoList = new AddToDoList();
+            //    foreach (DoItemEdit item in addToDoList.flowLayoutPanel2.Controls)
+            //    {
+            //        addToDoList.flowLayoutPanel2.Controls.Remove(doitem);
+            //    }
+            //    //addToDoList.flowLayoutPanel2.Controls.Remove(this);
+            //}
+        }
+
+        //private void kryptonLabel2_Click(object sender, EventArgs e)
+        //{
+        //    Core.ViewManager.MoveView(new AddNoteHomepageControl());
+//<<<<<<< HEAD
+>>>>>>> 1795e3bbb25f6e7c400e6b68e473907f44e949d1
 
 
     }
+<<<<<<< HEAD
 
 
   
    
+=======
+//=======
+
+        //}
+//>>>>>>> 5b270c3d26bf3dab41769a9e526bb3a140bd8c91:notfiy/Views/Todolist/AddToDoList/AddToDoListControl.cs
+ 
+//>>>>>>> 2e809c5ebfc8fe4bb61aaded6c5557ef87be1815
+>>>>>>> 1795e3bbb25f6e7c400e6b68e473907f44e949d1

@@ -138,6 +138,7 @@
             HamburgerButton.StateTracking.Border.Width = -5;
             HamburgerButton.TabIndex = 14;
             HamburgerButton.Values.Text = "";
+            HamburgerButton.Click += HamburgerButton_Click;
             // 
             // kryptonPictureBox1
             // 
@@ -177,6 +178,7 @@
             Controls.Add(kryptonPanel1);
             Name = "LabelControl";
             Size = new Size(1440, 1024);
+            Load += LabelControl_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);

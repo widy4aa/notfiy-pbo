@@ -132,7 +132,7 @@
         0ECvJMtLzkIjkmT8FSTfk/IXtdzkLDRUxw1cx6oOjwqVyi8d+iYaOdkoeQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonLabelEdit.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAktJREFUWEftmD1rVEEUhhdsRERQhIBF2mgUY2OiiWVECztjEoX4UWlhYaF/wcbW
@@ -148,7 +148,7 @@
         D/NXPci11J99AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="kryptonButton2.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonLabelDelete.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAnBJREFUWEftmc9LFVEYhq9gpBFYEYG0KNqUWIFQQijS2kWbDEkDFxkqSCsxF/2A
