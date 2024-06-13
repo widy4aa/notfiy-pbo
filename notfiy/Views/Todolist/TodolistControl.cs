@@ -39,9 +39,6 @@ namespace notfiy.Views.Todolist
         private void TodolistControl_Load(object sender, EventArgs e)
         {
             List<TodoList> todoList = TodoListController.GetAllTodoList(1);
-            //List<DoItem> doItems = DoItemController.GetAllDoItems(idTodolist);
-            //todoList = TodoListController.GetAllTodoList();
-            //TodoItem todoitem = new TodoItem(todoList);
             flowLayoutPanel1.AutoScroll = true;
             foreach (TodoList todolist in todoList)
             {
@@ -78,17 +75,10 @@ namespace notfiy.Views.Todolist
                 }
                
             }
-            //MessageBox.Show(todoList.Count.ToString());
-            //flowLayoutPanel1.AutoScroll = true;
+;
         }
         private void HamburgerButton_Click(object sender, EventArgs e)
         {
-            //Sidebar sidebar = new Sidebar();
-            //this.Controls.Add(sidebar);
-            //sidebar.BringToFront();
-            //sidebar.BackColor = Color.Transparent;
-            //sidebar.Location = new Point(950, 0);
-            //sidebar.Show();
 
             Navbar navbar = new Navbar();
             this.Controls.Add(navbar);

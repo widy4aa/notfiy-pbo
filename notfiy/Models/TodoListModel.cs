@@ -13,11 +13,11 @@ namespace notfiy.Models
         {
             List<TodoList> todoLists = new List<TodoList>();
             Connection.Open();
-<<<<<<< HEAD
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = 1 ORDER BY id_todolist DESC", Connection);
-=======
+
+            //NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = 1 ORDER BY id_todolist DESC", Connection);
+
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from todolists where id_user = {idUser} and id_status = {idStatus}", Connection);
->>>>>>> 1795e3bbb25f6e7c400e6b68e473907f44e949d1
+
             NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
             while (reader.Read())
             {
