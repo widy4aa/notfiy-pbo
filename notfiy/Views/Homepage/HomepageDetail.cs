@@ -43,7 +43,8 @@ namespace notfiy.Views.Homepage
             {
                 this.NoteName.Text = Note.NoteName;
                 this.NoteContentTextBox.Text = Note.Content;
-                if (Note.ImageUrl == null || Note.ImageUrl.Length < 1)
+
+                if (Note.ImageUrl == null || Note.ImageUrl.Length < 3)
                 {
 
                     return;

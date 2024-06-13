@@ -41,7 +41,7 @@ namespace notfiy.Views.Archive
             {
                 this.NoteName.Text = Note.NoteName;
                 this.NoteContentTextBox2.Text = Note.Content;
-                if (Note.ImageUrl == null || Note.ImageUrl.Length < 1)
+                if (Note.ImageUrl == null || Note.ImageUrl.Length < 3)
                 {
 
                     return;
